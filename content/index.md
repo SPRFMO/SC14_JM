@@ -1,0 +1,26 @@
+# Jack mackerel: research for management
+
+**What does the research tell us about the stock, and how can it support reliable catch decisions?**
+
+This working guide brings together research for the South Pacific Regional Fisheries Management Organisation (SPRFMO). It explains the questions behind the studies, their relevance to management, and the decisions still to be made.
+
+## What we know so far
+
+The 2026 work has examined the evidence used to assess the stock and tested possible rules for future management. Two workshops brought that work together: a benchmark review of data and assessment methods in May, and a management strategy evaluation workshop in June. Their reports are now among the papers prepared for the fourteenth Scientific Committee meeting (SC14). Sources: [JM02](https://www.sprfmo.int/assets/Meetings/02-SC/14th-SC-2026/Jack-Mackerel/SC14-JM-02-Report-of-the-Jack-Mackerel-Benchmark-Workshop-SCW16a.pdf), [JM03](https://www.sprfmo.int/assets/Meetings/02-SC/14th-SC-2026/Jack-Mackerel/SC14-JM-03-Report-of-the-Jack-Mackerel-MSE-Workshop-SCW17.pdf).
+
+## Why it matters
+
+Managers need advice on the stock’s condition and on how catch decisions may perform when the future differs from expectations. This guide helps distinguish evidence about **the stock today** from tests of **management rules over time**.
+
+- [How is the stock doing?](assessments.html) — what an assessment can tell us and what still needs review.
+- [Which catch rules may work best?](mse.html) — how procedures are tested for biological performance, catch and stability.
+- [What do the surveys and catches tell us?](data-surveys.html) — why abundance signals can differ.
+- [What is being considered at SC14?](sc14-week.html) — this week’s work and the record still needed.
+
+## What has been agreed?
+
+The workshop reports record conclusions and recommendations at workshop level. **The SC14 material currently covered consists of submitted papers and planned discussions.** Stock-status advice and recommendations on management procedures require the Committee’s agreed meeting record.
+
+## What remains uncertain?
+
+The strongest coverage here is May–September 2026. Earlier research and management decisions still need to be added. The record of SC14 discussions will be updated when meeting reports or agreed text are available. The information currently included was assembled on 7 September 2026.
