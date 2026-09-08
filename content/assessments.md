@@ -6,7 +6,7 @@ A stock assessment brings together catches, surveys and information about the fi
 
 ## What the research has done
 
-The May benchmark reviewed the data, biological assumptions and assessment methods that support this work. This preparation supports the updated assessment needed to describe the stock’s condition in 2026. Source: [JM02](https://www.sprfmo.int/assets/Meetings/02-SC/14th-SC-2026/Jack-Mackerel/SC14-JM-02-Report-of-the-Jack-Mackerel-Benchmark-Workshop-SCW16a.pdf).
+The May benchmark reviewed the data, biological assumptions and assessment methods that support this work. This preparation supports the updated assessment needed to describe the stock’s condition in 2026. Source: [JM02](https://sprfmo.github.io/JM_SCW_prep/JMWG-Benchmark-Meeting-report-2026.html).
 
 ## Why it matters for management
 

@@ -6,7 +6,7 @@ This working guide brings together research for the South Pacific Regional Fishe
 
 ## What we know so far
 
-The 2026 work has examined the evidence used to assess the stock and tested possible rules for future management. Two workshops brought that work together: a benchmark review of data and assessment methods in May, and a management strategy evaluation workshop in June. Their reports are now among the papers prepared for the fourteenth Scientific Committee meeting (SC14). Sources: [JM02](https://www.sprfmo.int/assets/Meetings/02-SC/14th-SC-2026/Jack-Mackerel/SC14-JM-02-Report-of-the-Jack-Mackerel-Benchmark-Workshop-SCW16a.pdf), [JM03](https://www.sprfmo.int/assets/Meetings/02-SC/14th-SC-2026/Jack-Mackerel/SC14-JM-03-Report-of-the-Jack-Mackerel-MSE-Workshop-SCW17.pdf).
+The 2026 work has examined the evidence used to assess the stock and tested possible rules for future management. Two workshops brought that work together: a benchmark review of data and assessment methods in May, and a management strategy evaluation workshop in June. Their reports are now among the papers prepared for the fourteenth Scientific Committee meeting (SC14). Sources: [JM02](https://sprfmo.github.io/JM_SCW_prep/JMWG-Benchmark-Meeting-report-2026.html), [JM03](https://sprfmo.github.io/scw17/SCW17-MSE-Workshop-report.html).
 
 ## Why it matters
 

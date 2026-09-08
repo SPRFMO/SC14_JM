@@ -1,0 +1,250 @@
+[
+  {
+    "document": "JM02",
+    "pdf": "https://www.sprfmo.int/assets/Meetings/02-SC/14th-SC-2026/Jack-Mackerel/SC14-JM-02-Report-of-the-Jack-Mackerel-Benchmark-Workshop-SCW16a.pdf",
+    "html": "https://sprfmo.github.io/JM_SCW_prep/JMWG-Benchmark-Meeting-report-2026.html",
+    "occurrences": 7,
+    "status": "Verified HTML reading version; exact submitted-version equivalence not asserted",
+    "verification": {
+      "url": "https://sprfmo.github.io/JM_SCW_prep/JMWG-Benchmark-Meeting-report-2026.html",
+      "ok": true,
+      "title": [
+        "JMWG Benchmark Meeting Report 2026 \u2013 SPRFMO Jack Mackerel Working Group"
+      ],
+      "html_links": [],
+      "error": ""
+    }
+  },
+  {
+    "document": "JM03",
+    "pdf": "https://www.sprfmo.int/assets/Meetings/02-SC/14th-SC-2026/Jack-Mackerel/SC14-JM-03-Report-of-the-Jack-Mackerel-MSE-Workshop-SCW17.pdf",
+    "html": "https://sprfmo.github.io/scw17/SCW17-MSE-Workshop-report.html",
+    "occurrences": 7,
+    "status": "Verified HTML reading version; exact submitted-version equivalence not asserted",
+    "verification": {
+      "url": "https://sprfmo.github.io/scw17/SCW17-MSE-Workshop-report.html",
+      "ok": true,
+      "title": [
+        "SPRFMO SCW17 MSE Workshop Report \u2013 SPRFMO SCW17"
+      ],
+      "html_links": [],
+      "error": ""
+    }
+  },
+  {
+    "document": "JM04",
+    "pdf": "https://www.sprfmo.int/assets/Meetings/02-SC/14th-SC-2026/Jack-Mackerel/SC14-JM-04-Independent-desk-review-of-the-SPRFMO-JM-MSE.pdf",
+    "html": null,
+    "occurrences": 5,
+    "status": "No verified HTML counterpart found; original PDF retained",
+    "verification": null
+  },
+  {
+    "document": "JM01",
+    "pdf": "https://www.sprfmo.int/assets/Meetings/02-SC/14th-SC-2026/Jack-Mackerel/SC14-JM01-Catch-history-of-Trachurus-murphyi.pdf",
+    "html": null,
+    "occurrences": 2,
+    "status": "No verified HTML counterpart found; original PDF retained",
+    "verification": null
+  },
+  {
+    "document": "JM05",
+    "pdf": "https://www.sprfmo.int/assets/Meetings/02-SC/14th-SC-2026/Jack-Mackerel/SC14-JM05_rev1-Guide-to-the-Jack-Mackerel-MSE-papers-for-SC14.pdf",
+    "html": "https://sprfmo.github.io/jmMSE26/sc14/index.html",
+    "occurrences": 2,
+    "status": "Verified HTML reading version; exact submitted-version equivalence not asserted",
+    "verification": {
+      "url": "https://sprfmo.github.io/jmMSE26/sc14/index.html",
+      "ok": true,
+      "title": [
+        "Guide to the Jack Mackerel MSE papers for SC14 \u2013 SPRFMO Jack Mackerel CMPs"
+      ],
+      "html_links": [],
+      "error": ""
+    }
+  },
+  {
+    "document": "JM06",
+    "pdf": "https://www.sprfmo.int/assets/Meetings/02-SC/14th-SC-2026/Jack-Mackerel/SC14-JM06-Jack-mackerel-MSE-questions-and-tasks-for-SC14.pdf",
+    "html": "https://sprfmo.github.io/jmMSE26/sc14/decision-paper.html",
+    "occurrences": 7,
+    "status": "Verified HTML reading version; exact submitted-version equivalence not asserted",
+    "verification": {
+      "url": "https://sprfmo.github.io/jmMSE26/sc14/decision-paper.html",
+      "ok": true,
+      "title": [
+        "Jack mackerel MSE: questions and tasks for SC14 \u2013 SPRFMO Jack Mackerel CMPs"
+      ],
+      "html_links": [],
+      "error": ""
+    }
+  },
+  {
+    "document": "JM07",
+    "pdf": "https://www.sprfmo.int/assets/Meetings/02-SC/14th-SC-2026/Jack-Mackerel/SC14-JM07-Jack-Mackerel-Management-Strategy-Evaluation-for-SC14.pdf",
+    "html": "https://sprfmo.github.io/jmMSE26/evidence/sc14-mse-report.html",
+    "occurrences": 6,
+    "status": "Verified HTML reading version; exact submitted-version equivalence not asserted",
+    "verification": {
+      "url": "https://sprfmo.github.io/jmMSE26/evidence/sc14-mse-report.html",
+      "ok": true,
+      "title": [
+        "Jack mackerel management strategy evaluation for SC14 \u2013 SPRFMO Jack Mackerel CMPs"
+      ],
+      "html_links": [],
+      "error": ""
+    }
+  },
+  {
+    "document": "JM08",
+    "pdf": "https://www.sprfmo.int/assets/Meetings/02-SC/14th-SC-2026/Jack-Mackerel/SC14-JM08-Jack-Mackerel-MSE-Technical-Information-and-Work-Remaining.pdf",
+    "html": "https://sprfmo.github.io/jmMSE26/sc14/technical-paper.html",
+    "occurrences": 3,
+    "status": "Verified HTML reading version; exact submitted-version equivalence not asserted",
+    "verification": {
+      "url": "https://sprfmo.github.io/jmMSE26/sc14/technical-paper.html",
+      "ok": true,
+      "title": [
+        "Jack mackerel MSE: technical information and work remaining \u2013 SPRFMO Jack Mackerel CMPs"
+      ],
+      "html_links": [],
+      "error": ""
+    }
+  },
+  {
+    "document": "JM09",
+    "pdf": "https://www.sprfmo.int/assets/Meetings/02-SC/14th-SC-2026/Jack-Mackerel/SC14-JM09-Response-to-the-Independent-SC14-MSE-Desk-Review.pdf",
+    "html": "https://sprfmo.github.io/jmMSE26/sc14/review-response.html",
+    "occurrences": 5,
+    "status": "Verified HTML reading version; exact submitted-version equivalence not asserted",
+    "verification": {
+      "url": "https://sprfmo.github.io/jmMSE26/sc14/review-response.html",
+      "ok": true,
+      "title": [
+        "Response to the independent SC14 MSE desk review \u2013 SPRFMO Jack Mackerel CMPs"
+      ],
+      "html_links": [],
+      "error": ""
+    }
+  },
+  {
+    "document": "JM10",
+    "pdf": "https://www.sprfmo.int/assets/Meetings/02-SC/14th-SC-2026/Jack-Mackerel/SC14-JM10-Standardization-of-commercial-CPUE-for-CJM-rs.pdf",
+    "html": null,
+    "occurrences": 3,
+    "status": "No verified HTML counterpart found; original PDF retained",
+    "verification": null
+  },
+  {
+    "document": "JM11",
+    "pdf": "https://www.sprfmo.int/assets/Meetings/02-SC/14th-SC-2026/Jack-Mackerel/SC14-JM11-Hydroacoustic-assessment-of-CJM-in-the-northern-zone-of-Chile-2026.pdf",
+    "html": null,
+    "occurrences": 2,
+    "status": "No verified HTML counterpart found; original PDF retained",
+    "verification": null
+  },
+  {
+    "document": "JM12",
+    "pdf": "https://www.sprfmo.int/assets/Meetings/02-SC/14th-SC-2026/Jack-Mackerel/SC14-JM12_rev1-Management-Strategies-Evaluation-for-the-Jack-Mackerel-Fishery.pdf",
+    "html": null,
+    "occurrences": 4,
+    "status": "No verified HTML counterpart found; original PDF retained",
+    "verification": null
+  },
+  {
+    "document": "JM13",
+    "pdf": "https://www.sprfmo.int/assets/Meetings/02-SC/14th-SC-2026/Jack-Mackerel/SC14-JM13_rev1-Improving-Hydroacoustic-Assessment-of-Chilean-Jack-Mackerel.pdf",
+    "html": null,
+    "occurrences": 2,
+    "status": "No verified HTML counterpart found; original PDF retained",
+    "verification": null
+  },
+  {
+    "document": "JM14",
+    "pdf": "https://www.sprfmo.int/assets/Meetings/02-SC/14th-SC-2026/Jack-Mackerel/SC14-JM14-A-spatio-temporal-approach-for-standardizing-acoustic-survey-indices-of-CJM.pdf",
+    "html": null,
+    "occurrences": 2,
+    "status": "No verified HTML counterpart found; original PDF retained",
+    "verification": null
+  },
+  {
+    "document": "JM15",
+    "pdf": "https://www.sprfmo.int/assets/Meetings/02-SC/14th-SC-2026/Jack-Mackerel/SC14-JM15-Update-CJM-CPUE-Index-based-on-fishing-trip-database-and-Acoustic-Biomass-Estimates.pdf",
+    "html": null,
+    "occurrences": 4,
+    "status": "No verified HTML counterpart found; original PDF retained",
+    "verification": null
+  },
+  {
+    "document": "JM16",
+    "pdf": "https://www.sprfmo.int/assets/Meetings/02-SC/14th-SC-2026/Jack-Mackerel/SC14-JM16-Spatiotemporal-Dynamics-of-the-CJM-Fishery-off-Central-Southern-Chile-During-202026.pdf",
+    "html": null,
+    "occurrences": 2,
+    "status": "No verified HTML counterpart found; original PDF retained",
+    "verification": null
+  },
+  {
+    "document": "JM17",
+    "pdf": "https://www.sprfmo.int/assets/Meetings/02-SC/14th-SC-2026/Jack-Mackerel/SC14-JM17-Implementation-of-an-informed-creep-correction-into-the-CJM-CPUE-index.pdf",
+    "html": null,
+    "occurrences": 2,
+    "status": "No verified HTML counterpart found; original PDF retained",
+    "verification": null
+  },
+  {
+    "document": "JM18",
+    "pdf": "https://www.sprfmo.int/assets/Meetings/02-SC/14th-SC-2026/Jack-Mackerel/SC14-JM18-JM-acoustic-density-index-in-the-central-north-acoustic-surveys.pdf",
+    "html": null,
+    "occurrences": 2,
+    "status": "No verified HTML counterpart found; original PDF retained",
+    "verification": null
+  },
+  {
+    "document": "JM19",
+    "pdf": "https://www.sprfmo.int/assets/Meetings/02-SC/14th-SC-2026/Jack-Mackerel/SC14-JM19-Update-of-Chilean-Jack-Mackerel-CPUE-abundance-index-estimated.pdf",
+    "html": null,
+    "occurrences": 3,
+    "status": "No verified HTML counterpart found; original PDF retained",
+    "verification": null
+  },
+  {
+    "document": "JM20",
+    "pdf": "https://www.sprfmo.int/assets/Meetings/02-SC/14th-SC-2026/Jack-Mackerel/SC14-JM20-PFA-selfsampling-report-for-the-SPRFMO-Science-Committee-2026.pdf",
+    "html": null,
+    "occurrences": 2,
+    "status": "No verified HTML counterpart found; original PDF retained",
+    "verification": null
+  },
+  {
+    "document": "JM21",
+    "pdf": "https://www.sprfmo.int/assets/Meetings/02-SC/14th-SC-2026/Jack-Mackerel/SC14-JM21-PFA-2026-SPRFMO-offshore-fleet-CPUE-standardisation-2026.pdf",
+    "html": null,
+    "occurrences": 2,
+    "status": "No verified HTML counterpart found; original PDF retained",
+    "verification": null
+  },
+  {
+    "document": "Doc01",
+    "pdf": "https://www.sprfmo.int/assets/Meetings/02-SC/14th-SC-2026/Plenary/SC14-Doc01-SC14-Provisional-Agenda.pdf",
+    "html": null,
+    "occurrences": 1,
+    "status": "No verified HTML counterpart found; original PDF retained",
+    "verification": null
+  },
+  {
+    "document": "Doc02",
+    "pdf": "https://www.sprfmo.int/assets/Meetings/02-SC/14th-SC-2026/Plenary/SC14-Doc02-Annotated-Provisional-SC14-Agenda-v2.pdf",
+    "html": null,
+    "occurrences": 7,
+    "status": "No verified HTML counterpart found; original PDF retained",
+    "verification": null
+  },
+  {
+    "document": "Doc04",
+    "pdf": "https://www.sprfmo.int/assets/Meetings/02-SC/14th-SC-2026/Plenary/SC14-Doc04_rev2-SC14-Meeting-Schedule_24-Aug.pdf",
+    "html": null,
+    "occurrences": 2,
+    "status": "No verified HTML counterpart found; original PDF retained",
+    "verification": null
+  }
+]

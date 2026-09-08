@@ -8,9 +8,9 @@ These distinctions matter when advice is used. A paper can propose a method; a w
 
 | Record | What it tells us | Decision status |
 |---|---|---|
-| May benchmark report | Reviews data, assessment methods and further work. [JM02](https://www.sprfmo.int/assets/Meetings/02-SC/14th-SC-2026/Jack-Mackerel/SC14-JM-02-Report-of-the-Jack-Mackerel-Benchmark-Workshop-SCW16a.pdf) | Workshop conclusions and recommendations. |
-| June management strategy evaluation (MSE) workshop report | Records development of management strategy evaluation and follow-up work. [JM03](https://www.sprfmo.int/assets/Meetings/02-SC/14th-SC-2026/Jack-Mackerel/SC14-JM-03-Report-of-the-Jack-Mackerel-MSE-Workshop-SCW17.pdf) | Workshop conclusions and recommendations. |
-| Independent review and authors’ response | Sets out concerns and the authors’ response to them. [JM04](https://www.sprfmo.int/assets/Meetings/02-SC/14th-SC-2026/Jack-Mackerel/SC14-JM-04-Independent-desk-review-of-the-SPRFMO-JM-MSE.pdf), [JM09](https://www.sprfmo.int/assets/Meetings/02-SC/14th-SC-2026/Jack-Mackerel/SC14-JM09-Response-to-the-Independent-SC14-MSE-Desk-Review.pdf) | Reviewer findings and authors’ responses for consideration. |
+| May benchmark report | Reviews data, assessment methods and further work. [JM02](https://sprfmo.github.io/JM_SCW_prep/JMWG-Benchmark-Meeting-report-2026.html) | Workshop conclusions and recommendations. |
+| June management strategy evaluation (MSE) workshop report | Records development of management strategy evaluation and follow-up work. [JM03](https://sprfmo.github.io/scw17/SCW17-MSE-Workshop-report.html) | Workshop conclusions and recommendations. |
+| Independent review and authors’ response | Sets out concerns and the authors’ response to them. [JM04](https://www.sprfmo.int/assets/Meetings/02-SC/14th-SC-2026/Jack-Mackerel/SC14-JM-04-Independent-desk-review-of-the-SPRFMO-JM-MSE.pdf), [JM09](https://sprfmo.github.io/jmMSE26/sc14/review-response.html) | Reviewer findings and authors’ responses for consideration. |
 | SC14 annotated agenda | Sets out the questions the Committee intends to consider. [Doc02](https://www.sprfmo.int/assets/Meetings/02-SC/14th-SC-2026/Plenary/SC14-Doc02-Annotated-Provisional-SC14-Agenda-v2.pdf) | Agenda for intended discussions. |
 
 ## Why it matters for management

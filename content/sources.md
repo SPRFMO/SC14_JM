@@ -2,24 +2,26 @@
 
 **Which papers support the explanations in this guide?**
 
-The links below open papers on the **official SPRFMO website**. Links between the guide’s own pages stay within the guide. Readers can follow the public research links directly; access to Jim’s computer is unnecessary for those papers.
+Document links open verified **HTML reading versions** on SPRFMO working-group websites where available. Papers without a verified HTML counterpart retain their **official SPRFMO PDF** links. Links between the guide’s own pages stay within the guide.
 
 ## Which versions are linked?
 
-The guide links to the revised JM05, JM12 and JM13 papers and the revised meeting schedule. These are submitted papers and planned meeting documents. Their scientific findings and recommendations retain the status described on the topic pages.
+HTML reading versions are linked for JM02, JM03 and JM05–JM09. These working publications may be updated separately from the submitted SC14 PDFs; they are not asserted to reproduce the exact submitted revision. Consult the official SC14 document page for the submitted versions, including revised JM05, JM12, JM13 and the meeting schedule. Scientific findings and recommendations retain the status described on the topic pages.
+
+No verified HTML counterpart was found for JM01, JM04, JM10–JM21, Doc01, Doc02 or Doc04 (checked 8 September 2026). Their PDF links remain available below.
 
 [Browse the official SC14 document page](https://www.sprfmo.int/meetings/scientific-committee/14th-sc-2026).
 
 ## Workshops and management evaluation
 
-- **Benchmark workshop in Lima** — [Read JM02 on SPRFMO (PDF)](https://www.sprfmo.int/assets/Meetings/02-SC/14th-SC-2026/Jack-Mackerel/SC14-JM-02-Report-of-the-Jack-Mackerel-Benchmark-Workshop-SCW16a.pdf).
-- **MSE workshop in Wageningen** — [Read JM03 on SPRFMO (PDF)](https://www.sprfmo.int/assets/Meetings/02-SC/14th-SC-2026/Jack-Mackerel/SC14-JM-03-Report-of-the-Jack-Mackerel-MSE-Workshop-SCW17.pdf).
+- **Benchmark workshop in Lima** — [Read JM02 online (HTML)](https://sprfmo.github.io/JM_SCW_prep/JMWG-Benchmark-Meeting-report-2026.html).
+- **MSE workshop in Wageningen** — [Read JM03 online (HTML)](https://sprfmo.github.io/scw17/SCW17-MSE-Workshop-report.html).
 - **Independent review of the MSE** — [Read JM04 on SPRFMO (PDF)](https://www.sprfmo.int/assets/Meetings/02-SC/14th-SC-2026/Jack-Mackerel/SC14-JM-04-Independent-desk-review-of-the-SPRFMO-JM-MSE.pdf).
-- **Guide to the MSE papers — revised** — [Read JM05 on SPRFMO (PDF)](https://www.sprfmo.int/assets/Meetings/02-SC/14th-SC-2026/Jack-Mackerel/SC14-JM05_rev1-Guide-to-the-Jack-Mackerel-MSE-papers-for-SC14.pdf).
-- **Questions and tasks for the MSE discussion** — [Read JM06 on SPRFMO (PDF)](https://www.sprfmo.int/assets/Meetings/02-SC/14th-SC-2026/Jack-Mackerel/SC14-JM06-Jack-mackerel-MSE-questions-and-tasks-for-SC14.pdf).
-- **Main jack mackerel MSE study** — [Read JM07 on SPRFMO (PDF)](https://www.sprfmo.int/assets/Meetings/02-SC/14th-SC-2026/Jack-Mackerel/SC14-JM07-Jack-Mackerel-Management-Strategy-Evaluation-for-SC14.pdf).
-- **MSE technical information and remaining work** — [Read JM08 on SPRFMO (PDF)](https://www.sprfmo.int/assets/Meetings/02-SC/14th-SC-2026/Jack-Mackerel/SC14-JM08-Jack-Mackerel-MSE-Technical-Information-and-Work-Remaining.pdf).
-- **Authors’ response to the independent review** — [Read JM09 on SPRFMO (PDF)](https://www.sprfmo.int/assets/Meetings/02-SC/14th-SC-2026/Jack-Mackerel/SC14-JM09-Response-to-the-Independent-SC14-MSE-Desk-Review.pdf).
+- **Guide to the MSE papers — revised** — [Read JM05 online (HTML)](https://sprfmo.github.io/jmMSE26/sc14/index.html).
+- **Questions and tasks for the MSE discussion** — [Read JM06 online (HTML)](https://sprfmo.github.io/jmMSE26/sc14/decision-paper.html).
+- **Main jack mackerel MSE study** — [Read JM07 online (HTML)](https://sprfmo.github.io/jmMSE26/evidence/sc14-mse-report.html).
+- **MSE technical information and remaining work** — [Read JM08 online (HTML)](https://sprfmo.github.io/jmMSE26/sc14/technical-paper.html).
+- **Authors’ response to the independent review** — [Read JM09 online (HTML)](https://sprfmo.github.io/jmMSE26/sc14/review-response.html).
 - **Complementary management evaluation — revised** — [Read JM12 on SPRFMO (PDF)](https://www.sprfmo.int/assets/Meetings/02-SC/14th-SC-2026/Jack-Mackerel/SC14-JM12_rev1-Management-Strategies-Evaluation-for-the-Jack-Mackerel-Fishery.pdf).
 
 ## Catches, surveys and biological sampling
@@ -45,7 +47,7 @@ The guide links to the revised JM05, JM12 and JM13 papers and the revised meetin
 
 ## Workshop reports to read online
 
-These working-group publications provide a convenient web reading format. The submitted SC14 papers above identify the meeting versions used for this guide.
+These are the same HTML workshop reports linked above. The official SC14 document page identifies the submitted meeting versions used for this guide.
 
 - [Read the Lima benchmark report on the working-group website](https://sprfmo.github.io/JM_SCW_prep/JMWG-Benchmark-Meeting-report-2026.html).
 - [Read the Wageningen MSE workshop report on the working-group website](https://sprfmo.github.io/scw17/SCW17-MSE-Workshop-report.html).
