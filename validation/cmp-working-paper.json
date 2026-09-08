@@ -1,0 +1,10 @@
+{
+  "local_file_links_checked": 166,
+  "failures": [],
+  "paper_figures": 7,
+  "worm_iterations": 15,
+  "simulations_per_cmp_om_component": 500,
+  "screening_checks": "passed",
+  "browser_scorecards": "all-eight and shortlist render and recalculate; percentage formatting and best=100 checked",
+  "accessibility": "semantic headings and tables, seven figure alt texts and loaded images verified; screen-reader and formal conformance not tested"
+}

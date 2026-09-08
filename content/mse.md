@@ -1,5 +1,11 @@
 # Which management rules may work best?
 
+## New working comparison: narrowing the CMP set
+
+The [8 September working paper](papers/cmp-screening-2026/cmp-screening-working-paper.html) compares HS−20, HS−30 and PR−20 after an explicit screen of close alternatives and poorer reference-OM performers. It includes trade-off plots across OMs and 15 matched SSB and catch trajectories. The shortlist is exploratory, not an agreed selection, and the paper retains the reasons and data for omitted CMPs.
+
+Try the [all-eight-CMP scorecard](papers/cmp-screening-2026/scorecard-all.html) or the [three-CMP scorecard](papers/cmp-screening-2026/scorecard-shortlist.html). Within each indicator, the best selected CMP scores 100 and others are scored relative to it. Raw values, zero-best exceptions and chosen weights remain visible.
+
 **How can we choose rules that support catches while performing acceptably when the future is uncertain?**
 
 Management strategy evaluation (**MSE**) tests management procedures in simulated fisheries. A procedure specifies how information is used to make a decision, such as a catch recommendation. The simulation repeats the process over time so that the consequences of earlier decisions affect later ones.

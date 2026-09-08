@@ -24,3 +24,8 @@ The workshop reports record conclusions and recommendations at workshop level. *
 ## What remains uncertain?
 
 The strongest coverage here is May–September 2026. Earlier research and management decisions still need to be added. The record of SC14 discussions will be updated when meeting reports or agreed text are available. The information currently included was assembled on 7 September 2026.
+
+
+## New CMP working paper
+
+[Compare a smaller set of management rules](papers/cmp-screening-2026/cmp-screening-working-paper.html): explicit screening, best-relative scorecards, trade-offs across OMs and 15-simulation SSB/catch worms. This is a working comparison for discussion, not a management decision.

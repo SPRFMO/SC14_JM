@@ -55,3 +55,9 @@ These are the same HTML workshop reports linked above. The official SC14 documen
 ## Further history and meeting conclusions
 
 Earlier studies, Commission decisions and SC14’s agreed conclusions are the next additions to locate and review. [See the historical priorities](history.html). JM01 is now linked for access; its catch figures await review for inclusion in the narrative.
+
+
+## Additional working analysis — 8 September 2026
+
+- [Narrowing the jack mackerel CMP comparison](papers/cmp-screening-2026/cmp-screening-working-paper.html) — new working paper, separate from the formally submitted SC14 papers.
+- [All eight CMPs: best-relative scorecard](papers/cmp-screening-2026/scorecard-all.html) and [three retained CMPs](papers/cmp-screening-2026/scorecard-shortlist.html).
