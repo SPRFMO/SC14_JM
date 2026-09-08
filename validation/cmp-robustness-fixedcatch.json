@@ -1,0 +1,10 @@
+{
+  "local_links_checked": 24,
+  "missing_links": [],
+  "fixed_catch_unique_simulations": 15,
+  "fixed_catch_plot": "SSB only, 2025\u20132050",
+  "shortlist_browser_om_components_checked": 14,
+  "browser_errors": 0,
+  "reference_fixed_dynamic_P_green": 0.603,
+  "risk_crosscheck": "nine focused CMP/OM cases agree within 1e-12"
+}

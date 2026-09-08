@@ -28,4 +28,4 @@ The strongest coverage here is May–September 2026. Earlier research and manage
 
 ## New CMP working paper
 
-[Compare a smaller set of management rules](papers/cmp-screening-2026/cmp-screening-working-paper.html): explicit screening, best-relative scorecards, trade-offs across OMs and 15-simulation SSB/catch worms. This is a working comparison for discussion, not a management decision.
+[Compare a smaller set of management rules](papers/cmp-screening-2026/cmp-screening-working-paper.html): explicit screening, OM-selectable best-relative scorecards, recruitment-crash and OM21 trade-offs, a fixed-catch reference benchmark and 15-simulation SSB/catch worms. This is a working comparison for discussion, not a management decision.

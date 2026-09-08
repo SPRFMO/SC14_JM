@@ -14,10 +14,10 @@ format:
     fig-width: 10
 ---
 
-[Back to the jack mackerel wiki](../../mse.html) · [All eight CMPs: best-relative scorecard](scorecard-all.html) · [Three retained CMPs: best-relative scorecard](scorecard-shortlist.html)
+[Back to the jack mackerel wiki](../../mse.html) · [All CMPs and fixed catch: best-relative scorecard](scorecard-all.html) · [Retained CMPs and fixed catch: best-relative scorecard](scorecard-shortlist.html)
 
 ::: {.callout-note title="Status and scope"}
-This is a working comparison for discussion, not an agreed CMP selection or a new assessment. It uses the saved 500-simulation outputs, with no retuning or changes to operating models. Screening narrows the reference-OM presentation; robustness results remain separate and can justify reinstating an omitted CMP. The full set remains available in the scorecard and downloadable data.
+This is a working comparison for discussion, not an agreed CMP selection or a new assessment. It uses the saved 500-simulation outputs, with no retuning or changes to operating models. This revision focuses on the recruitment-crash OM and OM21 and adds the supplied fixed-catch reference benchmark. Screening narrows the reference-OM presentation; robustness results remain separate and can justify reinstating an omitted CMP. The full set remains available in the scorecard and downloadable data.
 :::
 
 ## Findings for discussion
@@ -68,7 +68,9 @@ The table retains the omitted CMPs so the screen can be challenged. C is thousan
 
 ## Scorecards: best 100, others relative to it
 
-Use the [all-eight-CMP scorecard](scorecard-all.html) to review the original set and the [retained-set scorecard](scorecard-shortlist.html) for the three-way comparison. Both open with **best-relative scaling** and equal weights on the five screening indicators. Users can change CMPs, indicators, scaling and weights. The aggregate score is illustrative; it is not used to generate the shortlist.
+Use the [all-CMP scorecard](scorecard-all.html) to review the original set and the [retained-set scorecard](scorecard-shortlist.html) for the retained-set comparison and fixed-catch reference benchmark. Both open with **best-relative scaling** and equal weights on the available screening indicators. Use **Choose an OM** to select the reference or any of the nine robustness OMs, then choose a **stock component** for a two-stock OM. Scores are recomputed within the selected OM/component; no OMs or stock components are pooled. Recruitment crash and OM21 appear near the top of the selector.
+
+The fixed-catch benchmark is available in the reference selection only. No fixed-catch robustness results were supplied. The 270 kt whole-stock catch threshold is omitted from two-stock components. When fixed catch is selected, the two vulnerable-biomass indicators are unavailable because they have not been extracted for that supplied run; deselect it to restore those choices. Each scorecard displays only indicators shared by the selected CMPs. The fixed-catch snapshot uses its own stored reference points and reconstructed dynamic B0, preserving its reported tuning convention. Users can change CMPs, indicators, scaling and weights. The aggregate score is illustrative; it is not used to generate the shortlist.
 
 For a higher-is-better indicator, the score is $100V_i/\max_j(V_j)$. For a lower-is-better indicator, it is $100\min_j(V_j)/V_i$. The best value therefore scores 100. Scores are recalculated for the selected CMP set, so scores from different selections should not be compared as though their reference were fixed.
 
@@ -84,7 +86,45 @@ The [existing general best-relative explorer](https://sprfmo.github.io/jmMSE26/a
 
 The reference plots expose the cost of concentrating on one outcome. More stable catches, higher catch and lower depletion risk need not select the same CMP. Overlapping simulation ranges are expected and do not erase paired differences between rules. The shortlist should be revisited if a different time horizon, screening tolerance or biological constraint is agreed.
 
-## Does the contrast persist under alternative OMs?
+## Focused robustness: recruitment crash and OM21
+
+The requested comparison keeps **HS−20, HS−30 and PR−20** and focuses on
+**om11_2 (h1_0.16_lowrec, recruitment crash)** and **om21 (h2_0.16, two stocks)**.
+The existing om11_2 uses the saved `collf` recruitment-deviation scenario; it
+has not been regenerated or retuned here. OM21 retains separate North and
+Southern components. The reference OM is included alongside them for orientation.
+
+![Catch and interannual variability for the reference OM, recruitment crash and both components of OM21.](focused-robustness-IACC.png){#fig-focus-iacc fig-alt="Four panels compare HS minus 20, HS minus 30 and PR minus 20. Catch is horizontal, interannual catch change vertical, with medians and interquartile ranges over 500 simulations."}
+
+![Catch and static-reference SSB status for the same focused robustness set.](focused-robustness-SBMSY.png){#fig-focus-ssb fig-alt="Four panels display median catch versus median SSB divided by static SSBMSY for the reference stock, recruitment-crash stock, and the two OM21 components. Both axes have interquartile bars."}
+
+The following risk table instead uses **dynamic BMSY** for green status and
+**8% dynamic B0** for the previous Blim, separately for each biological
+component. These are proportions of the 5,000 simulation-years per CMP and
+component over 2041–2050. They are not probabilities that both stocks jointly
+meet a target.
+
+{{< include focused-robustness-risk.md >}}
+
+Under recruitment crash, PR−20 has the highest dynamic-green frequency of
+these three CMPs (54.5%) and the lowest below-Blim frequency (5.0%), while the
+hockey-stick CMPs retain lower catch variability. In OM21, the Southern
+component's green probability is highest under PR−20 (90.4%). The Northern
+component has zero green probability under all three, with below-Blim
+frequencies of roughly 14–16%. A favourable Southern-stock result therefore
+cannot establish satisfactory performance for the two-stock system.
+
+![Fifteen matched SSB and catch trajectories under recruitment crash.](worms-15-om11_2.png){#fig-worm-rec-crash fig-alt="Six panels show the same 15 posterior-draw IDs for SSB and catch under HS minus 20, HS minus 30 and PR minus 20 in the recruitment-crash OM. Low trajectories remain included."}
+
+![Fifteen matched trajectories for each component of OM21.](worms-15-om21.png){#fig-worm-om21 fig-alt="Twelve panels separate Northern and Southern SSB and catch for the three CMPs. The same 15 draw IDs are retained across CMPs; scales are shared within each row."}
+
+[Focused trade-off data](focused-robustness-tradeoffs.csv) ·
+[Dynamic risk results](focused-robustness-risk.csv) ·
+[Robustness worm trajectories](focused-robustness-worms.csv)
+
+<details>
+<summary>Full robustness plots and interpretation across all nine OMs</summary>
+
 
 The reference screen is not automatically generalized to robustness OMs. The following plots keep each OM and stock component separate. Panel scales vary to make within-panel comparisons legible; compare numerical axes before comparing distances across panels. No probabilities or weights have been assigned to the OMs.
 
@@ -107,6 +147,9 @@ meaningful ranking. Its raw values remain in the downloadable data.
 
 All eight CMPs' OM-specific summaries are retained in the [complete trade-off data](tradeoff-summary-all-cmps.csv). An omitted CMP should be reinstated if the working group identifies a material robustness advantage not captured by the reference screen. This paper does not declare an across-OM winner, and its tolerance-based screening is not a statistical test of equivalence or dominance.
 
+
+</details>
+
 ## Fifteen matched simulation worms
 
 The 15 iteration IDs are reused from the earlier paired reference figure: **37, 65, 110, 151, 158, 165, 177, 186, 246, 327, 344, 348, 367, 397 and 498**. The same IDs and colours are used in all six panels. They were not reselected to favour the retained CMPs or remove poor trajectories. Matching an iteration ID preserves the posterior-draw comparison; this alone does not establish identical stochastic observation innovations across differently seeded CMP tuning runs.
@@ -116,6 +159,48 @@ The 15 iteration IDs are reused from the earlier paired reference figure: **37, 
 These worms illustrate timing, persistence and contrasting paths, not the probability of an outcome. They represent 15 of 500 simulations and are not uncertainty envelopes. The full-distribution trade-off summaries and low-biomass frequencies remain the basis for comparing typical performance and risk.
 
 [Iteration IDs](worm-iterations.csv) · [SSB and catch trajectories](worm-trajectories.csv)
+
+## Fixed-catch reference benchmark
+
+The supplied `tunfixc.rds` is an `FLmse` reference-OM result with **500
+simulations**, projection years 2025–2050, and `fixedC.hcr` advice of **1,525
+thousand tonnes per year**. It is intended to be tuned to the same 60% dynamic
+green objective as the other CMPs. Reconstructing its unfished trajectory with
+the repository's zero-catch projection, using the supplied run's own initial
+state, gives **P(green) = 60.3% over 2041–2050**. This is consistent with the
+reported target. The original tuning trace and stopping tolerance are not
+stored in the supplied result, so this checks the achieved probability,
+not the full tuning history. Using static BMSY instead gives 57.8%.
+
+{{< include fixed-catch-summary.md >}}
+
+The fixed advice should not be confused with fixed realized catch. Recorded
+implementation-adjusted targets vary from about **1,517 to 1,593 thousand
+tonnes**; the mean catch within each simulation therefore varies, as do
+realized annual changes. The supplied run includes implementation adjustments,
+whereas the current reference tuning call for the three CMPs did not pass
+the stochastic implementation-error model.
+
+The initial numbers-at-age, mortality, maturity, weights and stock–recruit
+parameters match the current reference OM. However, the projected recruitment
+deviations and stored MSY reference points are not identical. For example,
+median stored FMSY is about **0.298** in the fixed-catch run and **0.334** in
+the current reference bundle. The scorecard includes it as a reference
+benchmark using its own saved reference points; this is not a controlled
+paired test of changing only the management procedure. A matched rerun would
+be needed to attribute every difference to the HCR alone.
+
+![SSB trajectories for 15 unique simulations from the supplied fixed-catch reference run.](worms-15-fixed-catch.png){#fig-worm-fixed fig-alt="One panel shows SSB for 15 distinct simulations of the supplied fixed-catch reference run from 2025 to 2050, including trajectories that fall sharply."}
+
+The same 15 display IDs are used for orientation, but their recruitment
+paths are not assumed to match those in the current CMP runs. No fixed-catch
+results were supplied for recruitment crash or OM21; none have been invented
+or extrapolated into the robustness scorecards.
+
+[Fixed-catch summary](fixed-catch-summary.csv) ·
+[Stored reference-point comparison](fixed-catch-reference-point-check.csv) ·
+[Recorded implementation targets](fixed-catch-implementation-targets.csv) ·
+[Inspection and reconstruction provenance](robustness-fixedcatch-provenance.txt)
 
 ## Decisions this paper can support
 
@@ -127,7 +212,7 @@ These worms illustrate timing, persistence and contrasting paths, not the probab
 
 ## Reproducibility and scope of validation
 
-The new script `R/build_cmp_screening_paper.R` reads the saved reference and robustness performance tables from `output/candidate-performance-500/`, and the reference runs from `jmMSE-500-refine/model/tune/refine_500_from_100/runs.rds`. No simulations were rerun. The current quilt supplies the filtered catch-cut and dynamic-B0 risk values. Input checksums and the R session are recorded in [provenance](provenance.txt). This paper's [editable Quarto source](cmp-screening-working-paper.qmd) and companion data permit revision without editing the displayed figures manually.
+The base script `R/build_cmp_screening_paper.R` reads the saved reference and robustness performance tables from `output/candidate-performance-500/`, and the reference runs from `jmMSE-500-refine/model/tune/refine_500_from_100/runs.rds`. No CMP simulations were rerun. A zero-catch counterfactual was reconstructed only to check dynamic reference points for the fixed-catch handoff. The current quilt supplies the filtered catch-cut and dynamic-B0 risk values. The extension `R/extend_cmp_paper_robustness_fixedcatch.R` reads the two robustness checkpoints and inspects the unchanged Downloads input. `R/build_cmp_om_scorecards.R`, `R/add_fixedcatch_scorecard.R` and `R/configure_cmp_scorecard_oms.py` rebuild the OM-aware scorecard snapshots and interfaces. Input checksums and the R session are recorded in [provenance](provenance.txt). This paper's [editable Quarto source](cmp-screening-working-paper.qmd) and companion data permit revision without editing the displayed figures manually.
 
 Validation checks require 500 iterations for every OM/CMP/component summary, complete 15-by-26-year worm panels, common worm IDs, documented mass units, and direct numerical confirmation of every screening comparison. The HTML uses semantic headings and tables, numerical data alternatives, captions, and figure descriptions. Screen-reader testing and formal accessibility certification have not been performed. Saved model dynamics and reference-point conventions are inherited; this is an output-analysis paper, not a new verification of the assessment or projection solver.
 

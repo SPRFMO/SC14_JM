@@ -2,9 +2,9 @@
 
 ## New working comparison: narrowing the CMP set
 
-The [8 September working paper](papers/cmp-screening-2026/cmp-screening-working-paper.html) compares HS−20, HS−30 and PR−20 after an explicit screen of close alternatives and poorer reference-OM performers. It includes trade-off plots across OMs and 15 matched SSB and catch trajectories. The shortlist is exploratory, not an agreed selection, and the paper retains the reasons and data for omitted CMPs.
+The [8 September working paper](papers/cmp-screening-2026/cmp-screening-working-paper.html) compares HS−20, HS−30 and PR−20 after an explicit screen of close alternatives and poorer reference-OM performers. It now focuses on recruitment-crash and OM21 robustness cases, with trade-off plots and 15 SSB/catch trajectories for each case. Fixed catch is included as a reference-OM benchmark tuned using dynamic BMSY (achieved long-term P(Green): 60.3%). The shortlist is exploratory, not an agreed selection, and the paper retains the reasons and data for omitted CMPs.
 
-Try the [all-eight-CMP scorecard](papers/cmp-screening-2026/scorecard-all.html) or the [three-CMP scorecard](papers/cmp-screening-2026/scorecard-shortlist.html). Within each indicator, the best selected CMP scores 100 and others are scored relative to it. Raw values, zero-best exceptions and chosen weights remain visible.
+Try the [all-CMP scorecard](papers/cmp-screening-2026/scorecard-all.html) or the [retained-CMP scorecard](papers/cmp-screening-2026/scorecard-shortlist.html). Choose among ten OMs and, for two-stock OMs, separate stock components. Fixed catch is available for the reference OM. Within each indicator, the best selected CMP scores 100 and others are scored relative to it. Raw values, zero-best exceptions and chosen weights remain visible.
 
 **How can we choose rules that support catches while performing acceptably when the future is uncertain?**
 

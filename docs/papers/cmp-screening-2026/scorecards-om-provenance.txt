@@ -1,0 +1,12 @@
+OM/component scorecards; 500 simulations each; no cross-OM pooling. Fixed catch is excluded because its supplied setup differs.
+output/candidate-performance-500/robustness/performance_with_vb.rds 07f9cdeca81529647d9272da830b7e34
+../jmMSE-500-refine/data/om11_h1_0.16_065.rds 9ee178a30a5bb397703d10bc67535544
+../jmMSE-500-refine/data/om11_2_h1_0.16_065.rds 4a69181043139937037761de23732488
+../jmMSE-500-refine/data/om21_h2_0.16_065.rds 69b335af98f7135bf5c524104620a159
+../jmMSE-500-refine/data/om11_1_h1_0.16_065.rds 581b15263d5ed7affa14329a8b2623c6
+../jmMSE-500-refine/data/om11_3_h1_0.16_065.rds dcac4350158e6f1037990ec00738cb6e
+../jmMSE-500-refine/data/om12_h1_0.16h_080.rds dc07785c67860e7a1046eb9ef06c9acb
+../jmMSE-500-refine/data/om18_h1_1.14_065.rds 63c98fb3f5d31575a72f1a923b2747fd
+../jmMSE-500-refine/data/om21_1_h2_0.16_065.rds a8c0572f7a6581fcdab63548a71bee65
+../jmMSE-500-refine/data/om22_h2_0.16h_080.rds b761266a6deab65cb3f1344848f5af1b
+../jmMSE-500-refine/data/om28_h2_1.14_065.rds cceb84d737bb7741a2676087f3699c1c
