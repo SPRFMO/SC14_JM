@@ -45,7 +45,7 @@ tradeplot <- function(dat,y,title,facet=FALSE) {
  p<-ggplot(dat,aes(x=median_C,y=.data[[paste0('median_',y)]],colour=CMP,shape=CMP))+
   geom_segment(aes(x=q25_C,xend=q75_C,yend=.data[[paste0('median_',y)]]),linewidth=.55)+
   geom_segment(aes(y=.data[[paste0('q25_',y)]],yend=.data[[paste0('q75_',y)]],xend=median_C),linewidth=.55)+
-  geom_point(size=2.8)+scale_colour_manual(values=palette)+theme_bw(base_size=11)+
+  geom_point(size=2.8)+scale_colour_manual(values=palette)+ggthemes::theme_few(base_size=11)+
   labs(x='Median annual catch (thousand t)',y=if(y=='IACC')'Median interannual catch change (%)' else 'Median SSB / static SSBMSY',
     title=title,subtitle='2041–2050 means within simulations; points are medians; bars are interquartile ranges',
     caption='500 simulations per CMP and OM/component. Crash trajectories are retained in these trade-offs.')+
@@ -92,7 +92,7 @@ worms[,`:=`(CMP=factor(labels[code],levels=labels[keep]),Metric=factor(ifelse(me
 fwrite(worms,file.path(out,'worm-trajectories.csv')); fwrite(data.table(iter=ids),file.path(out,'worm-iterations.csv'))
 p<-ggplot(worms,aes(year,data,group=iter,colour=factor(iter)))+geom_line(linewidth=.5,alpha=.85)+
  facet_grid(Metric~CMP,scales='free_y')+scale_colour_viridis_d(option='turbo',name='Simulation')+
- theme_bw(base_size=11)+theme(legend.position='bottom')+labs(x='Year',y=NULL,title='15 matched simulation trajectories',
+ ggthemes::theme_few(base_size=11)+theme(legend.position='bottom')+labs(x='Year',y=NULL,title='15 matched simulation trajectories',
  subtitle='Same iteration IDs in every CMP and metric panel; all selected trajectories retained',
  caption='Illustrative trajectories, not uncertainty intervals. Values are thousand tonnes; scales are shared across CMPs within each row.')
 ggsave(file.path(out,'worms-15.png'),p,width=12,height=7.8,dpi=170)

@@ -9,6 +9,7 @@ format:
     toc-depth: 2
     number-sections: true
     embed-resources: true
+    lightbox: true
     code-fold: true
     theme: cosmo
     fig-width: 10

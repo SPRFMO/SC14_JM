@@ -52,7 +52,7 @@ for(scenario_i in names(checkpoints)) {
  z[,Panel:=factor(paste(biol,ifelse(metric=='SB','SSB (thousand t)','Catch (thousand t)'),sep=': '),levels=as.vector(t(outer(unique(biol),c('SSB (thousand t)','Catch (thousand t)'),paste,sep=': '))))]
  p<-ggplot(z,aes(year,data,group=iter,colour=factor(iter)))+geom_line(linewidth=.45,alpha=.85)+
  facet_grid(Panel~CMP,scales='free_y')+scale_colour_viridis_d(option='turbo',name='Simulation')+
- theme_bw(base_size=10)+theme(legend.position='bottom')+labs(x='Year',y=NULL,
+ ggthemes::theme_few(base_size=10)+theme(legend.position='bottom')+labs(x='Year',y=NULL,
  title=paste('15 matched draws:',if(scenario_i=='om21')'OM21, separate stock components' else 'recruitment crash (om11_2)'),
  subtitle='Same 15 posterior-draw IDs across CMPs; all selected trajectories retained',
  caption='Illustrative paths, not probability envelopes; common vertical scales within each row.')
@@ -77,7 +77,7 @@ fwrite(fixed_summary,file.path(out,'fixed-catch-summary.csv'));md_table(fixed_su
 fw<-flat(m[['SB']])[year %in% 2025:2050 & iter %in% ids][,metric:='SSB (thousand t)']
 stopifnot(nrow(fw)==15*26,uniqueN(fw$iter)==15,!anyDuplicated(fw[,.(iter,year)]),!anyNA(fw$data))
 fwrite(fw,file.path(out,'fixed-catch-worms.csv'))
-p<-ggplot(fw,aes(year,data,group=iter,colour=factor(iter)))+geom_line(linewidth=.5)+scale_colour_viridis_d(option='turbo',name='Simulation')+theme_bw(base_size=11)+theme(legend.position='bottom')+
+p<-ggplot(fw,aes(year,data,group=iter,colour=factor(iter)))+geom_line(linewidth=.5)+scale_colour_viridis_d(option='turbo',name='Simulation')+ggthemes::theme_few(base_size=11)+theme(legend.position='bottom')+
  labs(x='Year',y='SSB (thousand t)',title='Fixed-catch benchmark: 15 unique SSB simulations',subtitle='Advice = 1,525 thousand t; supplied reference-OM run, dynamic-BMSY tuning',caption='The same displayed draw IDs are used for illustration, not asserted as a controlled paired comparison with the current CMP runs.')
 ggsave(file.path(out,'worms-15-fixed-catch.png'),p,width=11,height=6,dpi=160)
 basefile<-'../jmMSE-500-refine/data/om11_h1_0.16_065.rds';base<-readRDS(basefile)
