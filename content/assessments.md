@@ -4,6 +4,16 @@
 
 A stock assessment brings together catches, surveys and information about the fish with a model of population change. It estimates quantities such as spawning biomass—the amount of mature fish—and fishing mortality, a measure of the rate at which fishing removes fish.
 
+<!-- sc14-assessment:start -->
+## Current SC14 assessment
+
+[Read the current SC14 assessment report](assessment/SC14.html).
+
+This working assessment presents model results for review. Its draft or proposed-model labels remain as stated in the report. It does not by itself establish agreed Scientific Committee advice.
+
+[Report synchronization record](assessment/sync.json).
+<!-- sc14-assessment:end -->
+
 ## What the research has done
 
 The May benchmark reviewed the data, biological assumptions and assessment methods that support this work. This preparation supports the updated assessment needed to describe the stock’s condition in 2026. Source: [JM02](https://sprfmo.github.io/JM_SCW_prep/JMWG-Benchmark-Meeting-report-2026.html).
