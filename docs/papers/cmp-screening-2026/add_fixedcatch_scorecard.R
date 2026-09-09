@@ -8,12 +8,12 @@ a<-merge(a,data.table(iter=1:500,sbmsy=as.numeric(rp['SBMSY',]),fmsy=as.numeric(
 setorder(a,iter,year);a[,`:=`(ssb_db0=SB/db0,SBMSY=SB/sbmsy,FMSY=F/fmsy)]
 a[,`:=`(previous_catch=shift(C),previous_ssb_db0=shift(ssb_db0)),by=iter]
 a[,reduction:=1-C/previous_catch];a[,IACC:=100*abs(reduction)]
-a[,cut:=as.integer(is.finite(reduction)&previous_catch>0&C>=0&ssb_db0>=.08&previous_ssb_db0>=.08&reduction>.201+1e-12)]
 core<-melt(a[year %in% 2041:2050,.(C=mean(C),SBMSY=mean(SBMSY),FMSY=mean(FMSY),IACC=mean(IACC)),by=iter],id.vars='iter')[,.(raw_value=median(value)),by=.(statistic=variable)]
-extra<-a[year %in% 2041:2050,.(SB0red=mean(SB/((sbmsy/sb0)*db0)<1 & FMSY>1),SSBbelow8dB0=mean(ssb_db0<.08),PC270=mean(C<270),CatchDrop20=sum(cut)/500)]
+extra<-a[year %in% 2041:2050,.(SB0red=mean(SB/((sbmsy/sb0)*db0)<1 & FMSY>1),SSBbelow8dB0=mean(ssb_db0<.08),PC270=mean(C<270))]
 extra<-melt(extra,measure.vars=names(extra),variable.name='statistic',value.name='raw_value')
 cr<-a[year %in% 2027:2050,.(v=mean(pmax(reduction,0)*100)),by=iter][,.(raw_value=median(v))][,statistic:='Creduction']
-r<-rbindlist(list(core,extra,cr),use.names=TRUE)
+cuts<-fread('output/catchdrop19/advice-summary.csv')[mp=='fixedcatch',.(statistic='CatchDrop20',raw_value)]
+r<-rbindlist(list(core,extra,cr,cuts),use.names=TRUE)
 meta<-unique(fread('doc/data/candidates/candidate_quilt_reference_summary.csv')[,.(statistic,metric,direction,years,summary)])
 r<-merge(r,meta,by='statistic');stopifnot(nrow(r)==9,all(is.finite(r$raw_value)))
 r<-r[,.(mp='Fixed catch (1,525 kt)',statistic,metric,raw_value,preferred_direction=direction,include=statistic %in% c('C','IACC','PC270','SSBbelow8dB0','CatchDrop20'),weight=1,years,summary,om_code='om11',om_label='Reference (om11)',component='CJM',n_iter=500L)]

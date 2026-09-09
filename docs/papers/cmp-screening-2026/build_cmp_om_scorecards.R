@@ -13,6 +13,7 @@ rows<-list(q[,.(mp,statistic,metric,raw_value=value,preferred_direction=directio
 perf_file<-'output/candidate-performance-500/robustness/performance_with_vb.rds'
 perf<-as.data.table(readRDS(perf_file));perf[,code:=sub('_om.*$','',mp)]
 flat<-function(q){z<-as.data.table(as.data.frame(q));z[,year:=as.integer(as.character(year))];z[,iter:=as.integer(as.character(iter))];stopifnot(!anyDuplicated(z[,.(year,iter)]));z[,.(year,iter,data)]}
+advice_summary<-fread('output/catchdrop19/advice-summary.csv')
 risks<-list()
 for(i in 2:nrow(lookup)) {
  message('Scorecards: ',lookup$om_code[i]);sel<-lookup[i]
@@ -31,12 +32,11 @@ for(i in 2:nrow(lookup)) {
   setorder(annual,code,iter,year)
   annual[,`:=`(previous_catch=shift(C),previous_ssb_db0=shift(ssb_db0)),by=.(code,iter)]
   annual[,reduction:=1-C/previous_catch]
-  annual[,cut_flag:=as.integer(is.finite(reduction)&previous_catch>0&C>=0&ssb_db0>=.08&previous_ssb_db0>=.08&reduction>.201+1e-12)]
   core<-d[year %in% 2041:2050,.(iv=mean(data)),by=.(code,iter,statistic)][,.(raw_value=median(iv)),by=.(code,statistic)]
   risk<-annual[year %in% 2041:2050,.(SB0red=mean(sb_dynamic_msy<1 & FMSY>1),SSBbelow8dB0=mean(ssb_db0<.08),green=mean(sb_dynamic_msy>=1 & FMSY<=1)),by=code]
   risks[[length(risks)+1L]]<-risk[,.(scenario=sel$om_code,biol=biol_code,code,green,below8=SSBbelow8dB0)]
   risklong<-melt(risk[,.(code,SB0red,SSBbelow8dB0)],id.vars='code',variable.name='statistic',value.name='raw_value')
-  cuts<-annual[year %in% 2041:2050,.(n=sum(cut_flag)),by=.(code,iter)][,.(raw_value=mean(n)),by=code][,statistic:='CatchDrop20']
+  cuts<-advice_summary[om_code==sel$om_code,.(code=mp,raw_value)][,statistic:='CatchDrop20']
   # Match the legacy mean-reduction window, whose first comparison is 2027.
   reductions<-annual[year %in% 2027:2050,.(iv=mean(pmax(reduction,0)*100)),by=.(code,iter)][,.(raw_value=median(iv)),by=code][,statistic:='Creduction']
   combined<-rbindlist(list(core,risklong,cuts,reductions),use.names=TRUE)

@@ -33,6 +33,8 @@ The immediate recommendation is to agree the criteria for selecting among these 
 
 This wording proposes a process and a set of CMPs for discussion. Confirming that these CMPs meet biological requirements will require an agreed standard and a check of their performance against it.
 
+The advice-reduction update changes the earlier screening result: HS+20, HSsym, PR+20 and PRsym now show trade-offs with the listed comparators. The three-CMP display remains a discussion set, and all eight CMPs should be reviewed before confirming the shortlist.
+
 ## Why retain these alternatives?
 
 IACC measures annual catch variability. SSB is spawning-stock biomass, and Blim is the biomass limit. “Green” means biomass and fishing pressure meet the stated MSY reference levels; the definitions below explain the time period and changing biomass reference.
@@ -40,7 +42,7 @@ IACC measures annual catch variability. SSB is spawning-stock biomass, and Blim 
 | Alternative | Management choice it helps examine | Results and points to consider |
 |:--|:--|:--|
 | HS−20 (MP43) | Greater emphasis on stable catches, retaining the 20% advice-reduction limit. | Lower reference IACC than PR−20; compare the biological consequences as well as stability in the [reference trade-offs](cmp-screening-working-paper.html#reference-om-trade-offs-after-screening). |
-| HS−30 (MP47) | Whether allowing larger advice reductions provides a worthwhile biological benefit. | Lower reference below-previous-Blim frequency than HS−20, with more filtered large realized-catch cuts. Review both outcomes in the [reference comparison](cmp-screening-working-paper.html#full-reference-comparison). |
+| HS−30 (MP47) | Whether allowing larger advice reductions provides a worthwhile biological benefit. | Lower reference below-previous-Blim frequency than HS−20, with a different frequency of advice reductions greater than 19%. Review both outcomes in the [reference comparison](cmp-screening-working-paper.html#full-reference-comparison). |
 | PR−20 (MP44) | Whether higher reference catch and its biological performance justify greater catch variability. | Best dynamic-green frequency among these three in recruitment crash and Southern OM21, but no green outcomes in Northern OM21. See the [focused robustness results](cmp-screening-working-paper.html#focused-robustness-recruitment-crash-and-om21). |
 | Fixed catch | What is gained or lost by responding to observations rather than holding advice constant. | A reference comparison; evaluation under the alternative OMs would be needed before considering it alongside the finalists. Its saved recruitment deviations, implementation adjustments and MSY values differ from the other reference runs; see the [comparison limits](cmp-screening-working-paper.html#fixed-catch-reference-benchmark). |
 
@@ -65,12 +67,12 @@ The following division of responsibilities is proposed for discussion. The final
 
 **Count years below a limit and simulations with a breach separately.** The existing SSB <8% dynamic B0 statistic is the fraction of simulation-years below the previous Blim. If managers instead require the probability of at least one breach during a specified period, that statistic must be calculated separately. The 8% threshold represents the previous Blim for this comparison. Managers still need to confirm the limit and acceptable risk for adoption.
 
-**Filtered cuts describe only a subset of catch changes.** The catch-cut count excludes crash-affected transitions and changes close to 20%. It helps investigate large catch changes. A fuller picture of disruption to fishing also includes the excluded changes. Catch and IACC summaries and the complete trajectories retain those outcomes. Checks of advice limits and projection calculations remain necessary.
+**Advice reductions cover all saved consecutive comparisons.** `CatchDrop20` now reports the percentage of valid comparisons in which HCR advice falls strictly more than 19%, pooled across all years and 500 iterations. Exact 20% reductions count, and no biomass filter is applied. This measures advice before implementation; realized-catch variability remains available separately. The first saved advice has no predecessor and cannot enter an advice-to-advice comparison. See the working paper for denominators and the two-stock advice convention.
 
 ## Work needed before recommending adoption
 
 1. Confirm the biological requirements and how robustness outcomes affect selection. If these differ from the evaluated settings, rerun or retune the affected comparisons.
-2. Complete the remaining projection checks and document the results, including low-catch failures and advice-versus-realized-catch discrepancies. The catch-cut filter changes which events are counted; the underlying projection problems still require resolution.
+2. Complete the remaining projection checks and document the results, including low-catch failures and advice-versus-realized-catch discrepancies. The revised advice statistic does not resolve underlying projection problems.
 3. Add first-application and early-cycle catch consequences, including the distribution of initial reductions. This would complement the long-term summaries and 15 illustrative paths already presented.
 4. If fixed catch is proposed as an adoption candidate, evaluate it under comparable recruitment and implementation assumptions and the required robustness set. Its present role is a reference comparison.
 5. Hold a focused scientist–manager and stakeholder discussion, record preferences and remaining disagreements, and prepare a preferred-CMP proposal with a complete implementation and review specification.

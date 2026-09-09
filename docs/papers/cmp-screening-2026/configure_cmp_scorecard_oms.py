@@ -10,10 +10,10 @@ for name in ['all','shortlist']:
  s=s.replace('This browser-based explorer reproduces','[Return to the working paper](cmp-screening-working-paper.html).\n\nThis browser-based explorer reproduces',1)
  s=s.replace('(scorecard.qmd)','(https://sprfmo.github.io/jmMSE26/application/scorecard.html)')
  s=s.replace('<option value="equal">','<option value="equal" selected>').replace('<option value="dispersion" selected>','<option value="dispersion">')
- s=s.replace('["SB0red","PC270"]','["SB0red","PC270","SSBbelow8dB0"]')
+ s=s.replace('["SB0red","PC270"]','["SB0red","PC270","SSBbelow8dB0","CatchDrop20"]')
  s=s.replace('"P(Kobe red)"\n  ]','"P(Kobe red)", "SSB <8% dynamic B0 (%)"\n  ]')
- s=s.replace('"Mean catch reduction"]','"Mean catch reduction", "P(catch < 270 kt)", "Catch cuts >20% (filtered count)"]')
- s=s.replace('<style>','For a lower-is-better indicator with a best value of zero, zero-valued CMPs score 100 and positive values score zero. The catch-cut indicator excludes crash-affected and near-20% transitions as documented in the paper; other indicators retain those trajectories.\n\n<style>',1)
+ s=s.replace('"Mean catch reduction"]','"Mean catch reduction", "P(catch < 270 kt)", "Advice reductions >19% (%)"]')
+ s=s.replace('<style>','For a lower-is-better indicator with a best value of zero, zero-valued CMPs score 100 and positive values score zero. Advice reductions greater than 19% pool all valid consecutive saved HCR-advice comparisons across all 500 iterations. No biomass or near-20% exclusions apply. In two-stock OMs this is advice for the managed Southern stock, shared across component views.\n\n<style>',1)
  selected=None if name=='all' else {'HS-20 (MP43)','HS-30 (MP47)','PR-20 (MP44)','Fixed catch (1,525 kt)'}
  rows=[r for r in data if selected is None or r['mp'] in selected]
  # Start from the unchanged general explorer for repeatable generation.
@@ -47,7 +47,7 @@ for name in ['all','shortlist']:
     refreshMetricOptions();
     const fixed=rows.some(d=>d.mp.startsWith("Fixed catch"));
     const component=componentSelect.options[componentSelect.selectedIndex].text;
-    document.getElementById("om-context").textContent=`${rows[0].om_label} · ${component} · 500 simulations per CMP · 2041–2050 (optional mean catch reduction: 2026–2050). Scores are relative within this selection; OMs are not pooled. `+
+    document.getElementById("om-context").textContent=`${rows[0].om_label} · ${component} · 500 simulations per CMP · 2041–2050 (advice reductions: all saved consecutive comparisons, advice years 2026–2049, applied 2027–2050; optional mean catch reduction: 2026–2050). Scores are relative within this selection; OMs are not pooled. `+
       (componentSelect.value==='CJM'?"":"The 270 kt whole-stock catch threshold is omitted for stock components. ")+
       (fixed?"Fixed catch is available here as the supplied reference benchmark; it has different recruitment deviations and stored MSY values. VB metrics are available only when fixed catch is deselected.":"No fixed-catch results were supplied for this OM.")+
       (omSelect.value==='om23'&&componentSelect.value==='North'?" Near-zero catch in this component makes relative numerical rankings uninformative.":"");

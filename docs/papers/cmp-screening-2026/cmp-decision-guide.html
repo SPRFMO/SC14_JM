@@ -2174,7 +2174,7 @@ vertical-align: -.125em;
 <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
   <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">Table of contents</h2>
-   
+
   <ul class="collapse">
   <li><a href="#proposed-advice-for-the-next-discussion" id="toc-proposed-advice-for-the-next-discussion" class="nav-link active" data-scroll-target="#proposed-advice-for-the-next-discussion"><span class="header-section-number">1</span> Proposed advice for the next discussion</a></li>
   <li><a href="#why-retain-these-alternatives" id="toc-why-retain-these-alternatives" class="nav-link" data-scroll-target="#why-retain-these-alternatives"><span class="header-section-number">2</span> Why retain these alternatives?</a></li>
@@ -2198,17 +2198,17 @@ vertical-align: -.125em;
 
 <div class="quarto-title-meta">
 
-    
+
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
       <p class="date">September 9, 2026</p>
     </div>
   </div>
-  
-    
+
+
   </div>
-  
+
 
 
 </header>
@@ -2239,6 +2239,7 @@ vertical-align: -.125em;
 <p>The Scientific Committee is invited to consider carrying HS−20, HS−30 and PR−20 forward for focused consultation, subject to review of the screening criteria and remaining projection checks. The comparison should present reference-OM performance and separate recruitment-crash and two-stock robustness results, including the Northern component of OM21. Managers are invited to specify the biological performance requirements and the relative importance of catch, catch variability and the ability to reduce advice. A subsequent recommendation for a preferred CMP should state these choices, identify the supporting results and specify implementation, responses to unexpected conditions and review arrangements.</p>
 </blockquote>
 <p>This wording proposes a process and a set of CMPs for discussion. Confirming that these CMPs meet biological requirements will require an agreed standard and a check of their performance against it.</p>
+<p>The advice-reduction update changes the earlier screening result: HS+20, HSsym, PR+20 and PRsym now show trade-offs with the listed comparators. The three-CMP display remains a discussion set, and all eight CMPs should be reviewed before confirming the shortlist.</p>
 </section>
 </section>
 <section id="why-retain-these-alternatives" class="level2" data-number="2">
@@ -2261,7 +2262,7 @@ vertical-align: -.125em;
 <tr class="even">
 <td style="text-align: left;">HS−30 (MP47)</td>
 <td style="text-align: left;">Whether allowing larger advice reductions provides a worthwhile biological benefit.</td>
-<td style="text-align: left;">Lower reference below-previous-Blim frequency than HS−20, with more filtered large realized-catch cuts. Review both outcomes in the <a href="cmp-screening-working-paper.html#full-reference-comparison">reference comparison</a>.</td>
+<td style="text-align: left;">Lower reference below-previous-Blim frequency than HS−20, with a different frequency of advice reductions greater than 19%. Review both outcomes in the <a href="cmp-screening-working-paper.html#full-reference-comparison">reference comparison</a>.</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">PR−20 (MP44)</td>
@@ -2331,13 +2332,13 @@ vertical-align: -.125em;
 <h2 data-number="4" class="anchored" data-anchor-id="definitions-that-must-accompany-the-advice"><span class="header-section-number">4</span> Definitions that must accompany the advice</h2>
 <p><strong>Tuning and risk answer different questions.</strong> Here, dynamic-green results concern SSB at or above dynamic BMSY and F at or below FMSY over the stated 2041–2050 period. The probability of staying above a biomass limit throughout the period requires a separate calculation. The figures labelled SSB/SSBMSY describe biomass relative to the stored, fixed reference value; dynamic-green probabilities use a reference value that changes with productivity.</p>
 <p><strong>Count years below a limit and simulations with a breach separately.</strong> The existing SSB &lt;8% dynamic B0 statistic is the fraction of simulation-years below the previous Blim. If managers instead require the probability of at least one breach during a specified period, that statistic must be calculated separately. The 8% threshold represents the previous Blim for this comparison. Managers still need to confirm the limit and acceptable risk for adoption.</p>
-<p><strong>Filtered cuts describe only a subset of catch changes.</strong> The catch-cut count excludes crash-affected transitions and changes close to 20%. It helps investigate large catch changes. A fuller picture of disruption to fishing also includes the excluded changes. Catch and IACC summaries and the complete trajectories retain those outcomes. Checks of advice limits and projection calculations remain necessary.</p>
+<p><strong>Advice reductions cover all saved consecutive comparisons.</strong> <code>CatchDrop20</code> now reports the percentage of valid comparisons in which HCR advice falls strictly more than 19%, pooled across all years and 500 iterations. Exact 20% reductions count, and no biomass filter is applied. This measures advice before implementation; realized-catch variability remains available separately. The first saved advice has no predecessor and cannot enter an advice-to-advice comparison. See the working paper for denominators and the two-stock advice convention.</p>
 </section>
 <section id="work-needed-before-recommending-adoption" class="level2" data-number="5">
 <h2 data-number="5" class="anchored" data-anchor-id="work-needed-before-recommending-adoption"><span class="header-section-number">5</span> Work needed before recommending adoption</h2>
 <ol type="1">
 <li>Confirm the biological requirements and how robustness outcomes affect selection. If these differ from the evaluated settings, rerun or retune the affected comparisons.</li>
-<li>Complete the remaining projection checks and document the results, including low-catch failures and advice-versus-realized-catch discrepancies. The catch-cut filter changes which events are counted; the underlying projection problems still require resolution.</li>
+<li>Complete the remaining projection checks and document the results, including low-catch failures and advice-versus-realized-catch discrepancies. The revised advice statistic does not resolve underlying projection problems.</li>
 <li>Add first-application and early-cycle catch consequences, including the distribution of initial reductions. This would complement the long-term summaries and 15 illustrative paths already presented.</li>
 <li>If fixed catch is proposed as an adoption candidate, evaluate it under comparable recruitment and implementation assumptions and the required robustness set. Its present role is a reference comparison.</li>
 <li>Hold a focused scientist–manager and stakeholder discussion, record preferences and remaining disagreements, and prepare a preferred-CMP proposal with a complete implementation and review specification.</li>
@@ -2367,7 +2368,7 @@ vertical-align: -.125em;
     anchorJS.add('.anchored');
     const isCodeAnnotation = (el) => {
       for (const clz of el.classList) {
-        if (clz.startsWith('code-annotation-')) {                     
+        if (clz.startsWith('code-annotation-')) {
           return true;
         }
       }
@@ -2387,11 +2388,11 @@ vertical-align: -.125em;
         button.setAttribute("data-bs-toggle", "tooltip");
         button.setAttribute("data-bs-placement", "left");
         button.setAttribute("data-bs-title", "Copied!");
-        tooltip = new bootstrap.Tooltip(button, 
-          { trigger: "manual", 
+        tooltip = new bootstrap.Tooltip(button,
+          { trigger: "manual",
             customClass: "code-copy-button-tooltip",
             offset: [0, -8]});
-        tooltip.show();    
+        tooltip.show();
       }
       setTimeout(function() {
         if (tooltip) {
@@ -2468,7 +2469,7 @@ vertical-align: -.125em;
       if (onUntriggerFn) {
         config.onUntrigger = onUntriggerFn;
       }
-      window.tippy(el, config); 
+      window.tippy(el, config);
     }
     const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
     for (var i=0; i<noterefs.length; i++) {
@@ -2543,7 +2544,7 @@ vertical-align: -.125em;
       tippyHover(xref, undefined, function(instance) {
         instance.disable();
         let url = xref.getAttribute('href');
-        let hash = undefined; 
+        let hash = undefined;
         if (url.startsWith('#')) {
           hash = url;
         } else {
@@ -2571,7 +2572,7 @@ vertical-align: -.125em;
               if (note !== null) {
                 const html = processXRef(id, note);
                 instance.setContent(html);
-              } 
+              }
             }).finally(() => {
               instance.enable();
               instance.show();
@@ -2595,7 +2596,7 @@ vertical-align: -.125em;
               }
               const html = processXRef(null, note);
               instance.setContent(html);
-            } 
+            }
           }).finally(() => {
             instance.enable();
             instance.show();
@@ -2635,7 +2636,7 @@ vertical-align: -.125em;
               height = bottom - top;
             }
             if (top !== null && height !== null && parent !== null) {
-              // cook up a div (if necessary) and position it 
+              // cook up a div (if necessary) and position it
               let div = window.document.getElementById("code-annotation-line-highlight");
               if (div === null) {
                 div = window.document.createElement("div");

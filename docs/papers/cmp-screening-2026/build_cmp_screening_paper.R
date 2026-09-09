@@ -8,7 +8,7 @@ q <- fread('doc/data/candidates/candidate_quilt_reference_summary.csv')
 q[, code := paste0('tun', sub('.*MP([0-9]+).*','\\1',mp))]
 w <- dcast(q, code~statistic,value.var='value')
 primary <- c('C','IACC','PC270','SSBbelow8dB0','CatchDrop20')
-tolerances <- c(C=40,IACC=.6,PC270=.01,SSBbelow8dB0=.01,CatchDrop20=.1)
+tolerances <- c(C=40,IACC=.6,PC270=.01,SSBbelow8dB0=.01,CatchDrop20=.01)
 direction <- c(C=1,IACC=-1,PC270=-1,SSBbelow8dB0=-1,CatchDrop20=-1)
 screen <- data.table(code=c('tun29','tun45','tun32','tun46','tun48'),
   comparator=c('tun43','tun43','tun43','tun44','tun47'),
@@ -18,7 +18,7 @@ for(i in seq_len(nrow(screen))) {
   benefit <- (to-from)*direction
   similar <- all(abs(to-from)<=tolerances)
   poorer <- all(benefit>=-tolerances) && any(benefit>tolerances)
-  stopifnot(if (screen$disposition[i]=='Close alternative') similar else poorer)
+  screen$disposition[i] <- if(similar) 'Close alternative' else if(poorer) 'Poorer within screening tolerances' else 'Trade-off; review all CMPs'
 }
 screen[, `:=`(CMP=labels[code], comparator_label=labels[comparator])]
 fwrite(screen,file.path(out,'screening.csv'))
@@ -99,3 +99,6 @@ ggsave(file.path(out,'worms-15.png'),p,width=12,height=7.8,dpi=170)
 inputs<-c(files,runsfile,'doc/data/candidates/candidate_quilt_reference_summary.csv','doc/data/candidates/catch_spaghetti_reference_iterations.csv')
 writeLines(c(paste(names(tools::md5sum(inputs)),tools::md5sum(inputs)),capture.output(sessionInfo())),file.path(out,'provenance.txt'))
 cat('Working-paper figures, screening, and data verified\n')
+
+for (f in c("candidate_quilt_catch_cut_diagnostics_reference.csv", "candidate_quilt_event_counts_reference.csv")) file.copy(file.path("doc/data/candidates",f),file.path(out,f),overwrite=TRUE)
+file.copy("output/catchdrop19/advice-summary.csv",file.path(out,"catchdrop19-advice-summary.csv"),overwrite=TRUE)

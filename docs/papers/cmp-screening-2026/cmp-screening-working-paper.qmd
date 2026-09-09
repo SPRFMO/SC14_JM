@@ -1,7 +1,7 @@
 ---
 title: "Narrowing the jack mackerel CMP comparison"
 subtitle: "Working paper: best-relative scorecards, management trade-offs and matched simulation trajectories"
-date: 2026-09-08
+date: 2026-09-09
 lang: en
 format:
   html:
@@ -18,32 +18,32 @@ format:
 [Back to the jack mackerel wiki](../../mse.html) · [All CMPs and fixed catch: best-relative scorecard](scorecard-all.html) · [Retained CMPs and fixed catch: best-relative scorecard](scorecard-shortlist.html)
 
 ::: {.callout-note title="Purpose"}
-This working paper supports discussion of CMP choices using the saved 500-simulation results. Model settings and tuning are unchanged; selection of a CMP remains open. This revision focuses on the recruitment-crash OM and OM21 and adds the supplied fixed-catch reference comparison. Screening narrows the reference-OM presentation; robustness results remain separate and can justify reinstating an omitted CMP. The full set remains available in the scorecard and downloadable data.
+This working paper supports discussion of CMP choices using the saved 500-simulation results. Model settings and tuning are unchanged; selection of a CMP remains open. This revision focuses on the recruitment-crash OM and OM21 and adds the supplied fixed-catch reference comparison. The three-CMP presentation is a discussion set; the revised advice indicator requires the shortlist to be reviewed. Robustness results remain separate. The full set remains available in the scorecard and downloadable data.
 :::
 
 ## Findings for discussion
 
 Three CMPs provide a compact view of the main management choices: **HS−20 (MP43), HS−30 (MP47), and PR−20 (MP44)**. HS−20 represents the lower-variability hockey-stick alternatives with a 20% advice-reduction limit. HS−30 retains the contrast offered by allowing larger reductions. PR−20 retains the higher-catch power-ramp alternative and its greater interannual variability.
 
-The shortlist uses stated thresholds to identify similar alternatives and focus the discussion. Omitted CMPs retain advantages that may matter under other priorities. Small differences in reference-OM indicators are treated as close alternatives. Two cases are less favourable within the specified tolerances; their remaining advantages are stated below. Agreement on acceptable risk remains a separate step. A score of 100 identifies the best selected value; judging its acceptability requires an agreed risk limit.
+The three-CMP display is retained for continuity, but the revised advice-reduction statistic changes the earlier screening result. HS+20, HSsym, PR+20 and PRsym now present trade-offs with their listed comparators; their former exclusion is not supported by the updated five-indicator screen. Review all eight CMPs before confirming a shortlist. PR−30 remains poorer than HS−30 within the illustrative tolerances. Agreement on acceptable risk remains a separate step.
 
 ## Data, periods and indicator definitions
 
-The results cover eight candidate management procedures (CMPs), each with 500 simulations under the reference operating model (OM) and nine alternative OMs used to test performance under different assumptions (robustness tests). Two-stock OMs are shown by biological component; their catches and biomasses are reported separately. All performance calculations in this paper use **2041–2050**, except the inherited mean-catch-reduction column available as an optional scorecard indicator, which uses **2026–2050**. The worm plots span **2025–2050**.
+The results cover eight candidate management procedures (CMPs), each with 500 simulations under the reference operating model (OM) and nine alternative OMs used to test performance under different assumptions (robustness tests). Two-stock OMs are shown by biological component; their catches and biomasses are reported separately. Advice reductions use all consecutive saved advice comparisons across all iterations (advice years **2026–2049**, applied **2027–2050**). Other performance calculations use **2041–2050**, except the inherited mean-catch-reduction column available as an optional scorecard indicator, which uses **2026–2050**. The worm plots span **2025–2050**.
 
 For catch, interannual catch change (IACC), and SSB/SSBMSY, first calculate each simulation's mean over 2041–2050. Trade-off points then show the median across 500 simulations; horizontal and vertical bars show the 25th–75th percentiles. The bars contain the middle half of simulation-specific values. Uncertainty in the estimated median would require a separate calculation. IACC is the absolute percentage change from the previous year's realized catch. The 2041 change therefore uses catch in 2040. The biomass ratio in the trade-off plots uses the stored **static SSBMSY** denominator; it is distinct from the dynamic-B0 risk indicator.
 
 The low-biomass indicator is the proportion of simulation-years with **SSB <8% of the matching year's dynamic B0**, the previous Blim. Dynamic B0 is the saved projected unfished SSB for the matching simulation. Each year below the threshold counts, including consecutive years. Catch below 270 kt is also a pooled simulation-year frequency.
 
-The **filtered catch-cut count** counts retained realized-catch reductions greater than 20.1%. Transitions are excluded when SSB is below 8% of dynamic B0 in either the current or previous year, or the reduction is within 0.1 percentage point of 20%. These are diagnostic exclusions requested for this indicator only: the low-SSB indicator, catch and IACC trade-offs, and worm plots retain the crash trajectories. A wholly excluded window has zero retained events. The plotted mean count uses the original ten-year window for every simulation. A probability calculated only among eligible years would use a different denominator. Recorded advice respects the 20% limit within numerical tolerance in the checked HS−20 run; realized-catch shortfalls and numerical edge cases motivated the filter. Checks of the remaining projection calculations are still required.
+The **advice-reduction frequency** (`CatchDrop20`) is the proportion of valid consecutive saved HCR-advice comparisons with $A_t < 0.81 A_{t-1}$, pooled over all years and 500 iterations. Advice is recorded in 2025–2049 and applied in 2026–2050. The first saved advice has no predecessor, leaving 24 comparisons per iteration (12,000 when complete). Exact 19% reductions and increases do not count; 20% reductions count. There are no biomass or near-20% exclusions. Invalid values and nonpositive previous advice are excluded from the denominator and reported in the audit. This uses advice before implementation. Two-stock OMs have advice for the managed Southern stock; the same run-level advice statistic appears in both component views.
 
-[Annual exclusions and checks](candidate_quilt_catch_cut_diagnostics_reference.csv) and [counts and eligible years per simulation](candidate_quilt_event_counts_reference.csv) retain the audit trail.
+[All OM/CMP advice counts and denominators](catchdrop19-advice-summary.csv) · [Annual advice events and checks](candidate_quilt_catch_cut_diagnostics_reference.csv) and [counts and eligible years per simulation](candidate_quilt_event_counts_reference.csv) retain the audit trail.
 
 ## Screening the CMP set
 
-Five management-facing indicators are used for this screen: median catch, IACC, low-catch probability, SSB-below-previous-Blim frequency, and the filtered catch-cut count. All eleven indicators remain available in the scorecards; the shortlist uses the five indicators listed here.
+Five management-facing indicators are used for this screen: median catch, IACC, low-catch probability, SSB-below-previous-Blim frequency, and the advice-reduction frequency. All eleven indicators remain available in the scorecards; the shortlist uses the five indicators listed here.
 
-The following absolute differences are treated as small for **forming this discussion shortlist**. These thresholds remain open for review:
+The following absolute differences are treated as small for **forming this discussion shortlist**. These thresholds remain open for review. The former tolerance of 0.1 event per ten-year window is expressed as 1 percentage point for the revised advice frequency; its use with the new definition also requires review:
 
 | Indicator | Screening tolerance | Preferred direction |
 |---|---:|---|
@@ -51,17 +51,17 @@ The following absolute differences are treated as small for **forming this discu
 | IACC | 0.6 percentage point | Lower |
 | Probability of catch below 270 kt | 1 percentage point | Lower |
 | Frequency below previous Blim | 1 percentage point | Lower |
-| Filtered catch-cut count | 0.1 event per ten-year window | Lower |
+| Advice reductions >19% | 1 percentage point | Lower |
 
-A **close alternative** differs from its retained comparator by no more than every listed tolerance. A **poorer performer within these tolerances** has a retained comparator that is no worse beyond any tolerance and better beyond at least one. Every omitted CMP is compared directly with a retained CMP; there is no chain of eliminations. Choosing HS−20 and PR−20 as the representatives preserves the focal minus-20 variants for discussion. This choice keeps the minus-20 variants central to the discussion; the overall score is displayed separately.
+A **close alternative** differs from its retained comparator by no more than every listed tolerance. A **poorer performer within these tolerances** has a retained comparator that is no worse beyond any tolerance and better beyond at least one. Every omitted CMP is compared directly with a retained CMP; there is no chain of eliminations. Choosing HS−20 and PR−20 as the representatives preserves the focal minus-20 variants for discussion. This presentation choice does not establish that the omitted CMPs can be discarded under the revised indicator; the overall score is displayed separately.
 
 {{< include screening.md >}}
 
-HS+20 retains a modest biomass advantage over HS−20, and HSsym has slightly lower IACC. PRsym has slightly lower IACC than PR−20 but lower catch. These distinctions remain visible in the full scorecard. PR+20 has markedly greater IACC than its HS−20 comparator while catch is close. PR−30 has a lower low-catch frequency than HS−30, but by less than the one-percentage-point screening tolerance; it has substantially higher IACC and more filtered large cuts. Thus “poorer” here means poorer **under these five indicators and tolerances in the reference OM**, with the comparison open to revision for other OMs, indicators or stakeholder preferences.
+HS+20, HSsym, PR+20 and PRsym have no advice reductions greater than 19% in the reference runs, whereas their retained comparators do. These differences exceed the illustrative one-percentage-point tolerance and create trade-offs, so the earlier close-alternative or poorer labels for those four CMPs no longer apply. PR−30 remains poorer than HS−30 under these five indicators and tolerances. All comparisons remain open to revision for other OMs, indicators or stakeholder preferences.
 
 ### Full reference comparison
 
-The table retains the omitted CMPs so the screen can be challenged. C is thousand tonnes; IACC is percent; PC270 and SSBbelow8dB0 are displayed as percentages; CatchDrop20 is the filtered mean event count per ten-year simulation window.
+The table retains the omitted CMPs so the screen can be challenged. C is thousand tonnes; IACC is percent; PC270 and SSBbelow8dB0 are displayed as percentages; CatchDrop20 is displayed as the percentage of all valid consecutive advice comparisons with reductions greater than 19%.
 
 {{< include all-cmp-values.md >}}
 
@@ -71,11 +71,11 @@ The table retains the omitted CMPs so the screen can be challenged. C is thousan
 
 Use the [all-CMP scorecard](scorecard-all.html) to review the original set and the [retained-set scorecard](scorecard-shortlist.html) for the retained-set comparison and fixed-catch reference comparison. Both open with **best-relative scaling** and equal weights on the available screening indicators. Use **Choose an OM** to select the reference or any of the nine robustness OMs, then choose a **stock component** for a two-stock OM. Scores are recomputed within the selected OM/component; no OMs or stock components are pooled. Recruitment crash and OM21 appear near the top of the selector.
 
-The fixed-catch benchmark is available in the reference selection only. The supplied fixed-catch results cover the reference OM. The 270 kt whole-stock catch threshold is omitted from two-stock components. When fixed catch is selected, the two vulnerable-biomass indicators are unavailable pending extraction from the supplied run; deselect it to restore those choices. Each scorecard displays only indicators shared by the selected CMPs. The fixed-catch snapshot uses its own stored reference points and reconstructed dynamic B0, preserving its reported tuning convention. Users can change CMPs, indicators, scaling and weights. The overall score helps explore preferences. The shortlist follows the stated five-indicator comparison.
+The fixed-catch benchmark is available in the reference selection only. The supplied fixed-catch results cover the reference OM. The 270 kt whole-stock catch threshold is omitted from two-stock components. When fixed catch is selected, the two vulnerable-biomass indicators are unavailable pending extraction from the supplied run; deselect it to restore those choices. Each scorecard displays only indicators shared by the selected CMPs. The fixed-catch snapshot uses its own stored reference points and reconstructed dynamic B0, preserving its reported tuning convention. Users can change CMPs, indicators, scaling and weights. The overall score helps explore preferences. The revised five-indicator comparison requires the earlier shortlist to be reviewed.
 
 For a higher-is-better indicator, the score is $100V_i/\max_j(V_j)$. For a lower-is-better indicator, it is $100\min_j(V_j)/V_i$. The best value therefore scores 100. Scores are recalculated for the selected CMP set, so each selection has its own reference for comparison.
 
-**Zero-best exception:** when the best value for a lower-is-better indicator is zero, zero-valued CMPs score 100 and positive-valued CMPs score zero. This rule is necessary because the ordinary ratio cannot distinguish positive values when its numerator is zero. The filtered-cut count separates the retained CMPs: HS−20 and PR−20 are zero, while HS−30 is positive. Giving this column a substantial weight can therefore impose a sharp penalty. Inspect its raw count and the exclusion definitions before assigning weight. Related stock or stability indicators can overlap even when given equal weights.
+**Zero-best exception:** when the best value for a lower-is-better indicator is zero, zero-valued CMPs score 100 and positive-valued CMPs score zero. This rule is necessary because the ordinary ratio cannot distinguish positive values when its numerator is zero. In the full reference set, several CMPs and fixed catch have zero advice reductions greater than 19%, while HS−20, HS−30, PR−20 and PR−30 have positive frequencies. This gives the latter zero scores for this indicator when a zero-valued comparator is selected. Inspect the raw frequencies and compare with range scaling before assigning weight. Related stock or stability indicators can overlap even when given equal weights.
 
 The [existing general best-relative explorer](https://sprfmo.github.io/jmMSE26/application/scorecard-best-relative.html) and [original range-scaled explorer](https://sprfmo.github.io/jmMSE26/application/scorecard.html) provide the broader application context. The two companion scorecards above embed this paper's exact data snapshot for reproducibility.
 
@@ -210,7 +210,7 @@ The companion [draft decision guide](cmp-decision-guide.html) uses these results
 2. Set biological acceptability criteria separately from best-relative scoring; a relatively high score can coexist with unacceptable risk.
 3. Examine robustness panels and the full-set data before treating an omitted CMP as dispensable.
 4. Agree which indicators and weights represent the objectives, paying particular attention to zero-best risk indicators and overlapping measures.
-5. Retain projection-failure diagnostics and advice-versus-realized-catch checks as outstanding validation work. The catch-cut filter changes which events are counted; failed projections and their effects on other indicators still require investigation.
+5. Retain projection-failure diagnostics and advice-versus-realized-catch checks as outstanding validation work. The advice statistic measures decisions before implementation; failed projections and their effects on realized-catch indicators still require investigation.
 
 ## Source files and checks {#reproducibility-and-scope-of-validation}
 
