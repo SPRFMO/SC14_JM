@@ -205,6 +205,8 @@ or extrapolated into the robustness scorecards.
 
 ## Decisions this paper can support
 
+The companion [draft decision guide](cmp-decision-guide.html) translates this evidence into proposed advice, a manager decision checklist and the work needed before an adoption recommendation. It is a discussion draft, not agreed Scientific Committee or Commission advice.
+
 1. Review the explicit screening tolerances and decide whether the three-CMP presentation set is sufficient for the next discussion.
 2. Set biological acceptability criteria separately from best-relative scoring; a relatively high score can coexist with unacceptable risk.
 3. Examine robustness panels and the full-set data before treating an omitted CMP as dispensable.

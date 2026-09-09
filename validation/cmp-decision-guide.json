@@ -1,0 +1,11 @@
+{
+  "track": "working paper / draft decision guide",
+  "date": "2026-09-09",
+  "track_gate": "Pass: explicitly draft proposed advice",
+  "provenance_gate": "Pass: links to two reviewed public sources and existing simulation evidence; ICES retrieval unavailable",
+  "scientific_gate": "Pass for consistency of proposed advice with existing results; inherited projection diagnostics remain outstanding",
+  "consistency_gate": "Pass: no metric definitions or simulation outputs changed",
+  "render_gate": "Pass: both Quarto pages rendered",
+  "accessibility_gate": "Partial: semantic headings and table headers checked; browser has no horizontal overflow; screen-reader testing Not Tested",
+  "local_links_and_fragments_checked": 97
+}
