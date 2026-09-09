@@ -2333,7 +2333,7 @@ window.Quarto = {
 
 
 <p><a href="cmp-screening-working-paper.html">Return to the working paper</a>.</p>
-<p>This browser-based explorer reproduces the relative-preference scorecard without requiring R or a Shiny server. Select an OM, stock component, CMPs and metrics; choose a weighting scheme, or enter weights manually. Scores are recalculated relative to the selected CMP set and are <strong>not absolute acceptability scores or agreed management preferences</strong>.</p>
+<p>Choose an operating model (OM), stock component, candidate management procedures (CMPs) and indicators. Set how much weight each indicator receives. Scores compare the selected CMPs; managers can use them to explore their priorities and assess performance alongside agreed biological requirements.</p>
 <div class="callout callout-style-default callout-note callout-titled" title="Best-relative weighting version">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -2481,9 +2481,9 @@ window.Quarto = {
     refreshMetricOptions();
     const fixed=rows.some(d=>d.mp.startsWith("Fixed catch"));
     const component=componentSelect.options[componentSelect.selectedIndex].text;
-    document.getElementById("om-context").textContent=`${rows[0].om_label} · ${component} · 500 simulations per CMP · 2041–2050 (optional mean catch reduction: 2026–2050). Scores are relative within this selection; OMs are not pooled. `+
+    document.getElementById("om-context").textContent=`${rows[0].om_label} · ${component} · 500 simulations per CMP · 2041–2050 (optional mean catch reduction: 2026–2050). Scores compare CMPs within this OM and stock component. `+
       (componentSelect.value==='CJM'?"":"The 270 kt whole-stock catch threshold is omitted for stock components. ")+
-      (fixed?"Fixed catch is available here as the supplied reference benchmark; it has different recruitment deviations and stored MSY values. VB metrics are available only when fixed catch is deselected.":"No fixed-catch results were supplied for this OM.")+
+      (fixed?"Fixed catch is available here as the supplied reference comparison; it has different recruitment deviations and stored MSY values. VB metrics are available only when fixed catch is deselected.":"Fixed-catch results are available for the reference OM only.")+
       (omSelect.value==='om23'&&componentSelect.value==='North'?" Near-zero catch in this component makes relative numerical rankings uninformative.":"");
     update();
   }
@@ -2668,7 +2668,7 @@ window.Quarto = {
 <div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
 
 <ol>
-<li id="fn1"><p>For each PI <span class="math inline">\(x\)</span>, the best-performing CMP among the <span class="math inline">\(N\)</span> selected CMPs is assigned a weight of 100. For a PI where higher values are preferred, CMP <span class="math inline">\(i\)</span> receives <span class="math inline">\(W_{i,x}=100\,V_{i,x}/V_{\mathrm{best},x}\)</span>, where <span class="math inline">\(V_{\mathrm{best},x}=\max_j(V_{j,x})\)</span>. For a PI where lower values are preferred, the direction-consistent reciprocal is used: <span class="math inline">\(W_{i,x}=100\,V_{\mathrm{best},x}/V_{i,x}\)</span>, where <span class="math inline">\(V_{\mathrm{best},x}=\min_j(V_{j,x})\)</span>. Thus the best CMP has <span class="math inline">\(W_{i,x}=100\)</span>, while the other weights retain their proportional contrast with the best observed value. The weights are recalculated whenever the selected CMP set changes; they express relative performance, not an absolute acceptability threshold.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1"><p>For each PI <span class="math inline">\(x\)</span>, the best-performing CMP among the <span class="math inline">\(N\)</span> selected CMPs is assigned a weight of 100. For a PI where higher values are preferred, CMP <span class="math inline">\(i\)</span> receives <span class="math inline">\(W_{i,x}=100\,V_{i,x}/V_{\mathrm{best},x}\)</span>, where <span class="math inline">\(V_{\mathrm{best},x}=\max_j(V_{j,x})\)</span>. For a PI where lower values are preferred, the calculation is: <span class="math inline">\(W_{i,x}=100\,V_{\mathrm{best},x}/V_{i,x}\)</span>, where <span class="math inline">\(V_{\mathrm{best},x}=\min_j(V_{j,x})\)</span>. Thus the best CMP has <span class="math inline">\(W_{i,x}=100\)</span>, while the other weights retain their proportional contrast with the best observed value. The weights are recalculated whenever the selected CMP set changes; they express performance relative to the selected CMPs. Biological acceptability requires a separately agreed threshold.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main>
 <!-- /main column -->

@@ -55,10 +55,10 @@ for(scenario_i in names(checkpoints)) {
  ggthemes::theme_few(base_size=10)+theme(legend.position='bottom')+labs(x='Year',y=NULL,
  title=paste('15 matched draws:',if(scenario_i=='om21')'OM21, separate stock components' else 'recruitment crash (om11_2)'),
  subtitle='Same 15 posterior-draw IDs across CMPs; all selected trajectories retained',
- caption='Illustrative paths, not probability envelopes; common vertical scales within each row.')
+ caption='Selected simulation paths; common vertical scales within each row.')
  ggsave(file.path(out,paste0('worms-15-',scenario_i,'.png')),p,width=12,height=if(scenario_i=='om21')12 else 7.8,dpi=160)
 }
-# Fixed-catch benchmark: its own initial state and reference points.
+# Fixed catch: its own initial state and reference points.
 fixed_file<-'/Users/jim/Downloads/tunfixc.rds';hash_before<-tools::md5sum(fixed_file)
 x<-readRDS(fixed_file);m<-metrics(om(x))$CJM;rp<-refpts(om(x));stopifnot(dims(om(x))$iter==500)
 e<-parse('../jmMSE-500-refine/utilities.R')
@@ -78,7 +78,7 @@ fw<-flat(m[['SB']])[year %in% 2025:2050 & iter %in% ids][,metric:='SSB (thousand
 stopifnot(nrow(fw)==15*26,uniqueN(fw$iter)==15,!anyDuplicated(fw[,.(iter,year)]),!anyNA(fw$data))
 fwrite(fw,file.path(out,'fixed-catch-worms.csv'))
 p<-ggplot(fw,aes(year,data,group=iter,colour=factor(iter)))+geom_line(linewidth=.5)+scale_colour_viridis_d(option='turbo',name='Simulation')+ggthemes::theme_few(base_size=11)+theme(legend.position='bottom')+
- labs(x='Year',y='SSB (thousand t)',title='Fixed-catch benchmark: 15 unique SSB simulations',subtitle='Advice = 1,525 thousand t; supplied reference-OM run, dynamic-BMSY tuning',caption='The same displayed draw IDs are used for illustration, not asserted as a controlled paired comparison with the current CMP runs.')
+ labs(x='Year',y='SSB (thousand t)',title='Fixed catch: 15 unique SSB simulations',subtitle='Advice = 1,525 thousand t; supplied reference-OM run, dynamic-BMSY tuning',caption='Display IDs match the other figures; recruitment paths and implementation assumptions differ between the supplied runs.')
 ggsave(file.path(out,'worms-15-fixed-catch.png'),p,width=11,height=6,dpi=160)
 basefile<-'../jmMSE-500-refine/data/om11_h1_0.16_065.rds';base<-readRDS(basefile)
 cmp<-rbindlist(lapply(dimnames(rp)$params,function(par) {

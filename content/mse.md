@@ -2,9 +2,9 @@
 
 ## New working comparison: narrowing the CMP set
 
-The [8 September working paper](papers/cmp-screening-2026/cmp-screening-working-paper.html) compares HS−20, HS−30 and PR−20 after an explicit screen of close alternatives and poorer reference-OM performers. It now focuses on recruitment-crash and OM21 robustness cases, with trade-off plots and 15 SSB/catch trajectories for each case. Fixed catch is included as a reference-OM benchmark tuned using dynamic BMSY (achieved long-term P(Green): 60.3%). The shortlist is exploratory, not an agreed selection, and the paper retains the reasons and data for omitted CMPs.
+The [8 September working paper](papers/cmp-screening-2026/cmp-screening-working-paper.html) compares HS−20, HS−30 and PR−20 after an explicit screen of close alternatives and poorer reference-OM performers. It now focuses on recruitment-crash and OM21 robustness cases, with trade-off plots and 15 SSB/catch trajectories for each case. Fixed catch is included as a reference-OM benchmark tuned using dynamic BMSY (achieved long-term P(Green): 60.3%). The shortlist is proposed for discussion, and the paper retains the reasons and results for omitted CMPs.
 
-The [draft decision guide](papers/cmp-screening-2026/cmp-decision-guide.html) sets out proposed advice, decisions for managers and work needed before recommending adoption, drawing on the ICCAT and IOTC examples. It is a discussion draft, not agreed advice.
+The [draft decision guide](papers/cmp-screening-2026/cmp-decision-guide.html) sets out proposed advice, decisions for managers and work needed before recommending adoption, drawing on the ICCAT and IOTC examples. It is a discussion draft for review by scientists, managers and Parties.
 
 Try the [all-CMP scorecard](papers/cmp-screening-2026/scorecard-all.html) or the [retained-CMP scorecard](papers/cmp-screening-2026/scorecard-shortlist.html). Choose among ten OMs and, for two-stock OMs, separate stock components. Fixed catch is available for the reference OM. Within each indicator, the best selected CMP scores 100 and others are scored relative to it. Raw values, zero-best exceptions and chosen weights remain visible.
 

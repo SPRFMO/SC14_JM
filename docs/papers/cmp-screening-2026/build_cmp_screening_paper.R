@@ -94,7 +94,7 @@ p<-ggplot(worms,aes(year,data,group=iter,colour=factor(iter)))+geom_line(linewid
  facet_grid(Metric~CMP,scales='free_y')+scale_colour_viridis_d(option='turbo',name='Simulation')+
  ggthemes::theme_few(base_size=11)+theme(legend.position='bottom')+labs(x='Year',y=NULL,title='15 matched simulation trajectories',
  subtitle='Same iteration IDs in every CMP and metric panel; all selected trajectories retained',
- caption='Illustrative trajectories, not uncertainty intervals. Values are thousand tonnes; scales are shared across CMPs within each row.')
+ caption='Selected simulation paths; uncertainty summaries use all 500 simulations. Values are thousand tonnes; scales are shared across CMPs within each row.')
 ggsave(file.path(out,'worms-15.png'),p,width=12,height=7.8,dpi=170)
 inputs<-c(files,runsfile,'doc/data/candidates/candidate_quilt_reference_summary.csv','doc/data/candidates/catch_spaghetti_reference_iterations.csv')
 writeLines(c(paste(names(tools::md5sum(inputs)),tools::md5sum(inputs)),capture.output(sessionInfo())),file.path(out,'provenance.txt'))
