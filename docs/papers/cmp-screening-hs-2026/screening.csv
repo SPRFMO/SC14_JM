@@ -1,0 +1,7 @@
+CMP,Comparator,Result,Basis
+HS+20 (MP29),HSsym (MP45),Better within tolerances,"PC270, SSBbelow8dB0"
+HS+20 (MP29),HS-20 (MP43),Better within tolerances,CatchDrop20
+HSsym (MP45),HS+20 (MP29),Poorer within tolerances,"PC270, SSBbelow8dB0"
+HSsym (MP45),HS-20 (MP43),Better within tolerances,CatchDrop20
+HS-20 (MP43),HS+20 (MP29),Poorer within tolerances,CatchDrop20
+HS-20 (MP43),HSsym (MP45),Poorer within tolerances,CatchDrop20

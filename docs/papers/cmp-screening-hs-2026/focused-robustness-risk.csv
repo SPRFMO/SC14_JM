@@ -1,0 +1,10 @@
+scenario,biol,code,green,below8,iterations,years
+om11_2,CJM,tun29,0.4522,0.1006,500,10
+om11_2,CJM,tun45,0.4462,0.1026,500,10
+om11_2,CJM,tun43,0.428,0.0962,500,10
+om21,Southern,tun29,0.6128,0,500,10
+om21,North,tun29,0,0.144,500,10
+om21,Southern,tun45,0.5586,0,500,10
+om21,North,tun45,0,0.1484,500,10
+om21,Southern,tun43,0.4366,0,500,10
+om21,North,tun43,0,0.1548,500,10

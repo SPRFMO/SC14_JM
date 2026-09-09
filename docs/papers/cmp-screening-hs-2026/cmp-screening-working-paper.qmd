@@ -1,6 +1,6 @@
 ---
-title: "Narrowing the jack mackerel CMP comparison"
-subtitle: "Working paper: best-relative scorecards, management trade-offs and matched simulation trajectories"
+title: "Second CMP screening comparison: MP29, MP45 and MP43"
+subtitle: "HS+20, HSsym and HS−20: best-relative scorecards, management trade-offs and matched simulations"
 date: 2026-09-09
 lang: en
 format:
@@ -15,27 +15,27 @@ format:
     fig-width: 10
 ---
 
-[Back to the jack mackerel wiki](../../mse.html) · [All CMPs and fixed catch: best-relative scorecard](scorecard-all.html) · [Retained CMPs and fixed catch: best-relative scorecard](scorecard-shortlist.html)
+[First CMP screening working paper](../cmp-screening-2026/cmp-screening-working-paper.html) · [Back to the jack mackerel wiki](../../mse.html) · [All CMPs and fixed catch: best-relative scorecard](scorecard-all.html) · [Selected CMPs and fixed catch: best-relative scorecard](scorecard-shortlist.html)
 
 ::: {.callout-note title="Purpose"}
-This working paper supports discussion of CMP choices using the saved 500-simulation results. Model settings and tuning are unchanged; selection of a CMP remains open. This revision focuses on the recruitment-crash OM and OM21 and adds the supplied fixed-catch reference comparison. The three-CMP presentation is a discussion set; the revised advice indicator requires the shortlist to be reviewed. Robustness results remain separate. The full set remains available in the scorecard and downloadable data.
+This second working paper uses the same format and saved 500-simulation results as the first, but focuses on **MP29 (HS+20), MP45 (HSsym), and MP43 (HS−20)**. All three are retained as a discussion set for examining differences among the hockey-stick rules. Model settings, tuning, time windows and the illustrative screening tolerances are unchanged. The advice-reduction statistic is the probability of occurrence over all 25 projection years and 500 iterations. The first working paper remains available separately.
 :::
 
 ## Findings for discussion
 
-Three CMPs provide a compact view of the main management choices: **HS−20 (MP43), HS−30 (MP47), and PR−20 (MP44)**. HS−20 represents the lower-variability hockey-stick alternatives with a 20% advice-reduction limit. HS−30 retains the contrast offered by allowing larger reductions. PR−20 retains the higher-catch power-ramp alternative and its greater interannual variability.
+The three hockey-stick CMPs have similar reference median catch and IACC, but differ in low-catch risk, biomass risk and the probability of advice reductions greater than 19%. **MP29 and MP45 have zero occurrences of those advice reductions in the reference runs; MP43 has 761 occurrences in 12,500 comparisons (6.09%).** MP45 has the lowest median IACC of these three, and MP43 has the highest median catch. Those catch and IACC differences are small relative to the inherited screening tolerances.
 
-The three-CMP display is retained for continuity, but the revised advice-reduction statistic changes the earlier screening result. HS+20, HSsym, PR+20 and PRsym now present trade-offs with their listed comparators; their former exclusion is not supported by the updated five-indicator screen. Review all eight CMPs before confirming a shortlist. PR−30 remains poorer than HS−30 within the illustrative tolerances. Agreement on acceptable risk remains a separate step.
+Under the same five-indicator tolerances as the first paper, MP29 compares favourably with both alternatives, and MP45 compares favourably with MP43. These are tolerance-based comparisons, not strict dominance: small disadvantages in other indicators remain visible in the table. All three remain in this comparison. Robustness performance and agreed biological requirements remain separate considerations.
 
 ## Data, periods and indicator definitions
 
-The results cover eight candidate management procedures (CMPs), each with 500 simulations under the reference operating model (OM) and nine alternative OMs used to test performance under different assumptions (robustness tests). Two-stock OMs are shown by biological component; their catches and biomasses are reported separately. Advice reductions use all annual advice comparisons across all iterations (advice years **2025–2049**, applied **2026–2050**). Other performance calculations use **2041–2050**, except the inherited mean-catch-reduction column available as an optional scorecard indicator, which uses **2026–2050**. The worm plots span **2025–2050**.
+The source results cover eight candidate management procedures (CMPs), each with 500 simulations; this document focuses on three. The same runs were evaluated under the reference operating model (OM) and nine alternative OMs used to test performance under different assumptions (robustness tests). Two-stock OMs are shown by biological component; their catches and biomasses are reported separately. Advice reductions use all annual advice comparisons across all iterations (advice years **2025–2049**, applied **2026–2050**). Other performance calculations use **2041–2050**, except the inherited mean-catch-reduction column available as an optional scorecard indicator, which uses **2026–2050**. The worm plots span **2025–2050**.
 
 For catch, interannual catch change (IACC), and SSB/SSBMSY, first calculate each simulation's mean over 2041–2050. Trade-off points then show the median across 500 simulations; horizontal and vertical bars show the 25th–75th percentiles. The bars contain the middle half of simulation-specific values. Uncertainty in the estimated median would require a separate calculation. IACC is the absolute percentage change from the previous year's realized catch. The 2041 change therefore uses catch in 2040. The biomass ratio in the trade-off plots uses the stored **static SSBMSY** denominator; it is distinct from the dynamic-B0 risk indicator.
 
 The low-biomass indicator is the proportion of simulation-years with **SSB <8% of the matching year's dynamic B0**, the previous Blim. Dynamic B0 is the saved projected unfished SSB for the matching simulation. Each year below the threshold counts, including consecutive years. Catch below 270 kt is also a pooled simulation-year frequency.
 
-The **advice-reduction frequency** (`CatchDrop20`) is the proportion of valid annual HCR-advice comparisons with $A_t < 0.81 A_{t-1}$, pooled over all years and 500 iterations. Advice is recorded in 2025–2049 and applied in 2026–2050. The first advice is compared with the saved HCR initial advice, or the constant advice target for fixed catch. This gives 25 comparisons per iteration (12,500 when complete). Exact 19% reductions and increases do not count; 20% reductions count. There are no biomass or near-20% exclusions. Invalid values and nonpositive previous advice are excluded from the denominator and reported in the audit. This uses advice before implementation. Two-stock OMs have advice for the managed Southern stock; the same run-level advice statistic appears in both component views.
+The **probability of an advice reduction** (`CatchDrop20`) is the proportion of valid annual HCR-advice comparisons with $A_t < 0.81 A_{t-1}$, pooled over all years and 500 iterations. Advice is recorded in 2025–2049 and applied in 2026–2050. The first advice is compared with the saved HCR initial advice, or the constant advice target for fixed catch. This gives 25 comparisons per iteration (12,500 when complete). Exact 19% reductions and increases do not count; 20% reductions count. There are no biomass or near-20% exclusions. Invalid values and nonpositive previous advice are excluded from the denominator and reported in the audit. This uses advice before implementation. Two-stock OMs have advice for the managed Southern stock; the same run-level advice statistic appears in both component views.
 
 [All OM/CMP advice counts and denominators](catchdrop19-advice-summary.csv) · [Annual advice events and checks](candidate_quilt_catch_cut_diagnostics_reference.csv) and [counts and eligible years per simulation](candidate_quilt_event_counts_reference.csv) retain the audit trail.
 
@@ -53,49 +53,49 @@ The following absolute differences are treated as small for **forming this discu
 | Frequency below previous Blim | 1 percentage point | Lower |
 | Advice reductions >19% | 1 percentage point | Lower |
 
-A **close alternative** differs from its retained comparator by no more than every listed tolerance. A **poorer performer within these tolerances** has a retained comparator that is no worse beyond any tolerance and better beyond at least one. Every omitted CMP is compared directly with a retained CMP; there is no chain of eliminations. Choosing HS−20 and PR−20 as the representatives preserves the focal minus-20 variants for discussion. This presentation choice does not establish that the omitted CMPs can be discarded under the revised indicator; the overall score is displayed separately.
+A **close alternative** differs from its comparator by no more than every listed tolerance. A CMP is **better within tolerances** when it is no worse beyond any tolerance and better beyond at least one. All six directional comparisons among the three requested CMPs are shown, rather than eliminating a CMP through a chain of comparisons.
 
 {{< include screening.md >}}
 
-HS+20, HSsym, PR+20 and PRsym have no advice reductions greater than 19% in the reference runs, whereas their retained comparators do. These differences exceed the illustrative one-percentage-point tolerance and create trade-offs, so the earlier close-alternative or poorer labels for those four CMPs no longer apply. PR−30 remains poorer than HS−30 under these five indicators and tolerances. All comparisons remain open to revision for other OMs, indicators or stakeholder preferences.
+MP29 has lower low-catch probability and lower frequency below the previous Blim than MP45; both differences exceed one percentage point. MP29 and MP45 have lower probability of advice reductions greater than 19% than MP43. MP43's modest catch advantage and MP45's lower IACC remain visible, despite being within the inherited tolerances.
 
 ### Full reference comparison
 
-The table retains the omitted CMPs so the screen can be challenged. C is thousand tonnes; IACC is percent; PC270 and SSBbelow8dB0 are displayed as percentages; CatchDrop20 is displayed as the percentage of all valid consecutive advice comparisons with reductions greater than 19%.
+The table shows the three requested CMPs. The all-CMP scorecard retains the full eight-CMP comparison as background. C is thousand tonnes; IACC is percent; PC270 and SSBbelow8dB0 are displayed as percentages; CatchDrop20 is displayed as the percentage of all valid consecutive advice comparisons with reductions greater than 19%.
 
 {{< include all-cmp-values.md >}}
 
-[Screening decisions](screening.csv) · [Screening tolerances](screening-tolerances.csv) · [All eleven quilt indicators](all-cmp-quilt-values.csv)
+[Screening decisions](screening.csv) · [Screening tolerances](screening-tolerances.csv) · [All eleven indicators for these three CMPs](selected-cmp-quilt-values.csv)
 
 ## Scorecards: best 100, others relative to it
 
 Use the [all-CMP scorecard](scorecard-all.html) to review the original set and the [retained-set scorecard](scorecard-shortlist.html) for the retained-set comparison and fixed-catch reference comparison. Both open with **best-relative scaling** and equal weights on the available screening indicators. Use **Choose an OM** to select the reference or any of the nine robustness OMs, then choose a **stock component** for a two-stock OM. Scores are recomputed within the selected OM/component; no OMs or stock components are pooled. Recruitment crash and OM21 appear near the top of the selector.
 
-The fixed-catch benchmark is available in the reference selection only. The supplied fixed-catch results cover the reference OM. The 270 kt whole-stock catch threshold is omitted from two-stock components. When fixed catch is selected, the two vulnerable-biomass indicators are unavailable pending extraction from the supplied run; deselect it to restore those choices. Each scorecard displays only indicators shared by the selected CMPs. The fixed-catch snapshot uses its own stored reference points and reconstructed dynamic B0, preserving its reported tuning convention. Users can change CMPs, indicators, scaling and weights. The overall score helps explore preferences. The revised five-indicator comparison requires the earlier shortlist to be reviewed.
+The fixed-catch benchmark is available in the reference selection only. The supplied fixed-catch results cover the reference OM. The 270 kt whole-stock catch threshold is omitted from two-stock components. When fixed catch is selected, the two vulnerable-biomass indicators are unavailable pending extraction from the supplied run; deselect it to restore those choices. Each scorecard displays only indicators shared by the selected CMPs. The fixed-catch snapshot uses its own stored reference points and reconstructed dynamic B0, preserving its reported tuning convention. Users can change CMPs, indicators, scaling and weights. The overall score helps explore preferences. The paired screening table and raw outcomes should be considered alongside the scores.
 
 For a higher-is-better indicator, the score is $100V_i/\max_j(V_j)$. For a lower-is-better indicator, it is $100\min_j(V_j)/V_i$. The best value therefore scores 100. Scores are recalculated for the selected CMP set, so each selection has its own reference for comparison.
 
-**Zero-best exception:** when the best value for a lower-is-better indicator is zero, zero-valued CMPs score 100 and positive-valued CMPs score zero. This rule is necessary because the ordinary ratio cannot distinguish positive values when its numerator is zero. In the full reference set, several CMPs and fixed catch have zero advice reductions greater than 19%, while HS−20, HS−30, PR−20 and PR−30 have positive frequencies. This gives the latter zero scores for this indicator when a zero-valued comparator is selected. Inspect the raw frequencies and compare with range scaling before assigning weight. Related stock or stability indicators can overlap even when given equal weights.
+**Zero-best exception:** when the best value for a lower-is-better indicator is zero, zero-valued CMPs score 100 and positive-valued CMPs score zero. This rule is necessary because the ordinary ratio cannot distinguish positive values when its numerator is zero. MP29 and MP45 have zero reference advice-reduction probability, while MP43 has 6.09%. Thus MP43 scores zero for this indicator under best-relative scaling when either zero-valued comparator is selected. Inspect raw probabilities and range scaling before assigning weight. Related stock or stability indicators can overlap even when given equal weights.
 
 The [existing general best-relative explorer](https://sprfmo.github.io/jmMSE26/application/scorecard-best-relative.html) and [original range-scaled explorer](https://sprfmo.github.io/jmMSE26/application/scorecard.html) provide the broader application context. The two companion scorecards above embed this paper's exact data snapshot for reproducibility.
 
 ## Reference-OM trade-offs after screening
 
-![Catch and stability among retained CMPs. Horizontal and vertical bars are interquartile ranges across the 500 simulation-specific 2041–2050 means.](reference-IACC.png){#fig-reference-stability fig-alt="Three retained CMPs plotted with median catch on the horizontal axis and median interannual catch change on the vertical axis. Both directions have interquartile bars; colours and point shapes distinguish CMPs."}
+![Catch and stability among selected CMPs. Horizontal and vertical bars are interquartile ranges across the 500 simulation-specific 2041–2050 means.](reference-IACC.png){#fig-reference-stability fig-alt="Three selected CMPs plotted with median catch on the horizontal axis and median interannual catch change on the vertical axis. Both directions have interquartile bars; colours and point shapes distinguish CMPs."}
 
-![Catch and spawning-biomass status among retained CMPs, using the stored static SSBMSY reference point.](reference-SBMSY.png){#fig-reference-biomass fig-alt="Median catch versus median SSB divided by static SSBMSY for HS minus 20, HS minus 30 and PR minus 20, with horizontal and vertical interquartile ranges."}
+![Catch and spawning-biomass status among selected CMPs, using the stored static SSBMSY reference point.](reference-SBMSY.png){#fig-reference-biomass fig-alt="Median catch versus median SSB divided by static SSBMSY for HS plus 20, HS symmetric and HS minus 20, with horizontal and vertical interquartile ranges."}
 
 The reference plots expose the cost of concentrating on one outcome. The preferred CMP can change with the priority given to catch stability, catch level or low-biomass risk. Simulation ranges can overlap while differences between rules remain within individual simulations. The shortlist should be revisited if a different time horizon, screening tolerance or biological constraint is agreed.
 
 ## Focused robustness: recruitment crash and OM21
 
-The requested comparison keeps **HS−20, HS−30 and PR−20** and focuses on
+The requested comparison keeps **MP29 (HS+20), MP45 (HSsym), and MP43 (HS−20)** and focuses on
 **om11_2 (h1_0.16_lowrec, recruitment crash)** and **om21 (h2_0.16, two stocks)**.
 The existing om11_2 uses the saved `collf` recruitment-deviation scenario; its
 saved results and tuning are retained. OM21 retains separate North and
 Southern components. The reference OM is included alongside them for orientation.
 
-![Catch and interannual variability for the reference OM, recruitment crash and both components of OM21.](focused-robustness-IACC.png){#fig-focus-iacc fig-alt="Four panels compare HS minus 20, HS minus 30 and PR minus 20. Catch is horizontal, interannual catch change vertical, with medians and interquartile ranges over 500 simulations."}
+![Catch and interannual variability for the reference OM, recruitment crash and both components of OM21.](focused-robustness-IACC.png){#fig-focus-iacc fig-alt="Four panels compare HS plus 20, HS symmetric and HS minus 20. Catch is horizontal, interannual catch change vertical, with medians and interquartile ranges over 500 simulations."}
 
 ![Catch and static-reference SSB status for the same focused robustness set.](focused-robustness-SBMSY.png){#fig-focus-ssb fig-alt="Four panels display median catch versus median SSB divided by static SSBMSY for the reference stock, recruitment-crash stock, and the two OM21 components. Both axes have interquartile bars."}
 
@@ -107,15 +107,11 @@ separate calculation.
 
 {{< include focused-robustness-risk.md >}}
 
-Under recruitment crash, PR−20 has the highest dynamic-green frequency of
-these three CMPs (54.5%) and the lowest below-Blim frequency (5.0%), while the
-hockey-stick CMPs retain lower catch variability. In OM21, the Southern
-component's green probability is highest under PR−20 (90.4%). The Northern
-component has zero green probability under all three, with below-Blim
-frequencies of roughly 14–16%. Judging performance for the two-stock system therefore requires
-consideration of both stocks.
+Under recruitment crash, MP29 has the highest dynamic-green probability of these three (45.2%), while MP43 has the lowest below-previous-Blim frequency (9.6%). MP45 lies between them for green probability (44.6%) but has a slightly higher below-Blim frequency (10.3%). These indicators therefore give different views of performance.
 
-![Fifteen matched SSB and catch trajectories under recruitment crash.](worms-15-om11_2.png){#fig-worm-rec-crash fig-alt="Six panels show the same 15 posterior-draw IDs for SSB and catch under HS minus 20, HS minus 30 and PR minus 20 in the recruitment-crash OM. Low trajectories remain included."}
+In OM21, Southern green probability is 61.3% for MP29, 55.9% for MP45 and 43.7% for MP43. Northern green probability is zero under all three, with below-Blim frequencies of 14.4%, 14.8% and 15.5%, respectively. Judging performance for the two-stock system requires both stocks; high Southern performance does not establish acceptable Northern outcomes.
+
+![Fifteen matched SSB and catch trajectories under recruitment crash.](worms-15-om11_2.png){#fig-worm-rec-crash fig-alt="Six panels show the same 15 posterior-draw IDs for SSB and catch under HS plus 20, HS symmetric and HS minus 20 in the recruitment-crash OM. Low trajectories remain included."}
 
 ![Fifteen matched trajectories for each component of OM21.](worms-15-om21.png){#fig-worm-om21 fig-alt="Twelve panels separate Northern and Southern SSB and catch for the three CMPs. The same 15 draw IDs are retained across CMPs; scales are shared within each row."}
 
@@ -131,22 +127,15 @@ The alternative OMs provide a separate check of the reference shortlist. The fol
 
 ![Catch–stability trade-offs for the five single-stock robustness OMs.](robustness-single-IACC.png){#fig-single-stability fig-alt="Five panels show retained CMP catch and interannual catch-change medians and interquartile ranges for alternative selectivity, low recruitment, cyclic recruitment, higher steepness and the alternative assessment model."}
 
-![Catch–biomass trade-offs for the five single-stock robustness OMs.](robustness-single-SBMSY.png){#fig-single-biomass fig-alt="Five separate single-stock robustness panels compare catch and static-reference SSB ratios for the retained CMPs, with interquartile bars on both axes."}
+![Catch–biomass trade-offs for the five single-stock robustness OMs.](robustness-single-SBMSY.png){#fig-single-biomass fig-alt="Five separate single-stock robustness panels compare catch and static-reference SSB ratios for the selected CMPs, with interquartile bars on both axes."}
 
 ![Catch–stability trade-offs for each biological component of the four two-stock robustness OMs.](robustness-two-IACC.png){#fig-two-stability fig-alt="Eight panels separate the two biological components of four two-stock OMs. Each displays retained CMP catch and variability with interquartile ranges."}
 
 ![Catch–biomass trade-offs for each biological component of the four two-stock robustness OMs.](robustness-two-SBMSY.png){#fig-two-biomass fig-alt="Eight stock-component panels compare catch and static-reference spawning-biomass ratios under two-stock, movement, steepness and assessment-model alternatives."}
 
-Among the retained CMPs, PR−20 has the highest median catch in the reference
-and alternative-selectivity OMs, while one of the hockey-stick CMPs has the
-higher catch in the other non-collapsed panels. PR−20 often retains a higher
-SSB/static-SSBMSY ratio under robustness OMs. These contrasts reinforce the
-need to consider yield and biomass jointly rather than extrapolating the
-reference-OM ranking. The northern component of h2_1.14 has essentially zero
-catch under all three CMPs; that panel is labelled as having too little catch to support a
-useful ranking. Its raw values remain in the downloadable data.
+The panels show whether reference-OM differences persist under alternative assumptions, without pooling OMs or stock components. The Northern component of h2_1.14 has essentially zero catch under all three CMPs; that panel is labelled as having too little catch to support a useful numerical ranking. Raw values remain in the downloadable data.
 
-All eight CMPs' OM-specific summaries are retained in the [complete trade-off data](tradeoff-summary-all-cmps.csv). An omitted CMP should be reinstated if the working group identifies a useful advantage under an alternative OM. The preferred CMP across OMs remains open. The shortlist is based on practical comparison thresholds; formal statistical testing would be a separate analysis.
+All eight CMPs' OM-specific summaries are retained in the [complete trade-off data](tradeoff-summary-all-cmps.csv). An omitted CMP should be reinstated if the working group identifies a useful advantage under an alternative OM. The preferred CMP across OMs remains open. The requested three-CMP set is evaluated using the inherited practical thresholds; formal statistical testing would be a separate analysis.
 
 
 </details>
@@ -155,7 +144,7 @@ All eight CMPs' OM-specific summaries are retained in the [complete trade-off da
 
 The 15 iteration IDs are reused from the earlier paired reference figure: **37, 65, 110, 151, 158, 165, 177, 186, 246, 327, 344, 348, 367, 397 and 498**. The same IDs and colours are used in all six panels. The original selection is retained, including poor outcomes. Matching IDs align the underlying parameter draws. Random observation errors can still differ between CMP runs that use different seeds.
 
-![SSB and catch trajectories for the same 15 simulations under each retained CMP.](worms-15.png){#fig-worms fig-alt="Six panels show SSB above and catch below for HS minus 20, HS minus 30 and PR minus 20. Fifteen individually coloured simulations are matched across all panels; all trajectories, including low outcomes, are retained."}
+![SSB and catch trajectories for the same 15 simulations under each retained CMP.](worms-15.png){#fig-worms fig-alt="Six panels show SSB above and catch below for HS plus 20, HS symmetric and HS minus 20. Fifteen individually coloured simulations are matched across all panels; all trajectories, including low outcomes, are retained."}
 
 These plots show the timing and persistence of changes in 15 of the 500 simulations. Outcome probabilities and uncertainty ranges are calculated from the full set. The full-distribution trade-off summaries and low-biomass frequencies remain the basis for comparing typical performance and risk.
 
@@ -204,7 +193,7 @@ the reference OM, so this option appears only in the reference scorecard.
 
 ## Decisions this paper can support
 
-The companion [draft decision guide](cmp-decision-guide.html) uses these results to propose advice, a manager decision checklist and the work needed before an adoption recommendation. It is a discussion draft for review by the Scientific Committee, managers and Parties.
+This second document supports discussion of MP29, MP45 and MP43. The [first paper’s draft decision guide](../cmp-screening-2026/cmp-decision-guide.html) remains associated with its original discussion set and does not constitute advice selecting these three CMPs.
 
 1. Review the explicit screening tolerances and decide whether the three-CMP presentation set is sufficient for the next discussion.
 2. Set biological acceptability criteria separately from best-relative scoring; a relatively high score can coexist with unacceptable risk.
@@ -214,7 +203,9 @@ The companion [draft decision guide](cmp-decision-guide.html) uses these results
 
 ## Source files and checks {#reproducibility-and-scope-of-validation}
 
-The base script `R/build_cmp_screening_paper.R` reads the saved reference and robustness performance tables from `output/candidate-performance-500/`, and the reference runs from `jmMSE-500-refine/model/tune/refine_500_from_100/runs.rds`. The saved CMP simulations are unchanged. A zero-catch counterfactual was reconstructed only to check dynamic reference points for the fixed-catch handoff. The current quilt supplies the advice-reduction probability and dynamic-B0 risk values. The extension `R/extend_cmp_paper_robustness_fixedcatch.R` reads the two robustness checkpoints and inspects the unchanged Downloads input. `R/build_cmp_om_scorecards.R`, `R/add_fixedcatch_scorecard.R` and `R/configure_cmp_scorecard_oms.py` rebuild the OM-aware scorecard snapshots and interfaces. Input checksums and the R session are recorded in [input and software record](provenance.txt). This paper's [editable Quarto source](cmp-screening-working-paper.qmd) and companion data permit revision without editing the displayed figures manually.
+The base script `R/build_cmp_screening_paper.R` reads the saved reference and robustness performance tables from `output/candidate-performance-500/`, and the reference runs from `jmMSE-500-refine/model/tune/refine_500_from_100/runs.rds`. The saved CMP simulations are unchanged. The fixed-catch files are reused unchanged from the first paper, where its dynamic reference points were checked against a reconstructed zero-catch counterfactual. The current quilt supplies the advice-reduction probability and dynamic-B0 risk values. The extension `R/extend_cmp_paper_robustness_fixedcatch.R` reads the two robustness checkpoints for the selected CMPs. For this second paper, fixed-catch reconstruction is skipped and its previously checked files are reused. `R/build_hs_screening_tables.R` calculates the six direct paired screening comparisons. `R/build_cmp_om_scorecards.R`, `R/add_fixedcatch_scorecard.R` and `R/configure_cmp_scorecard_oms.py` rebuild the OM-aware scorecard snapshots and interfaces. Input checksums and the R session are recorded in [input and software record](provenance.txt). This paper's [editable Quarto source](cmp-screening-working-paper.qmd) and companion data permit revision without editing the displayed figures manually.
+
+The reproducible command is provided in [second-paper build instructions](BUILD.md).
 
 Validation checks require 500 iterations for every OM/CMP/component summary, complete 15-by-26-year worm panels, common worm IDs, documented mass units, and direct numerical confirmation of every screening comparison. The HTML uses semantic headings and tables, numerical data alternatives, captions, and figure descriptions. Screen-reader testing and formal accessibility review remain outstanding. This paper analyses saved outputs using the existing model dynamics and reference-point conventions. Verification of the assessment and projection calculations remains separate work.
 

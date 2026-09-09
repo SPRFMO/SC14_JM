@@ -1,0 +1,10 @@
+mp,statistic,metric,raw_value,preferred_direction,include,weight,years,summary,om_code,om_label,component,n_iter
+"Fixed catch (1,525 kt)",C,Catch,1546.37083735076,higher is better,TRUE,1,2041-2050,Median across iteration-specific 2041-2050 means,om11,Reference (om11),CJM,500
+"Fixed catch (1,525 kt)",CatchDrop20,Advice reductions >19% (%),0,lower is better,TRUE,1,2026-2050 (advice comparisons 2025-2049),Proportion across all valid consecutive saved HCR-advice comparisons and all iterations; advice falls strictly more than 19%; no biomass or near-20% exclusions; first advice compared with saved HCR initialization,om11,Reference (om11),CJM,500
+"Fixed catch (1,525 kt)",Creduction,Mean catch reduction,0.869923287003833,lower is better,FALSE,1,2041-2050,Median across iteration-specific 2026-2050 mean reductions,om11,Reference (om11),CJM,500
+"Fixed catch (1,525 kt)",FMSY,F / F[MSY],0.702703469649191,lower is better,FALSE,1,2041-2050,Median across iteration-specific 2041-2050 means,om11,Reference (om11),CJM,500
+"Fixed catch (1,525 kt)",IACC,IACC,1.81470828801996,lower is better,TRUE,1,2041-2050,Median across iteration-specific 2041-2050 means,om11,Reference (om11),CJM,500
+"Fixed catch (1,525 kt)",PC270,P(catch < 270 kt),0.0312,lower is better,TRUE,1,2041-2050,Proportion of 2041-2050 iteration-years with catch below 270 kt,om11,Reference (om11),CJM,500
+"Fixed catch (1,525 kt)",SB0red,P(Kobe red),0.3244,lower is better,FALSE,1,2041-2050,Proportion across all 2041-2050 iteration-years,om11,Reference (om11),CJM,500
+"Fixed catch (1,525 kt)",SBMSY,SB / SB[MSY],1.68764194547309,higher is better,FALSE,1,2041-2050,Median across iteration-specific 2041-2050 means,om11,Reference (om11),CJM,500
+"Fixed catch (1,525 kt)",SSBbelow8dB0,SSB <8% dynamic B0 (%),0.1072,lower is better,TRUE,1,2041-2050,Proportion of valid 2041-2050 iteration-years with SSB strictly below 8% of dynamic unfished SSB (previous Blim),om11,Reference (om11),CJM,500

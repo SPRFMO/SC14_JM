@@ -8,6 +8,12 @@ The [draft decision guide](papers/cmp-screening-2026/cmp-decision-guide.html) se
 
 Try the [all-CMP scorecard](papers/cmp-screening-2026/scorecard-all.html) or the [retained-CMP scorecard](papers/cmp-screening-2026/scorecard-shortlist.html). Choose among ten OMs and, for two-stock OMs, separate stock components. Fixed catch is available for the reference OM. Within each indicator, the best selected CMP scores 100 and others are scored relative to it. Raw values, zero-best exceptions and chosen weights remain visible.
 
+## Second working comparison: MP29, MP45 and MP43
+
+The [second CMP screening working document](papers/cmp-screening-hs-2026/cmp-screening-working-paper.html) uses the same format with **MP29 (HS+20), MP45 (HSsym), and MP43 (HS−20)**. It includes regenerated reference and robustness figures, the same 15 matched simulation IDs, and the fixed-catch comparison. Advice reductions greater than 19% are expressed as an occurrence probability over all 25 projection years and 500 iterations.
+
+Open the [three-CMP scorecard and fixed-catch comparison](papers/cmp-screening-hs-2026/scorecard-shortlist.html) or [all-CMP context scorecard](papers/cmp-screening-hs-2026/scorecard-all.html). The first working document remains available above.
+
 **How can we choose rules that support catches while performing acceptably when the future is uncertain?**
 
 Management strategy evaluation (**MSE**) tests management procedures in simulated fisheries. A procedure specifies how information is used to make a decision, such as a catch recommendation. The simulation repeats the process over time so that the consequences of earlier decisions affect later ones.

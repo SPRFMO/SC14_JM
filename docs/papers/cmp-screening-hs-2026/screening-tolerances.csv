@@ -1,0 +1,6 @@
+statistic,tolerance
+C,40
+IACC,0.6
+PC270,0.01
+SSBbelow8dB0,0.01
+CatchDrop20,0.01

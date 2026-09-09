@@ -63,3 +63,5 @@ Earlier studies, Commission decisions and SC14’s agreed conclusions are the ne
 - [All CMPs: configurable best-relative scorecard](papers/cmp-screening-2026/scorecard-all.html) and [three retained CMPs plus fixed-catch reference](papers/cmp-screening-2026/scorecard-shortlist.html).
 
 - [Draft jack mackerel MP decision guide](papers/cmp-screening-2026/cmp-decision-guide.html) — proposed advice and manager decisions, with links to the ICCAT and IOTC examples; proposed for discussion.
+
+- [Second CMP screening working document: MP29, MP45 and MP43](papers/cmp-screening-hs-2026/cmp-screening-working-paper.html) — same-format comparison with its own figures, scorecards and editable source.

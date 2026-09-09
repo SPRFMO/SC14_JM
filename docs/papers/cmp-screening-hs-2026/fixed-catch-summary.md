@@ -1,0 +1,10 @@
+| indicator | value |
+| --- | --- |
+| Fixed catch advice (thousand t) | 1525 |
+| Median realized catch (thousand t) | 1546.4 |
+| Realized catch IQR (thousand t) | 1478.2–1556.0 |
+| Median IACC (%) | 1.81 |
+| IACC IQR (%) | 1.45–2.69 |
+| P(green), reconstructed dynamic BMSY | 60.3% |
+| P(green), static BMSY | 57.8% |
+| SSB <8% reconstructed dynamic B0 | 10.7% |
