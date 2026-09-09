@@ -462,7 +462,7 @@ catch_summary <- rbindlist(list(
         , statistic := "Creduction"]
 ), use.names = TRUE)
 
-# Annual advice reductions across all consecutive saved advice years and iterations.
+# Annual advice reductions across all annual advice years and iterations.
 source("R/catchdrop_advice.R")
 catch_events <- rbindlist(lapply(names(candidate_runs), function(code)
   extract_advice_events(candidate_runs[[code]], code)))
@@ -562,7 +562,7 @@ quilt[statistic == "PC270",
 quilt[statistic == "Creduction",
   summary := "Median across iteration-specific 2026-2050 mean reductions"]
 quilt[statistic == "CatchDrop20",
-  `:=`(years = "2027-2050 (advice comparisons 2026-2049)", summary = "Proportion across all valid consecutive saved HCR-advice comparisons and all iterations; advice falls strictly more than 19%; no biomass or near-20% exclusions; first saved advice has no predecessor")]
+  `:=`(years = "2026-2050 (advice comparisons 2025-2049)", summary = "Proportion across all valid annual HCR-advice comparisons and all iterations; advice falls strictly more than 19%; no biomass or near-20% exclusions; first advice compared with saved HCR initialization")]
 quilt[statistic == "SSBbelow8dB0",
   summary := "Proportion of valid 2041-2050 iteration-years with SSB strictly below 8% of dynamic unfished SSB (previous Blim)"]
 quilt[, display_value := fifelse(
@@ -624,7 +624,7 @@ quilt_plot <- ggplot(quilt, aes(metric, mp, fill = relative_preference)) +
     x = NULL, y = NULL,
     caption = paste(
       "Purple = lower and light lavender = higher relative preference.",
-      "Advice cuts >19% pool all saved consecutive advice comparisons and iterations. SSB <8% dynamic B0 uses the previous Blim.",
+      "Advice cuts >19% pool all annual advice comparisons and iterations. SSB <8% dynamic B0 uses the previous Blim.",
       "This is not an absolute acceptability score."
     )
   ) +

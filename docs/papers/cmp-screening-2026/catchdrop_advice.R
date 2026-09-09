@@ -25,7 +25,23 @@ extract_advice_events <- function(run, code) {
   lag <- mse::args(run)$management_lag
   stopifnot(length(lag)==1L,is.finite(lag))
   t[, application_year:=year+as.integer(lag)]
-  advice_drop_events(t)
+  parameters <- mse::args(mse::control(run)$hcr)
+  initial <- parameters$initial
+  baseline_source <- 'HCR initial advice'
+  if (is.null(initial) && length(parameters$ctrg)==1L) {
+    initial <- parameters$ctrg
+    baseline_source <- 'fixed-catch constant advice target'
+  }
+  stopifnot(!is.null(initial),length(initial) %in% c(1L,data.table::uniqueN(t$iter)),
+    all(is.finite(initial)),all(initial>0))
+  baseline <- t[year==min(year)]
+  data.table::setorder(baseline,iter)
+  baseline[, `:=`(year=year-1L,application_year=application_year-1L,
+    advice=rep(as.numeric(initial),length.out=.N))]
+  out <- advice_drop_events(data.table::rbindlist(list(baseline,t)))
+  out <- out[year>=min(t$year)]
+  out[, first_comparison_baseline:=baseline_source]
+  out
 }
 summarize_advice_events <- function(x) {
   x[,.(events=sum(flag,na.rm=TRUE),valid_comparisons=sum(!is.na(flag)),

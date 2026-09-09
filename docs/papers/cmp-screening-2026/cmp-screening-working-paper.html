@@ -2404,10 +2404,10 @@ window.Quarto = {
 </section>
 <section id="data-periods-and-indicator-definitions" class="level2" data-number="2">
 <h2 data-number="2" class="anchored" data-anchor-id="data-periods-and-indicator-definitions"><span class="header-section-number">2</span> Data, periods and indicator definitions</h2>
-<p>The results cover eight candidate management procedures (CMPs), each with 500 simulations under the reference operating model (OM) and nine alternative OMs used to test performance under different assumptions (robustness tests). Two-stock OMs are shown by biological component; their catches and biomasses are reported separately. Advice reductions use all consecutive saved advice comparisons across all iterations (advice years <strong>2026–2049</strong>, applied <strong>2027–2050</strong>). Other performance calculations use <strong>2041–2050</strong>, except the inherited mean-catch-reduction column available as an optional scorecard indicator, which uses <strong>2026–2050</strong>. The worm plots span <strong>2025–2050</strong>.</p>
+<p>The results cover eight candidate management procedures (CMPs), each with 500 simulations under the reference operating model (OM) and nine alternative OMs used to test performance under different assumptions (robustness tests). Two-stock OMs are shown by biological component; their catches and biomasses are reported separately. Advice reductions use all annual advice comparisons across all iterations (advice years <strong>2025–2049</strong>, applied <strong>2026–2050</strong>). Other performance calculations use <strong>2041–2050</strong>, except the inherited mean-catch-reduction column available as an optional scorecard indicator, which uses <strong>2026–2050</strong>. The worm plots span <strong>2025–2050</strong>.</p>
 <p>For catch, interannual catch change (IACC), and SSB/SSBMSY, first calculate each simulation’s mean over 2041–2050. Trade-off points then show the median across 500 simulations; horizontal and vertical bars show the 25th–75th percentiles. The bars contain the middle half of simulation-specific values. Uncertainty in the estimated median would require a separate calculation. IACC is the absolute percentage change from the previous year’s realized catch. The 2041 change therefore uses catch in 2040. The biomass ratio in the trade-off plots uses the stored <strong>static SSBMSY</strong> denominator; it is distinct from the dynamic-B0 risk indicator.</p>
 <p>The low-biomass indicator is the proportion of simulation-years with <strong>SSB &lt;8% of the matching year’s dynamic B0</strong>, the previous Blim. Dynamic B0 is the saved projected unfished SSB for the matching simulation. Each year below the threshold counts, including consecutive years. Catch below 270 kt is also a pooled simulation-year frequency.</p>
-<p>The <strong>advice-reduction frequency</strong> (<code>CatchDrop20</code>) is the proportion of valid consecutive saved HCR-advice comparisons with <span class="math inline">\(A_t &lt; 0.81 A_{t-1}\)</span>, pooled over all years and 500 iterations. Advice is recorded in 2025–2049 and applied in 2026–2050. The first saved advice has no predecessor, leaving 24 comparisons per iteration (12,000 when complete). Exact 19% reductions and increases do not count; 20% reductions count. There are no biomass or near-20% exclusions. Invalid values and nonpositive previous advice are excluded from the denominator and reported in the audit. This uses advice before implementation. Two-stock OMs have advice for the managed Southern stock; the same run-level advice statistic appears in both component views.</p>
+<p>The <strong>advice-reduction frequency</strong> (<code>CatchDrop20</code>) is the proportion of valid annual HCR-advice comparisons with <span class="math inline">\(A_t &lt; 0.81 A_{t-1}\)</span>, pooled over all years and 500 iterations. Advice is recorded in 2025–2049 and applied in 2026–2050. The first advice is compared with the saved HCR initial advice, or the constant advice target for fixed catch. This gives 25 comparisons per iteration (12,500 when complete). Exact 19% reductions and increases do not count; 20% reductions count. There are no biomass or near-20% exclusions. Invalid values and nonpositive previous advice are excluded from the denominator and reported in the audit. This uses advice before implementation. Two-stock OMs have advice for the managed Southern stock; the same run-level advice statistic appears in both component views.</p>
 <p><a href="catchdrop19-advice-summary.csv">All OM/CMP advice counts and denominators</a> · <a href="candidate_quilt_catch_cut_diagnostics_reference.csv">Annual advice events and checks</a> and <a href="candidate_quilt_event_counts_reference.csv">counts and eligible years per simulation</a> retain the audit trail.</p>
 </section>
 <section id="screening-the-cmp-set" class="level2" data-number="3">
@@ -2514,7 +2514,7 @@ window.Quarto = {
 <tr class="even">
 <td>HS-20 (MP43)</td>
 <td>1905</td>
-<td>6.3%</td>
+<td>6.1%</td>
 <td>3.5</td>
 <td>4.7%</td>
 <td>7.0%</td>
@@ -2522,7 +2522,7 @@ window.Quarto = {
 <tr class="odd">
 <td>HS-30 (MP47)</td>
 <td>1904</td>
-<td>4.8%</td>
+<td>4.6%</td>
 <td>3.9</td>
 <td>3.5%</td>
 <td>4.5%</td>
@@ -2546,7 +2546,7 @@ window.Quarto = {
 <tr class="even">
 <td>PR-20 (MP44)</td>
 <td>1964</td>
-<td>17.3%</td>
+<td>20.6%</td>
 <td>10.2</td>
 <td>3.9%</td>
 <td>5.8%</td>
@@ -2554,7 +2554,7 @@ window.Quarto = {
 <tr class="odd">
 <td>PR-30 (MP48)</td>
 <td>1878</td>
-<td>13.3%</td>
+<td>16.7%</td>
 <td>10.5</td>
 <td>2.9%</td>
 <td>4.6%</td>
