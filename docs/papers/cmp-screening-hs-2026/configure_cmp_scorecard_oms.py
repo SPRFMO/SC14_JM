@@ -2,18 +2,21 @@ from pathlib import Path
 import json,re,os
 root=Path(os.environ.get('JMMSE_CMP_PAPER_OUT','output/cmp-working-paper-2026'))
 data=json.loads((root/'scorecards-all-oms.json').read_text())
+# Demonstration set: reference, recruitment crash and recruitment cycle.
+focus_oms=['om11','om11_2','om11_3']
+data=sorted([r for r in data if r['om_code'] in focus_oms],key=lambda r:focus_oms.index(r['om_code']))
 for name in ['all','shortlist']:
  p=root/f'scorecard-{name}.qmd'
  s=Path('doc/application/scorecard-best-relative.qmd').read_text()
  s=s.replace('page-layout: full','format:\n  html:\n    embed-resources: true\n    theme: cosmo')
  s=s.replace('title: "Interactive CMP scorecard: best-relative weighting"',f'title: "Best-relative scorecard: {"all CMPs" if name=="all" else "retained CMPs"} and fixed-catch reference"')
- s=s.replace('This browser-based explorer reproduces','[Return to the working paper](cmp-screening-working-paper.html).\n\nThis browser-based explorer reproduces',1)
+ s=s.replace('This browser-based explorer reproduces','[Return to the working paper](cmp-screening-working-paper.html). [Near-term trade-off and Kobe plots](cmp-screening-working-paper.html#near-term-performance-20262035).\n\nThis browser-based explorer reproduces',1)
  s=s.replace('(scorecard.qmd)','(https://sprfmo.github.io/jmMSE26/application/scorecard.html)')
  s=s.replace('<option value="equal">','<option value="equal" selected>').replace('<option value="dispersion" selected>','<option value="dispersion">')
  s=s.replace('["SB0red","PC270"]','["SB0red","PC270","SSBbelow8dB0","CatchDrop20"]')
  s=s.replace('"P(Kobe red)"\n  ]','"P(Kobe red)", "SSB <8% dynamic B0 (%)"\n  ]')
  s=s.replace('"Mean catch reduction"]','"Mean catch reduction", "P(catch < 270 kt)", "Advice reductions >19% (%)"]')
- s=s.replace('<style>','For a lower-is-better indicator with a best value of zero, zero-valued CMPs score 100 and positive values score zero. Advice reductions greater than 19% pool all valid annual HCR-advice comparisons across all 500 iterations. The first advice is compared with the saved HCR initialization (the constant target for fixed catch). No biomass or near-20% exclusions apply. In two-stock OMs this is advice for the managed Southern stock, shared across component views.\n\n<style>',1)
+ s=s.replace('<style>','For a lower-is-better indicator with a best value of zero, zero-valued CMPs score 100 and positive values score zero. Advice reductions greater than 19% pool all valid annual HCR-advice comparisons across all 500 iterations. The first advice is compared with the saved HCR initialization (the constant target for fixed catch). No biomass or near-20% exclusions apply. The demonstrations show the reference OM, recruitment crash (OM11_2), and recruitment cycle (OM11_3).\n\n<style>',1)
  selected=None if name=='all' else set(os.environ.get('JMMSE_SCORECARD_FOCUS','HS-20 (MP43)|HS-30 (MP47)|PR-20 (MP44)|Fixed catch (1,525 kt)').split('|'))
  rows=[r for r in data if selected is None or r['mp'] in selected]
  # Start from the unchanged general explorer for repeatable generation.
@@ -88,10 +91,12 @@ for name in ['all','shortlist']:
     renderCustomWeights(selectedMetrics);''')
  s=s.replace('const normalized=normalize(filtered,selectedMetrics,scaling);','if(filtered.length!==selectedCmps.length*selectedMetrics.length) throw new Error("Incomplete CMP–metric coverage in this OM.");\n      const normalized=normalize(filtered,selectedMetrics,scaling);')
  s=s.replace('three retained CMPs','retained CMPs and fixed-catch reference').replace('all eight CMPs','all CMPs and fixed-catch reference')
- s=s.replace('subtitle: "Alternative browser application using the current reference-OM performance metrics"','subtitle: "Reference and robustness OMs with separate stock components"')
+ s=s.replace('subtitle: "Alternative browser application using the current reference-OM performance metrics"','subtitle: "Reference, recruitment crash and recruitment cycle"')
  s=s.replace('Select CMPs and metrics, choose a','Select an OM, stock component, CMPs and metrics; choose a',1)
  # Plain-language wording for the published scorecards.
  for old_text,new_text in [('This browser-based explorer reproduces the relative-preference scorecard\nwithout requiring R or a Shiny server. Select an OM, stock component, CMPs and metrics; choose a\nweighting scheme, or enter weights manually. Scores are recalculated relative\nto the selected CMP set and are **not absolute acceptability scores or agreed\nmanagement preferences**.', 'Choose an operating model (OM), stock component, candidate management procedures (CMPs) and indicators. Set how much weight each indicator receives. Scores compare the selected CMPs; managers can use them to explore their priorities and assess performance alongside agreed biological requirements.'), ('they express relative performance, not an absolute acceptability threshold.', 'they express performance relative to the selected CMPs. Biological acceptability requires a separately agreed threshold.'), ('Scores are relative within this selection; OMs are not pooled.', 'Scores compare CMPs within this OM and stock component.'), ('No fixed-catch results were supplied for this OM.', 'Fixed-catch results are available for the reference OM only.'), ('the direction-consistent reciprocal is used', 'the calculation is'), ('supplied reference benchmark', 'supplied reference comparison')]:
   s=s.replace(old_text,new_text)
+ if name=='shortlist' and root.name=='cmp-working-paper-hs-2026':
+  s=s.replace('Best-relative scorecard: retained CMPs and fixed-catch reference','Best-relative scorecard: MP29, MP45, MP43 and fixed catch')
  p.write_text(s)
-print('Configured both scorecards for 10 OMs and 14 OM/components; fixed catch only in reference')
+print('Configured both scorecards for reference, recruitment crash and recruitment cycle; fixed catch only in reference')

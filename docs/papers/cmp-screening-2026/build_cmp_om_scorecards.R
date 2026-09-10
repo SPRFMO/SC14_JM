@@ -53,7 +53,7 @@ stopifnot(!anyDuplicated(allrows[,.(om_code,component,mp,statistic)]),all(allrow
 # Validate compact-data reconstruction against independently read run attributes.
 rv<-rbindlist(risks);focus<-fread(file.path(out,'focused-robustness-risk.csv'))
 check<-merge(focus,rv,by=c('scenario','biol','code'),suffixes=c('_runs','_compact'))
-stopifnot(nrow(check)==9,max(abs(check$green_runs-check$green_compact))<1e-12,max(abs(check$below8_runs-check$below8_compact))<1e-12)
+stopifnot(nrow(check)==nrow(focus),max(abs(check$green_runs-check$green_compact))<1e-12,max(abs(check$below8_runs-check$below8_compact))<1e-12)
 fwrite(allrows,file.path(out,'scorecards-all-oms.csv'))
 jsonlite::write_json(allrows,file.path(out,'scorecards-all-oms.json'),dataframe='rows',auto_unbox=TRUE,pretty=FALSE,digits=16)
 fwrite(rv,file.path(out,'scorecards-robustness-risk-check.csv'))

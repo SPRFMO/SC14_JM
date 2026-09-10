@@ -1,7 +1,7 @@
 ---
 title: "Jack mackerel management procedure: draft decision guide"
 subtitle: "Proposed advice and decisions for discussion before Commission consideration"
-date: 2026-09-09
+date: 2026-09-10
 lang: en
 format:
   html:
@@ -29,7 +29,7 @@ The immediate recommendation is to agree the criteria for selecting among these 
 
 ### Suggested wording for consideration
 
-> The Scientific Committee is invited to consider carrying HS−20, HS−30 and PR−20 forward for focused consultation, subject to review of the screening criteria and remaining projection checks. The comparison should present reference-OM performance and separate recruitment-crash and two-stock robustness results, including the Northern component of OM21. Managers are invited to specify the biological performance requirements and the relative importance of catch, catch variability and the ability to reduce advice. A subsequent recommendation for a preferred CMP should state these choices, identify the supporting results and specify implementation, responses to unexpected conditions and review arrangements.
+> The Scientific Committee is invited to consider carrying HS−20, HS−30 and PR−20 forward for focused consultation, subject to review of the screening criteria and remaining projection checks. The comparison should present reference-OM performance and separate recruitment-crash (OM11_2) and recruitment-cycle (OM11_3) robustness results, with near-term 2026–2035 trade-off and Kobe plots. Managers are invited to specify the biological performance requirements and the relative importance of catch, catch variability and the ability to reduce advice. A subsequent recommendation for a preferred CMP should state these choices, identify the supporting results and specify implementation, responses to unexpected conditions and review arrangements.
 
 This wording proposes a process and a set of CMPs for discussion. Confirming that these CMPs meet biological requirements will require an agreed standard and a check of their performance against it.
 
@@ -43,7 +43,7 @@ IACC measures annual catch variability. SSB is spawning-stock biomass, and Blim 
 |:--|:--|:--|
 | HS−20 (MP43) | Greater emphasis on stable catches, retaining the 20% advice-reduction limit. | Lower reference IACC than PR−20; compare the biological consequences as well as stability in the [reference trade-offs](cmp-screening-working-paper.html#reference-om-trade-offs-after-screening). |
 | HS−30 (MP47) | Whether allowing larger advice reductions provides a worthwhile biological benefit. | Lower reference below-previous-Blim frequency than HS−20, with a different frequency of advice reductions greater than 19%. Review both outcomes in the [reference comparison](cmp-screening-working-paper.html#full-reference-comparison). |
-| PR−20 (MP44) | Whether higher reference catch and its biological performance justify greater catch variability. | Best dynamic-green frequency among these three in recruitment crash and Southern OM21, but no green outcomes in Northern OM21. See the [focused robustness results](cmp-screening-working-paper.html#focused-robustness-recruitment-crash-and-om21). |
+| PR−20 (MP44) | Whether higher reference catch and its biological performance justify greater catch variability. | Highest long-term dynamic-green probability among these three in recruitment crash (54.5%) and recruitment cycle (51.5%). See the [focused robustness results](cmp-screening-working-paper.html#focused-robustness-recruitment-crash-and-recruitment-cycle). |
 | Fixed catch | What is gained or lost by responding to observations rather than holding advice constant. | A reference comparison; evaluation under the alternative OMs would be needed before considering it alongside the finalists. Its saved recruitment deviations, implementation adjustments and MSY values differ from the other reference runs; see the [comparison limits](cmp-screening-working-paper.html#fixed-catch-reference-benchmark). |
 
 For this stage, retaining contrasting alternatives is more defensible than selecting the top three from one composite ranking. This approach keeps the main choices visible while leaving room to revisit alternatives with useful advantages. If managers prefer numerical ranking, first agree the indicators, weights and biological requirements, then check whether the preferred CMP changes with those choices and with OM selection. The scorecards support this exploration. A systematic check of how rankings change with the selected weights and OMs remains to be completed.
@@ -55,7 +55,7 @@ The following division of responsibilities is proposed for discussion. The final
 | Decision | What needs to be recorded | Results or next action |
 |:--|:--|:--|
 | 1. Biological objectives | Target status, limit definition, acceptable risk, assessment period, and whether requirements apply to each stock component or to an aggregate. | Scientists should express each requirement as a reproducible statistic; managers should confirm the required performance. Keep the current 60% dynamic-green tuning convention distinct from any newly requested target. |
-| 2. Role of robustness tests | Which scenarios determine acceptability, which inform contingency planning, and any agreed OM weights. | Review recruitment crash and both components of OM21 separately. Keep OMs and stock components separate unless a method for combining them is agreed. Northern OM21's zero green frequency for all three CMPs requires explicit consideration. |
+| 2. Role of robustness tests | Which scenarios determine acceptability, which inform contingency planning, and any agreed OM weights. | Review recruitment crash (OM11_2) and recruitment cycle (OM11_3) separately. Compare the near-term 2026–2035 displays with long-term outcomes; agree a method before combining results across OMs. |
 | 3. Shortlist and preferences | Whether to retain these three CMPs; which differences matter; whether any composite weights are agreed. | Review the full-set scorecard and screening tolerances. Retain or reinstate an alternative if it offers a relevant advantage under the agreed criteria. |
 | 4. Stability and response | Allowed increases and decreases in advice, management-cycle length, implementation lag and any phase-in provisions. | Distinguish advice limits from realized-catch variability. Evaluate any changed settings before recommending the revised package. |
 | 5. Preferred CMP | Exact CMP identifier, tuning and settings; reasons for choosing it; material disadvantages accepted. | Scientists should document performance against agreed criteria. A Party proposal could then identify the preferred package for Commission consideration. Delegations would state their preferences during that process. |
@@ -73,7 +73,7 @@ The following division of responsibilities is proposed for discussion. The final
 
 1. Confirm the biological requirements and how robustness outcomes affect selection. If these differ from the evaluated settings, rerun or retune the affected comparisons.
 2. Complete the remaining projection checks and document the results, including low-catch failures and advice-versus-realized-catch discrepancies. The revised advice statistic does not resolve underlying projection problems.
-3. Add first-application and early-cycle catch consequences, including the distribution of initial reductions. This would complement the long-term summaries and 15 illustrative paths already presented.
+3. Review the new 2026–2035 trade-off and Kobe plots alongside long-term summaries. A separate first-application reduction distribution would further inform implementation.
 4. If fixed catch is proposed as an adoption candidate, evaluate it under comparable recruitment and implementation assumptions and the required robustness set. Its present role is a reference comparison.
 5. Hold a focused scientist–manager and stakeholder discussion, record preferences and remaining disagreements, and prepare a preferred-CMP proposal with a complete implementation and review specification.
 

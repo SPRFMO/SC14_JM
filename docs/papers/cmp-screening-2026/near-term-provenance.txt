@@ -1,0 +1,7 @@
+Near-term period: 2026-2035. Existing saved outputs; no model fitting.
+output/candidate-performance-500/reference/performance_with_vb.rds c5a14560e65a47322e694b0160e662b6
+output/candidate-performance-500/robustness/performance_with_vb.rds 07f9cdeca81529647d9272da830b7e34
+../jmMSE-500-refine/data/om11_h1_0.16_065.rds 9ee178a30a5bb397703d10bc67535544
+../jmMSE-500-refine/data/om11_2_h1_0.16_065.rds 4a69181043139937037761de23732488
+../jmMSE-500-refine/data/om11_3_h1_0.16_065.rds dcac4350158e6f1037990ec00738cb6e
+Reference Kobe medians independently match the established reference plot to <1e-10.

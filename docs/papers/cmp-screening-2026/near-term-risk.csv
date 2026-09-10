@@ -1,0 +1,10 @@
+scenario,panel,code,Pgreen,Pred,Pbelow8,n_comparisons
+om11,Reference (OM11),tun43,0.4342,0.1226,0.0014,5000
+om11,Reference (OM11),tun44,0.867,0.0188,0,5000
+om11,Reference (OM11),tun47,0.4568,0.1192,0.001,5000
+om11_2,Recruitment crash (OM11_2),tun43,0.417,0.1418,0.001,5000
+om11_2,Recruitment crash (OM11_2),tun44,0.8644,0.0218,2e-04,5000
+om11_2,Recruitment crash (OM11_2),tun47,0.4418,0.1346,8e-04,5000
+om11_3,Recruitment cycle (OM11_3),tun43,0.3706,0.1594,0.0022,5000
+om11_3,Recruitment cycle (OM11_3),tun44,0.845,0.0224,2e-04,5000
+om11_3,Recruitment cycle (OM11_3),tun47,0.393,0.1482,0.002,5000

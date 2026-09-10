@@ -19,3 +19,11 @@ quarto render output/cmp-working-paper-hs-2026/scorecard-shortlist.qmd
 ```
 
 The editable Quarto narrative belongs to this second comparison and must remain with its own figures. The source checkout also requires the sibling saved-run directories documented by the first paper. This workflow reads those runs and does not refit or retune models.
+
+## Recruitment-cycle and near-term update
+
+The focused checkpoint set is now OM11_2 and OM11_3. `R/build_cmp_nearterm.R` generates the new 2026–2035 trade-off/Kobe plots for both CMP sets and checks the reference Kobe values against the established calculation. Run it after the focused robustness build, then render both papers and regenerate their scorecards. The demonstration selectors use reference, recruitment crash and recruitment cycle.
+
+```sh
+Rscript R/build_cmp_nearterm.R
+```

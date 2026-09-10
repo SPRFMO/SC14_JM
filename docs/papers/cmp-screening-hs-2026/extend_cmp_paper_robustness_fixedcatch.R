@@ -1,4 +1,4 @@
-# Focus the existing paper on recruitment crash and OM21; inspect the supplied
+# Focus the existing paper on recruitment crash and OM11_3; inspect the supplied
 # fixed-catch run in isolation. Do not overwrite or modify the input RDS.
 suppressPackageStartupMessages({library(mse);library(FLasher);library(data.table);library(ggplot2);library(ggrepel)})
 out<-Sys.getenv('JMMSE_CMP_PAPER_OUT','output/cmp-working-paper-2026')
@@ -8,15 +8,15 @@ palette<-setNames(c('#996029','#277b4d','#246cac'),labels[keep])
 e<-parse('R/build_cmp_screening_paper.R')
 for(x in e)if(is.call(x)&&identical(x[[1]],as.name('<-'))&&as.character(x[[2]])[1] %in% c('tradeplot','md_table'))eval(x)
 wide<-fread(file.path(out,'all-om-tradeoffs.csv'))
-focus<-wide[code %in% keep & om %in% c('h1_0.16','h1_0.16_lowrec','h2_0.16')]
-stopifnot(nrow(focus)==12)
-focus[,om:=factor(om,levels=c('h1_0.16','h1_0.16_lowrec','h2_0.16'),labels=c('Reference OM','Recruitment crash (om11_2)','Two stocks (om21)'))]
+focus<-wide[code %in% keep & om %in% c('h1_0.16','h1_0.16_lowrec','h1_0.16_cycle')]
+stopifnot(nrow(focus)==9)
+focus[,om:=factor(om,levels=c('h1_0.16','h1_0.16_lowrec','h1_0.16_cycle'),labels=c('Reference OM','Recruitment crash (om11_2)','Recruitment cycle (om11_3)'))]
 for(y in c('IACC','SBMSY'))ggsave(file.path(out,paste0('focused-robustness-',y,'.png')),
- tradeplot(focus,y,'Three CMPs: reference, recruitment crash and OM21',TRUE),width=11,height=8.5,dpi=160)
+ tradeplot(focus,y,'Three CMPs: reference, recruitment crash and OM11_3',TRUE),width=11,height=8.5,dpi=160)
 fwrite(focus,file.path(out,'focused-robustness-tradeoffs.csv'))
 ids<-fread(file.path(out,'worm-iterations.csv'))$iter
 flat<-function(q){z<-as.data.table(as.data.frame(q));z[,year:=as.integer(as.character(year))];z[,iter:=as.integer(as.character(iter))];stopifnot(!anyDuplicated(z[,.(year,iter)]));z[,.(year,iter,data)]}
-checkpoints<-c(om11_2='../jmMSE-500-refine/model/candidates/robustness_500/checkpoints/om11_2.rds',om21='../jmMSE-500-refine/model/candidates/robustness_500/checkpoints/om21.rds')
+checkpoints<-c(om11_2='../jmMSE-500-refine/model/candidates/robustness_500/checkpoints/om11_2.rds',om11_3='../jmMSE-500-refine/model/candidates/robustness_500/checkpoints/om11_3.rds')
 wormparts<-list();riskparts<-list();input_baselines<-character()
 for(scenario in names(checkpoints)) {
  message('Reading ',scenario)
@@ -53,11 +53,12 @@ for(scenario_i in names(checkpoints)) {
  p<-ggplot(z,aes(year,data,group=iter,colour=factor(iter)))+geom_line(linewidth=.45,alpha=.85)+
  facet_grid(Panel~CMP,scales='free_y')+scale_colour_viridis_d(option='turbo',name='Simulation')+
  ggthemes::theme_few(base_size=10)+theme(legend.position='bottom')+labs(x='Year',y=NULL,
- title=paste('15 matched draws:',if(scenario_i=='om21')'OM21, separate stock components' else 'recruitment crash (om11_2)'),
+ title=paste('15 matched draws:',if(scenario_i=='om11_3')'recruitment cycle (om11_3)' else 'recruitment crash (om11_2)'),
  subtitle='Same 15 posterior-draw IDs across CMPs; all selected trajectories retained',
  caption='Selected simulation paths; common vertical scales within each row.')
- ggsave(file.path(out,paste0('worms-15-',scenario_i,'.png')),p,width=12,height=if(scenario_i=='om21')12 else 7.8,dpi=160)
+ ggsave(file.path(out,paste0('worms-15-',scenario_i,'.png')),p,width=12,height=7.8,dpi=160)
 }
+writeLines(c('Focused robustness uses OM11_2 and OM11_3; saved 500-iteration checkpoints.',paste(names(tools::md5sum(checkpoints)),tools::md5sum(checkpoints))),file.path(out,'focused-robustness-provenance.txt'))
 # Reuse already validated fixed-catch artifacts when only the CMP set changes.
 if (Sys.getenv('JMMSE_REUSE_FIXED_CATCH')=='true') {
  stopifnot(all(file.exists(file.path(out,c('fixed-catch-summary.csv','worms-15-fixed-catch.png','robustness-fixedcatch-provenance.txt')))))
