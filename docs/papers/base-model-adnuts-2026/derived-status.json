@@ -1,0 +1,30 @@
+{
+  "selected_quantities_pass_rhat_ess_screen": false,
+  "flagged_quantity_years": 39,
+  "assessed_quantity_years": 114,
+  "max_rhat": 1.0399,
+  "min_ess_bulk": 143.7481,
+  "min_ess_tail": 253.0317,
+  "thresholds": {
+    "rhat_max": 1.01,
+    "ess_bulk_min": 400,
+    "ess_tail_min": 400
+  },
+  "scope": "Derived quantity screen only. Parameter, divergence, tree-depth and energy diagnostics must also be checked.",
+  "interval": "Empirical equal-tail 2.5th to 97.5th percentiles of retained draws. Interpret as posterior credible intervals only after full-run convergence review.",
+  "chain_order": "Pooled PSV order: chain 1, then chain 2, then chain 3; 1000 retained draws each.",
+  "records_read": 41304000,
+  "draw_count": 3000,
+  "mode_comparator": "prepared/For_R_1.rep regenerated at original saved parameters; objective checked against source/h1_1.06.par",
+  "mode_interval": "Original report limits are exp(+/-2*sqrt(log(1+CV^2))) about the mode. They are a lognormal approximation using 2 SE, not the same construction as MCMC equal-tail 95% intervals.",
+  "biological_units": {
+    "SSB": "thousand tonnes",
+    "Recruits": "million fish at age 1"
+  },
+  "quantity_definitions": {
+    "SSB": "Spawning biomass",
+    "Recruits": "Recruitment at age 1"
+  },
+  "mceval_file": "/Users/jim/_mymods/sprfmo/jmMSE26/output/base-model-mcmc-2026-09-10/evaluation/mceval.rep",
+  "generated_at": "2026-09-10T22:45:57+0100"
+}

@@ -65,3 +65,7 @@ Earlier studies, Commission decisions and SC14’s agreed conclusions are the ne
 - [Draft jack mackerel MP decision guide](papers/cmp-screening-2026/cmp-decision-guide.html) — proposed advice and manager decisions, with links to the ICCAT and IOTC examples; proposed for discussion.
 
 - [Second CMP screening working document: MP29, MP45 and MP43](papers/cmp-screening-hs-2026/cmp-screening-working-paper.html) — same-format comparison with its own figures, scorecards and editable source.
+
+## Base-model uncertainty — 10 September 2026
+
+- [Jack mackerel base model: MCMC uncertainty](papers/base-model-adnuts-2026/base-model-adnuts.html) — default ADNUTS results for single-stock model h1_1.06, with diagnostics, biomass and recruitment summaries, and 100 Kobe trajectories for 2007–2026. Exploratory working analysis: some chains need better mixing.

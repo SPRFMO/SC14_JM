@@ -14,6 +14,10 @@ This working assessment presents model results for review. Its draft or proposed
 [Report synchronization record](assessment/sync.json).
 <!-- sc14-assessment:end -->
 
+## Base-model MCMC uncertainty
+
+[Read the separate ADNUTS results document](papers/base-model-adnuts-2026/base-model-adnuts.html), including biomass and recruitment intervals and 100 Kobe trajectories for 2007–2026. The default run completed, but some parameters have incomplete chain mixing; the uncertainty displays are exploratory. The document includes diagnostics, downloadable trajectories and reproducibility files.
+
 ## Which indices affect the assessment?
 
 [Read the single-stock LOI and LOO comparisons](assessment/loo.html), with static figures and separate summaries for leaving one recent index group in or out. Every panel includes the all-data base model.

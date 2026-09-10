@@ -29,3 +29,7 @@ The strongest coverage here is May–September 2026. Earlier research and manage
 ## New CMP working paper
 
 [Compare a smaller set of management rules](papers/cmp-screening-2026/cmp-screening-working-paper.html): explicit screening, OM-selectable best-relative scorecards, recruitment-crash and OM21 trade-offs, a fixed-catch reference benchmark and 15-simulation SSB/catch worms. This working comparison supports discussion ahead of a management decision.
+
+## New base-model uncertainty analysis
+
+[Read the ADNUTS results and 100 Kobe trajectories](papers/base-model-adnuts-2026/base-model-adnuts.html) for the single-stock base model, covering 2007–2026 in the Kobe plot. The document includes sampling diagnostics and downloadable data. Some chains need better mixing, so its uncertainty displays remain exploratory.

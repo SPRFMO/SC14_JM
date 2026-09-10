@@ -1,0 +1,76 @@
+{
+  "source_fit": "/Users/jim/_mymods/sprfmo/jmMSE26/output/base-model-mcmc-2026-09-10/fit.rds",
+  "generated_at_utc": "2026-09-10T21:40:43Z",
+  "package_versions": {
+    "adnuts": "1.1.2",
+    "posterior": "1.7.0",
+    "ggplot2": "4.0.3",
+    "jsonlite": "2.0.0"
+  },
+  "dimensions": {
+    "saved_iterations_per_chain": 2000,
+    "chains": 3,
+    "warmup_per_chain": 1000,
+    "retained_per_chain": 1000,
+    "retained_total": 3000,
+    "active_parameters": 1593,
+    "variables_including_lp": 1594
+  },
+  "thresholds": {
+    "maximum_rhat": 1.01,
+    "minimum_bulk_ess": 400,
+    "minimum_tail_ess": 400,
+    "minimum_ebfmi": 0.3,
+    "allowed_divergences": 0,
+    "allowed_max_treedepth_hits": 0
+  },
+  "parameter_checks": {
+    "denominator": 1593,
+    "passing": 1227,
+    "failing_any": 366,
+    "rhat_above_1_01": 220,
+    "bulk_ess_below_400": 329,
+    "tail_ess_below_400": 95,
+    "undefined_diagnostics": 0,
+    "parameters_with_nonfinite_draws": 0,
+    "parameters_constant_in_any_chain": 0,
+    "maximum_finite_rhat": 1.05475198710002,
+    "minimum_finite_bulk_ess": 83.3947671415924,
+    "minimum_finite_tail_ess": 150.260537446818
+  },
+  "sampler_checks": {
+    "chains": 3,
+    "passing_chains": 3,
+    "divergent_transitions": 0,
+    "max_treedepth_hits": 0,
+    "minimum_finite_ebfmi": 0.983753244279936
+  },
+  "lp_diagnostics": {
+    "variable": "lp__",
+    "is_parameter": false,
+    "mean": -1607.07032333333,
+    "median": -1606.53,
+    "sd": 27.5196777612581,
+    "q2.5": -1662.02175,
+    "q25": -1625.94,
+    "q75": -1588.2175,
+    "q97.5": -1555.1355,
+    "mcse_mean": 0.906966038069366,
+    "rhat": 1.00116267979847,
+    "ess_bulk": 921.783500019323,
+    "ess_tail": 1636.50576570558,
+    "nonfinite_draws": 0,
+    "stuck_chains": 0,
+    "rhat_above_1_01": false,
+    "bulk_ess_below_400": false,
+    "tail_ess_below_400": false,
+    "diagnostics_nonfinite": false,
+    "passes_parameter_checks": true,
+    "diagnostic_status": "passes screening"
+  },
+  "screening_status": "fails reported screening",
+  "inference_note": "Sampling diagnostics fail; retained-draw intervals and marginals are exploratory and should not be used for inference.",
+  "selected_plot_variables": ["fmort[154]", "log_q_ind[5]", "fmort[151]", "log_q_ind[4]", "mean_log_rec[1]", "lp__"],
+  "diagnostic_warnings": [],
+  "notes": ["Active parameter counts exclude lp__; lp__ is assessed separately.", "Rhat is posterior's rank-normalized split Rhat; ESS is bulk/tail ESS across all retained chains.", "MCSE of the mean is computed using retained draws and preserved chain structure.", "E-BFMI is mean(diff(energy)^2)/var(energy) within each retained chain.", "All warmup counts refer to saved iterations, as represented by fit$warmup.", "Model parameters retain their native ADMB scales; no scientific derived quantities are inferred."]
+}

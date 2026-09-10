@@ -1,0 +1,527 @@
+{
+  "validated_utc": "2026-09-10T22:02:40.902711+00:00",
+  "status": "pass",
+  "pages": 5,
+  "local_links_and_resources": 101,
+  "unresolved_links": 0,
+  "report_figures": 7,
+  "all_figures_have_alt_text": true,
+  "checks": [
+    {
+      "page": "papers/base-model-adnuts-2026/base-model-adnuts.html",
+      "link": "#what-the-run-shows",
+      "pass": true
+    },
+    {
+      "page": "papers/base-model-adnuts-2026/base-model-adnuts.html",
+      "link": "#model-and-sampler",
+      "pass": true
+    },
+    {
+      "page": "papers/base-model-adnuts-2026/base-model-adnuts.html",
+      "link": "#do-the-chains-agree",
+      "pass": true
+    },
+    {
+      "page": "papers/base-model-adnuts-2026/base-model-adnuts.html",
+      "link": "#biomass-and-recruitment-uncertainty",
+      "pass": true
+    },
+    {
+      "page": "papers/base-model-adnuts-2026/base-model-adnuts.html",
+      "link": "#kobe-trajectories",
+      "pass": true
+    },
+    {
+      "page": "papers/base-model-adnuts-2026/base-model-adnuts.html",
+      "link": "#interpretation-and-next-steps",
+      "pass": true
+    },
+    {
+      "page": "papers/base-model-adnuts-2026/base-model-adnuts.html",
+      "link": "#what-uncertainty-is-covered",
+      "pass": true
+    },
+    {
+      "page": "papers/base-model-adnuts-2026/base-model-adnuts.html",
+      "link": "#files-and-reproducibility",
+      "pass": true
+    },
+    {
+      "page": "papers/base-model-adnuts-2026/base-model-adnuts.html",
+      "link": "#validation-record",
+      "pass": true
+    },
+    {
+      "page": "papers/base-model-adnuts-2026/base-model-adnuts.html",
+      "link": "../../assessments.html",
+      "pass": true
+    },
+    {
+      "page": "papers/base-model-adnuts-2026/base-model-adnuts.html",
+      "link": "../../assessment/SC14.html",
+      "pass": true
+    },
+    {
+      "page": "papers/base-model-adnuts-2026/base-model-adnuts.html",
+      "link": "trace-selected.png",
+      "pass": true
+    },
+    {
+      "page": "papers/base-model-adnuts-2026/base-model-adnuts.html",
+      "link": "marginals-selected.png",
+      "pass": true
+    },
+    {
+      "page": "papers/base-model-adnuts-2026/base-model-adnuts.html",
+      "link": "ssb-trajectory.png",
+      "pass": true
+    },
+    {
+      "page": "papers/base-model-adnuts-2026/base-model-adnuts.html",
+      "link": "recruitment-trajectory.png",
+      "pass": true
+    },
+    {
+      "page": "papers/base-model-adnuts-2026/base-model-adnuts.html",
+      "link": "terminal-ssb-trace.png",
+      "pass": true
+    },
+    {
+      "page": "papers/base-model-adnuts-2026/base-model-adnuts.html",
+      "link": "terminal-ssb-density.png",
+      "pass": true
+    },
+    {
+      "page": "papers/base-model-adnuts-2026/base-model-adnuts.html",
+      "link": "kobe-100-trajectories-2007-2026.html",
+      "pass": true
+    },
+    {
+      "page": "papers/base-model-adnuts-2026/base-model-adnuts.html",
+      "link": "kobe-format.csv",
+      "pass": true
+    },
+    {
+      "page": "papers/base-model-adnuts-2026/base-model-adnuts.html",
+      "link": "kobe-trajectories-100-draws-2007-2026.csv",
+      "pass": true
+    },
+    {
+      "page": "papers/base-model-adnuts-2026/base-model-adnuts.html",
+      "link": "kobe-100-trajectories-2007-2026.png",
+      "pass": true
+    },
+    {
+      "page": "papers/base-model-adnuts-2026/base-model-adnuts.html",
+      "link": "kobe-README.md",
+      "pass": true
+    },
+    {
+      "page": "papers/base-model-adnuts-2026/base-model-adnuts.html",
+      "link": "selection-manifest.csv",
+      "pass": true
+    },
+    {
+      "page": "papers/base-model-adnuts-2026/base-model-adnuts.html",
+      "link": "kobe-status.json",
+      "pass": true
+    },
+    {
+      "page": "papers/base-model-adnuts-2026/base-model-adnuts.html",
+      "link": "kobe-reproducibility.zip",
+      "pass": true
+    },
+    {
+      "page": "papers/base-model-adnuts-2026/base-model-adnuts.html",
+      "link": "base-model-adnuts.qmd",
+      "pass": true
+    },
+    {
+      "page": "papers/base-model-adnuts-2026/base-model-adnuts.html",
+      "link": "run-manifest.json",
+      "pass": true
+    },
+    {
+      "page": "papers/base-model-adnuts-2026/base-model-adnuts.html",
+      "link": "diagnostic-summary.json",
+      "pass": true
+    },
+    {
+      "page": "papers/base-model-adnuts-2026/base-model-adnuts.html",
+      "link": "parameter-summary.csv",
+      "pass": true
+    },
+    {
+      "page": "papers/base-model-adnuts-2026/base-model-adnuts.html",
+      "link": "chain-diagnostics.csv",
+      "pass": true
+    },
+    {
+      "page": "papers/base-model-adnuts-2026/base-model-adnuts.html",
+      "link": "derived-summary.csv",
+      "pass": true
+    },
+    {
+      "page": "papers/base-model-adnuts-2026/base-model-adnuts.html",
+      "link": "source-notes.md",
+      "pass": true
+    },
+    {
+      "page": "papers/base-model-adnuts-2026/base-model-adnuts.html",
+      "link": "kobe-trajectories.rds",
+      "pass": true
+    },
+    {
+      "page": "papers/base-model-adnuts-2026/base-model-adnuts.html",
+      "link": "kobe-100-trajectories-2007-2026.svg",
+      "pass": true
+    },
+    {
+      "page": "papers/base-model-adnuts-2026/base-model-adnuts.html",
+      "link": "build-kobe-trajectories.R",
+      "pass": true
+    },
+    {
+      "page": "papers/base-model-adnuts-2026/base-model-adnuts.html",
+      "link": "session-info.txt",
+      "pass": true
+    },
+    {
+      "page": "papers/base-model-adnuts-2026/base-model-adnuts.html",
+      "link": "release-manifest.json",
+      "pass": true
+    },
+    {
+      "page": "papers/base-model-adnuts-2026/base-model-adnuts.html",
+      "link": "reproduction-README.md",
+      "pass": true
+    },
+    {
+      "page": "papers/base-model-adnuts-2026/base-model-adnuts.html",
+      "link": "reproducibility.zip",
+      "pass": true
+    },
+    {
+      "page": "index.html",
+      "link": "style.css",
+      "pass": true
+    },
+    {
+      "page": "index.html",
+      "link": "#main",
+      "pass": true
+    },
+    {
+      "page": "index.html",
+      "link": "index.html",
+      "pass": true
+    },
+    {
+      "page": "index.html",
+      "link": "history.html",
+      "pass": true
+    },
+    {
+      "page": "index.html",
+      "link": "meetings.html",
+      "pass": true
+    },
+    {
+      "page": "index.html",
+      "link": "stock-structure.html",
+      "pass": true
+    },
+    {
+      "page": "index.html",
+      "link": "data-surveys.html",
+      "pass": true
+    },
+    {
+      "page": "index.html",
+      "link": "assessments.html",
+      "pass": true
+    },
+    {
+      "page": "index.html",
+      "link": "mse.html",
+      "pass": true
+    },
+    {
+      "page": "index.html",
+      "link": "sc14-week.html",
+      "pass": true
+    },
+    {
+      "page": "index.html",
+      "link": "sources.html",
+      "pass": true
+    },
+    {
+      "page": "index.html",
+      "link": "contributing.html",
+      "pass": true
+    },
+    {
+      "page": "index.html",
+      "link": "assessments.html",
+      "pass": true
+    },
+    {
+      "page": "index.html",
+      "link": "assessment/SC14.html",
+      "pass": true
+    },
+    {
+      "page": "index.html",
+      "link": "mse.html",
+      "pass": true
+    },
+    {
+      "page": "index.html",
+      "link": "data-surveys.html",
+      "pass": true
+    },
+    {
+      "page": "index.html",
+      "link": "sc14-week.html",
+      "pass": true
+    },
+    {
+      "page": "index.html",
+      "link": "papers/cmp-screening-2026/cmp-screening-working-paper.html",
+      "pass": true
+    },
+    {
+      "page": "index.html",
+      "link": "papers/base-model-adnuts-2026/base-model-adnuts.html",
+      "pass": true
+    },
+    {
+      "page": "index.html",
+      "link": "sources.html",
+      "pass": true
+    },
+    {
+      "page": "index.html",
+      "link": "contributing.html",
+      "pass": true
+    },
+    {
+      "page": "assessments.html",
+      "link": "style.css",
+      "pass": true
+    },
+    {
+      "page": "assessments.html",
+      "link": "#main",
+      "pass": true
+    },
+    {
+      "page": "assessments.html",
+      "link": "index.html",
+      "pass": true
+    },
+    {
+      "page": "assessments.html",
+      "link": "history.html",
+      "pass": true
+    },
+    {
+      "page": "assessments.html",
+      "link": "meetings.html",
+      "pass": true
+    },
+    {
+      "page": "assessments.html",
+      "link": "stock-structure.html",
+      "pass": true
+    },
+    {
+      "page": "assessments.html",
+      "link": "data-surveys.html",
+      "pass": true
+    },
+    {
+      "page": "assessments.html",
+      "link": "assessments.html",
+      "pass": true
+    },
+    {
+      "page": "assessments.html",
+      "link": "mse.html",
+      "pass": true
+    },
+    {
+      "page": "assessments.html",
+      "link": "sc14-week.html",
+      "pass": true
+    },
+    {
+      "page": "assessments.html",
+      "link": "sources.html",
+      "pass": true
+    },
+    {
+      "page": "assessments.html",
+      "link": "contributing.html",
+      "pass": true
+    },
+    {
+      "page": "assessments.html",
+      "link": "assessment/SC14.html",
+      "pass": true
+    },
+    {
+      "page": "assessments.html",
+      "link": "assessment/sync.json",
+      "pass": true
+    },
+    {
+      "page": "assessments.html",
+      "link": "papers/base-model-adnuts-2026/base-model-adnuts.html",
+      "pass": true
+    },
+    {
+      "page": "assessments.html",
+      "link": "assessment/loo.html",
+      "pass": true
+    },
+    {
+      "page": "assessments.html",
+      "link": "assessment/loo-sync.json",
+      "pass": true
+    },
+    {
+      "page": "assessments.html",
+      "link": "sc14-week.html",
+      "pass": true
+    },
+    {
+      "page": "assessments.html",
+      "link": "sources.html",
+      "pass": true
+    },
+    {
+      "page": "assessments.html",
+      "link": "contributing.html",
+      "pass": true
+    },
+    {
+      "page": "sources.html",
+      "link": "style.css",
+      "pass": true
+    },
+    {
+      "page": "sources.html",
+      "link": "#main",
+      "pass": true
+    },
+    {
+      "page": "sources.html",
+      "link": "index.html",
+      "pass": true
+    },
+    {
+      "page": "sources.html",
+      "link": "history.html",
+      "pass": true
+    },
+    {
+      "page": "sources.html",
+      "link": "meetings.html",
+      "pass": true
+    },
+    {
+      "page": "sources.html",
+      "link": "stock-structure.html",
+      "pass": true
+    },
+    {
+      "page": "sources.html",
+      "link": "data-surveys.html",
+      "pass": true
+    },
+    {
+      "page": "sources.html",
+      "link": "assessments.html",
+      "pass": true
+    },
+    {
+      "page": "sources.html",
+      "link": "mse.html",
+      "pass": true
+    },
+    {
+      "page": "sources.html",
+      "link": "sc14-week.html",
+      "pass": true
+    },
+    {
+      "page": "sources.html",
+      "link": "sources.html",
+      "pass": true
+    },
+    {
+      "page": "sources.html",
+      "link": "contributing.html",
+      "pass": true
+    },
+    {
+      "page": "sources.html",
+      "link": "history.html",
+      "pass": true
+    },
+    {
+      "page": "sources.html",
+      "link": "papers/cmp-screening-2026/cmp-screening-working-paper.html",
+      "pass": true
+    },
+    {
+      "page": "sources.html",
+      "link": "papers/cmp-screening-2026/scorecard-all.html",
+      "pass": true
+    },
+    {
+      "page": "sources.html",
+      "link": "papers/cmp-screening-2026/scorecard-shortlist.html",
+      "pass": true
+    },
+    {
+      "page": "sources.html",
+      "link": "papers/cmp-screening-2026/cmp-decision-guide.html",
+      "pass": true
+    },
+    {
+      "page": "sources.html",
+      "link": "papers/cmp-screening-hs-2026/cmp-screening-working-paper.html",
+      "pass": true
+    },
+    {
+      "page": "sources.html",
+      "link": "papers/base-model-adnuts-2026/base-model-adnuts.html",
+      "pass": true
+    },
+    {
+      "page": "sources.html",
+      "link": "sources.html",
+      "pass": true
+    },
+    {
+      "page": "sources.html",
+      "link": "contributing.html",
+      "pass": true
+    }
+  ],
+  "independent_scientific_audit": {
+    "parameter_summaries": "Recomputed diagnostic CSV values agree to approximately 5e-12.",
+    "retained_draw_identity": "All 4779000 pooled PSV parameter values equal the retained fit bit for bit.",
+    "derived_outputs": "3000 complete draws; all 114 SSB and recruitment quantity-years checked.",
+    "kobe": "100 distinct retained draws, 33/33/34 by chain, 2000 rows; independently reconstructed coordinates agree within 5.4e-15.",
+    "native_reporting_invariance": "Selected original SSB, SBMSYy and F_faa values are identical after adding two output lines.",
+    "reference_points": "All 5700 supplemental draw-year reference points positive; no FMSY grid-bound solutions.",
+    "interpretation": "Full-run parameter mixing and precision screening failed; results remain exploratory."
+  },
+  "visual_review": "Report title, warning, result table and seven figures reviewed; interactive Kobe plot and draw selector checked.",
+  "manual_screen_reader_review": "not tested"
+}

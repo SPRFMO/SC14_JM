@@ -1,0 +1,69 @@
+{
+  "generated_at": "2026-09-10T23:01:05+0100",
+  "model": "h1_1.06",
+  "trajectories": 100,
+  "years": [2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026],
+  "rows": 2000,
+  "selection_seed": 20260910,
+  "rng_kind": ["Mersenne-Twister", "Inversion", "Rejection"],
+  "draws_by_chain": [33, 33, 34],
+  "available_retained_draws": 3000,
+  "selection": "Without replacement within each chain; no quantity-based filtering.",
+  "selection_file": "selection-manifest.csv",
+  "reference_convention": "jjmR fixed_bmsy: each draw uses mean annual SSBMSY for 2017-2026; F uses annual FMSY.",
+  "f_definition": "Sum F_faa across all four fleets and all twelve ages, divided by 12; not native emitted Fbar.",
+  "ssb_units": "thousand tonnes",
+  "f_units": "per year",
+  "ratio_units": "dimensionless",
+  "median_definition": "Coordinate-wise median of the selected 100 draws for each year; not a single sampled trajectory.",
+  "original_source": {
+    "path": "/Users/jim/_mymods/sprfmo/jmMSE26/output/base-model-mcmc-2026-09-10/evaluation/mceval.rep",
+    "bytes": 1239837791,
+    "mtime": 1789076704.3298171
+  },
+  "supplemental_source": "/Users/jim/_mymods/sprfmo/jmMSE26/output/base-model-mcmc-2026-09-10/kobe-evaluation/mceval.rep",
+  "original_quantities_invariant": true,
+  "invariance": [
+    {
+      "type": "F_faa",
+      "rows": 96000,
+      "maximum_absolute_difference": 0
+    },
+    {
+      "type": "SBMSYy",
+      "rows": 2000,
+      "maximum_absolute_difference": 0
+    },
+    {
+      "type": "SSB",
+      "rows": 2000,
+      "maximum_absolute_difference": 0
+    }
+  ],
+  "reconstructed_f_ratio_max_absolute_error": 1.5492671220584953e-05,
+  "reconstructed_f_ratio_max_relative_error": 9.2571184368357236e-06,
+  "selected_annual_fmsy_grid_boundary_hits": 0,
+  "annual_fmsy_grid_limits": [0.0001, 5],
+  "interactive_html_created": true,
+  "all_run_maximum_parameter_rhat": 1.0547519871000199,
+  "all_run_screening_status": "fails reported screening",
+  "interpretation": "Exploratory historical fitted trajectories conditional on the model. Convergence screening failed; not forecasts or validated stock-status probabilities.",
+  "package_versions": [
+    {
+      "package": "data.table",
+      "version": "1.18.4"
+    },
+    {
+      "package": "ggplot2",
+      "version": "4.0.3"
+    },
+    {
+      "package": "ggrepel",
+      "version": "0.9.8"
+    },
+    {
+      "package": "jsonlite",
+      "version": "2.0.0"
+    }
+  ]
+}

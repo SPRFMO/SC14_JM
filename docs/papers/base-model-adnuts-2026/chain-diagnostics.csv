@@ -1,0 +1,4 @@
+"chain","warmup_draws","retained_draws","divergent_transitions","divergent_fraction","max_treedepth","max_treedepth_hits","max_treedepth_fraction","ebfmi","ebfmi_below_0_3","mean_accept_stat","median_stepsize","mean_leapfrog_steps","nonfinite_sampler_values","nonfinite_parameter_draws","constant_parameters","passes_sampler_checks"
+1,1000,1000,0,0,12,0,0,1.05293513448498,FALSE,0.807254735,0.0471937,108.312,0,0,0,TRUE
+2,1000,1000,0,0,12,0,0,1.0372239052375,FALSE,0.811959357,0.046398,117.144,0,0,0,TRUE
+3,1000,1000,0,0,12,0,0,0.983753244279936,FALSE,0.812052333,0.0458034,125.464,0,0,0,TRUE

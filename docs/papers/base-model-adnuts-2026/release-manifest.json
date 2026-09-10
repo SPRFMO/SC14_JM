@@ -1,0 +1,197 @@
+{
+  "created_utc": "2026-09-10T22:02:40.903421+00:00",
+  "status": "complete; scientific calculations and deliverable checks passed; full-run convergence screening failed",
+  "model": "h1_1.06",
+  "source_repository": "https://github.com/SPRFMO/jjm",
+  "source_checkout_head": "a53473feebfd28417e85b80af77e82be56e01653",
+  "source_identity_note": "jjm2.tpl and the executable were untracked at freeze; file hashes identify the actual sampled source and executable.",
+  "wiki_repository": "https://github.com/SPRFMO/SC14_JM",
+  "report_url": "https://sprfmo.github.io/SC14_JM/papers/base-model-adnuts-2026/base-model-adnuts.html",
+  "local_archive": "base-model-mcmc-2026-09-10",
+  "private_archive_artifacts": {
+    "fit.rds": {
+      "bytes": 96961974,
+      "sha256": "56667bb5192e8d92ebe4edd51f6f991b22c38a76b331cb7cf2c48a88344039fe"
+    },
+    "run/jjm2.psv": {
+      "bytes": 38232004,
+      "sha256": "ca898ed35f857be8eccb69ebd2a7ea6a6ed32e8f51681b0154265c309784d46f"
+    },
+    "evaluation/mceval.rep": {
+      "bytes": 1239837791,
+      "sha256": "ebd934e05bafa3002653ecf0ab80f0a016867e4da162b655026ffe51908361d5"
+    },
+    "source/jjm2.tpl": {
+      "bytes": 255048,
+      "sha256": "4174ef904ab0c093b629370a7835cc0e3fc45e23dd53bc154b70103a6040d94a"
+    },
+    "source/jjm2": {
+      "bytes": 2469464,
+      "sha256": "b6095f4720aad9afdeb99d64528eb6b571bbcaca7e3e9ad3a62fd45af87ab792"
+    },
+    "source/h1_1.06.ctl": {
+      "bytes": 3269,
+      "sha256": "2c4e3e3c0269a1653915cac8688421a84e8fa27bbd2c1d7bb16a16cfc26657f0"
+    },
+    "source/1.06.dat": {
+      "bytes": 99681,
+      "sha256": "6b65fad6aff0340e04b792d687571587c9ca3c66c8c197faa2aec725ef38c844"
+    },
+    "source/h1_1.06.par": {
+      "bytes": 44797,
+      "sha256": "5daa615d5041415a376f349f7f7f54d042dd5bef6b073b408f9b437935b65818"
+    },
+    "kobe-evaluation/mceval.rep": {
+      "bytes": 39320012,
+      "sha256": "229556a5281fd8e50e48630ffd04722163646ff4c1e0bb4f73ce19f50872e1fe"
+    }
+  },
+  "published_artifacts": {
+    "base-model-adnuts.html": {
+      "bytes": 7685904,
+      "sha256": "2bf7d84d20f56c6a4c44a7360bcc911521fff4a786b63ef80a7ccc5952836da0"
+    },
+    "base-model-adnuts.qmd": {
+      "bytes": 19774,
+      "sha256": "9a7d1f381d12ac405a08f87767767548af4973df33df777453269657a4635106"
+    },
+    "build-kobe-trajectories.R": {
+      "bytes": 28376,
+      "sha256": "a68362b6c84fd414a1ad8ca249bab2b8afcacde503a32cf8587ab15ffcc240f2"
+    },
+    "chain-diagnostics.csv": {
+      "bytes": 593,
+      "sha256": "1f35e03a13815cf95dd1067b509ef3bd45efd03dd220fdfb8215feab8d4110fc"
+    },
+    "derived-status.json": {
+      "bytes": 1425,
+      "sha256": "98747ffb3c974d9b8d615b8ea26029feac561c7c8f22e7b2b8dac5d10879fde5"
+    },
+    "derived-summary.csv": {
+      "bytes": 30045,
+      "sha256": "2f076b3fdcb3350cd9670a3bd3c12fe2bb5a01136830bfbd361a0d5a0b1f1deb"
+    },
+    "diagnostic-summary.json": {
+      "bytes": 2837,
+      "sha256": "970f9c6fc7dad77b5629b2d31a48ae92af1679a85df146d66e11b3e50b787263"
+    },
+    "evaluation-invariance-check.csv": {
+      "bytes": 77,
+      "sha256": "0d9ad6475f4bc3aecea42d7ec8ca0283b96b4c9ba75b1952a12c6b0a37f506f8"
+    },
+    "kobe-100-trajectories-2007-2026.html": {
+      "bytes": 5010697,
+      "sha256": "2ee927bcdcb16a36b3aad4c175fc57d610bf7e2d6718c3707b3f5aa8b3764379"
+    },
+    "kobe-100-trajectories-2007-2026.png": {
+      "bytes": 1427129,
+      "sha256": "c1ce98e4af08c05ded4c92db00d634d7083f66632e22376da58d508daec00f07"
+    },
+    "kobe-100-trajectories-2007-2026.svg": {
+      "bytes": 52732,
+      "sha256": "9c05de81d29bab348fbc70222030a4ba347738b80834132598b49f8300b0c5bc"
+    },
+    "kobe-README.md": {
+      "bytes": 4217,
+      "sha256": "e969672aa3cb4aaa60e0ef996c4177617b106c69cfe484997d0af4f7fc9e3495"
+    },
+    "kobe-format.csv": {
+      "bytes": 85699,
+      "sha256": "1d8311b20d9d68ba8fc7897a1f094612d48bc401c764213eb024f6a2ed8a7f99"
+    },
+    "kobe-reproducibility.zip": {
+      "bytes": 21055,
+      "sha256": "e14591ec74080dd34205e4005ad7dfb1d9a74713afed8c91790793d88818cd09"
+    },
+    "kobe-reproduction-README.md": {
+      "bytes": 6954,
+      "sha256": "7a5a66b23e0f81441b77ea3d855507f71c25ae30f62b6855bbb9c597efceb036"
+    },
+    "kobe-status.json": {
+      "bytes": 2498,
+      "sha256": "ed2b6532cd080f72af07ac55238e83fcf8a0ac9d15f7d386260781928a836beb"
+    },
+    "kobe-trajectories-100-draws-2007-2026.csv": {
+      "bytes": 293491,
+      "sha256": "03b5808abae677a965137812a2d8df3805c034b1032144303a9a599b4205e0a0"
+    },
+    "kobe-trajectories.rds": {
+      "bytes": 116125,
+      "sha256": "9d5622754f51f1b09ccd847e011ff1406a3916516659ff8bfa5e5933c24e99a8"
+    },
+    "marginals-selected.png": {
+      "bytes": 272659,
+      "sha256": "62b705a94f16646c00c81632c665ff110b3a6d744731d2c7f21d2d37597a76ab"
+    },
+    "mceval-inventory.csv": {
+      "bytes": 497,
+      "sha256": "cc7ed91424f1d8b361755d237c959a5aeafb6bdcea3e2d3e8808d90de54a0f19"
+    },
+    "original-mode-comparison.csv": {
+      "bytes": 4961,
+      "sha256": "c33bc21c3852a651f63bab3fa524d42ce8e248e34426a7fd4b53eaa6c8666deb"
+    },
+    "parameter-summary.csv": {
+      "bytes": 446502,
+      "sha256": "b3ed88f3d9a20cd535a4e3d6975874045dd368ab2a21088a4fa01ab16b060fe7"
+    },
+    "recruitment-trajectory.png": {
+      "bytes": 148051,
+      "sha256": "916a9ba81d668fb9299ce409e1fdb7b92208a30d619ce5ded4b5660f110f1eb2"
+    },
+    "release-validation.json": {
+      "bytes": 13021,
+      "sha256": "c54a77b583b722aa99c52bcc82cacdd8f7379b54061adf0faef35a60db6d5b7f"
+    },
+    "reproducibility.zip": {
+      "bytes": 201629,
+      "sha256": "1bf048f38b304f356d2f8e99d57397bceb8f6a5f1d7fda14f5b2eb087a60298b"
+    },
+    "reproduction-README.md": {
+      "bytes": 7564,
+      "sha256": "6391fc8603490bdebc4bf4fee1761a6d9a92716eade61cb215022f018b883e66"
+    },
+    "run-manifest.json": {
+      "bytes": 2922,
+      "sha256": "c32beff2e1a200874f7264b3629199e457d10ba5bc2ceb5d26a346f7542f4d03"
+    },
+    "selected-draw-median-trajectory.csv": {
+      "bytes": 834,
+      "sha256": "dc73fe48983e248f7c643d536d70e92eec15122643d4094015cc8a99e2f32b94"
+    },
+    "selection-manifest.csv": {
+      "bytes": 3754,
+      "sha256": "eec59c800e13d76a8be86c4ce8b28f8b7a6f996576d8c445ae3090983d5adc84"
+    },
+    "session-info.txt": {
+      "bytes": 1571,
+      "sha256": "92b468dafa91de5f25acc423ccd1722795e4250655346f90fdd661b33d2100e2"
+    },
+    "source-notes.md": {
+      "bytes": 6271,
+      "sha256": "874489091e1e96518cdd5124b3663ad4c65256935acf19c046f4d71a56ed070f"
+    },
+    "ssb-trajectory.png": {
+      "bytes": 136088,
+      "sha256": "a6ee055dfb508f42dcace6469e036428c6e56550536757e5ef78bbfea547fd6e"
+    },
+    "terminal-2026-summary.csv": {
+      "bytes": 718,
+      "sha256": "db5debf7fc967fc67819bdc6a827fb74b1a60fa143c72fa2a1e70c61a1052e49"
+    },
+    "terminal-ssb-density.png": {
+      "bytes": 110527,
+      "sha256": "394829a9ec207ea31c8392d52cab2cdf825837aa949e7629bf077a54ff5dd598"
+    },
+    "terminal-ssb-trace.png": {
+      "bytes": 696418,
+      "sha256": "ee856f41023a6aa0f54ac01395a765870f3c673577652133c3a3e72fb6b8b371"
+    },
+    "trace-selected.png": {
+      "bytes": 1402689,
+      "sha256": "c9aa777ef158b626f50a7bf37a180b89d117d7006979e035ccb0e7265f1e95f6"
+    }
+  },
+  "manifest_self_hash": "Excluded to avoid a circular checksum.",
+  "validation_record": "release-validation.json"
+}
