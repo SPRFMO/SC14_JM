@@ -12,7 +12,7 @@ The 2026 work has examined the evidence used to assess the stock and tested poss
 
 Managers need advice on the stock’s condition and on how catch decisions may perform when the future differs from expectations. This guide helps distinguish evidence about **the stock today** from tests of **management rules over time**.
 
-- [How is the stock doing?](assessments.html) — what an assessment can tell us and what still needs review.
+- [How is the stock doing?](assessments.html) — what an assessment can tell us and what still needs review. [Read the SC14 assessment (draft, updated 10 September)](assessment/SC14.html).
 - [Which catch rules may work best?](mse.html) — how procedures are tested for biological performance, catch and stability.
 - [What do the surveys and catches tell us?](data-surveys.html) — why abundance signals can differ.
 - [What is being considered at SC14?](sc14-week.html) — this week’s work and the record still needed.

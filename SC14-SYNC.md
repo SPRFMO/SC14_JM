@@ -41,4 +41,6 @@ The first successful synchronization inserts the report link into the editable a
 
 ## Published source
 
-The report synchronized on 9 September 2026 was rendered from jjm revision `53ccf44300888c8205f5c2c81ca2bd537e920953`, using existing saved model outputs. The exact HTML and figure checksums are recorded in `docs/assessment/sync.json`. The report retains its DRAFT label.
+The report refreshed on 10 September 2026 uses jjm revision `17d3fb1` and existing saved assessment outputs, with a local source repair for the dynamic-BMSY Kobe plot. The unsupported `fixed_bmsy(..., dyn = TRUE)` call was replaced by the annual model BMSY/B0 ratio multiplied by dynamic unfished spawning biomass, reconstructed from the saved SSB_NoFishR series. The first year is excluded because that ratio begins in year two. F/FMSY is unchanged, and the caption states the dynamic convention.
+
+The exact HTML and figure checksums are recorded in `docs/assessment/sync.json`. The report retains its DRAFT label. Rendering and link/resource integrity were checked; model refitting and a full accessibility audit were not performed.
