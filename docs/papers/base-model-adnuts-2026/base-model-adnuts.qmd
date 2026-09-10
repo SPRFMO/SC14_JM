@@ -49,9 +49,9 @@ The default ADNUTS run sampled **1,593 active parameters** in the single-stock b
 #| results: asis
 #| label: interpretation-status
 if (passes) {
-  cat('::: {.callout-note title="Sampling checks passed"}\nThe run passes the parameter and sampler screening checks reported below. Its uncertainty estimates are conditional on this model, its data, its fixed parameter values, and its likelihood and penalty terms. Passing these checks does not establish that the model is correct.\n:::\n')
+  cat('::: {.callout-note title="Sampling checks passed"}\nThe run passes the parameter and sampler screening checks reported below. Its uncertainty estimates are conditional on this model, its data, its fixed parameter values, and its likelihood and penalty terms. Model adequacy also requires evaluation of its assumptions and fit to the observations.\n:::\n')
 } else {
-  cat('::: {.callout-warning title="The default run needs further sampling checks"}\nThe run completed with no retained divergences or tree-depth-limit events, but some parameters have slow mixing and fail the screening criteria below. The figures and intervals describe these retained draws and should be treated as exploratory. They are not sufficiently validated posterior uncertainty estimates for management advice.\n:::\n')
+  cat('::: {.callout-warning title="The default run needs further sampling checks"}\nThe run completed with zero retained divergences and zero tree-depth-limit events. Some parameters have slow mixing and fail the screening criteria below. The figures and intervals provide an exploratory description of these retained draws. Further sampling and validation are needed before using these uncertainty estimates for management advice.\n:::\n')
 }
 ```
 
@@ -59,17 +59,17 @@ The largest finite parameter R-hat is **`r fmt(diag$parameter_checks$maximum_fin
 
 The 2026 spawning-biomass sample median is **6.14 million tonnes**, with an exploratory central 95% interval of **4.47–8.43 million tonnes**. Its R-hat is **1.018**, so this quantity also needs further between-chain agreement checks. Recruitment at age 1 has a sample median of **5.38 billion fish**; detailed units, intervals and diagnostics are given below.
 
-This separate working document accompanies the assessment. It does not establish agreed Scientific Committee advice.
+This separate working document accompanies the assessment and provides an analysis for Scientific Committee review.
 
 ## Model and sampler
 
-The [SC14 assessment source](https://github.com/SPRFMO/jjm/blob/main/doc/SC14.qmd) identifies model 1.06 as the final model in the working comparison. This run uses its **single-stock hypothesis**, with data from 1970 through 2026, control file `h1_1.06.ctl`, data file `1.06.dat`, and the saved fitted parameter file. The run retains the working assessment’s 2026 catch projections and other model inputs. The two-stock hypothesis is not included in this run.
+The [SC14 assessment source](https://github.com/SPRFMO/jjm/blob/main/doc/SC14.qmd) identifies model 1.06 as the final model in the working comparison. This run uses its **single-stock hypothesis**, with data from 1970 through 2026, control file `h1_1.06.ctl`, data file `1.06.dat`, and the saved fitted parameter file. The run retains the working assessment’s 2026 catch projections and other model inputs. This analysis covers the single-stock hypothesis.
 
-The fitted objective was `r sprintf('%.11f', as.numeric(sub('.*Objective function value = ([^ ]+).*', '\\1', manifest$original_parameter_header)))`. An isolated evaluation at the saved parameters reproduced it to within $2\times10^{-9}$. The original fitted maximum gradient component was approximately 0.000167. The preparation used zero optimization iterations; its printed zero gradient is therefore not a new convergence check.
+The fitted objective was `r sprintf('%.11f', as.numeric(sub('.*Objective function value = ([^ ]+).*', '\\1', manifest$original_parameter_header)))`. An isolated evaluation at the saved parameters reproduced it to within $2\times10^{-9}$. The original fitted maximum gradient component was approximately 0.000167. The preparation evaluated the saved parameter values using zero optimization iterations. The original fitted gradient supplies the convergence evidence for that mode.
 
-The target is proportional to the exponential of the negative complete ADMB objective over the active parameters and their existing bounds. Existing likelihoods, penalties and priors remain in place; ADMB applies the required Jacobian for its sampling transformations. Parameters fixed in the control file remain fixed, including natural mortality (0.28 per year), steepness (0.65), and recruitment deviation standard deviation (0.6). No additional prior was introduced for this run.
+The target is proportional to the exponential of the negative complete ADMB objective over the active parameters and their existing bounds. Existing likelihoods, penalties and priors remain in place; ADMB applies the required Jacobian for its sampling transformations. Parameters fixed in the control file remain fixed, including natural mortality (0.28 per year), steepness (0.65), and recruitment deviation standard deviation (0.6). The run uses the existing prior specification.
 
-[ADNUTS](https://cole-monnahan-noaa.github.io/adnuts/articles/adnuts.html) provides NUTS sampling for ADMB models. The installed package's `sample_nuts()` defaults were used directly, rather than the repository's differently configured MCMC wrapper.
+[ADNUTS](https://cole-monnahan-noaa.github.io/adnuts/articles/adnuts.html) provides NUTS sampling for ADMB models. The installed package's `sample_nuts()` defaults were used directly.
 
 | Setting | Value |
 |:--|:--|
@@ -88,11 +88,11 @@ The target is proportional to the exponential of the negative complete ADMB obje
 | Chain seeds | `r paste(manifest$package_generated_chain_seeds, collapse=', ')` |
 | Sampling wall time | `r fmt(manifest$wall_seconds / 3600, 2)` hours |
 
-The root R seed was 20260910; the package generated the individual chain seeds. Sampler controls were not tuned after seeing this run. The `-fut_sel 3` model argument preserves the assessment's future-selectivity convention; no catch-advice projections are interpreted here. Derived quantities were evaluated from retained draws after sampling, keeping the sampler's default `mceval = FALSE` unchanged.
+The root R seed was 20260910; the package generated the individual chain seeds. Sampler controls retained their default values throughout this run. The `-fut_sel 3` model argument preserves the assessment's future-selectivity convention. Interpretation focuses on historical fitted quantities. Derived quantities were evaluated from retained draws after sampling, keeping the sampler's default `mceval = FALSE` unchanged.
 
 ## Do the chains agree?
 
-R-hat measures agreement between chains, while effective sample size (ESS) accounts for autocorrelation. The screening used here requires rank-normalized split R-hat no greater than 1.01 and bulk and tail ESS of at least 400. The ESS threshold of 400 is the screening choice for this report. These checks follow the definitions in the [Stan diagnostic guidance](https://mc-stan.org/learn-stan/diagnostics-warnings.html); they do not guarantee convergence. All chains start at the same mode under the requested defaults, so these checks provide less protection against undiscovered modes than a suitably dispersed initialization.
+R-hat measures agreement between chains, while effective sample size (ESS) accounts for autocorrelation. The screening used here requires rank-normalized split R-hat no greater than 1.01 and bulk and tail ESS of at least 400. The ESS threshold of 400 is the screening choice for this report. These checks follow the definitions in the [Stan diagnostic guidance](https://mc-stan.org/learn-stan/diagnostics-warnings.html). Convergence assessment combines these numerical screens with chain plots and checks of model exploration. All chains start at the same mode under the requested defaults; suitably dispersed starts would provide an additional check of exploration across modes.
 
 ```{r}
 #| label: tbl-parameter-diagnostics
@@ -110,7 +110,7 @@ names(x) <- c("Chain", "Retained", "Divergences", "Depth-12 events", "E-BFMI", "
 kable(x, digits=c(0,0,0,0,3,3,0))
 ```
 
-Divergences can signal biased exploration. Maximum-tree-depth events indicate that the sampler reached its trajectory-length limit. Energy Bayesian fraction of missing information (E-BFMI) is computed within each retained chain; values below 0.3 are flagged. The full screening requires no divergences, no depth-limit events, finite diagnostics, and E-BFMI of at least 0.3 in every chain.
+Divergences can signal biased exploration. Maximum-tree-depth events indicate that the sampler reached its trajectory-length limit. Energy Bayesian fraction of missing information (E-BFMI) is computed within each retained chain; values below 0.3 are flagged. The full screening requires zero divergences, zero depth-limit events, finite diagnostics, and E-BFMI of at least 0.3 in every chain.
 
 ```{r}
 #| label: tbl-slow-parameters
@@ -129,7 +129,7 @@ kable(x, digits=c(0,3,0,0,4), row.names=FALSE)
 
 ## Biomass and recruitment uncertainty
 
-These summaries use all 3,000 retained draws, with chain membership preserved for diagnostics. Intervals are the equal-tailed 2.5th and 97.5th percentiles. When the screening above fails, they remain descriptive intervals for the sampled draws and should not be interpreted as validated credible intervals.
+These summaries use all 3,000 retained draws, with chain membership preserved for diagnostics. Intervals are the equal-tailed 2.5th and 97.5th percentiles. These intervals describe the sampled draws. Further sampling is needed to support reliable posterior credible intervals.
 
 ```{r}
 #| label: tbl-terminal-results
@@ -145,7 +145,7 @@ kable(data.frame(Quantity=x$quantity, Units=x$units,
 
 The original fitted values are 6,108.87 thousand tonnes of spawning biomass and 5,559.86 million recruits at age 1 in 2026. The mode curves below were regenerated at the saved fitted parameters and checked against the original objective. The central 50% band shows the interquartile range; the wider band contains the central 95% of retained values.
 
-The derived-quantity screen flags **`r derived_diag$flagged_quantity_years` of `r derived_diag$assessed_quantity_years` quantity-year combinations** (spawning biomass and recruitment over 1970–2026). Its maximum R-hat is `r fmt(derived_diag$max_rhat, 3)`, and minimum bulk/tail ESS are `r fmt(derived_diag$min_ess_bulk, 0)`/`r fmt(derived_diag$min_ess_tail, 0)`. Individual biomass or recruitment diagnostics do not override failures elsewhere in the model.
+The derived-quantity screen flags **`r derived_diag$flagged_quantity_years` of `r derived_diag$assessed_quantity_years` quantity-year combinations** (spawning biomass and recruitment over 1970–2026). Its maximum R-hat is `r fmt(derived_diag$max_rhat, 3)`, and minimum bulk/tail ESS are `r fmt(derived_diag$min_ess_bulk, 0)`/`r fmt(derived_diag$min_ess_tail, 0)`. Overall sampling assessment combines these derived-quantity diagnostics with the full set of parameter and sampler checks.
 
 ![Spawning biomass over 1970–2026: retained-sample median, central 50% and 95% intervals, and the original fitted mode.](ssb-trajectory.png){#fig-ssb fig-alt="Historical spawning biomass in thousand tonnes, with sample median and shaded central 50 and 95 percent intervals. A dashed line marks the original fitted mode; the intervals are exploratory given incomplete chain agreement."}
 
@@ -171,7 +171,7 @@ $$
 \mathrm{harvest}_{d,y}=\frac{\frac{1}{12}\sum_{f=1}^{4}\sum_{a=1}^{12}F_{d,f,y,a}}{FMSY_{d,y}}.
 $$
 
-Both coordinates are dimensionless. Reference lines at one mark each denominator. The thick curve joins the coordinate-wise medians of the 100 selected draws for each year; it is a visual summary and need not be a possible model trajectory itself.
+Both coordinates are dimensionless. Reference lines at one mark each denominator. The thick curve joins the coordinate-wise medians of the 100 selected draws for each year; each coordinate is summarized separately to provide a visual guide to the selected draws.
 
 ![One hundred matched Kobe trajectories for 2007–2026. Thin lines show selected draws; the thick line joins their annual coordinate-wise medians. The open circle marks 2007 and the filled diamond marks 2026.](kobe-100-trajectories-2007-2026.png){#fig-kobe fig-alt="Kobe plot of 100 retained posterior trajectories over 2007 to 2026. Horizontal axis is spawning biomass relative to each draw's mean 2017 to 2026 MSY biomass; vertical axis is fishing mortality relative to annual FMSY. The median moves from approximately 0.54 and 3.50 in 2007 to 0.90 and 0.86 in 2026. Reference lines divide the plane at one; these are exploratory results because full-run chain screening failed."}
 
@@ -183,9 +183,9 @@ The chain-specific marginal plots show a shift in chain 1 for several of the slo
 
 ## What uncertainty is covered?
 
-MCMC explores parameter uncertainty conditional on this single-stock model. It does not measure uncertainty from alternative stock hypotheses, omitted processes, different data treatment, or parameters fixed by the control file. The defaults initialize every chain at the same mode. A run that needs further work should be followed by a separately labelled analysis with justified changes to initialization, run length or sampler controls.
+MCMC explores parameter uncertainty conditional on this single-stock model. Alternative stock hypotheses, additional processes, different data treatments and fixed parameter choices can be assessed through separate sensitivity analyses. The defaults initialize every chain at the same mode. A run that needs further work should be followed by a separately labelled analysis with justified changes to initialization, run length or sampler controls.
 
-The model's native `Fbar` MCMC field is not presented as stock-wide fishing mortality because its reporting code reads a fishery-specific parameter. Likewise, its native depletion fields have definitions that differ from spawning biomass relative to an unfished reference. Neither field is silently substituted for a stock-status measure.
+The Kobe calculation constructs stock-wide fishing mortality from F at age across all four fleets. The model's native `Fbar` field describes a fishery-specific parameter, and its depletion fields describe total-biomass ratios. The source notes record these definitions so each reported quantity retains its biological meaning.
 
 ## Files and reproducibility
 
@@ -197,7 +197,7 @@ The model's native `Fbar` MCMC field is not presented as stock-wide fishing mort
 - [Software environment](session-info.txt) and [source/output checksums](release-manifest.json)
 - [Reproduction instructions](reproduction-README.md) and [reproducibility files](reproducibility.zip), including the exact model source, control, data, saved parameter input, and analysis scripts
 
-The raw fit and full ADMB evaluation output are retained in the local run archive. Their checksums identify the draws used here. Report rendering reads saved summaries and figures; it does not rerun MCMC.
+The raw fit and full ADMB evaluation output are retained in the local run archive. Their checksums identify the draws used here. Report rendering uses the saved summaries and figures from the completed run.
 
 ## Validation record
 
@@ -206,12 +206,12 @@ The raw fit and full ADMB evaluation output are retained in the local run archiv
 | Base-model identity and inputs | Pass | Frozen file hashes; original and prepared objective agree within 2 × 10⁻⁹ |
 | Requested sampler defaults | Pass | Recorded package formals, resolved controls and all three executed commands |
 | Sampling completion and draw order | Pass | 2,000 × 3 iterations; all 4,779,000 pooled parameter values match the retained fit bit for bit |
-| Numerical sampler diagnostics | Pass | No retained divergences or depth saturation; E-BFMI ≥0.984 |
+| Numerical sampler diagnostics | Pass | Zero retained divergences and zero depth-limit events; E-BFMI ≥0.984 |
 | Parameter mixing and precision | Fail | 366/1,593 active parameters fail one or more reported screens |
 | Native derived-output completeness | Pass | All 3,000 draws and 57 years verified; all 20 native output types inventoried |
 | Kobe draw selection and coordinates | Pass | 100 distinct retained draws; 20 years each; unchanged native quantities and matching annual reference points |
 | Reported results | Pass | Tables and figures read the saved, checked CSVs; independent parameter diagnostic calculation agrees |
 | HTML, navigation, figure descriptions and file links | Pass | Rendered artifact, figure review and scoped local-link validation recorded in the release checks |
-| Manual screen-reader review | Not tested | Not performed |
+| Manual screen-reader review | Pending | A manual review remains an additional validation step |
 
-These checks describe this analysis and its deliverables; they are not an accessibility certification.
+These checks document the numerical, file and visual validation completed for this analysis.

@@ -1,5 +1,5 @@
 {
-  "created_utc": "2026-09-10T22:02:40.903421+00:00",
+  "created_utc": "2026-09-10T22:08:15.730136+00:00",
   "status": "complete; scientific calculations and deliverable checks passed; full-run convergence screening failed",
   "model": "h1_1.06",
   "source_repository": "https://github.com/SPRFMO/jjm",
@@ -48,16 +48,16 @@
   },
   "published_artifacts": {
     "base-model-adnuts.html": {
-      "bytes": 7685904,
-      "sha256": "2bf7d84d20f56c6a4c44a7360bcc911521fff4a786b63ef80a7ccc5952836da0"
+      "bytes": 7685255,
+      "sha256": "4f988017f176159bcaf9f57e97923af469215bc2bffb2ea589bb41687bb99486"
     },
     "base-model-adnuts.qmd": {
-      "bytes": 19774,
-      "sha256": "9a7d1f381d12ac405a08f87767767548af4973df33df777453269657a4635106"
+      "bytes": 19904,
+      "sha256": "3c35af15eabfb58435374e080929cd938d3079788a36d4efcf4a8493db0aeae6"
     },
     "build-kobe-trajectories.R": {
-      "bytes": 28376,
-      "sha256": "a68362b6c84fd414a1ad8ca249bab2b8afcacde503a32cf8587ab15ffcc240f2"
+      "bytes": 28632,
+      "sha256": "8bd34c4acc6d7a492b57ea9aa4b4c73e872b9ef4fe7abd1a32cd7ce567c703cd"
     },
     "chain-diagnostics.csv": {
       "bytes": 593,
@@ -80,36 +80,36 @@
       "sha256": "0d9ad6475f4bc3aecea42d7ec8ca0283b96b4c9ba75b1952a12c6b0a37f506f8"
     },
     "kobe-100-trajectories-2007-2026.html": {
-      "bytes": 5010697,
-      "sha256": "2ee927bcdcb16a36b3aad4c175fc57d610bf7e2d6718c3707b3f5aa8b3764379"
+      "bytes": 5010744,
+      "sha256": "431e49d15c1f4c133521bc764222b6f3d1eebee722022b2ed72c7a8e199b47c2"
     },
     "kobe-100-trajectories-2007-2026.png": {
-      "bytes": 1427129,
-      "sha256": "c1ce98e4af08c05ded4c92db00d634d7083f66632e22376da58d508daec00f07"
+      "bytes": 1426562,
+      "sha256": "418e0066dc6c88e6881b96618d9ad475b45eda6edb14f89a512890599abaa01d"
     },
     "kobe-100-trajectories-2007-2026.svg": {
-      "bytes": 52732,
-      "sha256": "9c05de81d29bab348fbc70222030a4ba347738b80834132598b49f8300b0c5bc"
+      "bytes": 52730,
+      "sha256": "a982f171e699a7bab09688985ec46f0e35d17b9af6d39e18a6209ff4e7c02f7d"
     },
     "kobe-README.md": {
-      "bytes": 4217,
-      "sha256": "e969672aa3cb4aaa60e0ef996c4177617b106c69cfe484997d0af4f7fc9e3495"
+      "bytes": 4364,
+      "sha256": "05f3053f3fdad3afb30f4c8cf48124118c5efb76a0cdc65558ceca68d73ca50e"
     },
     "kobe-format.csv": {
       "bytes": 85699,
       "sha256": "1d8311b20d9d68ba8fc7897a1f094612d48bc401c764213eb024f6a2ed8a7f99"
     },
     "kobe-reproducibility.zip": {
-      "bytes": 21055,
-      "sha256": "e14591ec74080dd34205e4005ad7dfb1d9a74713afed8c91790793d88818cd09"
+      "bytes": 21074,
+      "sha256": "6002993f079ea0f856974b208fb5d1159b86298eb1112dfa732a36aebee60305"
     },
     "kobe-reproduction-README.md": {
-      "bytes": 6954,
-      "sha256": "7a5a66b23e0f81441b77ea3d855507f71c25ae30f62b6855bbb9c597efceb036"
+      "bytes": 7081,
+      "sha256": "8a88c8aeb2b93f936c869e82b6e40c714e6d9ff97fd3257ff9899887a3166726"
     },
     "kobe-status.json": {
-      "bytes": 2498,
-      "sha256": "ed2b6532cd080f72af07ac55238e83fcf8a0ac9d15f7d386260781928a836beb"
+      "bytes": 2513,
+      "sha256": "7e932d953e3ea389869a8438a2a9f9fc3d6806a28410fbc78c77ebe65433e2ed"
     },
     "kobe-trajectories-100-draws-2007-2026.csv": {
       "bytes": 293491,
@@ -140,16 +140,16 @@
       "sha256": "916a9ba81d668fb9299ce409e1fdb7b92208a30d619ce5ded4b5660f110f1eb2"
     },
     "release-validation.json": {
-      "bytes": 13021,
-      "sha256": "c54a77b583b722aa99c52bcc82cacdd8f7379b54061adf0faef35a60db6d5b7f"
+      "bytes": 13018,
+      "sha256": "94e96b62908263f1fed8b51ed1222664c078b76e20a99ba41efc5e40e03ae9ed"
     },
     "reproducibility.zip": {
-      "bytes": 201629,
-      "sha256": "1bf048f38b304f356d2f8e99d57397bceb8f6a5f1d7fda14f5b2eb087a60298b"
+      "bytes": 201597,
+      "sha256": "c61aea3b42f5dcd3df6d8ff257aa9eb9cc9ca4d7ae49d82febd07aee1cb85b84"
     },
     "reproduction-README.md": {
-      "bytes": 7564,
-      "sha256": "6391fc8603490bdebc4bf4fee1761a6d9a92716eade61cb215022f018b883e66"
+      "bytes": 7575,
+      "sha256": "41f83464e4ef539f39e42cb2a4d671f14e7bb9dfe3f42f01cc0a24c87f91197b"
     },
     "run-manifest.json": {
       "bytes": 2922,
@@ -168,8 +168,8 @@
       "sha256": "92b468dafa91de5f25acc423ccd1722795e4250655346f90fdd661b33d2100e2"
     },
     "source-notes.md": {
-      "bytes": 6271,
-      "sha256": "874489091e1e96518cdd5124b3663ad4c65256935acf19c046f4d71a56ed070f"
+      "bytes": 6279,
+      "sha256": "bc6c1a87f37e9a1004952ff2fc94ba7e4b6c0b5ea57a2c800ab99b7ca2532b67"
     },
     "ssb-trajectory.png": {
       "bytes": 136088,

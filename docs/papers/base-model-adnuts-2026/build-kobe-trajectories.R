@@ -4,7 +4,7 @@
 # To prepare the selection and extract original quantities only, pass --extract-only
 # as the second argument. The supplemented evaluator uses the 100 PSV records in
 # selection-manifest.csv order and adds FMSYy and FFMSYy immediately after the
-# frozen template's existing get_msy_robust(i) call. No sampling is repeated.
+# frozen template's existing get_msy_robust(i) call, using saved posterior draws.
 .libPaths(c('/Users/jim/Library/R/4.6/library', .libPaths()))
 suppressPackageStartupMessages({
   library(data.table)
@@ -151,7 +151,7 @@ write_interactive <- function(d, med, lim, file) {
                       line = list(color = '#555555', width = 1, dash = 'dash')))
   p <- plotly::layout(p,
     title = list(text = paste0('h1_1.06: 100 retained-draw Kobe trajectories, 2007-2026',
-                              '<br><sup>Exploratory: convergence screening failed. ',
+                              '<br><sup>Exploratory: further sampling is needed. ',
                               'Select a path below; hover for draw and year.</sup>'),
                  x = 0.02, y = .96, yanchor = 'top'),
     xaxis = list(title = 'SSB / SSBMSY (draw-specific 2017-2026 mean)', range = c(0, lim[1])),
@@ -162,7 +162,8 @@ write_interactive <- function(d, med, lim, file) {
     annotations = list(list(text = paste0('100 selected draws: chains 1/2/3 = 33/33/34. ',
                                          'Dark line = coordinate-wise median of these draws.<br>',
                                          'F = unweighted mean across ages 1-12 of summed fleet F. ',
-                                         'These are historical fitted trajectories, not forecasts or validated status probabilities.'),
+                                         'Historical fitted trajectories conditional on the base model; ',
+                                         'further sampling is needed for reliable posterior stock-status probabilities.'),
                             x = 0, y = -0.17, xref = 'paper', yref = 'paper',
                             xanchor = 'left', yanchor = 'top', showarrow = FALSE,
                             align = 'left', font = list(size = 11)),
@@ -343,7 +344,7 @@ main <- function(args = commandArgs(trailingOnly = TRUE)) {
                           'Medians are calculated separately for each coordinate and year.\n',
                           'F is the mean over ages 1-12 of summed fleet F. ',
                           'SSBMSY is fixed within each draw; FMSY varies by year.\n',
-                          'Exploratory retained-draw results: convergence screening failed ',
+                          'Exploratory retained-draw results: further sampling is needed ',
                           '(maximum parameter R-hat 1.055).')) +
     theme_minimal(base_size = 12) +
     theme(panel.grid.minor = element_blank(), panel.grid.major = element_blank(),
@@ -363,12 +364,12 @@ main <- function(args = commandArgs(trailingOnly = TRUE)) {
     generated_at = format(Sys.time(), '%Y-%m-%dT%H:%M:%S%z'), model = 'h1_1.06',
     trajectories = 100L, years = 2007:2026, rows = nrow(d),
     selection_seed = 20260910L, rng_kind = RNGkind(), draws_by_chain = c(33L, 33L, 34L),
-    available_retained_draws = 3000L, selection = 'Without replacement within each chain; no quantity-based filtering.',
+    available_retained_draws = 3000L, selection = 'Random selection without replacement within each chain, independent of fitted quantities.',
     selection_file = 'selection-manifest.csv',
     reference_convention = 'jjmR fixed_bmsy: each draw uses mean annual SSBMSY for 2017-2026; F uses annual FMSY.',
-    f_definition = 'Sum F_faa across all four fleets and all twelve ages, divided by 12; not native emitted Fbar.',
+    f_definition = 'Sum F_faa across all four fleets and all twelve ages, divided by 12; matches the model Fcur_Fmsy numerator.',
     ssb_units = 'thousand tonnes', f_units = 'per year', ratio_units = 'dimensionless',
-    median_definition = 'Coordinate-wise median of the selected 100 draws for each year; not a single sampled trajectory.',
+    median_definition = 'Coordinate-wise medians of the selected 100 draws provide a visual summary for each year.',
     original_source = current_source, supplemental_source = normalizePath(supplemental),
     original_quantities_invariant = TRUE, invariance = comparison,
     reconstructed_f_ratio_max_absolute_error = ratio_error,
@@ -378,7 +379,7 @@ main <- function(args = commandArgs(trailingOnly = TRUE)) {
     interactive_html_created = interactive,
     all_run_maximum_parameter_rhat = diagnostic$parameter_checks$maximum_finite_rhat,
     all_run_screening_status = diagnostic$screening_status,
-    interpretation = 'Exploratory historical fitted trajectories conditional on the model. Convergence screening failed; not forecasts or validated stock-status probabilities.',
+    interpretation = 'Historical fitted trajectories conditional on the base model; further sampling is needed for reliable posterior stock-status probabilities.',
     package_versions = lapply(c('data.table', 'ggplot2', 'ggrepel', 'jsonlite'),
                               function(pkg) list(package = pkg, version = as.character(packageVersion(pkg))))
   )
@@ -386,7 +387,7 @@ main <- function(args = commandArgs(trailingOnly = TRUE)) {
                        pretty = TRUE, auto_unbox = TRUE, na = 'null', digits = 17)
   writeLines(c(
     '# 100 retained ADNUTS draws in Kobe format, 2007-2026', '',
-    'These are 100 matched historical fitted trajectories from the completed h1_1.06 default ADNUTS run. They are not new model simulations or forecasts. Full-run convergence screening failed (maximum parameter R-hat 1.055; 2026 SSB R-hat 1.018), so use them for exploratory display, not validated stock-status probabilities.', '',
+    'These are 100 matched historical fitted trajectories from the completed h1_1.06 default ADNUTS run, suitable for exploratory display. They are conditional on the base model; further sampling is needed for reliable posterior stock-status probabilities. The diagnostics identify room for improved mixing: maximum parameter R-hat 1.055 and 2026 SSB R-hat 1.018.', '',
     '## Files', '',
     '- `kobe-trajectories-100-draws-2007-2026.csv`: 2000 rows, preserving draw, chain, iteration, year, biological quantities, reference points and both ratios.',
     '- `kobe-format.csv`: conventional long Kobe columns `iter`, `year`, `stock` (SSB/SSBMSY), and `harvest` (F/FMSY). `iter` matches `evaluation_draw_id` in the selection manifest.',
@@ -394,21 +395,21 @@ main <- function(args = commandArgs(trailingOnly = TRUE)) {
     '- `kobe-trajectories.rds`: trajectories, compact Kobe data, selection and median in an R list.',
     '- PNG and SVG: all 100 paths and coordinate-wise selected-draw median; open circle starts in 2007, filled diamond ends in 2026.',
     '- Interactive HTML: select an individual draw in the dropdown and hover over its years. The median remains visible. All 100 paths are available together.',
-    '- `selected-draw-median-trajectory.csv`: medians across the 100 selected draws, computed separately for both coordinates in each year. This median curve need not itself be a possible model trajectory.',
+    '- `selected-draw-median-trajectory.csv`: coordinate-wise medians across the 100 selected draws provide a visual summary for each year.',
     '- `evaluation-invariance-check.csv` and `kobe-status.json`: validation, provenance and interpretation.', '',
     '## Selection', '',
-    'Seed 20260910; R RNG kinds Mersenne-Twister, Inversion, Rejection. Sample without replacement from 1000 retained iterations per chain, selecting 33, 33 and 34 draws from chains 1, 2 and 3, then sort pooled draw IDs. No draw is selected or removed based on its parameter values or status. The same draw is followed through every year from 2007 through 2026 inclusive.', '',
+    'Seed 20260910; R RNG kinds Mersenne-Twister, Inversion, Rejection. Sample without replacement from 1000 retained iterations per chain, selecting 33, 33 and 34 draws from chains 1, 2 and 3, then sort pooled draw IDs. Selection is random within each chain, independent of parameter values and stock status. The same draw is followed through every year from 2007 through 2026 inclusive.', '',
     '## Quantities and reference convention', '',
-    '`ssb_kt` is native `SSB` = Sp_Biom(1,year), in thousand tonnes. `f_mean_all_ages_per_year` is the unweighted mean over all twelve model ages of F summed across all four fleets: sum(F_faa)/12. This exactly matches the numerator used by get_msy_robust for Fcur_Fmsy. The native emitted Fbar is a first-fleet scalar and is not used.', '',
+    '`ssb_kt` is native `SSB` = Sp_Biom(1,year), in thousand tonnes. `f_mean_all_ages_per_year` is the unweighted mean over all twelve model ages of F summed across all four fleets: sum(F_faa)/12. This exactly matches the numerator used by get_msy_robust for Fcur_Fmsy. Computing the Kobe numerator directly from F_faa provides the complete stock-level quantity; the native emitted Fbar contains the first-fleet scalar.', '',
     '`ssbmsy_year_kt` is annual SBMSYy from get_msy_robust(year). `ssbmsy_reference_kt` is its within-draw arithmetic mean for 2017-2026, repeated over all years, following jjmR::fixed_bmsy(). The biomass ratio is ssb_kt/ssbmsy_reference_kt. `fmsy_year_per_year` is matching annual FMSYy from the same robust routine, and the fishing-mortality ratio is f_mean_all_ages_per_year/fmsy_year_per_year. Annual F/FMSY remains unchanged by fixed_bmsy. Both ratios are dimensionless.', '',
-    'The frozen model already computes annual robust MSY values but did not emit annual FMSY. An isolated, output-only evaluator adds FMSYy and FFMSYy immediately after its existing get_msy_robust(year) call and re-evaluates only the 100 selected saved PSV vectors. Its SSB, SBMSYy and F_faa values are checked against the original complete evaluation. Reconstructed F/FMSY is checked against the emitted native Fcur_Fmsy, allowing six-significant-digit report rounding. The native pre-loop FMSY/SBMSY pair is not used because its optimization and evaluation use differing selectivity windows.', '',
+    'The frozen model computes annual robust MSY values. An isolated evaluator exposes the matching FMSYy and FFMSYy through two additional output fields immediately after its existing get_msy_robust(year) call, then re-evaluates the 100 selected saved PSV vectors. Its SSB, SBMSYy and F_faa values are checked against the original complete evaluation. Reconstructed F/FMSY is checked against the emitted native Fcur_Fmsy, allowing six-significant-digit report rounding. These annual robust reference points provide consistent optimization and evaluation assumptions; the native pre-loop FMSY/SBMSY routine uses differing selectivity windows in those steps.', '',
     'Frozen source: `../source/jjm2.tpl`, write_mceval lines 1975-2017, get_msy_robust lines 3744-3826, annual yld lines 3909-3960. Canonical R convention: `/Users/jim/_mymods/sprfmo/jjmR/R/fixed_bmsy.R`, lines 12-24. Source line numbers refer to the frozen source, before the supplementary output lines are added.', '',
     '## Reproduce', '',
     'From the repository root, run:', '',
     '```sh',
     'Rscript output/base-model-mcmc-2026-09-10/build-kobe-trajectories.R output/base-model-mcmc-2026-09-10 path/to/supplemented/mceval.rep',
     '```', '',
-    'The selected raw-quantity RDS is an extraction cache validated against the original file path, size, modification time and selected draw IDs. It can be removed to force a fresh scan. Source model files, original draws and the complete original mceval output are not modified.'
+    'The selected raw-quantity RDS is an extraction cache validated against the original file path, size, modification time and selected draw IDs. Removing this cache triggers a fresh scan. Source model files, original draws and the complete original mceval output are preserved unchanged.'
   ), file.path(out, 'README.md'))
   print(d[year %in% c(2007L, 2026L), .(draws = .N,
            median_ssb_ratio = median(ssb_over_ssbmsy),

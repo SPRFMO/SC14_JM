@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-10T23:01:05+0100",
+  "generated_at": "2026-09-10T23:05:05+0100",
   "model": "h1_1.06",
   "trajectories": 100,
   "years": [2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026],
@@ -8,14 +8,14 @@
   "rng_kind": ["Mersenne-Twister", "Inversion", "Rejection"],
   "draws_by_chain": [33, 33, 34],
   "available_retained_draws": 3000,
-  "selection": "Without replacement within each chain; no quantity-based filtering.",
+  "selection": "Random selection without replacement within each chain, independent of fitted quantities.",
   "selection_file": "selection-manifest.csv",
   "reference_convention": "jjmR fixed_bmsy: each draw uses mean annual SSBMSY for 2017-2026; F uses annual FMSY.",
-  "f_definition": "Sum F_faa across all four fleets and all twelve ages, divided by 12; not native emitted Fbar.",
+  "f_definition": "Sum F_faa across all four fleets and all twelve ages, divided by 12; matches the model Fcur_Fmsy numerator.",
   "ssb_units": "thousand tonnes",
   "f_units": "per year",
   "ratio_units": "dimensionless",
-  "median_definition": "Coordinate-wise median of the selected 100 draws for each year; not a single sampled trajectory.",
+  "median_definition": "Coordinate-wise medians of the selected 100 draws provide a visual summary for each year.",
   "original_source": {
     "path": "/Users/jim/_mymods/sprfmo/jmMSE26/output/base-model-mcmc-2026-09-10/evaluation/mceval.rep",
     "bytes": 1239837791,
@@ -47,7 +47,7 @@
   "interactive_html_created": true,
   "all_run_maximum_parameter_rhat": 1.0547519871000199,
   "all_run_screening_status": "fails reported screening",
-  "interpretation": "Exploratory historical fitted trajectories conditional on the model. Convergence screening failed; not forecasts or validated stock-status probabilities.",
+  "interpretation": "Historical fitted trajectories conditional on the base model; further sampling is needed for reliable posterior stock-status probabilities.",
   "package_versions": [
     {
       "package": "data.table",

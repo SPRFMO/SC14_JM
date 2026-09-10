@@ -212,7 +212,7 @@
 <text x='11.96' y='24.25' style='font-size: 14.40px; font-family: "Arial";' textLength='311.97px' lengthAdjust='spacingAndGlyphs'>Base model: 100 retained-draw Kobe trajectories</text>
 <text x='11.96' y='535.16' style='font-size: 9.00px; font-family: "Arial";' textLength='480.50px' lengthAdjust='spacingAndGlyphs'>Open circle: 2007 median; filled diamond: 2026 median. Medians are calculated separately for each coordinate and year.</text>
 <text x='11.96' y='548.66' style='font-size: 9.00px; font-family: "Arial";' textLength='423.19px' lengthAdjust='spacingAndGlyphs'>F is the mean over ages 1-12 of summed fleet F. SSBMSY is fixed within each draw; FMSY varies by year.</text>
-<text x='11.96' y='562.16' style='font-size: 9.00px; font-family: "Arial";' textLength='397.00px' lengthAdjust='spacingAndGlyphs'>Exploratory retained-draw results: convergence screening failed (maximum parameter R-hat 1.055).</text>
+<text x='11.96' y='562.16' style='font-size: 9.00px; font-family: "Arial";' textLength='386.00px' lengthAdjust='spacingAndGlyphs'>Exploratory retained-draw results: further sampling is needed (maximum parameter R-hat 1.055).</text>
 </g>
 </g>
 </svg>

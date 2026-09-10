@@ -1,5 +1,5 @@
 {
-  "validated_utc": "2026-09-10T22:02:40.902711+00:00",
+  "validated_utc": "2026-09-10T22:08:15.729631+00:00",
   "status": "pass",
   "pages": 5,
   "local_links_and_resources": 101,
@@ -523,5 +523,5 @@
     "interpretation": "Full-run parameter mixing and precision screening failed; results remain exploratory."
   },
   "visual_review": "Report title, warning, result table and seven figures reviewed; interactive Kobe plot and draw selector checked.",
-  "manual_screen_reader_review": "not tested"
+  "manual_screen_reader_review": "pending"
 }
