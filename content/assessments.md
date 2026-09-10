@@ -14,6 +14,14 @@ This working assessment presents model results for review. Its draft or proposed
 [Report synchronization record](assessment/sync.json).
 <!-- sc14-assessment:end -->
 
+## Which indices affect the assessment?
+
+[Read the single-stock LOI and LOO comparisons](assessment/loo.html), with static figures and separate summaries for leaving one recent index group in or out. Every panel includes the all-data base model.
+
+The LOI runs give the highest recent biomass when North Chile acoustics or both Peru CPUE series retain their base weights. In LOO, leaving out Chile CPUE raises the 2026 estimate most, while leaving out North Chile acoustics lowers it. Leaving out Offshore or Peru CPUE has smaller effects. These results describe sensitivity of the fitted model and do not establish agreed Committee conclusions.
+
+[Editable report source](https://github.com/SPRFMO/jjm/blob/main/assessment/R/loo.qmd) · [Synchronization record](assessment/loo-sync.json).
+
 ## What the research has done
 
 The May benchmark reviewed the data, biological assumptions and assessment methods that support this work. This preparation supports the updated assessment needed to describe the stock’s condition in 2026. Source: [JM02](https://sprfmo.github.io/JM_SCW_prep/JMWG-Benchmark-Meeting-report-2026.html).

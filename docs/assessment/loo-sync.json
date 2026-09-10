@@ -1,0 +1,15 @@
+{
+  "source_repository": "SPRFMO/jjm",
+  "source_filename": "assessment/R/loo.qmd",
+  "source_revision": "a53473feebfd28417e85b80af77e82be56e01653",
+  "source_sha256": "a17b85d0d93047d461814a8ae97bc8d7f73918fe132e36d435e0102c00ec3ae6",
+  "rendered_filename": "loo.html",
+  "sha256": "c205a469e950d745e8f697cf5bc45fa7d86f16e47e10cdd0f132da53314f7cc2",
+  "synchronized_utc": "2026-09-10T14:25:26Z",
+  "base_model": "h1_1.06",
+  "loi_models": ["h1_3.01", "h1_3.02", "h1_3.03", "h1_3.04"],
+  "loo_models": ["h1_3.05", "h1_3.06", "h1_3.07", "h1_3.08"],
+  "assessment_years": [1970, 2026],
+  "displayed_biomass_unit": "million tonnes",
+  "note": "Exact self-contained rendered HTML copy; static figures and output-derived summaries. No model refitting."
+}
