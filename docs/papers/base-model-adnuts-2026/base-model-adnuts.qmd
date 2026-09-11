@@ -31,6 +31,9 @@ derived <- read.csv("derived-summary.csv", check.names = FALSE)
 derived_diag <- fromJSON("derived-status.json", simplifyVector = TRUE)
 terminal <- derived[derived$year == 2026 & derived$type %in% c("SSB", "Recruits"), ]
 chains <- read.csv("chain-diagnostics.csv", check.names = FALSE)
+green <- read.csv("kobe-green-probability-2007-2026.csv")
+stopifnot(nrow(green)==20L, identical(green$year,2007:2026), all(green$retained_draws==3000L),
+          all(abs(green$probability_green-green$green_draws/green$retained_draws)<1e-12))
 fmt <- function(x, digits=2) ifelse(is.finite(x), formatC(x, format="f", digits=digits, big.mark=","), "Not available")
 parameter_rows <- parameters[parameters$is_parameter, ]
 passes <- identical(diag$screening_status, "passes reported screening") && isTRUE(derived_diag$selected_quantities_pass_rhat_ess_screen)
@@ -177,6 +180,38 @@ Both coordinates are dimensionless. Reference lines at one mark each denominator
 
 Annual reference points come from the frozen model's existing annual MSY routine. The original evaluation omitted annual FMSY, so a reporting-only copy emitted that quantity and the native F/FMSY check for the selected draws. The added output leaves their spawning biomass, fishing mortality and annual MSY biomass identical to the original evaluation. All annual reference points are positive and none reaches the routine's fishing-mortality grid limits. See the [Kobe methods and data dictionary](kobe-README.md), [selection manifest](selection-manifest.csv), [validation record](kobe-status.json), and [supplementary reproduction files](kobe-reproducibility.zip).
 
+## Probability of Kobe green through time {#kobe-green-probability}
+
+For each year from **2007 through 2026**, the estimated posterior probability of being in the green quadrant is the proportion of **all 3,000 retained draws** with spawning biomass above its MSY reference **and** fishing mortality below FMSY:
+
+$$
+\widehat{P}(\mathrm{green}_y\mid\mathrm{data},\mathrm{model})=
+\frac{1}{3000}\sum_{d=1}^{3000}
+\mathbf{1}\!\left[\mathrm{stock}_{d,y}>1\;\text{and}\;\mathrm{harvest}_{d,y}<1\right].
+$$
+
+The two conditions are evaluated jointly within each draw, preserving their posterior dependence. The reference definitions match the Kobe trajectories above: each draw's mean SSBMSY for 2017–2026 and annual FMSY. Both inequalities are strict. Each chain contributes 1,000 retained draws, giving equal chain weights.
+
+The **2026 estimate is `r fmt(100*green$probability_green[green$year==2026],1)`%**, corresponding to **`r green$green_draws[green$year==2026]` of 3,000 draws** in green. These are exploratory posterior estimates conditional on this base model. Further sampling is needed to improve the full model's chain agreement and strengthen the probability estimates.
+
+![Estimated posterior probability of the Kobe green quadrant for each year, using all 3,000 retained draws. The thick green line and points give the pooled estimate; thin patterned lines give estimates from each chain.](kobe-green-probability-2007-2026.png){#fig-kobe-green fig-alt="Annual estimated posterior probability of simultaneously exceeding the MSY spawning-biomass reference and having fishing mortality below annual FMSY over 2007 to 2026. A thick green line shows the proportion across all 3000 retained draws, and three patterned lines show individual-chain proportions. The downloadable table gives every annual value and Monte Carlo precision estimate."}
+
+```{r}
+#| label: tbl-kobe-green
+#| tbl-cap: "Annual estimated posterior probabilities of Kobe green. Each year uses 3,000 retained draws. Monte Carlo standard errors (MCSE) are expressed in percentage points."
+gf <- function(z) ifelse(is.finite(z), formatC(z,format="f",digits=1), "—")
+kable(data.frame(Year=green$year,
+  "Green draws"=green$green_draws,
+  "Probability (%)"=gf(100*green$probability_green),
+  "Chain range (%)"=paste0(gf(100*pmin(green$chain1_probability,green$chain2_probability,green$chain3_probability)),"–",
+                            gf(100*pmax(green$chain1_probability,green$chain2_probability,green$chain3_probability))),
+  "MCSE (percentage points)"=gf(100*green$probability_mcse),check.names=FALSE),row.names=FALSE)
+```
+
+MCSE measures Monte Carlo precision of the estimated probability while accounting for correlation within chains. The calculation uses the binary green-quadrant indicator and preserves chain identity. The chain range shows the smallest and largest of the three chain-specific estimates. For years with a constant indicator across retained draws, the table reports the observed proportion and marks MCSE with a dash. A zero count describes the finite set of sampled draws. The full-model diagnostics above provide the context for interpreting these probabilities.
+
+Download the [annual probability table](kobe-green-probability-2007-2026.csv), [chain-specific estimates](kobe-green-by-chain-2007-2026.csv), [all draw-level coordinates and green indicators](kobe-green-draws-2007-2026.csv.gz), or [vector figure](kobe-green-probability-2007-2026.svg). The [calculation and evaluation scripts](kobe-green-reproducibility.zip) and [validation record](kobe-green-status.json) document the derivation. The previously displayed 100 trajectories retain their original draw selection; the probability calculation uses the full retained sample.
+
 ## Interpretation and next steps
 
 The chain-specific marginal plots show a shift in chain 1 for several of the slowest fishing-mortality and survey-catchability parameters. This agrees with the elevated R-hat and low ESS. Increasing the retained run length and checking suitably dispersed starting points are reasonable next checks; either would be a separately labelled follow-up run. The current analysis preserves the requested defaults.
@@ -210,6 +245,7 @@ The raw fit and full ADMB evaluation output are retained in the local run archiv
 | Parameter mixing and precision | Fail | 366/1,593 active parameters fail one or more reported screens |
 | Native derived-output completeness | Pass | All 3,000 draws and 57 years verified; all 20 native output types inventoried |
 | Kobe draw selection and coordinates | Pass | 100 distinct retained draws; 20 years each; unchanged native quantities and matching annual reference points |
+| Annual Kobe green probability | Pass | All 3,000 retained draws and 20 years; joint event counts, chain weights and original 100-draw coordinates verified |
 | Reported results | Pass | Tables and figures read the saved, checked CSVs; independent parameter diagnostic calculation agrees |
 | HTML, navigation, figure descriptions and file links | Pass | Rendered artifact, figure review and scoped local-link validation recorded in the release checks |
 | Manual screen-reader review | Pending | A manual review remains an additional validation step |

@@ -1,0 +1,58 @@
+{
+  "status": "complete; calculations and identity checks passed",
+  "model": "h1_1.06",
+  "retained_draws": 3000,
+  "chains": 3,
+  "draws_per_chain": 1000,
+  "years": [
+    2007,
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+  ],
+  "definition": "Kobe green: SSB / mean(annual SSBMSY, 2017\u20132026) > 1 AND mean-age summed fleet F / annual FMSY < 1.",
+  "boundary_rule": "Strict inequalities; equality at either boundary falls outside the green quadrant.",
+  "probability_estimator": "Number of retained draws in green in each year divided by 3000, equally weighting the three chains.",
+  "mcmc_uncertainty": "MCSE uses the chain-preserving binary event indicator and posterior::mcse_mean; ESS uses posterior::ess_mean. Constant indicators have NA diagnostic entries.",
+  "zero_counts": "A zero count records the observed retained draws; the estimate remains conditional on finite MCMC exploration.",
+  "interpretation": "Exploratory posterior probabilities conditional on the base model; further sampling is needed to improve full-model chain agreement.",
+  "previous_100_draw_check": {
+    "rows": 2000,
+    "max_b_difference": 5.10702591327572e-15,
+    "max_f_difference": 5.329070518200751e-15
+  },
+  "terminal": {
+    "year": 2026,
+    "green_draws": 837,
+    "retained_draws": 3000,
+    "probability_green": 0.279,
+    "chain1_probability": 0.278,
+    "chain2_probability": 0.298,
+    "chain3_probability": 0.261,
+    "indicator_rhat": 1.005229486719882,
+    "indicator_ess_mean": 1798.4174928523548,
+    "probability_mcse": 0.010577836974021908,
+    "indicator_varies": true
+  },
+  "packages": {
+    "R": "R version 4.6.1 (2026-06-24)",
+    "posterior": "1.7.0"
+  },
+  "independent_validation": "Python reconstruction from annual SSBMSY, SSB, F and FMSY reproduces all 60000 indicators, 20 annual probabilities and 60 chain summaries."
+}

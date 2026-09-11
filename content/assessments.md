@@ -16,7 +16,7 @@ This working assessment presents model results for review. Its draft or proposed
 
 ## Base-model MCMC uncertainty
 
-[Read the separate ADNUTS results document](papers/base-model-adnuts-2026/base-model-adnuts.html), including biomass and recruitment intervals and 100 Kobe trajectories for 2007–2026. The default run completed, but some parameters have incomplete chain mixing; the uncertainty displays are exploratory. The document includes diagnostics, downloadable trajectories and reproducibility files.
+[Read the separate ADNUTS results document](papers/base-model-adnuts-2026/base-model-adnuts.html), including biomass and recruitment intervals, 100 Kobe trajectories, and annual probabilities of the green quadrant for 2007–2026. The default run completed, but some parameters have incomplete chain mixing; the uncertainty displays are exploratory. The document includes diagnostics, downloadable trajectories and reproducibility files.
 
 ## Which indices affect the assessment?
 

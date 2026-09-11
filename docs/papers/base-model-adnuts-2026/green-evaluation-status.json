@@ -1,0 +1,58 @@
+{
+  "command": [
+    "./jjm2",
+    "-nox",
+    "-ind",
+    "h1_1.06.ctl",
+    "-mceval",
+    "-nohess",
+    "-fut_sel",
+    "3"
+  ],
+  "exit_code": 0,
+  "wall_seconds": 236.67475485801697,
+  "source": "validated two-line reporting-only evaluator, applied to all original retained draws",
+  "original_template_sha256": "4174ef904ab0c093b629370a7835cc0e3fc45e23dd53bc154b70103a6040d94a",
+  "reporting_template_sha256": "9b1a17a3b4876085819136a052e81b11b03a8d334549ccd5192017af67f578f1",
+  "executable_sha256": "49e09e09eb6dc6a8e98fca7107530fb4490cde8d8ab5680d017ed94a8df492c6",
+  "pooled_psv_sha256": "ca898ed35f857be8eccb69ebd2a7ea6a6ed32e8f51681b0154265c309784d46f",
+  "stream_sha256": "77a4785a999da38001143756ed26ff78513bc4779f92eecf0f56f095ffe3443e",
+  "stream_retention": "Compact annual quantities retained; full native stream hashed in transit",
+  "statistics": {
+    "records": 41646000,
+    "stream_bytes": 1250850213,
+    "completed_draws": 3000,
+    "maximum_f_ratio_relative_error": 9.261774968740737e-06,
+    "near_boundary_coordinates": 1
+  },
+  "records_by_type": {
+    "MSY": 3000,
+    "SBMSY": 3000,
+    "FMSY": 3000,
+    "R0": 3000,
+    "B0": 3000,
+    "SSB": 171000,
+    "Fbar": 171000,
+    "Recruits": 171000,
+    "Deviances": 171000,
+    "SBMSYy": 171000,
+    "FMSYy": 171000,
+    "FFMSYy": 171000,
+    "N_stock": 2052000,
+    "Depletion": 3000,
+    "Dynamic_Depletion": 3000,
+    "Sel_fsh": 8208000,
+    "C_fsh": 8208000,
+    "F_faa": 8208000,
+    "F_fsh": 684000,
+    "Q_ind": 378000,
+    "Pred_ind": 378000,
+    "Sel_ind": 12312000
+  },
+  "reader_errors": [],
+  "rounding_boundary_check": {
+    "native_relative_rounding_bound": 5e-06,
+    "ambiguous_joint_classifications": 0,
+    "definition": "Worst-case ratio intervals from positive native six-significant-digit quantities, sums and means."
+  }
+}

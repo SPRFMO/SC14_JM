@@ -1,5 +1,5 @@
 {
-  "created_utc": "2026-09-10T22:08:15.730136+00:00",
+  "created_utc": "2026-09-11T06:28:23.575613+00:00",
   "status": "complete; scientific calculations and deliverable checks passed; full-run convergence screening failed",
   "model": "h1_1.06",
   "source_repository": "https://github.com/SPRFMO/jjm",
@@ -48,12 +48,12 @@
   },
   "published_artifacts": {
     "base-model-adnuts.html": {
-      "bytes": 7685255,
-      "sha256": "4f988017f176159bcaf9f57e97923af469215bc2bffb2ea589bb41687bb99486"
+      "bytes": 7865766,
+      "sha256": "7632f71e0c5d885265edc4585d5211a3b0005096cb5923147fc219bc4bc3d699"
     },
     "base-model-adnuts.qmd": {
-      "bytes": 19904,
-      "sha256": "3c35af15eabfb58435374e080929cd938d3079788a36d4efcf4a8493db0aeae6"
+      "bytes": 24045,
+      "sha256": "82bcc70be9387555eadb1fdda7a4e6d06e758a67c269453fa66991938e7113f5"
     },
     "build-kobe-trajectories.R": {
       "bytes": 28632,
@@ -79,6 +79,10 @@
       "bytes": 77,
       "sha256": "0d9ad6475f4bc3aecea42d7ec8ca0283b96b4c9ba75b1952a12c6b0a37f506f8"
     },
+    "green-evaluation-status.json": {
+      "bytes": 1825,
+      "sha256": "99e499a5bde3fb03c4ca36c70cd0707a6b7df0530317d9fb42b7dbc7029c4c35"
+    },
     "kobe-100-trajectories-2007-2026.html": {
       "bytes": 5010744,
       "sha256": "431e49d15c1f4c133521bc764222b6f3d1eebee722022b2ed72c7a8e199b47c2"
@@ -98,6 +102,38 @@
     "kobe-format.csv": {
       "bytes": 85699,
       "sha256": "1d8311b20d9d68ba8fc7897a1f094612d48bc401c764213eb024f6a2ed8a7f99"
+    },
+    "kobe-green-README.md": {
+      "bytes": 3756,
+      "sha256": "adf966cf4bedb0c529cdfc572dddc3eaf69dd40b0aa748f65d5fcd3d7323a02e"
+    },
+    "kobe-green-by-chain-2007-2026.csv": {
+      "bytes": 1151,
+      "sha256": "8db22edfdcc456ff12d5a794eeff8ab8b5dbe7afa355466f4884ce09afc264d9"
+    },
+    "kobe-green-draws-2007-2026.csv.gz": {
+      "bytes": 2345607,
+      "sha256": "3bff3dd9acd0d63de5adda4e10463303cdfbecf129ae05a154b7cfef32fb2b80"
+    },
+    "kobe-green-probability-2007-2026.csv": {
+      "bytes": 1439,
+      "sha256": "5e5d81e4b138e80c9c241f946ac5a79c036af1f5e1a616e84db27c2e163882d2"
+    },
+    "kobe-green-probability-2007-2026.png": {
+      "bytes": 127138,
+      "sha256": "57843252f59fca61d69326f67b49e79dbc7f7a482a4e6b4818df9773054ff2f4"
+    },
+    "kobe-green-probability-2007-2026.svg": {
+      "bytes": 10777,
+      "sha256": "9282fb1a9624de5be5877800ed4b8196edc9c0f5d7baa7651a7f5903584cda36"
+    },
+    "kobe-green-reproducibility.zip": {
+      "bytes": 10094,
+      "sha256": "7fe873b967b66778c595b138f0de090a28f6d6a3c56f78bd1fefe5c43865fa41"
+    },
+    "kobe-green-status.json": {
+      "bytes": 1991,
+      "sha256": "d53911f0e4617fee1fb50845bd1a8e5aeff0f9d2fdb86baec1facb515b4526b2"
     },
     "kobe-reproducibility.zip": {
       "bytes": 21074,
@@ -140,8 +176,8 @@
       "sha256": "916a9ba81d668fb9299ce409e1fdb7b92208a30d619ce5ded4b5660f110f1eb2"
     },
     "release-validation.json": {
-      "bytes": 13018,
-      "sha256": "94e96b62908263f1fed8b51ed1222664c078b76e20a99ba41efc5e40e03ae9ed"
+      "bytes": 14382,
+      "sha256": "aee4b1fa7ce73926429fff7ae7689163770c565e7c8eead3ac66811d008a7156"
     },
     "reproducibility.zip": {
       "bytes": 201597,

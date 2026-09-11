@@ -1,10 +1,10 @@
 {
-  "validated_utc": "2026-09-10T22:08:15.729631+00:00",
+  "validated_utc": "2026-09-11T06:28:23.574653+00:00",
   "status": "pass",
   "pages": 5,
-  "local_links_and_resources": 101,
+  "local_links_and_resources": 109,
   "unresolved_links": 0,
-  "report_figures": 7,
+  "report_figures": 8,
   "all_figures_have_alt_text": true,
   "checks": [
     {
@@ -30,6 +30,11 @@
     {
       "page": "papers/base-model-adnuts-2026/base-model-adnuts.html",
       "link": "#kobe-trajectories",
+      "pass": true
+    },
+    {
+      "page": "papers/base-model-adnuts-2026/base-model-adnuts.html",
+      "link": "#kobe-green-probability",
       "pass": true
     },
     {
@@ -130,6 +135,41 @@
     {
       "page": "papers/base-model-adnuts-2026/base-model-adnuts.html",
       "link": "kobe-reproducibility.zip",
+      "pass": true
+    },
+    {
+      "page": "papers/base-model-adnuts-2026/base-model-adnuts.html",
+      "link": "kobe-green-probability-2007-2026.png",
+      "pass": true
+    },
+    {
+      "page": "papers/base-model-adnuts-2026/base-model-adnuts.html",
+      "link": "kobe-green-probability-2007-2026.csv",
+      "pass": true
+    },
+    {
+      "page": "papers/base-model-adnuts-2026/base-model-adnuts.html",
+      "link": "kobe-green-by-chain-2007-2026.csv",
+      "pass": true
+    },
+    {
+      "page": "papers/base-model-adnuts-2026/base-model-adnuts.html",
+      "link": "kobe-green-draws-2007-2026.csv.gz",
+      "pass": true
+    },
+    {
+      "page": "papers/base-model-adnuts-2026/base-model-adnuts.html",
+      "link": "kobe-green-probability-2007-2026.svg",
+      "pass": true
+    },
+    {
+      "page": "papers/base-model-adnuts-2026/base-model-adnuts.html",
+      "link": "kobe-green-reproducibility.zip",
+      "pass": true
+    },
+    {
+      "page": "papers/base-model-adnuts-2026/base-model-adnuts.html",
+      "link": "kobe-green-status.json",
       "pass": true
     },
     {
@@ -520,8 +560,9 @@
     "kobe": "100 distinct retained draws, 33/33/34 by chain, 2000 rows; independently reconstructed coordinates agree within 5.4e-15.",
     "native_reporting_invariance": "Selected original SSB, SBMSYy and F_faa values are identical after adding two output lines.",
     "reference_points": "All 5700 supplemental draw-year reference points positive; no FMSY grid-bound solutions.",
+    "kobe_green": "All 3000 retained draws and 20 years; 60000 joint indicators; pooled counts and equal chain weights verified against draw-level data.",
     "interpretation": "Full-run parameter mixing and precision screening failed; results remain exploratory."
   },
-  "visual_review": "Report title, warning, result table and seven figures reviewed; interactive Kobe plot and draw selector checked.",
+  "visual_review": "Report title, warning, result table and eight figures reviewed; interactive Kobe plot and draw selector checked.",
   "manual_screen_reader_review": "pending"
 }
