@@ -1,5 +1,9 @@
 # Which management rules may work best?
 
+## TAC calculations for 2027 and 2028
+
+[See the TAC calculations and download the Excel workbook](tac-advice-2027-2028.html) for **CMP29 and CMP45**, with the other six SC14 CMPs on the second sheet. The two starting scenarios set the 2026 TAC to **1,675 or 1,092 kt**. The 2027 advice uses index data through 2025; the 2028 advice uses data through 2026 and carries forward each CMP’s 2027 recommendation. These working calculations include the index inputs, formulas, annual change limits and current-year data qualifications.
+
 ## New working comparison: narrowing the CMP set
 
 The [working paper, updated 10 September](papers/cmp-screening-2026/cmp-screening-working-paper.html) retains HS−20, HS−30 and PR−20 as a discussion set. The updated advice-reduction statistic counts reductions greater than 19% across all 25 projection years and all 500 iterations, including the saved HCR initial advice baseline. It changes four earlier screening classifications, so all eight CMPs should be reviewed before confirming the shortlist. It now focuses on recruitment-crash (OM11_2) and recruitment-cycle (OM11_3) robustness cases, with trade-off plots and 15 SSB/catch trajectories for each case. Fixed catch is included as a reference-OM benchmark tuned using dynamic BMSY (achieved long-term P(Green): 60.3%). The shortlist is proposed for discussion, and the paper retains the reasons and results for omitted CMPs.

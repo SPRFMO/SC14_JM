@@ -30,6 +30,10 @@ The strongest coverage here is May–September 2026. Earlier research and manage
 
 [Compare a smaller set of management rules](papers/cmp-screening-2026/cmp-screening-working-paper.html): explicit screening, OM-selectable best-relative scorecards, recruitment-crash and OM21 trade-offs, a fixed-catch reference benchmark and 15-simulation SSB/catch worms. This working comparison supports discussion ahead of a management decision.
 
+## TAC calculations for 2027 and 2028
+
+[Read the CMP29 and CMP45 calculations and download the Excel workbook](tac-advice-2027-2028.html). The two scenarios start from a 2026 TAC of **1,675 or 1,092 kt**, with 2027 advice based on index data through 2025 and 2028 advice based on data through 2026. The page explains each calculation and the workbook’s second sheet covers the other six SC14 CMPs.
+
 ## New base-model uncertainty analysis
 
 [Read the ADNUTS results and 100 Kobe trajectories](papers/base-model-adnuts-2026/base-model-adnuts.html) for the single-stock base model, covering 2007–2026 in the Kobe plot. The document includes sampling diagnostics and downloadable data. Some chains need better mixing, so its uncertainty displays remain exploratory.

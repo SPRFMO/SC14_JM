@@ -1,0 +1,26 @@
+{
+  "checked_at_utc": "2026-09-12T09:07:24.294846+00:00",
+  "base_revision": "e013f83231a0adf20b57a00bd652e8506326616d",
+  "wiki_pages_checked": 11,
+  "local_links_checked": 213,
+  "tac_values_compared_with_validated_csv": 32,
+  "local_links_and_displayed_results_pass": true,
+  "errors": [],
+  "render_command": "python3 build.py",
+  "visual_review": "Hidden in-app browser: inspected page heading/navigation, main table, full HS/PR formula blocks, other-CMP table; readable layout with no observed clipping at desktop size.",
+  "scientific_validation": "all_cmp_validation.txt:32 cases match direct serialized SC14-function calls;40 rule branch checks; full-precision constrained2027 advice propagated into2028.",
+  "publication_status": "Prepared locally; publication and live download verification performed separately.",
+  "excel_cached_results_vs_csv": {
+    "sheets": [
+      "Main CMPs",
+      "Other CMPs"
+    ],
+    "detailed_advice_rows": 32,
+    "numeric_fields_per_detail_row": 6,
+    "summary_TAC_values": 32,
+    "maximum_absolute_difference": 4.433786671143025e-12,
+    "pass": true,
+    "errors": []
+  },
+  "excel_independent_recalculation": "LibreOffice independently recalculated all32 advice results successfully; root-agent verification record."
+}
