@@ -1,0 +1,1652 @@
+{
+  "source": "/Users/jim/_mymods/sprfmo/jjmR",
+  "installed": "/Users/jim/Library/R/4.6/library/jjmR",
+  "source_version": "1.2020.1",
+  "installed_version": "1.2020.1",
+  "installed_build": "R 4.6.1; ; 2026-09-10 10:32:09 UTC; unix",
+  "source_top_level_functions": 273,
+  "matching_functions": 273,
+  "differing_or_absent_functions": [],
+  "records": [
+    {
+      "name": ".ac",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.diag-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".an",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.diag-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".anf",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.diag-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".annex_default",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/annex-plots.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".annex_lowcase",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/annex-plots.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".annex_palette",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/annex-plots.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".bubbles",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.diag-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".calc_auc",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/annex-plots.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".calc_roc",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/annex-plots.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".checkExecutable",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjmr-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".checkGuess",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjmr-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".checkModels",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjmr-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".cleanad",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjmr-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".combineCatchFut",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjmr-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".combineConfig",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.config-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".combineModels",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.output-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".combineN",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjmr-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".combineR",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjmr-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".combineSSB",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjmr-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".combineSSBFut",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjmr-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".combineTotBiom",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjmr-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".compareMatrix",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjmr-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".compareTime",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjmr-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".composition_long",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/annex-plots.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".createDataFrame",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.diag-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".diagnostics",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.diag-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".empty_annex_plot",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/annex-plots.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".extract_meanstat",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/annex-plots.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".extract_sel",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/annex-plots.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".extract_wtat",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/annex-plots.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".fit_absoluteResidualCatchByFleetFUN",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.diag-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".fit_ageFitsCatchFUN",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.diag-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".fit_ageFitsSurveyFUN",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.diag-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".fit_catchResidualsByFleetFUN",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.diag-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".fit_fAtAGeFUN",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.diag-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".fit_fishedUnfishedBiomassFUN",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.diag-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".fit_fisheryMeanAgeFUN",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.diag-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".fit_fisheryMeanLengthFUN",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.diag-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".fit_fProportionAtAGeFUN",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.diag-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".fit_lengthFitsCatchFUN",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.diag-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".fit_matureInmatureFishesFUN",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.diag-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".fit_nAtAGeFUN",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.diag-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".fit_nProportionAtAGeFUN",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.diag-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".fit_predictedObservedCatchesByFleetFUN",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.diag-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".fit_predictedObservedIndicesFUN",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.diag-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".fit_residualsCatchAtAgeByFleetFUN",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.diag-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".fit_residualsCatchAtLengthByFleetFUN",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.diag-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".fit_sdPerInputSeriesFUN",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.diag-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".fit_selectivityFisheryByPentadFUN",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.diag-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".fit_selectivitySurveyByPentadFUN",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.diag-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".fit_standardizedSurveyResidualsFUN",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.diag-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".fit_stockRecruitmentFUN",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.diag-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".fit_stockRecruitmentFUN2",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.diag-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".fit_summarySheet2FUN",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.diag-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".fit_summarySheet3FUN",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.diag-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".fit_summarySheetFUN",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.diag-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".fit_surveyMeanAgeFUN",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.diag-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".fit_totalCatchByFleetFUN",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.diag-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".fit_totalCatchFUN",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.diag-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".fit_uncertaintyKeyParamsFUN",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.diag-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".fleet_name_from_number",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/annex-plots.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".fnames",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/annex-plots.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".funPlotKobe",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.output-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".funPlotProj",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.output-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".funPlotRatioSSB",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.output-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".funPlotRatioSSB_F",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.output-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".funPlotScen",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.output-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".funPlotSeries",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.output-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".funPlotTotProj",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.output-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".getCtlFile",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjmr-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".getDatFile",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjmr-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".getInfo",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.output-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".getJjmConfig",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.config-class.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".getModelName",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjmr-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".getOutFile",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjmr-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".getParameters",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjmr-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".getParFile",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjmr-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".getPath",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjmr-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".getPath2",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjmr-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".getPath3",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjmr-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".getRepFiles",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjmr-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".getResume",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjmr-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".getRetroData",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/retro.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".getYldFile",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjmr-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".historic_line_plot",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/annex-plots.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".historic_terminal_labels",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/annex-plots.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".input_ageCompositionSurvey1FUN",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.diag-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".input_ageCompositionSurvey2FUN",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.diag-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".input_ageFleets2FUN",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.diag-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".input_ageFleetsFUN",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.diag-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".input_ageFleetsPlotsFUN",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.diag-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".input_lengthComposition1FUN",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.diag-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".input_lengthComposition2FUN",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.diag-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".input_maturityPopulationFUN",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.diag-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".input_weightAgeFUN",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.diag-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".input_weightByCohortFleetFUN",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.diag-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".input_weightByCohortSurveyFUN",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.diag-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".input_weightFisheryFUN",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.diag-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".input_weightPopulationFUN",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.diag-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".jjm_out",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/annex-plots.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".kobe1",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/kobe.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".kobeFUN",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.diag-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".kobeFUN2",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.diag-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".kobeFUN3",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.diag-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".LikeTable",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjmr-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".linesCI",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/retro.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".mat_long",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/annex-plots.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".metadata_matrix_long",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/annex-plots.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".mutateMatrix",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/retro.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".my.panel.bands",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjmr-auxiliar.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".mygray",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.diag-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".normRetro",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/retro.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".ParTable",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjmr-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".plot.bubbles",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.diag-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".plotDiag",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.diag-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".plotDiagVar",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.diag-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".plotRetro",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/retro.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".plotRetroByStock",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/retro.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".prepareCombine",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjmr-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".projections_catchPredictionFUN",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.diag-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".projections_ssbPredictionFUN",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.diag-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".ProjTable",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjmr-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".Puntual_SSB_SD",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjmr-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".read.ctl",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjmr-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".read.ctlMS",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjmr-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".read.datEx",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjmr-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".readCtl",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjmr-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".readDat",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjmr-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".readOutputsJJM",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.output-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".readPar",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjmr-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".readYPR",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.diag-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".recDevFUN",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.diag-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".reshapeJJM",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.output-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".reshapeJJM2",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.output-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".reshapeJJM3",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.output-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".reshapeJJM4",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.output-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".reshapeJJM5",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.output-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".reshapeJJMCol",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.output-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".resultCombined",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjmr-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".runJJM",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjmr-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".runJJM2",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjmr-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".setOutputNames",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.diag-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".setParallelJJM",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjmr-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".snames",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/annex-plots.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".sortRetro",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/retro.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".sortRetroByStock",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/retro.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".splitPor",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjmr-auxiliar.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".subsetYPR",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.output-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".to",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjmr-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".versionJJM",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjmr-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".writeCombinedStocks",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjmr-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".writeFiles",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjmr-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".writeJJM",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjmr-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".xtract",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/retro.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": ".ypr_yieldSsbPerRecruitFUN",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.diag-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "annotate_cohorts",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/annex-plots.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "calc_mohn_rho",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/annex-plots.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "changeNameModel",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/changeNameModel.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "check.zero",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.diag-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "coerce",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.diag-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "combineModels",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/combineModels.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "comp_fig_height",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/annex-plots.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "compareModels",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/compareModels.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "diagnostics",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/Diagnostics.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "extr_agefits_fsh",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/annex-plots.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "extr_agefits_srv",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/annex-plots.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "extr_catch",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/annex-plots.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "extr_catch_cv",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/annex-plots.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "extr_cv",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/annex-plots.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "extr_effn",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/annex-plots.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "extr_fished_unfished",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/annex-plots.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "extr_francis",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/annex-plots.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "extr_indices",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/annex-plots.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "extr_kobe",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/annex-plots.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "extr_lenfits_fsh",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/annex-plots.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "extr_meanage_fsh",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/annex-plots.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "extr_meanage_srv",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/annex-plots.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "extr_meanlen_fsh",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/annex-plots.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "extr_q_breaks",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/annex-plots.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "extr_q_trajectory",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/annex-plots.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "extr_retro",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/annex-plots.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "extr_sel_breaks",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/annex-plots.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "extr_sel_fsh",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/annex-plots.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "extr_sel_srv",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/annex-plots.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "extr_sr",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/annex-plots.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "extr_survey_skill",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/annex-plots.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "extr_wtat_fsh",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/annex-plots.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "extr_wtat_srv",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/annex-plots.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "facet_fig_height",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/annex-plots.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "fixed_bmsy",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/fixed_bmsy.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "get_age_fits",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/get_age_fits.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "get_catchabilities",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/get_catchabilities.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "get_fishing_mortality",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/get_mortality.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "get_index_fits",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/get_index_fits.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "get_len_fits",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/get_len_fits.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "get_msy_mt",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/get_msy_mt.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "get_recruits",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/get_recruits.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "get_selectivities",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/get_selectivities.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "get_totals",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/get_totals.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "geth",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/geth.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "getter",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/getter.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "gray_ramp",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.diag-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "has_comp",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/annex-plots.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "jjm_label",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/annex-plots.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "jjm_pfa_palette",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/annex-plots.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "kobe",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/kobe.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "lower.saturation",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjmr-auxiliar.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "makeTransparent",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjmr-auxiliar.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "melt_matrix",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.diag-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "plot_catch_age_fits",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.diag-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "plot_catch_age_residuals",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.diag-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "plot_catch_fleet",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/annex-plots.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "plot_comp_fits",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/annex-plots.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "plot_comp_ridge",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/annex-plots.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "plot_effn",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/annex-plots.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "plot_fished_unfished",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/annex-plots.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "plot_fishery_weight",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.diag-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "plot_fit_diagnostics",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/annex-plots.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "plot_francis",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/annex-plots.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "plot_historic_retro",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/annex-plots.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "plot_indices_v2",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/annex-plots.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "plot_kobe",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/annex-plots.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "plot_meanstat",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/annex-plots.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "plot_metadata_overview",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/annex-plots.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "plot_q_trajectory",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/annex-plots.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "plot_retro",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/annex-plots.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "plot_sel_ridge",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/annex-plots.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "plot_selectivities",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/plot_selectivities.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "plot_sr",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/annex-plots.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "plot_summary_sheet",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/annex-plots.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "plot_survey_skill",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/annex-plots.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "plot_wtat",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/annex-plots.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "plot_wtat_cohort",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/annex-plots.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "plot.jjm.diag",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.diag-class.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "plot.jjm.diagnostics",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.diag-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "plot.jjm.output",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.output-class.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "plot.jjm.retro",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/retro.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "print.jjm.config",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.config-class.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "print.jjm.diag",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.diag-class.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "print.jjm.output",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.output-class.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "print.summary.jjm.config",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.config-class.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "print.summary.jjm.diag",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.diag-class.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "print.summary.jjm.output",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.output-class.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "read_historic_retro",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/annex-plots.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "readExFiles",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/readExFiles.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "readJJM",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/readJJM.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "readJJMConfig",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/readJJMConfig.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "readJJMConfig.default",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/readJJMConfig.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "readJJMConfig.jjm.output",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/readJJMConfig.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "report",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/reports.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "report.jjm.diag",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/reports.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "report.jjm.output",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/reports.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "retro",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/retro.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "runit",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/Runit.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "runJJM",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/runJJM.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "runJJM.default",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.config-class.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "runJJM.jjm.config",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.config-class.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "runJJM.jjm.output",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.config-class.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "sortRetro",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/retro.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "strong_cohorts",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/annex-plots.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "summary.jjm.config",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.config-class.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "summary.jjm.diag",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.diag-class.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "summary.jjm.diagnostics",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.diag-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "summary.jjm.output",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjm.output-class.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "theme_jjm",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/theme_jjm.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "tidy_JJM",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/tidy_jjm.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "toExpress",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjmr-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "toWrite",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjmr-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "toWrite.array",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjmr-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "toWrite.default",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjmr-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "toWrite.matrix",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/jjmr-internal.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "writeJJM",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/writeJJM.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    },
+    {
+      "name": "writeJJM.jjm.output",
+      "source_file": "/Users/jim/_mymods/sprfmo/jjmR/R/writeJJM.R",
+      "installed": true,
+      "function_formals_and_body_match": true
+    }
+  ],
+  "method": "Parse direct top-level function assignments without evaluating package top-level statements; compare deparsed formals and bodies against installed namespace, excluding environments and bytecode/source-reference attributes.",
+  "limitations": "Does not compare nonfunction constants, documentation, data, dependency versions, compiled artifacts, or namespace registration; version equality alone does not establish complete package identity."
+}

@@ -1,0 +1,446 @@
+# Figures
+
+```{r}
+#| include: false
+# Parse selectivity age columns directly: report columns 1 and 2 are source and year.
+annex_selectivity <- function(mod, kind=c("fsh","ind")) {
+  kind <- match.arg(kind)
+  d <- mod[[1]]$data; ctl <- mod[[1]]$control
+  true_ages <- seq(mod[[1]]$info$data$age[1],mod[[1]]$info$data$age[2])
+  sources <- if(kind=="fsh") d$Fnames else d$Inames
+  map_dfr(seq_along(mod[[1]]$output),function(k) {
+    o <- mod[[1]]$output[[k]]
+    keys <- grep(paste0("^sel_",kind,"_[0-9]+$"), names(o), value=TRUE)
+    map_dfr(keys,function(key) {
+      num <- as.integer(sub(paste0("sel_",kind,"_"),"",key,fixed=TRUE))
+      col <- if(kind=="fsh") num else d$Fnum + num
+      if(ctl$SelMatrix[1,col] != k) return(tibble())
+      v <- o[[key]]
+      stopifnot(ncol(v)==length(true_ages)+2)
+      as_tibble(v[,-c(1,2),drop=FALSE],.name_repair="minimal") |>
+        setNames(as.character(true_ages)) |>
+        mutate(Year=v[,2], Source=sources[num],
+               Stock=if(ctl$nStocks==1) "Single stock" else
+                 if(k==1) "South stock" else "Far North stock") |>
+        pivot_longer(all_of(as.character(true_ages)),names_to="Age",values_to="Selectivity") |>
+        mutate(Age=as.integer(Age))
+    })
+  })
+}
+annex_selectivity_plot <- function(mod,kind) {
+  ggplot(annex_selectivity(mod,kind),aes(Age,Selectivity,group=Year,colour=Year)) +
+    geom_line(linewidth=0.45,alpha=0.65) +
+    facet_wrap(vars(Stock,Source),scales="free_y",ncol=2) +
+    scale_x_continuous(breaks=seq(1,12,by=1)) +
+    scale_colour_viridis_c(option="C", breaks=c(1970,1990,2010,2026)) + theme_bw() +
+    labs(x="Age (years; 12 is the plus group)",y="Selectivity (relative)") +
+    theme(legend.position="bottom")
+}
+```
+
+```{r}
+#| label: fig-catchbyfleet
+#| fig-alt: "Catch trajectories by model fleet over the fitted assessment years."
+#| fig-cap: "Catch of jack mackerel by fleet. Blue is the northern Chilean fleet, green is the south-central Chilean fleet, red is the far north fleet, and black is the offshore trawl fleet."
+plot(h1_diag, var = "totalCatchByFleet")
+```
+
+
+```{r}
+#| label: fig-metadata
+#| fig-cap: "Observation years by data source and type, read from the current 1.06 input file. Catch spans all model years, with the 2026 full-year values supplied as projections."
+#| fig-alt: "Timeline of catch, abundance indices and age or length observations for each current assessment fleet and index, retaining gaps in coverage."
+md <- h1_mod[[1]]$data
+metadata_points <- bind_rows(
+ map_dfr(seq_len(md$Fnum), function(i) bind_rows(
+   tibble(Source=md$Fnames[i], Type="Catch", Year=as.numeric(rownames(md$Fcaton))),
+   tibble(Source=md$Fnames[i], Type="Age", Year=md$Fageyears[,i]),
+   tibble(Source=md$Fnames[i], Type="Length", Year=md$Flengthyears[,i]))),
+ map_dfr(seq_len(md$Inum), function(i) bind_rows(
+   tibble(Source=md$Inames[i], Type="Index", Year=md$Iyears[,i]),
+   tibble(Source=md$Inames[i], Type="Age", Year=md$Iyearsage[,i]),
+   tibble(Source=md$Inames[i], Type="Length", Year=md$Iyearslength[,i])))) |>
+ filter(is.finite(Year))
+ggplot(metadata_points,aes(Year,Source,colour=Type,shape=Type)) +
+ geom_point(size=1.7,position=position_dodge(width=0.6)) +
+ facet_wrap(~Type,ncol=1,scales="free_y") + theme_bw() +
+ labs(x="Year",y=NULL) + theme(legend.position="none")
+```
+
+
+
+```{r}
+#| label: fig-retro-ssb-h1
+#| fig-alt: "Retrospective trajectories comparing the full assessment with successive removals of terminal-year data."
+#| fig-cap: !expr paste0("Spawning biomass (thousand tonnes) from the full assessment and five retrospective peels, based on Model ",h1nm," (single-stock hypothesis). Legend 0 is the full assessment; 1–5 are successive terminal-year peels. Shading shows saved model uncertainty bounds. Title rho uses each peel’s one-year-ahead SSB endpoint.")
+plot(h1_retro, var = "SSB")
+```
+
+
+
+```{r}
+#| label: fig-retro-r-h1
+#| fig-alt: "Retrospective trajectories comparing the full assessment with successive removals of terminal-year data."
+#| fig-cap: !expr paste0("Recruitment (millions of fish) from the full assessment and five retrospective peels, based on Model ",h1nm," (single-stock hypothesis). Legend 0 is the full assessment; 1–5 are successive terminal-year peels. Shading shows saved model uncertainty bounds.")
+plot(h1_retro, var = "R")
+```
+
+
+```{r}
+#| label: fig-retro-ssb-h2
+#| fig-alt: "Retrospective trajectories comparing the full assessment with successive removals of terminal-year data."
+#| fig-cap: !expr paste0("Spawning biomass (thousand tonnes) from the full assessment and five retrospective peels for the southern stock (top) and far north stock (bottom), based on Model ", h2nm, " (two-stock hypothesis). Legend 0 is the full assessment; 1–5 are successive terminal-year peels. Shading shows saved model uncertainty bounds. Title rho uses each peel’s one-year-ahead SSB endpoint.")
+#| fig-height: 10
+par(mfrow=c(2,1),mar=c(3,4,2,1))
+plot(h2_retro, var = "SSB")
+par(mfrow=c(1,1))
+```
+
+
+```{r}
+#| label: fig-retro-r-h2
+#| fig-alt: "Retrospective trajectories comparing the full assessment with successive removals of terminal-year data."
+#| fig-cap: !expr paste0("Recruitment (millions of fish) from the full assessment and five retrospective peels for the southern stock (top) and far north stock (bottom), based on Model ", h2nm, " (two-stock hypothesis). Legend 0 is the full assessment; 1–5 are successive terminal-year peels. Shading shows saved model uncertainty bounds.")
+#| fig-height: 10
+par(mfrow=c(2,1),mar=c(3,4,2,1))
+plot(h2_retro, var = "R")
+par(mfrow=c(1,1))
+```
+
+
+```{r}
+#| label: fig-histretroquants
+#| fig-alt: "Total biomass trajectories compared across the SC13, SCW17 and current SC14 single-stock assessment configurations."
+#| fig-cap: "Total biomass (thousand tonnes) comparison for the archived SC13 1.14, SCW17 0.16 and current SC14 1.06 single-stock configurations. Differences include successive input updates and changes in model assumptions."
+#| fig-height: 6
+plot(annex_historical_models,combine=TRUE,what="biomass",stack=FALSE,main="Total biomass (kt)")
+```
+
+```{r}
+#| label: fig-histretrorefpts
+#| fig-alt: "Recruitment trajectories compared across the SC13, SCW17 and current SC14 single-stock assessment configurations."
+#| fig-cap: "Recruitment (millions of fish) comparison for the archived SC13 1.14, SCW17 0.16 and current SC14 1.06 single-stock configurations."
+plot(annex_historical_models,combine=TRUE,what="recruitment",stack=FALSE,main="Recruitment")
+```
+
+
+```{r}
+#| label: fig-wtatagefsh
+#| fig-alt: "Input mean weight at age through time, with a separate trajectory for each model age and panels for observation sources."
+#| fig-cap: !expr paste0("Mean weights-at-age (kg) over time used for the fisheries in the JJM models. Each line represents an age from 1 to 12.")
+plot(h1_diag, var = "weightFishery")
+```
+
+
+```{r}
+#| label: fig-wtatagesrv
+#| fig-alt: "Input mean weight at age through time, with a separate trajectory for each model age and panels for observation sources."
+#| fig-cap: !expr paste0("Mean weights-at-age (kg) over time used for the surveys in the JJM models. Each line represents an age from 1 to 12.")
+plot(h1_diag, var = "weightAge")
+```
+
+
+```{r}
+#| label: fig-agefitsfshh1-1
+#| fig-alt: "Observed data and fitted assessment predictions plotted by year and observation source, as identified in the panel labels."
+#| fig-cap: !expr paste0("Model ",h1nm," (single-stock hypothesis) fit to the age compositions for the Chilean northern zone fishery (Fleet 1). Bars represent the observed data and lines represent the model predictions.")
+plot(h1_diag, var = "ageFitsCatch", fleet="N_Chile")
+
+age_fits <- get_age_fits(h1_mod)
+
+```
+
+
+```{r}
+#| label: fig-agefitsfshh2-1
+#| fig-alt: "Observed data and fitted assessment predictions plotted by year and observation source, as identified in the panel labels."
+#| fig-cap: !expr paste0("Model ",h2nm," (two-stock hypothesis) fit to the age compositions for the Chilean northern zone fishery (Fleet 1). Bars represent the observed data and lines represent the model predictions.")
+plot(h2_diag, var = "ageFitsCatch", fleet="N_Chile")
+```
+
+
+```{r}
+#| label: fig-agefitsfshh1-2
+#| fig-alt: "Observed data and fitted assessment predictions plotted by year and observation source, as identified in the panel labels."
+#| fig-cap: !expr paste0("Model ",h1nm, " (single-stock hypothesis) fit to the age compositions for the South-Central Chilean purse seine fishery (Fleet 2). Bars represent the observed data and lines represent the model predictions.")
+plot(h1_diag, var = "ageFitsCatch", fleet="SC_Chile_PS")
+```
+
+
+```{r}
+#| label: fig-agefitsfshh2-2
+#| fig-alt: "Observed data and fitted assessment predictions plotted by year and observation source, as identified in the panel labels."
+#| fig-cap: !expr paste0("Model ",h2nm, " (two-stock hypothesis) fit to the age compositions for the South-Central Chilean purse seine fishery (Fleet 2). Bars represent the observed data and lines represent the model predictions.")
+plot(h2_diag, var = "ageFitsCatch", fleet="SC_Chile_PS")
+```
+
+
+```{r}
+#| label: fig-agefitsfshh1-4
+#| fig-alt: "Observed data and fitted assessment predictions plotted by year and observation source, as identified in the panel labels."
+#| fig-cap: !expr paste0("Model ",h1nm, " (single-stock hypothesis) fit to the age compositions for the offshore trawl fishery (Fleet 4). Bars represent the observed data and lines represent the model predictions.")
+plot(h1_diag, var = "ageFitsCatch", fleet="Offshore_Trawl")
+```
+
+
+```{r}
+#| label: fig-agefitsfshh2-4
+#| fig-alt: "Observed data and fitted assessment predictions plotted by year and observation source, as identified in the panel labels."
+#| fig-cap: !expr paste0("Model ",h2nm, " (two-stock hypothesis) fit to the age compositions for the offshore trawl fishery (Fleet 4). Bars represent the observed data and lines represent the model predictions.")
+plot(h2_diag, var = "ageFitsCatch", fleet="Offshore_Trawl")
+```
+
+
+```{r}
+#| label: fig-lenfitsfshh1
+#| fig-alt: "Observed data and fitted assessment predictions plotted by year and observation source, as identified in the panel labels."
+#| fig-cap: !expr paste0("Model ",h1nm, " (single-stock hypothesis) fit to the length compositions for the far north fishery (Fleet 3). Bars represent the observed data and points represent the model predictions.")
+plot(h1_diag, var = "lengthFitsCatch")
+```
+
+
+```{r}
+#| label: fig-lenfitsfshh2
+#| fig-alt: "Observed data and fitted assessment predictions plotted by year and observation source, as identified in the panel labels."
+#| fig-cap: !expr paste0("Model ",h2nm, " (two-stock hypothesis) fit to the length compositions for the far north fishery (Fleet 3). Bars represent the observed data and points represent the model predictions.")
+plot(h2_diag, var = "lengthFitsCatch")
+```
+
+
+```{r}
+#| label: fig-agefits-srv-h1-1
+#| fig-alt: "Observed data and fitted assessment predictions plotted by year and observation source, as identified in the panel labels."
+#| fig-cap: !expr paste0("Model ",h1nm, " (single-stock hypothesis) fit to the age compositions for the South-Central Acoustic survey. Bars represent the observed data and lines represent the model predictions.")
+plot(h1_diag, var = "ageFitsSurvey", fleet="Chile_AcousCS")
+```
+
+
+```{r}
+#| label: fig-agefits-srv-h2-1
+#| fig-alt: "Observed data and fitted assessment predictions plotted by year and observation source, as identified in the panel labels."
+#| fig-cap: !expr paste0("Model ",h2nm, " (two-stock hypothesis) fit to the age compositions for the South-Central Acoustic survey. Bars represent the observed data and lines represent the model predictions.")
+plot(h2_diag, var = "ageFitsSurvey", fleet="Chile_AcousCS")
+```
+
+
+```{r}
+#| label: fig-agefits-srv-h1-2
+#| fig-alt: "Observed data and fitted assessment predictions plotted by year and observation source, as identified in the panel labels."
+#| fig-cap: !expr paste0("Model ",h1nm," (single-stock hypothesis) fit to the age compositions for the North Chilean acoustic survey. Bars represent the observed data and lines represent the model predictions.")
+plot(h1_diag, var = "ageFitsSurvey", fleet="Chile_AcousN")
+```
+
+
+```{r}
+#| label: fig-agefits-srv-h2-2
+#| fig-alt: "Observed data and fitted assessment predictions plotted by year and observation source, as identified in the panel labels."
+#| fig-cap: !expr paste0("Model ",h2nm," (two-stock hypothesis) fit to the age compositions for the North Chilean acoustic survey. Bars represent the observed data and lines represent the model predictions.")
+plot(h2_diag, var = "ageFitsSurvey", fleet="Chile_AcousN")
+```
+
+
+
+
+
+
+
+
+```{r}
+#| label: fig-indfitsh1
+#| fig-alt: "Observed data and fitted assessment predictions plotted by year and observation source, as identified in the panel labels."
+#| fig-cap: !expr paste0("Model ",h1nm," (single-stock hypothesis) fit to different indices. Vertical bars represent 2 standard deviations around the observations.")
+plot(h1_diag, var = "predictedObservedIndices")
+```
+
+
+```{r}
+#| label: fig-indfitsh2-1
+#| fig-alt: "Observed data and fitted assessment predictions plotted by year and observation source, as identified in the panel labels."
+#| fig-cap: !expr paste0("Model ",h2nm," (two-stock hypothesis) fit to indices for the south stock. Vertical bars represent 2 standard deviations around the observations.")
+plot(h2_diag, var = "predictedObservedIndices", stock=1)
+```
+
+
+```{r}
+#| label: fig-indfitsh2-2
+#| fig-alt: "Observed data and fitted assessment predictions plotted by year and observation source, as identified in the panel labels."
+#| fig-cap: !expr paste0("Model ",h2nm," (two-stock hypothesis) fit to indices for the north stock. Vertical bars represent 2 standard deviations around the observations.")
+plot(h2_diag, var = "predictedObservedIndices", stock=2)
+```
+
+
+```{r}
+#| label: fig-meanagefshh1
+#| fig-alt: "Observed and predicted mean age or fork length by year and source, with the reported observation intervals."
+#| fig-cap: !expr paste0("Mean age by year and fishery. Line represents the Model ",h1nm," (single-stock hypothesis) predictions and dots observed values with implied input error bars.")
+plot(h1_diag, var = "fisheryMeanAge")
+```
+
+
+```{r}
+#| label: fig-meanagefshh2
+#| fig-alt: "Observed and predicted mean age or fork length by year and source, with the reported observation intervals."
+#| fig-cap: !expr paste0("Mean age by year and fishery. Line represents the Model ",h2nm," (two-stock hypothesis) predictions and dots observed values with implied input error bars.")
+plot(h2_diag, var = "fisheryMeanAge")
+```
+
+
+```{r}
+#| label: fig-meanagesrvh1
+#| fig-alt: "Observed and predicted mean age or fork length by year and source, with the reported observation intervals."
+#| fig-cap: !expr paste0("Mean age by year and survey. Line represents the Model ",h1nm," (single-stock hypothesis) predictions and dots observed values with implied input error bars.")
+plot(h1_diag, var = "surveyMeanAge")
+```
+
+
+```{r}
+#| label: fig-meanagesrvh2
+#| fig-alt: "Observed and predicted mean age or fork length by year and source, with the reported observation intervals."
+#| fig-cap: !expr paste0("Mean age by year and survey. Line represents the Model ",h2nm," (two-stock hypothesis) predictions and dots observed values with implied input error bars.")
+plot(h2_diag, var = "surveyMeanAge")
+```
+
+
+```{r}
+#| label: fig-meanlenfshh1
+#| fig-alt: "Observed and predicted mean age or fork length by year and source, with the reported observation intervals."
+#| fig-cap: !expr paste0("Mean length by year in Fleet 3 (Far North). Line represents the Model ",h1nm," (single-stock hypothesis) predictions and dots observed values with implied input error bars.")
+plot(h1_diag, var = "fisheryMeanLength")
+```
+
+
+```{r}
+#| label: fig-meanlenfshh2
+#| fig-alt: "Observed and predicted mean age or fork length by year and source, with the reported observation intervals."
+#| fig-cap: !expr paste0("Mean length by year in Fleet 3 (Far North). Line represents the Model ",h2nm," (two-stock hypothesis) predictions and dots observed values with implied input error bars.")
+plot(h2_diag, var = "fisheryMeanLength")
+```
+
+
+```{r}
+#| label: fig-selfshh1
+#| fig-alt: "Estimated selectivity by age and year for the fisheries or indices identified in the panels."
+#| fig-cap: !expr paste0("Estimates of selectivity by fishery over time for Model ",h1nm," (single-stock hypothesis).")
+#| fig-height: 7
+annex_selectivity_plot(h1_mod,"fsh")
+```
+
+
+```{r}
+#| label: fig-selfshh2
+#| fig-alt: "Estimated selectivity by age and year for the fisheries or indices identified in the panels."
+#| fig-cap: !expr paste0("Estimates of selectivity by fishery over time for Model ",h2nm," (two-stock hypothesis).")
+#| fig-height: 7
+annex_selectivity_plot(h2_mod,"fsh")
+```
+
+
+```{r}
+#| label: fig-selsrvh1
+#| fig-alt: "Estimated selectivity by age and year for the fisheries or indices identified in the panels."
+#| fig-cap: !expr paste0("Estimates of selectivity by survey over time for Model ",h1nm," (single-stock hypothesis).")
+#| fig-height: 9
+annex_selectivity_plot(h1_mod,"ind")
+```
+
+
+```{r}
+#| label: fig-selsrvh2
+#| fig-alt: "Estimated selectivity by age and year for the fisheries or indices identified in the panels."
+#| fig-cap: !expr paste0("Estimates of selectivity by survey over time for Model ",h2nm," (two-stock hypothesis).")
+#| fig-height: 9
+annex_selectivity_plot(h2_mod,"ind")
+```
+
+
+```{r}
+#| label: fig-sumsheet-h1
+#| fig-alt: "Assessment summary showing spawning biomass, recruitment, fishing mortality and catch trajectories with reference overlays."
+#| fig-cap: !expr paste0("Model ",h1nm," (single-stock hypothesis) summary estimates over time showing spawning biomass (kt; top left), recruitment at age 1 (millions; lower left), total fishing mortality (top right), and total catch (kt; bottom right). Reference overlays follow the existing summary routine, including the recent-average biomass reference; these summaries use the fitted assessment outputs.")
+plot(bmsy_diag_h1, var = "summarySheet")
+```
+
+```{r}
+#| label: fig-unfshbio-h1
+#| fig-alt: "Comparison of fitted total biomass and the corresponding no-fishing total biomass trajectory."
+#| fig-cap: !expr paste0("Model ",h1nm," (single-stock hypothesis) results for the estimated total biomass (solid line) and the estimated total biomass that would have occurred if no fishing had taken place (dotted line), beginning in 1970. This year, the ratio of total biomass to total biomass without fishing is ", round((tail(h1_mod[[1]]$output[[1]]$TotBiom[,2],1) / tail(h1_mod[[1]]$output[[1]]$TotBiom_NoFish[,2],1)),2),".")
+plot(h1_diag, var = "fishedUnfishedBiomass")
+```
+
+```{r}
+#| label: fig-sumsheet-h2-1
+#| fig-alt: "Assessment summary showing spawning biomass, recruitment, fishing mortality and catch trajectories with reference overlays."
+#| fig-cap: !expr paste0("Model ",h2nm," (two-stock hypothesis) summary estimates over time showing spawning biomass (kt; top left), recruitment at age 1 (millions; lower left), total fishing mortality (top right), and total catch (kt; bottom right) for the south stock. Reference overlays follow the existing summary routine, including the recent-average biomass reference; these summaries use the fitted assessment outputs.")
+plot(bmsy_diag_h2, var = "summarySheet", stock=1)
+```
+
+
+```{r}
+#| label: fig-sumsheet-h2-2
+#| fig-alt: "Assessment summary showing spawning biomass, recruitment, fishing mortality and catch trajectories with reference overlays."
+#| fig-cap: !expr paste0("Model ",h2nm," (two-stock hypothesis) summary estimates over time showing spawning biomass (kt; top left), recruitment at age 1 (millions; lower left), total fishing mortality (top right), and total catch (kt; bottom right) for the far north stock. Reference overlays follow the existing summary routine, including the recent-average biomass reference; these summaries use the fitted assessment outputs.")
+plot(bmsy_diag_h2, var = "summarySheet", stock=2)
+```
+
+
+```{r}
+#| label: fig-unfshbio-h2-1
+#| fig-alt: "Comparison of fitted total biomass and the corresponding no-fishing total biomass trajectory."
+#| fig-cap: !expr paste0("Model ",h2nm," (two-stock hypothesis) results for the estimated total biomass (solid line) and the estimated total biomass that would have occurred if no fishing had taken place (dotted line) for the south stock, beginning in 1970. This year, the ratio of total biomass to total biomass without fishing is ", round((tail(h2_mod[[1]]$output[[1]]$TotBiom[,2],1) / tail(h2_mod[[1]]$output[[1]]$TotBiom_NoFish[,2],1)),2),".")
+plot(h2_diag, var = "fishedUnfishedBiomass",stock=1)
+
+```
+
+
+```{r}
+#| label: fig-unfshbio-h2-2
+#| fig-alt: "Comparison of fitted total biomass and the corresponding no-fishing total biomass trajectory."
+#| fig-cap: !expr paste0("Model ",h2nm," (two-stock hypothesis) results for the estimated total biomass (solid line) and the estimated total biomass that would have occurred if no fishing had taken place (dotted line) for the far north stock, beginning in 1970. This year, the ratio of total biomass to total biomass without fishing is ", round((tail(h2_mod[[1]]$output[[2]]$TotBiom[,2],1) / tail(h2_mod[[1]]$output[[2]]$TotBiom_NoFish[,2],1)),2),".")
+plot(h2_diag, var = "fishedUnfishedBiomass",stock=2)
+```
+
+## Projection diagnostics
+
+These figures retain the **earlier five-year model 1.06.ls projection outputs (2027–2031)** for comparison. The updated ten-year projections from the corrected `jjm.tpl`, including the revised scenario-4 calculation, are summarized in @sec-risk-summary. Both sets use steepness 0.65, with recruitment over 2001–2015 for the single stock and southern component and 1970–2016 for Far North.
+
+```{r}
+#| include: false
+h1_diag_ls <- diagnostics(h1_mod_ls, plots=FALSE)
+h2_diag_ls <- diagnostics(h2_mod_ls, plots=FALSE)
+```
+
+```{r}
+#| label: fig-projection-ssb-h1
+#| fig-cap: "Earlier five-year (2027–2031) spawning biomass projections (thousand tonnes) from h1_1.06.ls under the scenario labels shown in the existing model output."
+#| fig-alt: "Time series of projected spawning biomass under alternative fishing scenarios for the single-stock model."
+#| fig-height: 6
+plot(h1_diag_ls, var="ssbPrediction")
+```
+
+```{r}
+#| label: fig-projection-catch-h1
+#| fig-cap: "Earlier five-year (2027–2031) catch projections (thousand tonnes) from h1_1.06.ls under the scenario labels shown in the existing model output."
+#| fig-alt: "Time series of projected catch under alternative fishing scenarios for the single-stock model."
+#| fig-height: 6
+plot(h1_diag_ls, var="catchPrediction")
+```
+
+```{r}
+#| label: fig-projection-ssb-h2
+#| fig-subcap: ["Southern stock", "Far North stock"]
+#| layout-ncol: 1
+#| fig-cap: "Earlier five-year (2027–2031) spawning biomass projections (thousand tonnes) from h2_1.06.ls: southern stock followed by Far North stock. Scenario labels follow the existing model output."
+#| fig-alt: "Time series of projected spawning biomass under alternative fishing scenarios for the two-stock model."
+#| fig-height: 3.5
+plot(h2_diag_ls, var="ssbPrediction")
+```
+
+```{r}
+#| label: fig-projection-catch-h2
+#| fig-subcap: ["Southern stock", "Far North stock"]
+#| layout-ncol: 1
+#| fig-cap: "Earlier five-year (2027–2031) catch projections (thousand tonnes) from h2_1.06.ls: southern stock followed by Far North stock. Scenario labels follow the existing model output."
+#| fig-alt: "Time series of projected catch under alternative fishing scenarios for the two-stock model."
+#| fig-height: 3.5
+plot(h2_diag_ls, var="catchPrediction")
+```

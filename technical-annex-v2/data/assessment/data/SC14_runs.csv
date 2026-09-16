@@ -1,0 +1,23 @@
+﻿Model      ,Description
+Models 0.x,Data introductions
+0,  Exact 2026 (single stock `h1` and two-stock `h2`) model and data set (model 0.16) from SCW17.
+0.01,  As 0.00 but with revised catches through 2025 (currently still estimates)
+0.02,"  As 0.01 but with updated 2025 fishery age composition data for N_Chile, SC_Chile, and Offshore_Trawl, and updated 2025 fishery length composition data for FarNorth"
+0.03,  As 0.02 but with updated 2025 weight at age data for all fisheries and their associated CPUE indices
+0.04,  As 0.03 but replaced offshore CPUE up to 2025
+0.05,  As 0.04 but with 2026 catch projections
+0.06,"  As 0.05 but with updated 2026 fishery age composition data for N_Chile, SC_Chile, and Offshore_Trawl, and updated 2026 fishery length composition data for FarNorth"
+0.07,"  As 0.06 but with updated 2026 weight at age data for N_Chile, SC_Chile, and FarNorth fleets, and for their associated CPUE indices"
+0.08,  As 0.07 but replaced SC_Chile_CPUE index (updated index from SC14-JM10)
+0.09,  As 0.08 but replaced Peru_CPUE index
+0.1,"  As 0.09 but updated 2026 AcousN index, with associated age composition and weight at age"
+Models 1.x,Updated Model and Sensitivities
+1," As 0.10 but with updated model (selectivity changes, recruitment) to 2026; 0.10 data file"
+1.01,As 1.00 but removing early years (pre-2006) of Acoustic North survey data
+1.02,As 1.01 but replaced SC_Chile_CPUE with one from fishing trip database (SC14-JM15)
+1.03,As 1.02 but removing the 2026 data point for Chile CPUE
+1.04,As 1.01 but replacing 2025/2026 weight-at-age for offshore fleet with mean across 2019-2024
+1.05,As 1.04 but adding 22799 tons from Chile high seas to N_Chile fleet for 2025
+1.06,As 1.05 but moving 10000 tons from FarNorth to offshore fleet for 2026
+Models 1.xx.yy,Base Model Projections
+1.xx.ls,As 1.xx but low steepness and short recruitment time series (2001-2015)

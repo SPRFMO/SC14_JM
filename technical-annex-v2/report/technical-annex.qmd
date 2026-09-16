@@ -1,0 +1,54 @@
+---
+title: "Jack Mackerel Technical Annex 2026"
+subtitle: "Cumulative assessment update Version 2"
+author: "Jack Mackerel Working Group"
+date: "2026-09-12"
+lang: en
+bibliography: refs.bib
+csl: apa.csl
+link-citations: true
+word-contents: true
+---
+
+```{r}
+#| label: setup
+#| include: false
+options(warn = 1)
+report_dir <- normalizePath(dirname(knitr::current_input(dir = TRUE)), winslash = "/")
+assessment_dir <- normalizePath(file.path(report_dir, "..", "data", "assessment"), winslash = "/", mustWork = TRUE)
+knitr::opts_knit$set(root.dir = assessment_dir)
+knitr::opts_chunk$set(fig.width = 7, fig.height = 5)
+library(jjmR)
+library(tidyverse)
+library(flextable)
+library(knitr)
+library(scales)
+source(file.path(report_dir, "..", "R", "table_layout.R"), local = TRUE)
+curryr <- 2026L
+finmodname <- "1.06"
+h1nm <- paste0("h1_", finmodname)
+h2nm <- paste0("h2_", finmodname)
+```
+
+```{r}
+#| label: load-assessment-products
+#| include: false
+source(file.path(report_dir, "..", "R", "prepare_report.R"), local = TRUE)
+```
+
+{{< include annex_text.qmd >}}
+
+{{< include annex_history.qmd >}}
+
+# References {.unnumbered}
+
+::: {#refs}
+:::
+
+{{< pagebreak >}}
+
+{{< include annex_tables.qmd >}}
+
+{{< pagebreak >}}
+
+{{< include annex_plots.qmd >}}

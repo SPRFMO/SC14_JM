@@ -1,0 +1,9 @@
+.DS_Store
+.Rhistory
+.RData
+report/.quarto/
+report/*_files/
+report/*.tex
+report/*.log
+report/*.aux
+validation/page-images/

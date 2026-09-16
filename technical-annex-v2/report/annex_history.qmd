@@ -1,0 +1,76 @@
+# Assessment continuity and inherited methods {#sec-assessment-continuity}
+
+The SC13 technical annex records the assessment accepted in **2025**, including its data sources, model development and diagnostic findings. This section retains that background alongside the **2026 Model 1.06** assessment. Historical model labels and dates are stated explicitly; the current input tables, diagnostics, reference points and projections elsewhere in this annex describe the 2026 configurations [@sprfmo2025annex, pp. 1, 13–17].
+
+## From the SC13 assessment to the 2026 benchmark
+
+The 2025 assessment began from the SC12 Model 1.07 configuration, relabelled 0.00 for its data bridge. Models 0.01–0.10 progressively updated catches, compositions, weights at age and abundance indices. After the annual model update, SC13 examined the influence of the four principal abundance signals and alternative treatments of recent selectivity and composition data. Its final Model 1.14 incorporated additional 2025 selectivity flexibility for South-Central Chile and Offshore, increased weights on their 2025 age compositions, reduced influence of early North Chile acoustic observations, and revised historical weights for older FarNorth fish. This accepted SC13 configuration supplied the starting point for the 2026 benchmark [@sprfmo2025annex, pp. 13–15; @sprfmo2025annex, p. 42, Table 26].
+
+The historical sequence explains why identical model numbers can describe different analyses in successive years. In SC13, Models 1.01–1.09 were mainly index-influence sensitivities. In the 2026 annual assessment, Model 1.06 identifies the current working configuration. The current model-development table records the separate 2026 progression.
+
+SC13 also distinguished two retrospective comparisons. An analytical retrospective repeatedly removed the most recent year's data from one assessment configuration. A historical comparison assembled estimates from successive annual assessments, thereby incorporating changes in data, methods and assumptions. That distinction continues to apply to the five-peel diagnostics and the comparison of SC13 1.14, the 2026 workshop configuration and SC14 1.06 shown here [@sprfmo2025annex, p. 15, paras. 74–76].
+
+## Construction and provenance of fishery compositions
+
+Catch inputs aggregate Member submissions into four fleets defined by fishing area and gear. The composition inputs preserve a further distinction between observations processed into ages before assessment and lengths fitted directly by the assessment model. The SC13 record describes Chilean and older international length distributions converted with annual Chilean age–length keys. For more recent offshore submissions, quarterly EU, Russian or Chilean keys were applied as appropriate before aggregation. Peruvian and Ecuadorian length distributions were retained as lengths and compared with model predictions generated through the growth relationship [@sprfmo2025annex, p. 3, paras. 14–16].
+
+The offshore sampling protocol also forms part of the input history. Beginning with the 2021 data, self-sampling length distributions could supply quarters covered by self-sampling when observer sampling was absent, following the protocol described in SC10-JM03 and SC10-JM04. SC13 documented this as a supplement to observer coverage. The source and quarterly coverage of each submission therefore matter when interpreting subsequent annual revisions to offshore age compositions [@sprfmo2025annex, p. 4, para. 17].
+
+The 2022 ageing revision changed historical Chilean fishery and survey compositions and the associated biological inputs. SC13 identified consistency among ageing laboratories, older composition data, and mean weights at age as continuing review priorities. These concerns remain relevant to the 2026 input checks; the current composition and weight tables show the values actually used [@sprfmo2025annex, pp. 3–4, 6–8; @sprfmo2025annex, p. 18, paras. 90–91].
+
+## Historical development of abundance indices
+
+The current 2026 CPUE specifications follow the changes described earlier in this annex. Their preceding history helps explain differences among archived assessment inputs:
+
+- **South-Central Chile:** the SC13 account describes a trip-based GLM with year, quarter, zone and vessel hold capacity, using fishing days as effort. Earlier changes excluded trips with zero jack mackerel catch and introduced a catchability change associated with the year-2000 management changes. These describe the earlier series; the 2026 benchmark adopted a revised index and uncertainty treatment.
+- **Peru:** before SC6, the industrial series was affected by shifts in fishing toward other pelagic species. The subsequent combined index used recovered artisanal and small-scale information with a gamma GAM and log link. SC13 recorded concerns about historical fleet identifiers. The 2026 separate industrial and artisanal series represent a later data and model specification.
+- **Offshore:** separate fleet indices were progressively combined, first for EU and Russian data in SC6 and then across China, EU, Korea, Vanuatu and Russia in SC7. The SC13 record describes a negative-binomial GAM with a log-effort offset, temporal and environmental effects, and spatial smoothers; contracting party replaced vessel identity in the SC9 formulation. The assessment series began in 2008 [@sprfmo2025annex, pp. 4–5, paras. 19–21].
+
+SC13 documented interim efficiency corrections of 1% annually for the Chilean and Peruvian CPUE series and 2.5% for Offshore. These are historical specifications: the 2026 treatment of each series is given in the current data section. The earlier annex also identified search time as difficult to measure consistently and described weekly effort aggregation as one way of capturing more of that activity. Consequently, index revisions can reflect changes in effort definition, sampling, standardization and availability, alongside changes in abundance [@sprfmo2025annex, p. 5, paras. 22–25].
+
+Two survey records also explain the longer data history. The DEPM observations supplied a historical relative-abundance series and age compositions, while the Peruvian acoustic series represented a coastal survey footprint developed principally for anchoveta. Its later jack mackerel index used backscatter information and ended in 2013. Spatial coverage and changes in fish distribution were central qualifications in the SC13 account. Their 2026 development and removal from the annual Model 1.06 are recorded above; their historical observations remain documented in SC13 [@sprfmo2025annex, p. 6, paras. 26–30; @sprfmo2025annex, p. 34, Table 18].
+
+## Additional observation-model detail
+
+The principal population equations are summarized in @tbl-eqs. Two further relationships make explicit how survey ages and fishery lengths connect to those population quantities, extending the model description in SC13 Table 20 [@sprfmo2025annex, p. 36].
+
+For a survey or index with age observations, expected sampled numbers are proportional to abundance surviving to the observation time and to index selectivity. Thus
+
+$$
+p^{\mathrm{index}}_{s,y,a}=
+\frac{N_{y,a}S_{s,y,a}\exp(-\Delta_s Z_{y,a})}
+{\sum_b N_{y,b}S_{s,y,b}\exp(-\Delta_s Z_{y,b})}.
+$$ {#eq-index-age-proportions}
+
+Here $\Delta_s$ is the fraction of the year before observation. These are number proportions, so mean weight at age is absent from the expression. The currently disabled ageing-error option would apply its age-error matrix to this prediction when enabled. The formula follows the survey age-prediction calculation in both retained JJM source versions.
+
+For the age-to-length conversion, mean length follows the recursive von Bertalanffy form, with a standard deviation proportional to mean length:
+
+$$
+\begin{gathered}
+L_1=L_0,\\
+L_a=L_\infty(1-e^{-k})+e^{-k}L_{a-1}\quad(a>1),\\
+\sigma_a=\mathrm{CV}_L L_a.
+\end{gathered}
+$$ {#eq-length-at-age-recursion}
+
+Let $u_l^-$ and $u_l^+$ be the lower and upper boundaries of modeled length bin $l$, and let $\Phi$ denote the standard normal cumulative distribution function. The implemented conversion calculates finite-bin probabilities and normalizes them over the represented bins:
+
+$$
+\begin{gathered}
+g_{l,a}=\Phi\!\left(\frac{u_l^+-L_a}{\sigma_a}\right)
+       -\Phi\!\left(\frac{u_l^--L_a}{\sigma_a}\right),\\
+\Gamma_{l,a}=\frac{g_{l,a}}{\sum_m g_{m,a}},\\
+\widehat C_{f,y,l}=\sum_a\Gamma_{l,a}C_{f,y,a}.
+\end{gathered}
+$$ {#eq-normalized-age-length}
+
+This normalization preserves predicted total numbers when age compositions are converted to length compositions. Expected length proportions then follow by dividing $\widehat C_{f,y,l}$ by their sum across lengths. The 2026 input convention uses 10–50 cm fork-length bins, with observations in the terminal category recorded as 50 cm plus. That data convention and the model's normalized finite-bin probability calculation are separate parts of the treatment. Growth parameters and their stock/regime mapping follow the selected current controls.
+
+## Estimation and weighting history
+
+The JJM estimates recruitment, annual fishing intensity, and fleet- or index-specific selectivity and catchability components through a penalized likelihood. The substantial parameter groups are annual recruitment deviations and the age and annual components of fishing mortality. Selectivity regularity penalties control variation among adjacent ages and changes over time; their active form, strength and estimation phase depend on the configuration. The 2026 selectivity-mapping and input-weight tables make these choices explicit alongside the fitted patterns [@sprfmo2025annex, pp. 9–10; @sprfmo2025annex, pp. 35–41, Tables 19–25].
+
+SC13 records use of the Francis T1.8 composition-weighting method from 2018 and a subsequent weighting update at the 2022 benchmark. The 2025 update retained those benchmark weights, with specific adjustments to the partial-year South-Central Chile and Offshore age compositions. These effective sample sizes scale the composition likelihood; they differ from raw counts of sampled fish. The 2026 annual input vectors and coverage adjustments supersede the historical numerical weighting table for the calculations in this annex [@sprfmo2025annex, p. 9, para. 47; @sprfmo2025annex, p. 13, paras. 63, 66; @sprfmo2025annex, p. 38, Table 22].
+
+Finally, SC13 documented separate data-processing and assessment stages: preparing and raising catch compositions, assembling annual data bridges, defining sensitivities, running projections and generating results. Retaining those stages and their input vintage makes successive assessment estimates interpretable. The cumulative annex preserves that provenance while its numerical results continue to come from the saved 2026 assessment products [@sprfmo2025annex, p. 14, para. 67].

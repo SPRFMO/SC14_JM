@@ -1,0 +1,219 @@
+
+
+processing file: technical-annex.qmd
+1/181                           
+2/181 [setup]                   
+3/181                           
+4/181 [load-assessment-products]
+5/181                           
+6/181 [tbl-status-2026]         
+7/181                           
+8/181 [build-risk-summary]      
+9/181                           
+10/181 [tbl-risk-h1]             
+11/181                           
+12/181 [tbl-risk-h2-south]       
+13/181                           
+14/181 [tbl-risk-h2-north]       
+15/181                           
+16/181 [unnamed-chunk-1]         
+17/181                           
+18/181 [unnamed-chunk-2]         
+19/181                           
+20/181 [tbl-catch-fleet]         
+21/181                           
+22/181 [tbl-catchage-f1]         
+23/181                           
+24/181 [tbl-catchage-f2]         
+25/181                           
+26/181 [tbl-catchage-f4]         
+27/181                           
+28/181 [tbl-catchlen-f3]         
+29/181                           
+30/181 [tbl-catchlen-f3-middle]  
+31/181                           
+32/181 [tbl-catchlen-f3-upper]   
+33/181                           
+34/181 [tbl-indices]             
+35/181                           
+36/181 [tbl-catchage-i1]         
+37/181                           
+38/181 [tbl-catchage-i2]         
+39/181                           
+40/181 [tbl-matatage]            
+41/181                           
+42/181 [tbl-pars]                
+43/181                           
+44/181 [tbl-ageerror]            
+45/181                           
+46/181 [tbl-wtatage-f1]          
+47/181                           
+48/181 [tbl-wtatage-f2]          
+49/181                           
+50/181 [tbl-wtatage-f3]          
+51/181                           
+52/181 [tbl-wtatage-f4]          
+53/181                           
+54/181 [unnamed-chunk-3]         
+55/181                           
+56/181 [tbl-datused]             
+57/181                           
+58/181 [tbl-cv]                  
+59/181                           
+60/181 [tbl-sel-h1]              
+61/181                           
+62/181 [tbl-sel-h2-s1]           
+63/181                           
+64/181 [tbl-sel-h2-s2]           
+65/181                           
+66/181 [tbl-modruns]             
+67/181                           
+68/181 [tbl-histssb]             
+69/181                           
+70/181 [tbl-natage-h1]           
+71/181                           
+72/181 [tbl-natage-h2-s1]        
+73/181                           
+74/181 [tbl-natage-h2-s2]        
+75/181                           
+76/181 [tbl-fatage-h1]           
+77/181                           
+78/181 [tbl-fatage-h2-s1]        
+79/181                           
+80/181 [tbl-fatage-h2-s2]        
+81/181                           
+82/181 [tbl-sum-h1]              
+83/181                           
+84/181 [tbl-sum-h2-s1]           
+85/181                           
+86/181 [tbl-sum-h2-s2]           
+87/181                           
+88/181 [unnamed-chunk-4]         
+89/181                           
+90/181 [fig-catchbyfleet]        
+91/181                           
+92/181 [fig-metadata]            
+93/181                           
+94/181 [fig-retro-ssb-h1]        
+95/181                           
+96/181 [fig-retro-r-h1]          
+97/181                           
+98/181 [fig-retro-ssb-h2]        
+99/181                           
+100/181 [fig-retro-r-h2]          
+101/181                           
+102/181 [fig-histretroquants]     
+103/181                           
+104/181 [fig-histretrorefpts]     
+105/181                           
+106/181 [fig-wtatagefsh]          
+107/181                           
+108/181 [fig-wtatagesrv]          
+109/181                           
+110/181 [fig-agefitsfshh1-1]      
+111/181                           
+112/181 [fig-agefitsfshh2-1]      
+113/181                           
+114/181 [fig-agefitsfshh1-2]      
+115/181                           
+116/181 [fig-agefitsfshh2-2]      
+117/181                           
+118/181 [fig-agefitsfshh1-4]      
+119/181                           
+120/181 [fig-agefitsfshh2-4]      
+121/181                           
+122/181 [fig-lenfitsfshh1]        
+123/181                           
+124/181 [fig-lenfitsfshh2]        
+125/181                           
+126/181 [fig-agefits-srv-h1-1]    
+127/181                           
+128/181 [fig-agefits-srv-h2-1]    
+129/181                           
+130/181 [fig-agefits-srv-h1-2]    
+131/181                           
+132/181 [fig-agefits-srv-h2-2]    
+133/181                           
+134/181 [fig-indfitsh1]           
+135/181                           
+136/181 [fig-indfitsh2-1]         
+137/181                           
+138/181 [fig-indfitsh2-2]         
+139/181                           
+140/181 [fig-meanagefshh1]        
+141/181                           
+142/181 [fig-meanagefshh2]        
+143/181                           
+144/181 [fig-meanagesrvh1]        
+145/181                           
+146/181 [fig-meanagesrvh2]        
+147/181                           
+148/181 [fig-meanlenfshh1]        
+149/181                           
+150/181 [fig-meanlenfshh2]        
+151/181                           
+152/181 [fig-selfshh1]            
+153/181                           
+154/181 [fig-selfshh2]            
+155/181                           
+156/181 [fig-selsrvh1]            
+157/181                           
+158/181 [fig-selsrvh2]            
+159/181                           
+160/181 [fig-sumsheet-h1]         
+161/181                           
+162/181 [fig-unfshbio-h1]         
+163/181                           
+164/181 [fig-sumsheet-h2-1]       
+165/181                           
+166/181 [fig-sumsheet-h2-2]       
+167/181                           
+168/181 [fig-unfshbio-h2-1]       
+169/181                           
+170/181 [fig-unfshbio-h2-2]       
+171/181                           
+172/181 [unnamed-chunk-5]         
+173/181                           
+174/181 [fig-projection-ssb-h1]   
+175/181                           
+176/181 [fig-projection-catch-h1] 
+177/181                           
+178/181 [fig-projection-ssb-h2]   
+179/181                           
+180/181 [fig-projection-catch-h2] 
+181/181                           
+output file: technical-annex.knit.md
+
+pandoc 
+  to: html
+  output-file: technical-annex.html
+  standalone: true
+  embed-resources: true
+  section-divs: true
+  html-math-method: mathjax
+  wrap: none
+  default-image-extension: png
+  toc: true
+  toc-depth: 3
+  number-sections: true
+  css:
+    - styles.css
+  
+metadata
+  document-css: false
+  link-citations: true
+  date-format: long
+  lang: en
+  theme: flatly
+  code-summary: Show supporting code
+  title: Jack Mackerel Technical Annex 2026
+  subtitle: Cumulative assessment update Version 2
+  author: Jack Mackerel Working Group
+  date: '2026-09-12'
+  bibliography:
+    - refs.bib
+  csl: apa.csl
+  word-contents: true
+  
+Output created: ../output/technical-annex.html
+

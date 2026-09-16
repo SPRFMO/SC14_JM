@@ -1,0 +1,217 @@
+# Introduction
+
+This cumulative technical annex carries forward the assessment background and methods documented for SC13, records the May 2026 benchmark (SCW16) and subsequent model development, and presents the annual assessment and analyses available during SC14 through **11 September 2026**. The working assessment uses Models `r h1nm` and `r h2nm`, with data through 2026. Results, input tables and diagnostic figures below are read from those saved assessment products.
+
+The SC13 annex provides the preceding assessment record. SCW16 reviewed the data and model specification; subsequent development revised the Peruvian indices, selectivity and productivity assumptions. During SC14, analysts incorporated the annual data update, examined conflicting abundance indices, and checked projections, reference points and uncertainty. The 2026 results retain working status pending the agreed Committee assessment and advice record. The numerical projection results are the saved 11 September runs identified in their manifest.
+
+| Stage | Date and place | Contribution to this annex |
+|---|---|---|
+| SC13 assessment | 2025 | Assessment background, model methods and the preceding annual assessment record. |
+| SCW16 benchmark | 18–22 May 2026, Lima | Data review, CPUE and acoustic treatments, biological inputs and model development. |
+| Post-benchmark development | May–June 2026 | Separate Peruvian CPUE series, selectivity and productivity revisions. |
+| SC14 working analyses | 7–11 September 2026, Tórshavn | Annual data bridge, Model 1.06, LOI/LOO diagnostics, uncertainty analysis and projection checks. |
+
+: Assessment work covered by this cumulative update. {#tbl-work-programme}
+
+The assessment history and development are documented in the SC13 technical annex, benchmark report, model-development paper and SC14 working assessment [@sprfmo2025annex; @jmwgb2026benchmark; @modeldevelopments2026; @assessment2026].
+
+## Scientific Name and General Distribution
+The Chilean jack mackerel (*Trachurus murphyi*, Nichols 1920) is widespread throughout the South Pacific. It is found along the shelf and oceanic waters adjacent to Ecuador, Peru, and Chile, and across the South Pacific along the Subtropical Convergence Zone in what has been described as the “jack mackerel belt” that goes from the coast of Chile to New Zealand within a 35° to 50° S variable band across the South Pacific. 
+
+## Main Management Units
+At least five management units of *T. murphyi* associated to distinct fisheries are identified in the SE Pacific: the Ecuadorian fishery, which is managed as part of a more general pelagic fishery within the Ecuadorian EEZ; the Peruvian fishery, which is managed as part of a jack mackerel, mackerel and sardine fishery directed exclusively for direct human consumption taking place almost entirely within the Peruvian EEZ; the northern and the central-southern Chilean fisheries which are managed as separate management units, with the northern fishery being mostly within the Chilean EEZ and the central-southern Chilean fishery which straddles the Chilean EEZ and the adjacent high sea; and, the purely high sea fishery which is a multinational fishery being managed entirely within the context of the SPRFMO. At present there is no directed fishery for *T. murphyi* in the central and western South Pacific and around New Zealand, where incidental catches are very small. 
+
+## Stock Structure
+There are a number of competing stock structure hypotheses, and up to five and more separate stocks have been suggested: i) a Peruvian stock (northern stock) which is a straddling stock with respect to the high seas; ii) a Chilean stock (southern stock) which is also a straddling stock with respect to the high seas; iii) a central Pacific stock which exists solely in the high seas; iv) a southwest Pacific stock which exists solely in the high seas; v) and, a New Zealand-Australian stock which straddles the high seas and both the New Zealand and Australian EEZs. Regarding specifically the eastern and central South Pacific, the SPRFMO has identified the following four alternative stock structure working hypotheses: 1) jack mackerel caught off the coasts of Peru and Chile each constitute separate stocks which straddle the high seas; 2) jack mackerel caught off the coasts of Peru and Chile constitute a single shared stock which straddles the high seas; 3) jack mackerel caught off the Chilean area constitute a single straddling stock extending from the coast out to about 120°W; and, 4) jack mackerel caught off the Chilean area constitute separate straddling and high seas stocks. 
+
+Accordingly, the Jack Mackerel Sub-group (JMSG) of the Science Working Group (SWG) of the SPRFMO at its 11th Session (SWG-11) carried out parallel assessments of the jack mackerel stock(s) in the Eastern South Pacific under the two main working hypotheses already identified. That is: jack mackerel caught off the coasts of Peru and Chile constitute a single shared stock which straddles the high seas (hypothesis 1); or that jack mackerel caught off the coasts of Peru and Chile each constitute separate stocks (the Peruvian or northern and the Chilean or southern stock) which straddle the high seas (hypothesis 2). In following up on the SWG-11 recommendations, the SPRFMO Commission at its 1st Commission Meeting requested the newly established Scientific Committee (SC) to continue the work on evaluating alternative hypotheses on jack mackerel stock population. Pending more conclusive findings on the stock population structure of jack mackerel, the 2nd Commission meeting requested the SC to continue and expand the stock assessment work under both stock hypotheses considered in the 11th SWG Meeting, and this continues to be one of the main tasks retained in the 2026 assessment.
+
+## Fishery
+The fishery for jack mackerel in the south-eastern Pacific is conducted by fleets from the coastal states (Chile, Peru and Ecuador), and by distant water fleets from various countries, operating beyond the EEZ of the coastal states. 
+
+The fishery by the coastal states is conducted by purse seiners. The largest fishery is in Chile; fishmeal production has been an important part of its history. In Peru, the fishery is variable from year to year. Here the fish are taken by purse seiners that also fish for other pelagic species (e.g., anchovy, mackerel, sardines). According to government regulations, the jack mackerel in Peru may only be used for human consumption. Ecuador constitutes the northern fringe of the distribution of jack mackerel. Here the fish only occur in certain years, when the local purse seiners may take substantial quantities (70,000 tons in 2011). Part of the catch is processed into fish meal but recently jack mackerel has been promoted to be used for human consumption. 
+
+The distant water fleets operating for jack mackerel outside the EEZs have been from a number of parties including Belize, China, Cook Islands, Cuba, European Union (Netherlands, Germany, Poland and Lithuania), Faroe Islands, Korea, Japan, Russian Federation, Ukraine and Vanuatu. These fleets consist exclusively of pelagic trawlers that freeze the catch for human consumption. In the 1980s a large fleet from Russia and other Eastern European countries operated as far west as 130° W. After the economic reforms in the communist countries around 1990, the fishery by these countries in the eastern Pacific was halted. Foreign trawlers returned to the waters outside the EEZs of the coastal states in 2003.  
+
+The fishery in Chilean and offshore waters targets jack mackerel. In the offshore fishery, the catch consists of 90 – 98% jack mackerel, with minor bycatch of chub mackerel (*Scomber japonicus*) and Pacific bream (*Brama australis*). The available time series of jack mackerel catches in the south-eastern Pacific by Member are documented in the annual catch compilation; the fleet totals used here are shown in @fig-catchbyfleet and @tbl-catch-fleet.
+
+## Management
+Jack mackerel were managed by coastal states beginning in the mid-1990s. National catch quotas for jack mackerel were introduced by Peru in 1995 and by Chile in 1999. Peru introduced a ban on the use of jack mackerel for fish meal in 2002. For the international waters, the first voluntary agreement to limit the number of fishing vessels was introduced in 2010. Catch limits for jack mackerel were established for the south-eastern Pacific starting from 2011.   
+
+## Information on the environment in relation to the fisheries
+Important environmental events such as the El Niño effect of 2016 affect oceanographic dynamics. During such events, the depth of the 15 °C isotherm and oxycline change significantly affecting the spatial distribution of jack mackerel and their availability in different regions (see for example the work of the Habitat Monitoring Working Group of the Scientific Committee as reported in previous meetings of the Scientific Committee). The extent that such changes affect the overall population productivity is unclear. 
+
+## Reproductive Biology
+The main spawning season happens from October to December; however, spawning has been described from July to March. Gonadosomatic index and egg surveys have been used to determine the time of spawning.
+
+# Data used in the assessment
+
+## Current data and provisional values
+
+The assessment retains four fisheries: North Chile purse seine, South-Central Chile purse seine, FarNorth, and Offshore trawl. The data bridge updates catches through 2025, adds provisional 2026 catches, and incorporates revised fishery compositions, weights at age and abundance indices. The 2026 observations describe the part of the year available at assessment time; 2026 catches are model inputs based on the current annual estimates. They should be distinguished from completed annual landings.
+
+The active Model 1.06 contains **six abundance indices**: Chile Acoustic Central-South, Chile Acoustic North, Chile CPUE, Peruvian artisanal CPUE, Peruvian industrial CPUE, and Offshore CPUE. The current data coverage and inputs are shown in @tbl-datused, @tbl-indices and @fig-metadata. The DEPM and Peruvian acoustic series discussed in earlier assessments and at the benchmark are absent from this annual model. Their workshop history remains relevant to the development record, while the tables below describe the actual 2026 inputs.
+
+The current model fleet catch totals are in @tbl-catch-fleet. Model 1.05 adds **22,799 t** of Chilean high-seas catch to the North Chile fleet in 2025. Model 1.06 adds **10,000 t** to the FarNorth fleet in 2026. The latter is an addition to the assessment catch total. The current input files and update script establish that allocation.
+
+## Benchmark review of fishery indices
+
+SCW16 selected the revised South-Central Chile CPUE index beginning in 1998, using the selected INLA standardization and annual coverage-adjusted uncertainty. The workshop agreed a 1% compounded efficiency adjustment through 2004 and a fixed multiplicative correction of 0.669 from 2005, with the EU objection recorded in the report. A diagnostic alternative with an estimated 2005 catchability change was also requested. Coverage was used to increase uncertainty in poorly sampled years, by dividing the base CV by the square root of annual coverage relative to maximum coverage. These are the benchmark decisions; the alternative trip-database index examined at SC14 is identified separately below [@jmwgb2026benchmark].
+
+Peruvian CPUE treatment changed after the benchmark. SCW16 preferred the shorter standardized combined series for 2015–2025. Post-benchmark Models 0.15/0.16 instead used separate nominal industrial and artisanal series for 2002–2025, removed the Peruvian CPUE catchability random walks, and applied coverage-based uncertainty. Industrial CPUE received a 1% annual efficiency adjustment; artisanal CPUE remained unadjusted. The documented uncertainty used a mean CV of 30%, annual coverage adjustment, and a 20% floor. A June implementation correction changed the industrial efficiency operation from multiplication to division, lowering the terminal industrial index; the artisanal series was unchanged. The 2026 bridge updates these separate series [@modeldevelopments2026; @jmwgmse2026workshop].
+
+The offshore CPUE combines observations across the participating offshore fleets. Its 2026 assessment update extends through 2025. Changes in this index, the Chilean index and the North Chile acoustic survey motivate the index-influence analyses described under Results. CPUE reflects both abundance and availability to the sampled fleet; changes in fishing location, targeting, catchability and sampling coverage require consideration alongside modelled stock-wide biomass.
+
+## Survey indices and composition data
+
+SCW16 retained the design-based Chile Acoustic North biomass series. Spatio-temporal acoustic analyses remained diagnostic and research options. Subsequent 2026 Model 1.01 removes the pre-2006 Acoustic North observations; this treatment is inherited by Model 1.06. The 2026 North Chile acoustic estimate and associated age compositions and weights at age enter the annual data bridge. The decline in that survey index is a regional observation and should be interpreted separately from the estimated trend in total stock spawning biomass [@jmwgb2026benchmark; @assessment2026].
+
+For Peru, SCW16 agreed to replace the older acoustic series with seasonal **availability indices** and associated survey length compositions. Survey sample-size vectors were based on tows containing jack mackerel, capped at 30 and then rescaled to mean 15. These workshop choices describe a development stage; the present annual Model 1.06 omits the Peruvian acoustic indices. This distinction also separates the Peruvian CPUE update from acoustic information.
+
+SCW16 retained fork-length data and matching growth units for the FarNorth fishery, using 10–50 cm model bins with a 50 cm plus group. Its fishery length-composition sample-size vector was rescaled to mean 30. This fishery weighting differs from the survey weighting described above. The input compositions and weights used by the current annual model are provided in the tables and figures below [@jmwgb2026benchmark].
+
+## Biological Parameters
+The maturity-at-age for jack mackerel in Chile was estimated by @leal2012reproductive and has been updated by applying the new ageing criteria [@cerna2022lifehistory] to the otoliths and histological maturity data collected between September 2011 and January 2012. Overall, the changes caused by the new aging criteria led to the understanding of a faster-growing species that is earlier to mature. Maturity-at-length was consistently observed with L~50~ at about 22-23 cm fork length (FL). The maturity-at-age values, for the single/Southern stock and those for the far north stock, are shown in @tbl-matatage.
+
+To fit the length composition data from the far north fleet, a growth curve was used to convert age compositions predicted by the model to predicted lengths, with the conversion occurring within the model. The values for the von Bertalanffy growth parameters are given in @tbl-pars. It was noted in SC10 that the growth parameters reflected fish Total Length, whereas the data were in Fork Length. The parameters were since corrected. Ageing imprecision was previously acknowledged using an age-error matrix, as shown in @tbl-ageerror. However, because this matrix is based on expert judgement instead of empirical data, the discussions during SC4 led to selecting the assessment model with this ageing error option turned off. The option also remains off in the current 2026 configurations.
+
+Mean weight-at-age is required for all fishing fleets and biomass indices in order to relate biomass quantities to the underlying model estimates of jack mackerel abundance (in numbers). The four weight-at-age matrices for the fishing fleets correspond to: Fleet 1 (northern Chile), Fleet 2 (south-central Chile), Fleet 3 (the far north fleet) and Fleet 4 (the offshore trawl fleet). These values are shown in @tbl-wtatage-f1, @tbl-wtatage-f2, @tbl-wtatage-f3, and @tbl-wtatage-f4. Historically, missing weight-at-age data were replaced with data from the previous year. In SCW14, it was recommended that those missing data be replaced with appropriate fleet-specific mean values from the previous five years instead. This procedure was adopted in SC11.
+
+For the Chilean fleets, the mean weight-at-age was calculated by year by taking the mean length-at-age in the catch and a length-weight relationship derived for the year. Before SC3, the same weight-at-age matrix was used for the Northern Chilean Fleet (Fleet 1) and the Southern Chilean Fleet (Fleet 2). Beginning in SC3, a weight-at-age matrix specific for Northern Chile was applied. The method used two information sources: the length-age keys and the parameters of the weight-at-length relationship from IFOP’s monitoring programme of the Chilean fisheries. The information was separated into two zones which correspond to fishing areas (and acoustic surveys) that occur in Chile. Annual weight-at-length relationship was fitted to the data by each fleet independently, and these relationships were applied to mean length-at-age within each zone, resulting in the weights-at-ages seen in @tbl-wtatage-f1 and @tbl-wtatage-f2. The information covers the period 1974-`r curryr`; for earlier years the weight-at-age from 1974 was used.
+
+For the far north fleet, biological sampling data were collected by length and converted post-hoc to weights-at-age. Weight-length parameters for the von Bertalanffy weight-length curve [@vonbertalanffyQuantitativeLawsMetabolism1957] were estimated annually from these biological sampling data. The calculated weight-length parameters were then converted to weight-at-age by applying a mean length-at-age vector, calculated using a fixed (non-annually-varying) von Bertalanffy growth curve (L~∞~ = 80.77, t~0~ = -0.356, k = 0.155, L~0~ = 15.31). These growth parameters are different from the ones used in the assessment [@tbl-pars], as they are based on Total Length, whereas the assessment uses parameters based on Fork Length. A procedure was developed (and adopted in SC11) to convert the mean length-at-age vector to a mean weight-at-age vector for the given year [@tbl-wtatage-f3]. This procedure was designed to better reflect the dynamics of the far north fishery, and to match the assessment model used for the Peruvian Area of National Jurisdiction (ANJ). Prior to SC11, the far north fleet weights-at-age for 2015-2022 were fixed at historical mean values.
+
+The weights-at-age for the offshore fleet were derived from EU and Russian age-length keys as well as age-length keys from the south-central Chilean fleet. The EU and Russia reported both age, length, and weight data, allowing for weight-at-age to be reported for their catches based on observer programme data compiled in 2019. For China, Vanuatu and Korea, length-weight information is transformed using quarter-specific age-length keys. For most countries in this fleet, weight-at-length information is available. In some years, however, including 2018, weight-at-length data from the Chinese fleet were missing, which resulted in the use of the length-weight relationship from the south-central Chilean fleet. As of SCW14, due to the update in the Chilean ageing criteria, these weight-at-age data were updated for the time series beginning in 2015 (@tbl-wtatage-f4).
+
+In SCW14, the [Natural Mortality Tool](https://connect.fisheries.noaa.gov/natural-mortality-tool/) was used to derive values of M range from roughly 0.1 to 0.35 with a mode at 0.28. The L~∞~ was assumed to be 80.4cm, k was assumed at 0.16 and t~0~ at –0.356. The value of 0.28 was used for the assessment beginning in SC10. In the current model, M is fixed at 0.28 yr⁻¹ for the single stock and for the southern component under the two-stock hypothesis, and at 0.33 yr⁻¹ for the Far North component. Each value is constant over ages and years within its component (@tbl-pars).
+
+
+For the 2026 working model, the 2025 and 2026 Offshore fleet weights at age are replaced by the **2020–2024 mean**. This is the five-year period implemented in the update script and reproduced in the current input files. The associated CPUE weights are updated consistently. The resulting inputs are shown in @tbl-wtatage-f4 and @fig-wtatagefsh.
+
+# The assessment model
+
+## Population dynamics and estimation
+
+The Joint Jack Mackerel Model (JJM) is an age-structured statistical catch-at-age model implemented in AD Model Builder. It combines catches, age and length compositions, biological inputs and abundance indices to estimate recruitment, stock size and fishing mortality. The annual model covers 1970–2026 and ages 1–12+, with a plus group at age 12. Recruitment occurs at age 1. The current model evaluates spawning biomass 9.5 months into the year (spawning-month input 10.5), approximately mid-October; this model timing differs from the seasonal biological description above. The population dynamics use natural mortality and fleet-specific fishing mortality, with a Beverton–Holt stock–recruitment relationship and productivity regimes. Model equations and definitions are summarized in @tbl-symbols and @tbl-eqs; the full technical background is provided by the [JJM user guide](https://www.sprfmo.int/assets/Meetings/02-SC/12th-SC-2024/Jack-Mackerel/SC12-JM08-PER-Joint-Jack-Mackerel-Model-User-Guide.pdf) [@beverton1957dynamics; @fournier2012ad].
+
+Catch and abundance-index observations enter through lognormal components. Age and length compositions enter through multinomial components scaled by their effective sample sizes. Priors and smoothing penalties constrain biological, recruitment and selectivity parameters. The current index uncertainties and composition sample sizes are derived from the input data, with annual coverage adjustments where specified; a constant CV description would therefore be inappropriate for all series. Parameter estimation proceeds in phases. The saved mode, retrospective analyses and separate MCMC exploration provide different types of diagnostic evidence [@francis2011data].
+
+The single-stock hypothesis (`h1`) models one shared stock. The two-stock hypothesis (`h2`) separates southern and Far North components. Both remain in the assessment programme. The FarNorth fishery and its indices inform the northern component in `h2`; the North Chile, South-Central Chile and Offshore fisheries inform the southern component. Comparing the two hypotheses helps evaluate stock-structure uncertainty.
+
+## Development from the benchmark to SC14
+
+The workshop model labels and annual assessment labels refer to different stages. SC13 Model 1.14 was the workshop starting model (0.00). Benchmark development led to Model 0.14; post-benchmark Model 0.15 split Peruvian nominal CPUE into two series, and Model 0.16 combined the Far North productivity regimes under `h2`. The `h1` biological and data specifications were unchanged between 0.15 and 0.16. The development files show DEPM removed by workshop Model 0.12 and the Peruvian acoustic availability indices removed by 0.14. The annual SC14 Model 0.00 starts from the post-benchmark Model 0.16 configuration [@modeldevelopments2026].
+
+The June model review considered reduced FarNorth selectivity parameterization and a differentiable penalty discouraging implausibly high mean fishing mortality at ages 2–5. The annual 2026 assessment subsequently incorporated new data and model sensitivities. Improvements in total objective function include changes in penalties, so they require examination alongside the direct data likelihoods [@jmwgmse2026workshop].
+
+The SC14 data bridge (Models 0.01–0.10) adds updated catches, fishery compositions, fishery weights, Offshore and Chilean CPUE, Peruvian CPUE, and the 2026 North Chile acoustic data. Model 1.00 updates the control settings for the new terminal year. The subsequent comparisons are:
+
+- **1.01:** remove pre-2006 North Chile acoustic observations.
+- **1.02 and 1.03:** evaluate the Chilean fishing-trip CPUE series (SC14-JM15), including a version excluding its 2026 value. These are sensitivity alternatives.
+- **1.04:** continue from 1.01 and replace 2025–2026 Offshore weights at age with the 2020–2024 mean.
+- **1.05:** add 22,799 t of 2025 Chilean high-seas catch to North Chile.
+- **1.06:** add 10,000 t to FarNorth catch in 2026; this is the current working base under both stock hypotheses.
+
+The complete bridge is shown in @tbl-modruns. Where older run descriptions differ from the implemented changes, this annex follows the current script and input files, particularly for the Offshore weight averaging period and the FarNorth catch addition [@assessment2026].
+
+## Reference points and projection conventions
+
+Three reference-point constructions need to remain explicit. The model estimates annual equilibrium MSY quantities from biological, selectivity and recruitment assumptions. The assessment convention for the fixed biomass target is the mean of annual model-estimated B~MSY~ over the most recent ten years, **2017–2026** in this update. The status table and assessment summary figures below use that fixed mean; the annual F/F~MSY~ values use their corresponding annual model estimates.
+
+A separate dynamic biomass reference can describe stock status relative to the unfished biomass implied by the estimated recruitment history:
+
+$$
+B_{\mathrm{MSY},y}^{\mathrm{dynamic}} =
+\left(\frac{B_{\mathrm{MSY}}}{B_0}\right) B_{0,y}^{\mathrm{dynamic}}.
+$$
+
+Here $B_{0,y}^{\mathrm{dynamic}}$ is unfished spawning biomass in year $y$ under the corresponding recruitment history. The chosen $B_{\mathrm{MSY}}/B_0$ ratio and its reference period are part of the definition. For MCMC-based calculations, the ratio and dynamic unfished series are paired **within the same draw**. This construction is separate from the fixed ten-year biomass target used in the status and risk tables.
+
+The canonical annual-report source contains a call to `fixed_bmsy(dyn = TRUE)`, whereas the installed `jjmR` function used for the saved annex supports the fixed ten-year convention. A separately repaired report snapshot calculates the dynamic diagnostic directly. Reconciliation of the canonical source remains a follow-up item; the numerical status table here uses the explicitly labelled fixed reference. The exploratory MCMC Kobe display has its own reference definition and validation status.
+
+The saved calculations retain separate annual, 15-year and three-completed-year selectivity paths. The annual MSY series used in the fixed 2017–2026 biomass target uses each year's selectivity. The `jjm.tpl` version used for the 11 September projections reports global MSY with the 15-year mean (2011–2025), while projection scenario 4 both optimizes and applies a separate F~MSY~ using `sel_fut` (2023–2025 when `fut_sel = 3`). The ten-year risk tables use those saved projections and their recalculated ADMB standard errors. These paths and their numerical values are distinguished in @sec-reference-diagram.
+
+The saved low-productivity projection variants (`r paste0(h1nm, ".ls")` and `r paste0(h2nm, ".ls")`) use steepness **0.65**. The recruitment period is **2001–2015** for the single stock and southern component, and **1970–2016** for the Far North component. Their projection figures are conditional scenarios. Catch advice requires reconciliation of the scenario definitions, fleet allocation, recruitment and selectivity assumptions, and final agreed reference points.
+
+{{< include annex_reference_points.qmd >}}
+
+# Results
+
+## Current working stock estimates
+
+The current estimates are given in @tbl-status-2026. SSB and B~MSY~ are expressed in million tonnes (Mt); the underlying model biomass output is in thousand tonnes. The 2026 SSB estimate for the single-stock model is about 6.11 Mt, compared with 6.03 Mt in 2025. Its ratio to the fixed 2017–2026 mean B~MSY~ is about 0.89. The two-stock estimates differ, particularly for the Far North component. These are conditional estimates from the working configurations.
+
+```{r}
+#| label: tbl-status-2026
+#| tbl-cap: "Working 2026 assessment estimates. Mean BMSY is the fixed 2017–2026 mean of annual model estimates. F/FMSY is the 2026 annual ratio. These values use saved Model 1.06 results and retain preliminary assessment status."
+status_table |>
+  mutate(across(where(is.numeric), ~ round(.x, 3))) |>
+  flextable() |>
+  autofit()
+```
+
+The North Chile acoustic-index decline from approximately 3.06 Mt in 2025 to 0.64 Mt in 2026 differs from the single-stock model's slight increase in SSB. The survey measures a regional signal and has its own spatial coverage, timing and availability effects. ENSO and changes in distribution remain hypotheses to examine alongside sampling and fishery behaviour. Inferring whole-stock biomass change requires integrating this regional signal with the other surveys, fishery data and model diagnostics. The model fits and index-influence analyses show how these observations affect the integrated assessment [@assessment2026].
+
+{{< include annex_risk.qmd >}}
+
+## Fits and retrospective patterns
+
+The appended figures show fishery age and length fits, index fits, mean ages and lengths, selectivity patterns and summary trajectories for the current models. These provide the evidence for evaluating tensions among data sources. They replace the previous annex's claims about the fit of SC13 Model 1.14.
+
+At each peel's final fitted year, the five-peel SSB Mohn's rho is **`r h1_mohn_ssb`** under the single-stock hypothesis, **`r h2_mohn_ssb_s1`** for the southern component and **`r h2_mohn_ssb_s2`** for the Far North component. The SSB figure titles use each peel's extra forecast year from the saved series, giving **`r h1_mohn_ssb_endpoint`**, **`r h2_mohn_ssb_endpoint_s1`** and **`r h2_mohn_ssb_endpoint_s2`**, respectively. The two sets therefore describe different endpoints. The larger southern retrospective pattern under `h2` warrants attention when comparing stock hypotheses and interpreting terminal estimates. Recruitment retrospectives are also shown. These diagnostics describe revision patterns within the fitted models; they provide a separate check from comparisons between successive annual assessments.
+
+## Leave-one-in and leave-one-out analyses
+
+The September 2026 single-stock analyses compare the all-data base `h1_1.06` with Models `h1_3.01`–`h1_3.08`. The four tested index groups are Chile CPUE, Offshore CPUE, both Peruvian CPUE series together, and North Chile acoustics. LOI Models 3.01–3.04 retain one of these groups at its base weight; LOO Models 3.05–3.08 reduce the influence of each group in turn. In this implementation, exclusion means multiplying the selected index errors by 100. Catches and composition data remain in the likelihood.
+
+LOI results retain the highest recent biomass when North Chile acoustics or the paired Peruvian CPUE series retain their base weights. Among the LOO runs, reducing the influence of Chile CPUE gives the largest increase in 2026 SSB, whereas reducing North Chile acoustics decreases it. Offshore and Peruvian CPUE exclusions have smaller effects. The comparisons diagnose sensitivity to index weighting and conflict among signals; they support discussion of the input uncertainties and model assumptions. The LOI/LOO report [@loiloo2026] provides the common-axis comparisons and full run definitions.
+
+## Replacement-yield checks
+
+The 11 September replacement calculation solves **B~2028~ = B~2027~**, using the projection SRR, future selectivity, stock-specific fleet shares and the same trial fishing rate in both spawning years. It calculates catch in 2027 with the Baranov equation and retains survivors from the terminal plus group. All six model/component checks attain a root, with native reported absolute biomass residuals below 0.001 kt; independent reconstruction from rounded report values agrees within reporting precision. Under the precautionary `.ls` assumptions, replacement catches are **1,104.7 kt** for the single stock, **895.5 kt** for the southern component and **15.7 kt** for Far North. Corresponding base-run values are **1,273.3**, **1,118.0** and **15.7 kt**. These consecutive-year results replace the earlier `jjm2` diagnostics for a different B~2028~ = B~2026~ target and mean-recruitment assumption. Those earlier diagnostics remain part of the assessment history. The consecutive-year calculation addresses the supplied Annex K replacement condition; application of the full rule still requires the other decision inputs in @sec-annex-k-guidance.
+
+## Exploratory uncertainty analysis
+
+A separate ADNUTS analysis of `h1_1.06` used three chains, 2,000 iterations per chain including 1,000 warmup iterations, and 3,000 retained draws. It completed without divergences or tree-depth saturation, but **366 of 1,593 active parameters** failed one or more diagnostic screens. Maximum R-hat was about 1.055, and minimum bulk and tail effective sample sizes were about 83 and 150. The derived summaries also contain diagnostic failures. Intervals, annual green probabilities and the 100 historical Kobe trajectories therefore remain exploratory.
+
+That Kobe display uses each draw's mean SSB~MSY~ for 2017–2026 and the matching annual F~MSY~. Its biomass reference is the fixed ten-year mean. The outputs illustrate assessment uncertainty and mixing problems; definitive posterior probabilities require satisfactory sampling diagnostics [@ianelli2026adnuts].
+
+# Management advice and decision status
+
+{{< include annex_srr_convention.qmd >}}
+
+This annex records the assessment evidence available through 11 September 2026. Final Committee conclusions and catch recommendations require the agreed text, date and report reference. The 2025 annex's TAC alternatives for 2026 remain part of the SC13 history [@sprfmo2025annex]; the present working assessment provides the updated evidence for the coming management period.
+
+The supplied 2022 SCW14 Annex K proposal is incorporated in @sec-annex-k-guidance, including its coming-year biomass test, dynamic limit, trial/replacement-catch comparisons and specified 15% stability provisions. Its documented proposal status is retained pending the applicable agreed management record.
+
+Advice for the coming management period requires confirmation of the annual assessment configuration, the biomass-reference convention and projection assumptions, followed by the agreed Committee catch recommendation. The recorded catches, recruitment assumptions and stock allocations should accompany any projection used in that decision.
+
+## 1-stock {#sec-management-1-stock}
+
+Under the single-stock hypothesis, `h1_1.06` provides the base assessment and the long-term SRR basis for the biomass target. Its SRR uses **2000–2023**; the fixed 2017–2026 mean B~MSY~ is **6.869 Mt**. The current working stock estimates are in @tbl-status-2026.
+
+The `h1_1.06.ls` projections follow the precautionary SRR convention, using **2001–2015** recruitment productivity. Steepness remains **0.65** in the base and projection runs. Projected biomass and catch are summarized in @tbl-risk-h1, with biomass probabilities evaluated against the **base-model target**. The projection variant's own equilibrium B~MSY~ is a separate quantity.
+
+For the supplied Annex K guidance, the decision input is a stated **2027 spawning-biomass forecast**. The corrected single-stock replacement calculation gives **1,104.7 kt** under precautionary `.ls` recruitment, with B~2028~ equal to B~2027~ under the same trial F. The updated fixed-F and supplied-TAC scenarios provide projection evidence for the advice discussion; implementing the full rule also requires the dynamic limit, replacement-catch comparison and applicable TAC stability provisions described in @sec-annex-k-guidance.
+
+## 2-stock {#sec-management-2-stock}
+
+Under the two-stock hypothesis, `h2_1.06` separates the **southern** and **Far North** components. Each component retains its own SRR, biomass target and projection results.
+
+**Southern component.** The base SRR uses **2000–2023** and the precautionary `h2_1.06.ls` SRR uses **2001–2015**, with steepness **0.65** in both. Its fixed base-model B~MSY~ target is **6.524 Mt**. The updated southern projection risks are shown in @tbl-risk-h2-south. The corrected precautionary replacement calculation gives **895.5 kt**, with a successful root for B~2028~ equal to B~2027~.
+
+**Far North component.** The base and `.ls` configurations both retain the **1970–2016** SRR period and steepness **0.65**. Its fixed base-model B~MSY~ target is **1.305 Mt**. The component's updated projections and probabilities are shown separately in @tbl-risk-h2-north. The corrected consecutive-year replacement calculation attains a small positive catch of **15.7 kt**, replacing the earlier failed boundary diagnostic for a different target.
+
+Applying the supplied HCR under this hypothesis requires a stated coming-year biomass forecast and matched dynamic limit for the relevant component, together with an explicit decision on how component-level criteria and fleet allocations translate into catch advice. The different recruitment assumptions and replacement diagnostics should accompany any comparison with the 1-stock hypothesis.
+
+# Assessment issues and follow-up
+
+The benchmark and SC14 assessment analyses identify the following continuing priorities:
+
+- **Abundance and availability:** explain the contrasting Chile CPUE, Offshore CPUE and North Chile acoustic signals using sampling coverage, standardization, survey footprint, targeting and environmental information. Evaluate the joint influence of the separate Peruvian CPUE series.
+- **Biological and composition inputs:** review weight-at-age substitutions, length conventions, age-reading consistency and effective sample sizes, with attention to the FarNorth fleet and the recent Offshore data.
+- **Stock structure and diagnostics:** assess the larger southern retrospective pattern under `h2`, resolve MCMC mixing problems, and preserve the distinction between penalized objective-function improvements and improvements to direct data fits.
+- **Reference points and projections:** reconcile the dynamic-B~MSY~ implementation, retain the pairing of within-draw reference points, confirm future-selectivity and recruitment settings, review the corrected consecutive-year replacement calculation, resolve the interaction of biological catch ceilings and the 15% stability bounds, and review low-catch projection behavior.
+- **Assessment and advice record:** incorporate the agreed SC14 paragraphs when available, including their qualifications and report reference; document the assessment configuration, projection scenario and reference-point conventions supporting the catch recommendation.
+
+The benchmark report and SC14 working assessment provide the supporting discussion [@jmwgb2026benchmark; @assessment2026]. Completed analyses and formal Committee conclusions should each retain their source and date.

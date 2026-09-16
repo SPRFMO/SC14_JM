@@ -1,0 +1,98 @@
+## Projection risk summary {#sec-risk-summary}
+
+@tbl-risk-h1, @tbl-risk-h2-south and @tbl-risk-h2-north summarize the six fishing scenarios from the saved low-productivity projection runs. Spawning biomass (B) and catch are in **thousand tonnes (kt)**. The tables show biomass and the approximate probability of exceeding B~MSY~ at **2, 5 and 10 years after 2026: 2028, 2031 and 2036**, plus catches in 2027–2028. The projections cover 2027–2036 and were recalculated on **11 September 2026**, including ADMB standard errors, with the `jjm.tpl` version identified in the run manifest. Later source revisions are outside this saved result set.
+
+The biomass threshold is the **fixed 2017–2026 mean B~MSY~ from the corresponding base Model 1.06**, consistent with @tbl-status-2026. All three components use steepness 0.65. The single stock and southern component use the 2001–2015 recruitment period; the Far North component retains 1970–2016. Probabilities follow the existing JJM risk-table method, using the projected biomass estimate and its reported ADMB standard error:
+
+$$
+P(B_y>B_{\mathrm{MSY}})\;\simeq\;
+1-\Phi\left(\frac{B_{\mathrm{MSY}}-\widehat B_y}{\mathrm{SE}(\widehat B_y)}\right).
+$$
+
+These are conditional normal approximations with the reference point held fixed. They measure exceedance in each stated year. The probability of remaining above a threshold throughout a period requires a separate calculation, as do the exploratory MCMC summaries.
+
+**Saved TAC scenario.** Scenario 5 retains the 11 September implementation and its realized catches. With the supplied input of **1,674.975 kt**, the saved 2027 catch is **1,491.6 kt** under `h1` and **1,656.65 kt** in total under `h2` (1,489.38 kt southern and 167.27 kt Far North). These catches differ from the input and vary over the projection. This archived scenario therefore describes its recorded catches; use as a projection of a specified annual TAC requires a separately validated run that achieves that TAC in each intended year. The subsequent catch-solver revision is outside the saved results displayed here.
+
+For the **1-stock table, both model runs contribute**: the ten-year extension of `h1_1.06.ls.ctl` supplies projected biomass and its newly calculated ADMB standard error; `h1_1.06.ctl` supplies the base-model B~MSY~ threshold through the original `h1_1.06_1_R.rep`. The precautionary run's own B~MSY~ estimate is separate from the threshold used here. For example, updated scenario 4 in 2028 gives $\widehat B = 5774.30$ kt and $\mathrm{SE}=1147.25$ kt. With the base threshold $6869.029054$ kt, the calculation is $1-\Phi[(6869.029054-5774.30)/1147.25]=0.169986$, displayed as **17%**. Uncertainty in the B~MSY~ threshold is excluded.
+
+**Calculation and run provenance:** global MSY uses `sel_msy` (2011–2025), while scenario 4 both calculates and applies its own `Fmsy_proj` using `sel_fut` (2023–2025), the same future selectivity used in scenarios 1–3. Fitted assessment parameters were held at their saved values; future recruitment deviations were extended with zeros and the Hessian and derived standard errors were recomputed. The original fixed base biomass targets are retained. [Annual risk data](../data/projections/risk-data.csv) and the [run manifest](../data/projections/manifest.json) provide the values, controls, source hash and validation record. Earlier five-year validation files belong to the calculation history; the ten-year records support the tables below.
+
+The supplied 2022 Annex K proposal (@sec-annex-k-guidance) also uses a dynamic limit, 80% and 100% biomass bands, replacement catch and specified TAC stability constraints. These tables describe fixed-BMSY exceedance under saved scenarios. Limit-breach probability and application of the complete harvest control rule require the additional definitions and calculations described in that section.
+
+```{r}
+#| label: build-risk-summary
+#| include: false
+risk_years <- c(2028L, 2031L, 2036L)
+risk_catch_years <- c(2027L, 2028L)
+risk_scenario_order <- c(6L, 2L, 1L, 3L, 4L, 5L)
+source(file.path(report_dir, "..", "R", "risk_data.R"), local = TRUE)
+risk_data <- calculate_risk(normalizePath(file.path(report_dir, "..")))
+write.csv(risk_data, file.path(derived_dir, "risk-data.csv"), row.names = FALSE)
+stopifnot(nrow(risk_data) == 180L, all(risk_data$SSB_SE_kt > 0),
+          max(abs(risk_data$Probability_above_percent - 100 * pnorm(
+            risk_data$BMSY_kt, risk_data$SSB_kt, risk_data$SSB_SE_kt,
+            lower.tail = FALSE))) < 1e-10,
+          all(risk_data$Probability_above_percent >= 0 &
+              risk_data$Probability_above_percent <= 100))
+for (hyp in c("h1", "h2")) {
+  base <- if (hyp == "h1") h1_mod else h2_mod
+  for (stock in seq_along(base[[1]]$output)) {
+    ref <- base[[1]]$output[[stock]]$msy_mt
+    threshold <- mean(ref[match(2017:2026, ref[, 1]), 10])
+    x <- filter(risk_data, Hypothesis == hyp, Stock == stock)
+    stopifnot(all(abs(x$BMSY_kt - threshold) < 1e-8),
+              all(table(x$Scenario_ID) == 10), setequal(x$Year, 2027:2036))
+  }
+}
+risk_display_data <- function(hyp, stock) {
+  x <- risk_data |> filter(Hypothesis == hyp, Stock == stock)
+  biomass <- x |> filter(Year %in% risk_years) |>
+    select(Scenario_ID, Scenario, Year, SSB_kt, Probability_above_percent) |>
+    mutate(SSB_kt = round(SSB_kt),
+           Probability_above_percent = case_when(
+             Probability_above_percent < 1 ~ "<1",
+             Probability_above_percent > 99 ~ ">99",
+             TRUE ~ as.character(round(Probability_above_percent)))) |>
+    pivot_wider(names_from = Year, values_from = c(SSB_kt, Probability_above_percent),
+                names_vary = "slowest")
+  catches <- x |> filter(Year %in% risk_catch_years) |>
+    select(Scenario_ID, Year, Catch_kt) |> mutate(Catch_kt = round(Catch_kt)) |>
+    pivot_wider(names_from = Year, values_from = Catch_kt, names_prefix = "Catch_")
+  biomass |> left_join(catches, by = "Scenario_ID") |>
+    arrange(match(Scenario_ID, risk_scenario_order)) |> select(-Scenario_ID)
+}
+risk_table <- function(hyp, stock) {
+  risk_display_data(hyp, stock) |> flextable() |>
+    set_header_labels(Scenario = "Fishing scenario",
+      SSB_kt_2028 = "B 2028", Probability_above_percent_2028 = "P(B > Bmsy) in 2028",
+      SSB_kt_2031 = "B 2031", Probability_above_percent_2031 = "P(B > Bmsy) in 2031",
+      SSB_kt_2036 = "B 2036", Probability_above_percent_2036 = "P(B > Bmsy) in 2036",
+      Catch_2027 = "Catch 2027", Catch_2028 = "Catch 2028") |>
+    compose(j = "Probability_above_percent_2028", part = "header",
+      value = as_paragraph(as_chunk("P(B > B"), as_sub("msy"), as_chunk(") in 2028"))) |>
+    compose(j = "Probability_above_percent_2031", part = "header",
+      value = as_paragraph(as_chunk("P(B > B"), as_sub("msy"), as_chunk(") in 2031"))) |>
+    compose(j = "Probability_above_percent_2036", part = "header",
+      value = as_paragraph(as_chunk("P(B > B"), as_sub("msy"), as_chunk(") in 2036"))) |>
+    colformat_double(j = c("SSB_kt_2028", "SSB_kt_2031", "SSB_kt_2036", "Catch_2027", "Catch_2028"), digits = 0) |>
+    fontsize(size = 9, part = "all") |> autofit()
+}
+```
+
+```{r}
+#| label: tbl-risk-h1
+#| tbl-cap: !expr paste0("Single-stock risk summary, h1_1.06.ls. B and catch are in kt; P(B > BMSY) is the approximate annual probability that B exceeds fixed BMSY = ", round(unique(filter(risk_data, Hypothesis == "h1")$BMSY_kt)), " kt. Probabilities are rounded to whole percentages; values below 1% or above 99% are shown as <1 or >99.")
+risk_table("h1", 1)
+```
+
+```{r}
+#| label: tbl-risk-h2-south
+#| tbl-cap: !expr paste0("Southern-component risk summary, h2_1.06.ls. B and catch are in kt; P(B > BMSY) is the approximate annual probability that B exceeds fixed BMSY = ", round(unique(filter(risk_data, Hypothesis == "h2", Stock == 1)$BMSY_kt)), " kt. Probabilities are rounded to whole percentages; values below 1% or above 99% are shown as <1 or >99.")
+risk_table("h2", 1)
+```
+
+```{r}
+#| label: tbl-risk-h2-north
+#| tbl-cap: !expr paste0("Far North-component risk summary, h2_1.06.ls. B and catch are in kt; P(B > BMSY) is the approximate annual probability that B exceeds fixed BMSY = ", round(unique(filter(risk_data, Hypothesis == "h2", Stock == 2)$BMSY_kt)), " kt. Probabilities are rounded to whole percentages; values below 1% or above 99% are shown as <1 or >99.")
+risk_table("h2", 2)
+```

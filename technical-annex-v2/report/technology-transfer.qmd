@@ -1,0 +1,119 @@
+---
+title: "Maintaining the Jack Mackerel Technical Annex"
+subtitle: "A handover for the next assessment scientist"
+author: "Jack Mackerel Working Group"
+date: "2026-09-15"
+lang: en
+format:
+  pdf:
+    toc: false
+  docx:
+    toc: false
+  html:
+    toc: true
+---
+
+# Start here
+
+The maintained annex is `technical-annex-v2/` in the **SC14_JM** repository.
+Open `output/technical-annex.html`, `.pdf` or `.docx`. Edit the plain-text
+files in `report/` and rebuild from this folder:
+
+```sh
+Rscript build.R           # annex and this guide in HTML
+Rscript build.R all       # HTML, PDF and Word
+Rscript build.R pdf annex # one document and format
+Rscript build.R check     # verify inputs and risk calculations
+```
+
+The build uses R and Quarto. PDF also needs XeLaTeX and the fonts in
+`report/_quarto.yml`. Installation commands are in `README.md`. The supplied
+`software/jjmR_1.2020.1.tar.gz` preserves the local package fixes used by the
+annex. The build records package versions, logs and product hashes in `validation/`.
+
+These are the saved September 2026 Model 1.06 working results. This migration
+changes the workflow and location; assessment findings and decision status remain
+as recorded in the annex. Running the build reads saved fits, calculates summaries
+and draws figures. A new assessment or projection requires a separate JJM run.
+
+# Follow the calculation
+
+| Source | R calculation | Result |
+|---|---|---|
+| `data/assessment/config/`, `input/`, `results/` | `R/prepare_report.R` reads four fits with `jjmR::readJJM` | Model objects, status and catch summaries in `data/derived/` |
+| Base `msy_mt` block | Mean of column 10 for 2017–2026 | Fixed BMSY for stock status and risk |
+| `data/projections/*_R.rep` | `R/risk_data.R` reads projected SSB and ADMB standard error | All 180 annual records in `data/derived/risk-data.csv` |
+| Saved fits and retrospectives | R chunks in `report/annex_tables.qmd` and `annex_plots.qmd` | Report tables and figures |
+| Text, tables and figures | Quarto assembles the includes in `report/technical-annex.qmd` | HTML, PDF and Word in `output/` |
+
+## Example probability
+
+For each stock, scenario and year, `R/risk_data.R` calculates:
+
+```r
+100 * pnorm(BMSY, mean = projected_SSB, sd = ADMB_SE,
+            lower.tail = FALSE)
+```
+
+The fixed target uses the **base** assessment; the projected biomass and standard
+error use the **.ls** ten-year projection. All quantities are in kt. The result is
+an annual conditional normal probability. The calculation holds BMSY fixed and
+excludes uncertainty in that threshold. R recalculates every record and compares
+it with the reviewed export before the report uses it.
+
+For single-stock scenario 4 in 2028, the target is 6,869.029 kt, projected SSB is
+5,774.3 kt and its standard error is 1,147.25 kt. The result is 16.999%, displayed
+as **17%**. The tables show 2028, 2031 and 2036: two, five and ten years after 2026.
+
+## Keep the reference points distinct
+
+The fixed risk target is a **2017–2026 mean of annual base BMSY**. The model's
+separate **global scalar BMSY** uses 2011–2025 mean selectivity. Scenario 4
+optimizes and applies its projection FMSY with 2023–2025 mean future selectivity.
+The equations and scalar values are in `report/annex_reference_points.qmd`;
+`data/projections/manifest.json` identifies the saved projection run and template.
+
+The original five-year projection plots remain historical comparisons. The risk
+tables use the separate ten-year products. Three explanatory diagrams and the
+reference-value tables retain reviewed September values; inspect their labels
+when changing models. Original diagram drawing scripts are preserved in the
+archive. These saved elements require an explicit update when new runs are adopted.
+
+# Make a change
+
+For prose, edit `report/annex_text.qmd` or the relevant included section. For
+literature, edit `report/refs.bib`. Keep figure and table labels stable. After a
+Word review, transfer agreed edits back into the `.qmd` source and rebuild.
+
+For a new assessment, complete and review the model run first. The optional R
+helper copies this release's explicit set of 24 assessment files into a **new**
+folder and checks that the fits and saved objects can be read:
+
+```sh
+Rscript R/snapshot_assessment.R /path/to/jjm /path/to/new-snapshot
+```
+
+Review that candidate before replacing `data/assessment/`. A new model or year
+requires reviewing the helper's selection, year/model settings, recruitment
+periods, retrospective years, reference values and projection horizons. Update
+the ten-year run products and their uncertainty calculation separately. Record
+the source revision and changes, then update `data/input-checksums.csv` only for
+the reviewed inputs. The inventory is deliberately checked rather than rewritten
+by a routine build.
+
+# Check and hand over
+
+Run `Rscript build.R check`, rebuild the required formats, and inspect status,
+reference and risk tables, figure captions and links. Build logs are in
+`validation/logs/`. `validation/build.csv` records each product's date and hash;
+`validation/R-session.txt` records the build environment. The migration check
+records what was compared with the previous package. Rendering and automated
+checks provide only part of accessibility validation; reading order and assistive
+technology still require review.
+
+Keep the whole `technical-annex-v2/` folder together. Its data links are relative,
+and the build needs no other local checkout. Historical sources and concise
+reviews are isolated in `archive/september-12-history.zip`. The parent repository's
+wiki has a separate build; it is independent of the annex's R workflow. Commit
+reviewed source and generated reports together when ready, and treat publication
+as a separate step.

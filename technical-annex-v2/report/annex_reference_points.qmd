@@ -1,0 +1,129 @@
+### Reference-point and projection diagram {#sec-reference-diagram}
+
+@fig-reference-pathways separates the reference values used to describe stock status from the scalar fishing rate used in projection scenario 4. The **single-stock example** uses the base Model 1.06 for status and its `.ls` variant for the saved low-productivity projections. The same calculations for all three stock components are tabulated below. The supplied 2022 Annex K guidance adds the catch-decision step described in @sec-annex-k-guidance.
+
+**Saved source and projections, 11 September 2026:** the `jjm.tpl` version identified in the [run manifest](../data/projections/manifest.json) reports global MSY using the default `sel_msy` average for 2011–2025, and separately optimizes `Fmsy_proj` using `sel_fut` for 2023–2025. Scenario 4 applies that same future selectivity when calculating mortality, spawning biomass and catch. These ten-year projections and their ADMB standard errors were recalculated at the saved assessment parameter values. The fixed base-model biomass targets retain their original annual-average definition. Later template revisions and executable changes require their own run validation before their results can replace this saved set.
+
+![Reference points and projection scenario 4 in the saved 11 September calculations. The fixed base biomass target comes from annual reference points. Scenario 4 calculates and applies FMSY with the same future selectivity; the global fifteen-year reference is reported separately.](reference-points-diagram.png){#fig-reference-pathways width=6.4in fig-alt="The fixed base target is 6.869 Mt. Scenario 4 uses FMSY 0.9252, optimized and applied with 2023–2025 selectivity and precautionary recruitment. Its 2028 biomass is 5.774 Mt and probability of exceeding the fixed target is 17 percent. The separate base global BMSY is 6.546 Mt using fifteen-year selectivity."}
+
+### Reference values
+
+| Base model / component | Annual 2026 FMSY | Annual 2026 BMSY (Mt) | Fixed 2017–2026 BMSY (Mt) |
+|---|---:|---:|---:|
+| h1_1.06 / Single stock | 0.7946 | 6.335 | 6.869 |
+| h2_1.06 / South | 0.8854 | 6.074 | 6.524 |
+| h2_1.06 / Far North | 0.1109 | 1.309 | 1.305 |
+
+: Annual base references from `msy_mt` columns 5 and 10, and the fixed ten-year mean of column 10. {#tbl-reference-annual}
+
+The scalar values below are named outputs from the saved 11 September `jjm.tpl` runs. Independent equilibrium calculations reproduce the global and projection optima for all six model/component combinations. The associated validation checks found that changing `fut_sel` between 0, 3 and 15 leaves the global reference unchanged; setting both windows to 15 gives matching global and projection optima for these constant-M configurations. [Reference values and replacement diagnostics](../data/projections/reference-values.csv) retain the native kt values.
+
+| Run / component | Global FMSY (15-year) | Global BMSY (Mt; 15-year) | Projection FMSY (3-year) | Projection equilibrium BMSY (Mt; 3-year) |
+|---|---:|---:|---:|---:|
+| h1_1.06 / Single stock | 0.3916 | 6.546 | 0.9128 | 6.434 |
+| h2_1.06 / South | 0.3855 | 6.040 | 0.9502 | 6.205 |
+| h2_1.06 / Far North | 0.0955 | 1.314 | 0.1120 | 1.293 |
+| h1_1.06.ls / Single stock | 0.3932 | 5.750 | 0.9252 | 5.667 |
+| h2_1.06.ls / South | 0.3874 | 5.096 | 0.9751 | 5.254 |
+| h2_1.06.ls / Far North | 0.0955 | 1.314 | 0.1120 | 1.293 |
+
+: Global and projection equilibrium reference points from the saved 11 September runs. The `.ls` projection FMSY values feed scenario 4. All scalar BMSY values remain separate from the fixed **base-model annual-average** risk thresholds. {#tbl-reference-scalar}
+
+All configurations use Beverton–Holt steepness 0.65. The base single and southern stocks fit recruitment over 2000–2023; their `.ls` variants use 2001–2015. The Far North stock uses 1970–2016 in both. This changes productivity as well as preserving the distinction between reference-point selectivity windows.
+
+### Equations behind the diagram
+
+Let $T=2026$, $k$ index fleets belonging to stock $s$, $a=1,\ldots,A$ index ages, and $A=12+$ denote the plus group. The model's $B$ is **spawning biomass**. Biomass and catch in the native report are in thousand tonnes (kt); the tables here divide biomass by 1,000 to show million tonnes (Mt). $F$ and $M$ are instantaneous annual rates. Selectivity $v$ retains the model's age scaling, so the reported $F$ is the sum of fleet means over model ages, rather than a fully selected maximum.
+
+The fleet allocation and trial fishing mortality are
+
+$$
+p_{k,t}=\frac{\sum_a F_{k,t,a}}{\sum_{k\in s}\sum_a F_{k,t,a}},
+\qquad F_{k,a}(f)=p_{k,t}\,f\,v_{k,a},
+\qquad Z_a(f)=M_a+\sum_{k\in s}F_{k,a}(f).
+$$ {#eq-ref-fishing}
+
+For one recruit, the equilibrium age distribution, spawning biomass per recruit and yield per recruit are
+
+$$
+\begin{gathered}
+\ell_1(f)=1,\\
+\ell_a(f)=\exp\!\left[-\sum_{j=1}^{a-1}Z_j(f)\right]\quad(a<A),\\
+\ell_A(f)=\frac{\exp[-\sum_{j=1}^{A-1}Z_j(f)]}{1-\exp[-Z_A(f)]},\\
+\phi(f)=\sum_a \ell_a(f)e^{-\tau Z_a(f)}w_a^{\mathrm{mat}},\\
+y(f)=\sum_{k\in s}\sum_a w_{k,a}^{\mathrm{fsh}}\ell_a(f)
+\frac{F_{k,a}(f)}{Z_a(f)}\left(1-e^{-Z_a(f)}\right).
+\end{gathered}
+$$ {#eq-ref-per-recruit}
+
+Here $w_a^{\mathrm{mat}}$ is population weight multiplied by maturity, and $\tau=(10.5-1)/12=9.5/12$ is the spawning fraction used by these runs. The active Beverton–Holt form (`SrType = 2`) is
+
+$$
+\begin{gathered}
+R(B)=\frac{B}{\alpha+\beta B},\\
+\alpha=\frac{B_0(1-h)}{4hR_0},\\
+\beta=\frac{5h-1}{4hR_0},\\
+R_{\mathrm{eq}}(f)=\frac{\phi(f)-\alpha}{\beta\phi(f)},\\
+Y_{\mathrm{eq}}(f)=R_{\mathrm{eq}}(f)y(f),\\
+B_{\mathrm{eq}}(f)=R_{\mathrm{eq}}(f)\phi(f).
+\end{gathered}
+$$ {#eq-ref-equilibrium}
+
+Thus $F_{\mathrm{MSY}}$ seeks the maximum of $Y_{\mathrm{eq}}(f)$ and $B_{\mathrm{MSY}}=B_{\mathrm{eq}}(F_{\mathrm{MSY}})$. In the saved template version, the annual report searches 501 logarithmically spaced trial rates from 0.0001 to 5 and retains feasible positive equilibria; the global scalar calculation uses eight Newton updates. The projection calculation locates a feasible interior maximum on a 101-point logarithmic grid and refines it with eight differentiable Newton updates, using the same equilibrium function for optimization and final evaluation. `Requil()` evaluates equilibrium recruitment without a $\exp(\sigma_R^2/2)$ multiplier.
+
+### Which quantities are used
+
+| Calculation | Selectivity and biological inputs | Use |
+|---|---|---|
+| Annual MSY series | Each year's selectivity, fleet shares, natural mortality, fishery weights and stock–recruit regime | `msy_mt`: annual $F_{\mathrm{MSY},t}$ and $B_{\mathrm{MSY},t}$ |
+| Fixed biomass target | Arithmetic mean of annual **base-model** $B_{\mathrm{MSY},t}$ for 2017–2026 | Stock-status summary and the restored projection-risk tables |
+| Global scalar MSY in `jjm.tpl` | `sel_msy`: mean selectivity for 2011–2025 when `msy_sel = 15`; terminal fleet shares and fishery weights, initial-year $M$, terminal stock–recruit regime | Reports `Fmsy_global`, `Bmsy_global` and `MSY_global` independently of projection selectivity |
+| Projection MSY and scenario 4 | `sel_fut`: mean selectivity for 2023–2025 when `fut_sel = 3`; terminal fleet shares, weights and $M$ | Optimizes `Fmsy_proj` and applies it to future numbers at age with the same `sel_fut` |
+
+The fixed target and annual fishing-mortality ratio are
+
+$$
+\overline B_{\mathrm{MSY}}^{\mathrm{base}}
+=\frac{1}{10}\sum_{t=2017}^{2026}B_{\mathrm{MSY},t}^{\mathrm{base}},
+\qquad
+\frac{F_T}{F_{\mathrm{MSY},T}}
+=\frac{\sum_{k\in s}\operatorname{mean}_a F_{k,T,a}}
+{F_{\mathrm{MSY},T}^{\mathrm{annual}}}.
+$$ {#eq-ref-status}
+
+The future-selectivity averages and scenario-4 fishing rates are
+
+$$
+\overline v_{k,a}^{15}=\frac{1}{15}\sum_{t=2011}^{2025}v_{k,t,a},
+\qquad
+\overline v_{k,a}^{3}=\frac{1}{3}\sum_{t=2023}^{2025}v_{k,t,a},
+\qquad
+F_{k,y,a}^{(4)}=p_{k,T}\,F_{\mathrm{MSY}}^{\mathrm{proj}}\,\overline v_{k,a}^{3}.
+$$ {#eq-ref-projection-f}
+
+With $Z_{y,a}=M_{T,a}+\sum_kF_{k,y,a}$, future biomass and catch follow the population forward from the fitted terminal age structure:
+
+$$
+\begin{gathered}
+N_{y,1}=R(B_{y-1})e^{\epsilon_y},\\
+N_{y+1,a+1}=N_{y,a}e^{-Z_{y,a}}\quad(a<A-1),\\
+N_{y+1,A}=N_{y,A-1}e^{-Z_{y,A-1}}+N_{y,A}e^{-Z_{y,A}},\\
+B_y=\sum_aN_{y,a}e^{-\tau Z_{y,a}}w_a^{\mathrm{mat}},\\
+C_y=\sum_{k\in s}\sum_aw_{k,T,a}^{\mathrm{fsh}}N_{y,a}
+\frac{F_{k,y,a}}{Z_{y,a}}\left(1-e^{-Z_{y,a}}\right).
+\end{gathered}
+$$ {#eq-ref-projection-population}
+
+The recruitment lag is one year in these runs. The terminal stock–recruit regime supplies $R(\cdot)$ and `rec_dev_future` supplies $\epsilon_y$. The population equations produce the finite trajectories `SSB_fut_4` and `Catch_fut_4`. The annex risk calculation compares the projected biomass distribution with the separate fixed base-model target, $P(B_y>\overline B_{\mathrm{MSY}}^{\mathrm{base}})$.
+
+Scenarios 1–3 apply 1, 0.75 and 1.25 times the terminal fleet mean $F$ with `sel_fut` when `fut_sel > 0`; scenario 6 sets $F=0$. Scenario 5 uses the supplied TAC input and a **terminal-year selectivity** path distinct from scenario 4. The realized catches in the saved scenario differ from the supplied TAC; @sec-risk-summary records those values and their interpretation.
+
+### Source and interpretation checks
+
+The equations above follow the 11 September `jjm.tpl` version's functions `get_future_sel`, `get_msy`, `projection_equilibrium`, `get_projection_msy`, `get_future_Fs`, `Future_projections`, `get_msy_robust`, `SRecruit` and `Requil`. The [validation record](../data/projections/model-validation.json) identifies the source hash and independent numerical checks, including all ten years of scenario-4 biomass and catch. Earlier five-year and intermediate scenario-4 validation records describe superseded calculations; the ten-year manifest and its matching validation define the results presented here.
+
+The saved base Model 1.06 assessment results used **`jjm2`**. The 11 September ten-year projections used a separately compiled **`jjm`** executable; their annual `msy_mt`, historical numbers at age and fitted fishing mortality reproduce the saved assessment values. The annual assessment script subsequently changed to call **`jjm`**. This document retains the saved outputs and the exact projection version identified by the manifest; a later executable path alone leaves their numerical provenance unchanged. The earlier `jjm2.tpl` replacement calculation is retained as historical context.
+
+`Sp_Biom_NoFish` supports a separate dynamic unfished-biomass series. Multiplying that series by a selected $B_{\mathrm{MSY}}/B_0$ ratio constructs a dynamic reference for comparison with biomass. The fixed target and scenario-4 population equations above retain their own definitions.
+
+{{< include annex_hcr_2022.qmd >}}

@@ -1,0 +1,46 @@
+project:
+  type: default
+  output-dir: ../output
+  render:
+    - technical-annex.qmd
+    - technology-transfer.qmd
+execute:
+  echo: false
+  warning: false
+  message: false
+  cache: false
+filters:
+  - ../R/word-contents.lua
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    number-sections: true
+    theme: flatly
+    css: styles.css
+    embed-resources: true
+    format-links: [pdf, docx]
+    code-fold: true
+    code-summary: Show supporting code
+  pdf:
+    documentclass: scrartcl
+    pdf-engine: xelatex
+    toc: true
+    toc-depth: 2
+    number-sections: true
+    fontsize: 10pt
+    papersize: a4
+    geometry: margin=20mm
+    colorlinks: true
+    fig-pos: H
+    mainfont: Times New Roman
+    sansfont: Arial
+    monofont: Courier New
+    latex-auto-install: false
+  docx:
+    toc: false
+    toc-depth: 2
+    number-sections: true
+    reference-doc: refdoc.docx
+    fig-width: 6.5
+    fig-height: 5

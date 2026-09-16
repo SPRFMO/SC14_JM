@@ -1,0 +1,251 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-09-12T11:37:41.378915+00:00",
+  "purpose": "Saved assessment inputs/products for Technical Annex v2 rendering; no refitting",
+  "source_jjm": "/Users/jim/_mymods/sprfmo/jjm",
+  "source_git_head": "a53473feebfd28417e85b80af77e82be56e01653",
+  "source_selected_file_git_status": "",
+  "destination": "/Users/jim/_mymods/sprfmo/jmMSE26/technical-annex-v2/data/assessment",
+  "models": [
+    {
+      "model": "h1_1.06",
+      "stocks": 1,
+      "files": [
+        "config/h1_1.06.ctl",
+        "input/1.06.dat",
+        "results/h1_1.06.par",
+        "results/h1_1.06.yld",
+        "results/h1_1.06_1_R.rep"
+      ]
+    },
+    {
+      "model": "h2_1.06",
+      "stocks": 2,
+      "files": [
+        "config/h2_1.06.ctl",
+        "input/1.06.dat",
+        "results/h2_1.06.par",
+        "results/h2_1.06.yld",
+        "results/h2_1.06_1_R.rep",
+        "results/h2_1.06_2_R.rep"
+      ]
+    },
+    {
+      "model": "h1_1.06.ls",
+      "stocks": 1,
+      "files": [
+        "config/h1_1.06.ls.ctl",
+        "input/1.06.dat",
+        "results/h1_1.06.ls.par",
+        "results/h1_1.06.ls.yld",
+        "results/h1_1.06.ls_1_R.rep"
+      ]
+    },
+    {
+      "model": "h2_1.06.ls",
+      "stocks": 2,
+      "files": [
+        "config/h2_1.06.ls.ctl",
+        "input/1.06.dat",
+        "results/h2_1.06.ls.par",
+        "results/h2_1.06.ls.yld",
+        "results/h2_1.06.ls_1_R.rep",
+        "results/h2_1.06.ls_2_R.rep"
+      ]
+    }
+  ],
+  "files": [
+    {
+      "path": "config/h1_1.06.ctl",
+      "source": "/Users/jim/_mymods/sprfmo/jjm/assessment/config/h1_1.06.ctl",
+      "bytes": 3269,
+      "sha256": "2c4e3e3c0269a1653915cac8688421a84e8fa27bbd2c1d7bb16a16cfc26657f0"
+    },
+    {
+      "path": "config/h1_1.06.ls.ctl",
+      "source": "/Users/jim/_mymods/sprfmo/jjm/assessment/config/h1_1.06.ls.ctl",
+      "bytes": 3227,
+      "sha256": "7aba9d8b81c3c612811f7d0ab2aa99c5b75f01fef439fef66d03c628000d4d37"
+    },
+    {
+      "path": "config/h2_1.06.ctl",
+      "source": "/Users/jim/_mymods/sprfmo/jjm/assessment/config/h2_1.06.ctl",
+      "bytes": 3723,
+      "sha256": "80f650195cd8371892f49a7137cacb397afa1a013c1048e24ce9c8ab87a4727a"
+    },
+    {
+      "path": "config/h2_1.06.ls.ctl",
+      "source": "/Users/jim/_mymods/sprfmo/jjm/assessment/config/h2_1.06.ls.ctl",
+      "bytes": 3683,
+      "sha256": "4b578b9cf9a3bd729e336b6ce5ecd6a5a91209a5f95d67587f5ed861dd6a12f0"
+    },
+    {
+      "path": "data/SC14_runs.csv",
+      "source": "/Users/jim/_mymods/sprfmo/jjm/assessment/data/SC14_runs.csv",
+      "bytes": 1910,
+      "sha256": "c3bb6869216aebb2a4dcc8f4a62231f6430c0d5f4c277c3e17ed87604ddc716d"
+    },
+    {
+      "path": "input/1.06.dat",
+      "source": "/Users/jim/_mymods/sprfmo/jjm/assessment/input/1.06.dat",
+      "bytes": 99681,
+      "sha256": "6b65fad6aff0340e04b792d687571587c9ca3c66c8c197faa2aec725ef38c844"
+    },
+    {
+      "path": "results/h1_1.06.ls.par",
+      "source": "/Users/jim/_mymods/sprfmo/jjm/assessment/results/h1_1.06.ls.par",
+      "bytes": 44799,
+      "sha256": "a3ebe7bb0989c63493dd97b2f951329ca7d2077ea686e4537518ade41a16dbe2"
+    },
+    {
+      "path": "results/h1_1.06.ls.yld",
+      "source": "/Users/jim/_mymods/sprfmo/jjm/assessment/results/h1_1.06.ls.yld",
+      "bytes": 24670,
+      "sha256": "43d3dbd2f76eb1e2c745fec5d4423c4d516318c51b2ed6c0388d63880a545eca"
+    },
+    {
+      "path": "results/h1_1.06.ls_1_R.rep",
+      "source": "/Users/jim/_mymods/sprfmo/jjm/assessment/results/h1_1.06.ls_1_R.rep",
+      "bytes": 367139,
+      "sha256": "473596c3826028bc76badd94111e628cbdd9d77d5faa13dff9cce177e8ddd3a3"
+    },
+    {
+      "path": "results/h1_1.06.par",
+      "source": "/Users/jim/_mymods/sprfmo/jjm/assessment/results/h1_1.06.par",
+      "bytes": 44797,
+      "sha256": "5daa615d5041415a376f349f7f7f54d042dd5bef6b073b408f9b437935b65818"
+    },
+    {
+      "path": "results/h1_1.06.yld",
+      "source": "/Users/jim/_mymods/sprfmo/jjm/assessment/results/h1_1.06.yld",
+      "bytes": 24662,
+      "sha256": "8f32db9960f1cb204f0223cfc9b269bd4734d4b389554747016d5397a30e0eaf"
+    },
+    {
+      "path": "results/h1_1.06_1_R.rep",
+      "source": "/Users/jim/_mymods/sprfmo/jjm/assessment/results/h1_1.06_1_R.rep",
+      "bytes": 367538,
+      "sha256": "540c0ee9c07aabee0b699b3fb4ad68c7fd6b5af2d402b505f978e33d47afc4de"
+    },
+    {
+      "path": "results/h1_1.06_retrospective.RData",
+      "source": "/Users/jim/_mymods/sprfmo/jjm/assessment/results/h1_1.06_retrospective.RData",
+      "bytes": 32739,
+      "sha256": "1526f457ca3c16bf8aa5fe719ec329c280296d878b84aa1446ca8cb4c179bee9"
+    },
+    {
+      "path": "results/h2_1.06.ls.par",
+      "source": "/Users/jim/_mymods/sprfmo/jjm/assessment/results/h2_1.06.ls.par",
+      "bytes": 45890,
+      "sha256": "0a6f761012458cfec42bcbadf843c72f991cb99ac475f3cc2270f38d98fb4706"
+    },
+    {
+      "path": "results/h2_1.06.ls.yld",
+      "source": "/Users/jim/_mymods/sprfmo/jjm/assessment/results/h2_1.06.ls.yld",
+      "bytes": 51324,
+      "sha256": "f9435cdac71dc8a2b6a2e2dad000e7af9ee7efea1ed8d60d5dd33502df14f87c"
+    },
+    {
+      "path": "results/h2_1.06.ls_1_R.rep",
+      "source": "/Users/jim/_mymods/sprfmo/jjm/assessment/results/h2_1.06.ls_1_R.rep",
+      "bytes": 260391,
+      "sha256": "dc1518e289feec794dc1ca5421c585d807c64f485f38b61a4e572535e4e3f29e"
+    },
+    {
+      "path": "results/h2_1.06.ls_2_R.rep",
+      "source": "/Users/jim/_mymods/sprfmo/jjm/assessment/results/h2_1.06.ls_2_R.rep",
+      "bytes": 187866,
+      "sha256": "bb571c30e4c6f7883c0abec002edb1330fb768ec79a3bec3640c66dc761f6d8b"
+    },
+    {
+      "path": "results/h2_1.06.par",
+      "source": "/Users/jim/_mymods/sprfmo/jjm/assessment/results/h2_1.06.par",
+      "bytes": 45910,
+      "sha256": "eb887be18aa689f0cebadfe336f0c466cc5644167cc947b1ba95b9860db7ecd4"
+    },
+    {
+      "path": "results/h2_1.06.yld",
+      "source": "/Users/jim/_mymods/sprfmo/jjm/assessment/results/h2_1.06.yld",
+      "bytes": 51353,
+      "sha256": "3f32c2ad0eff64b2052dd6d963f49311625903b73b4fa1eb780eb08cee093b20"
+    },
+    {
+      "path": "results/h2_1.06_1_R.rep",
+      "source": "/Users/jim/_mymods/sprfmo/jjm/assessment/results/h2_1.06_1_R.rep",
+      "bytes": 260582,
+      "sha256": "b56bdeacb1b3e4b00de3fc18e9086b8f9e5585d30cb52865a1ec3b1173b5379f"
+    },
+    {
+      "path": "results/h2_1.06_2_R.rep",
+      "source": "/Users/jim/_mymods/sprfmo/jjm/assessment/results/h2_1.06_2_R.rep",
+      "bytes": 187908,
+      "sha256": "66f0fbae938172b06b0f9d4ce1064ab48f7b49cb39613baeb821e3a6edb8c628"
+    },
+    {
+      "path": "results/h2_1.06_retrospective.RData",
+      "source": "/Users/jim/_mymods/sprfmo/jjm/assessment/results/h2_1.06_retrospective.RData",
+      "bytes": 44383,
+      "sha256": "7f2a2b2b7bbc0271f1235f5d8f3790926042034adef3d18eb803c824d0f1c313"
+    },
+    {
+      "path": "results/mod_preBM_h1.Rdat",
+      "source": "/Users/jim/_mymods/sprfmo/jjm/assessment/results/mod_preBM_h1.Rdat",
+      "bytes": 230480,
+      "sha256": "63f1bfa49d8fbfedb59bb33d1a491406ee72fa8f471ef6c8fe6b3af8280e7873"
+    },
+    {
+      "path": "results/mod_prev_h1.Rdat",
+      "source": "/Users/jim/_mymods/sprfmo/jjm/assessment/results/mod_prev_h1.Rdat",
+      "bytes": 222014,
+      "sha256": "21f32023b5c41545a0bcb4f8699f07c45b624a4139a0d5a3326267228b3218ed"
+    }
+  ],
+  "file_count": 24,
+  "total_bytes": 2609938,
+  "readjjm_helper_trace": [
+    "config/h1_1.06.ctl",
+    "config/h1_1.06.ls.ctl",
+    "config/h2_1.06.ctl",
+    "config/h2_1.06.ls.ctl",
+    "input/1.06.dat",
+    "results/h1_1.06.ls.par",
+    "results/h1_1.06.ls.yld",
+    "results/h1_1.06.ls_1_R.rep",
+    "results/h1_1.06.par",
+    "results/h1_1.06.yld",
+    "results/h1_1.06_1_R.rep",
+    "results/h2_1.06.ls.par",
+    "results/h2_1.06.ls.yld",
+    "results/h2_1.06.ls_1_R.rep",
+    "results/h2_1.06.ls_2_R.rep",
+    "results/h2_1.06.par",
+    "results/h2_1.06.yld",
+    "results/h2_1.06_1_R.rep",
+    "results/h2_1.06_2_R.rep"
+  ],
+  "validation": {
+    "status": "PASS",
+    "models_loaded": [
+      "h1_1.06",
+      "h2_1.06",
+      "h1_1.06.ls",
+      "h2_1.06.ls"
+    ],
+    "saved_objects_loaded": [
+      "h1_1.06_retrospective.RData",
+      "h2_1.06_retrospective.RData",
+      "mod_preBM_h1.Rdat",
+      "mod_prev_h1.Rdat"
+    ],
+    "original_and_copy_sha256_equal": true,
+    "model_runs_performed": false
+  },
+  "r_environment": "/Users/jim/_mymods/sprfmo/jmMSE26/technical-annex-v2/provenance/R-environment.txt",
+  "r_environment_sha256": "74ff8a1f82c59b29336355fec3c7d831d9c24a2eabaa065c1678828d344c7050",
+  "distinctions": [
+    "Original five-year .ls products are retained for existing projection diagnostics.",
+    "Corrected ten-year risk products are separate under report/projection-10yr.",
+    "Historical Rdat files already contain model objects; archived input trees are not required.",
+    "A successful saved-product read verifies build inputs, not scientific acceptance or convergence."
+  ]
+}

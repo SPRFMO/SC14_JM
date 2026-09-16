@@ -1,0 +1,29 @@
+pandoc 
+  to: html
+  output-file: technology-transfer.html
+  standalone: true
+  embed-resources: true
+  section-divs: true
+  html-math-method: mathjax
+  wrap: none
+  default-image-extension: png
+  toc: true
+  toc-depth: 3
+  number-sections: true
+  css:
+    - styles.css
+  
+metadata
+  document-css: false
+  link-citations: true
+  date-format: long
+  lang: en
+  theme: flatly
+  code-summary: Show supporting code
+  title: Maintaining the Jack Mackerel Technical Annex
+  subtitle: A handover for the next assessment scientist
+  author: Jack Mackerel Working Group
+  date: '2026-09-15'
+  
+Output created: ../output/technology-transfer.html
+

@@ -1,0 +1,4 @@
+/* Preserve readable tables on narrow screens without expanding the page. */
+.quarto-float-tbl { overflow-x: auto; max-width: 100%; }
+.quarto-float-tbl table { margin-bottom: 0.75rem; }
+#title-block-header .subtitle { color: #34465b; }

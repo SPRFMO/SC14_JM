@@ -1,0 +1,18 @@
+pandoc 
+  to: docx
+  output-file: technology-transfer.docx
+  default-image-extension: png
+  toc: false
+  toc-depth: 2
+  number-sections: true
+  reference-doc: refdoc.docx
+  
+metadata
+  title: Maintaining the Jack Mackerel Technical Annex
+  subtitle: A handover for the next assessment scientist
+  author: Jack Mackerel Working Group
+  date: '2026-09-15'
+  lang: en
+  
+Output created: ../output/technology-transfer.docx
+

@@ -1,0 +1,699 @@
+# Tables
+
+```{r}
+#| include: false
+library(jjmR)
+library(tidyverse)
+
+options(knitr.kable.NA = '')
+h1_tidy <- tidy_JJM(h1_mod)
+h2_tidy <- tidy_JJM(h2_mod)
+
+```
+
+```{r}
+#| include: false
+ages <- seq(h1_mod[[1]]$info$data$age[1], h1_mod[[1]]$info$data$age[2])
+lengths <- seq(h1_mod[[1]]$info$data$length[1], h1_mod[[1]]$info$data$length[2])
+```
+
+
+Country-level catch submissions are documented in [@secretariat2026catch]. The table below reports the catch inputs in the current assessment, aggregated into the four model fleets; it preserves the distinction between preliminary 2025 catches and projected full-year 2026 catches.
+
+
+
+```{r}
+#| label: tbl-catch-fleet
+#| tbl-cap: !expr paste0("Input catch (thousand tonnes) by fleet for the stock assessment model. The ",curryr-1," catches remain preliminary and ", curryr, " catches are projected full-year values.")
+
+tab_catch_fleet <- h1_mod[[1]]$data$Fcaton %>% 
+  as_tibble(rownames = "Year") %>% 
+  rename_with(
+    ~ str_replace(., "^fishery(\\d+)$", "Fleet \\1"), 
+    starts_with("fishery")
+  ) %>% 
+  mutate(across(-Year, ~ round(.x, 2))) %>%
+  flextable()
+
+tab_catch_fleet
+```
+
+{{< pagebreak >}}
+
+```{r}
+#| label: tbl-catchage-f1
+#| tbl-cap: Input catch at age for Fleet 1. Observed proportions are displayed as percentages; the model uses proportions summing to one within each year.
+
+tab_catchage_f1 <- h1_mod[[1]]$output[[1]]$pobs_fsh_1 %>%
+  as_tibble() %>% 
+  rename_all(~c("Year", ages)) %>% 
+  mutate(across(-Year, ~ round(.x * 100, 0))) %>%
+  flextable() %>%
+  compose(j = "Year", value = as_paragraph(as.character(Year)))  %>%
+  add_header_row(values=c("", "Age group (years)"), 
+    colwidths=c(1, length(ages)))
+
+tab_catchage_f1
+```
+
+{{< pagebreak >}}
+
+```{r}
+#| label: tbl-catchage-f2
+#| tbl-cap: Input catch at age for Fleet 2. Observed proportions are displayed as percentages; the model uses proportions summing to one within each year.
+
+tab_catchage_f2 <- h1_mod[[1]]$output[[1]]$pobs_fsh_2 %>%
+  as_tibble() %>% 
+  rename_all(~c("Year", ages)) %>% 
+  mutate(across(-Year, ~ round(.x * 100, 0))) %>%
+  flextable() %>%
+  compose(j = "Year", value = as_paragraph(as.character(Year)))  %>%
+  add_header_row(values=c("", "Age group (years)"), 
+    colwidths=c(1, length(ages)))
+tab_catchage_f2
+```
+
+{{< pagebreak >}}
+
+```{r}
+#| label: tbl-catchage-f4
+#| tbl-cap: Input catch at age for Fleet 4. Observed proportions are displayed as percentages; the model uses proportions summing to one within each year.
+
+tab_catchage_f4 <- h1_mod[[1]]$output[[1]]$pobs_fsh_4 %>%
+  as_tibble() %>% 
+  rename_all(~c("Year", ages)) %>% 
+  mutate(across(-Year, ~ round(.x * 100, 0))) %>%
+  flextable() %>%
+  compose(j = "Year", value = as_paragraph(as.character(Year)))  %>%
+  add_header_row(values=c("", "Age group (years)"), 
+    colwidths=c(1, length(ages)))
+
+tab_catchage_f4
+```
+
+{{< pagebreak >}}
+
+```{r}
+#| label: tbl-catchlen-f3
+#| tbl-cap: "Input catch at fork length for Fleet 3, panel 1: 10–23 cm. Values are percentages; the model uses proportions summing to one across all length bins within each year."
+
+catchlen_f3_data <- h1_mod[[1]]$output[[1]]$pobs_len_fsh_3 %>%
+  as_tibble() %>% 
+  rename_all(~c("Year", lengths))  %>% 
+  mutate(across(-Year, ~ round(.x * 100, 0)))
+catchlen_panel <- function(bins) {
+  catchlen_f3_data |> select(Year, all_of(as.character(bins))) |>
+    flextable() |>
+    compose(j = "Year", value = as_paragraph(as.character(Year))) |>
+    add_header_row(values=c("", "Fork length (cm)"), colwidths=c(1, length(bins)))
+}
+write.csv(catchlen_f3_data, file.path(derived_dir, "fleet-3-length-composition-percent.csv"), row.names = FALSE)
+catchlen_panel(10:23)
+```
+
+{{< pagebreak >}}
+
+```{r}
+#| label: tbl-catchlen-f3-middle
+#| tbl-cap: "Input catch at fork length for Fleet 3, panel 2: 24–37 cm. Values are percentages of the same annual length composition."
+catchlen_panel(24:37)
+```
+
+{{< pagebreak >}}
+
+```{r}
+#| label: tbl-catchlen-f3-upper
+#| tbl-cap: "Input catch at fork length for Fleet 3, panel 3: 38–50 cm. Values are percentages of the same annual length composition; the terminal observation category is 50 cm plus."
+catchlen_panel(38:50)
+```
+
+{{< pagebreak >}}
+
+```{r}
+#| label: tbl-indices
+#| tbl-cap: "Observed abundance-index inputs for model 1.06. Each series retains its own input units and scaling. Blank cells indicate years without observations."
+h1_mod[[1]]$data$Index |>
+  as_tibble(rownames = "Year") |>
+  setNames(c("Year", h1_mod[[1]]$data$Inames)) |>
+  mutate(across(-Year, ~ signif(.x, 4))) |>
+  flextable() |>
+  compose(j = "Year", value = as_paragraph(as.character(Year)))
+```
+
+
+The current six-index configuration contains two Chilean acoustic series, Chilean CPUE, separate Peruvian artisanal and industrial CPUE, and offshore CPUE. Data coverage and uncertainty are listed below.
+
+{{< pagebreak >}}
+
+```{r}
+#| label: tbl-catchage-i1
+#| tbl-cap: Input catch at age for acoustic surveys in southern Chile. Observed proportions are displayed as percentages; the model uses proportions summing to one within each year.
+
+tab_catchage_i1 <- h1_mod[[1]]$output[[1]]$pobs_ind_1 %>%
+  as_tibble() %>% 
+  rename_all(~c("Year", ages)) %>% 
+  mutate(across(-Year, ~ round(.x * 100, 0))) %>%
+  flextable() %>%
+  compose(j = "Year", value = as_paragraph(as.character(Year))) %>%
+  add_header_row(values=c("", "Age group (years)"), 
+    colwidths=c(1, length(ages)))
+
+tab_catchage_i1
+```
+
+
+```{r}
+#| label: tbl-catchage-i2
+#| tbl-cap: Input catch at age for acoustic surveys in northern Chile. Observed proportions are displayed as percentages; the model uses proportions summing to one within each year.
+
+tab_catchage_i2 <- h1_mod[[1]]$output[[1]]$pobs_ind_2 %>%
+  as_tibble() %>% 
+  rename_all(~c("Year", ages)) %>% 
+  mutate(across(-Year, ~ round(.x * 100, 0))) %>%
+  flextable() %>%
+  compose(j = "Year", value = as_paragraph(as.character(Year))) %>%
+  add_header_row(values=c("", "Age group (years)"), 
+    colwidths=c(1, length(ages)))
+
+tab_catchage_i2
+```
+
+
+
+
+
+{{< pagebreak >}}
+
+```{r}
+#| label: tbl-matatage
+#| tbl-cap: Jack mackerel sexual maturity by age used in the JJM models.
+
+h2_mod[[1]]$control$Pmatatage %>%
+  as_tibble() %>%
+  mutate(Stock = c("Single / Southern", "Far North")) %>%
+  rename_all(~c(ages, "Stock")) %>%
+  relocate(Stock, 1) %>%
+  flextable() %>%
+  colformat_double(digits = 2)
+```
+
+```{r}
+#| label: tbl-pars
+#| tbl-cap: "Growth and natural mortality parameters in the current assessment. Growth lengths are fork length; natural mortality is annual instantaneous mortality."
+get_biology <- function(mod, labels) {
+  p <- mod[[1]]$parameters
+  tibble(Stock = labels, `Linf (cm)` = exp(p$log_Linf),
+         `k (per year)` = exp(p$log_k), `L0 (cm)` = exp(p$log_Lo),
+         `M (per year)` = p$N_Mort)
+}
+bind_rows(get_biology(h1_mod, "Single stock"),
+          get_biology(h2_mod, c("Two-stock: south", "Two-stock: Far North"))) |>
+  flextable() |> colformat_double(digits = 3)
+```
+
+L~0~ is the mean fork length at the recruitment age (1 year).
+
+
+```{r}
+#| label: tbl-ageerror
+#| tbl-cap: Ageing error matrix of jack mackerel. Rows represent observed ages and columns represent true ages. The current assessment disables the ageing-error option.
+
+h1_mod[[1]]$data$Pageerr %>%
+  as_tibble() %>%
+  rownames_to_column(var = "Age") %>%
+  flextable() %>%
+  colformat_double(digits = 3)
+
+```
+
+{{< pagebreak >}}
+
+```{r}
+#| label: tbl-wtatage-f1
+#| tbl-cap: Input mean body mass (kg) at age over time assumed for Fleet 1.
+
+tab_wtatage_f1 <- h1_mod[[1]]$output[[1]]$wt_fsh_1 %>%
+  as_tibble() %>% 
+  rename_all(~c("Year", ages)) %>% 
+  mutate_at(vars(-Year), ~round(., digits=3)) %>%
+  flextable() %>%
+  compose(j = "Year", value = as_paragraph(as.character(Year)))  %>%
+  add_header_row(values=c("", "Age group (years)"), 
+    colwidths=c(1, length(ages)))
+
+tab_wtatage_f1
+```
+
+{{< pagebreak >}}
+
+```{r}
+#| label: tbl-wtatage-f2
+#| tbl-cap: Input mean body mass (kg) at age over time assumed for Fleet 2.
+
+tab_wtatage_f2 <- h1_mod[[1]]$output[[1]]$wt_fsh_2 %>%
+  as_tibble() %>% 
+  rename_all(~c("Year", ages)) %>% 
+  mutate_at(vars(-Year), ~round(., digits=3)) %>%
+  flextable() %>%
+  compose(j = "Year", value = as_paragraph(as.character(Year)))  %>%
+  add_header_row(values=c("", "Age group (years)"), 
+    colwidths=c(1, length(ages)))
+
+tab_wtatage_f2
+```
+
+{{< pagebreak >}}
+
+```{r}
+#| label: tbl-wtatage-f3
+#| tbl-cap: Input mean body mass (kg) at age over time assumed for Fleet 3.
+
+tab_wtatage_f3 <- h1_mod[[1]]$output[[1]]$wt_fsh_3 %>%
+  as_tibble() %>% 
+  rename_all(~c("Year", ages)) %>% 
+  mutate_at(vars(-Year), ~round(., digits=3)) %>%
+  flextable() %>%
+  compose(j = "Year", value = as_paragraph(as.character(Year)))  %>%
+  add_header_row(values=c("", "Age group (years)"), 
+    colwidths=c(1, length(ages)))
+
+tab_wtatage_f3
+```
+
+{{< pagebreak >}}
+
+```{r}
+#| label: tbl-wtatage-f4
+#| tbl-cap: Input mean body mass (kg) at age over time assumed for Fleet 4.
+
+tab_wtatage_f4 <- h1_mod[[1]]$output[[1]]$wt_fsh_4 %>%
+  as_tibble() %>% 
+  rename_all(~c("Year", ages)) %>% 
+  mutate_at(vars(-Year), ~round(., digits=3)) %>%
+  flextable() %>%
+  compose(j = "Year", value = as_paragraph(as.character(Year)))  %>%
+  add_header_row(values=c("", "Age group (years)"), 
+    colwidths=c(1, length(ages)))
+
+tab_wtatage_f4
+```
+
+
+{{< pagebreak >}}
+
+```{r}
+#| include: false
+# Read coverage, uncertainty and selectivity mappings from the loaded inputs.
+annex_years <- function(x) {
+  x <- sort(unique(as.integer(x[is.finite(x)])))
+  if (!length(x)) return("—")
+  groups <- split(x, cumsum(c(TRUE, diff(x) != 1)))
+  paste(vapply(groups, function(g) if(length(g)==1) as.character(g) else
+    paste0(min(g), "–", max(g)), character(1)), collapse = "; ")
+}
+annex_range <- function(x) {
+  x <- x[is.finite(x)]
+  if (!length(x)) return("—")
+  paste0(formatC(min(x), digits=3, format="f"), "–",
+         formatC(max(x), digits=3, format="f"))
+}
+d <- h1_mod[[1]]$data
+coverage <- bind_rows(
+  tibble(Source=d$Fnames, Type="Fishery", Catch=annex_years(as.numeric(rownames(d$Fcaton))),
+         Index="—", Age=vapply(seq_len(d$Fnum), function(i) annex_years(d$Fageyears[,i]), character(1)),
+         Length=vapply(seq_len(d$Fnum), function(i) annex_years(d$Flengthyears[,i]), character(1))),
+  tibble(Source=d$Inames, Type="Index", Catch="—",
+         Index=vapply(seq_len(d$Inum), function(i) annex_years(d$Iyears[,i]), character(1)),
+         Age=vapply(seq_len(d$Inum), function(i) annex_years(d$Iyearsage[,i]), character(1)),
+         Length=vapply(seq_len(d$Inum), function(i) annex_years(d$Iyearslength[,i]), character(1))))
+annex_selmap <- function(mod) {
+  d <- mod[[1]]$data; ctl <- mod[[1]]$control
+  src <- c(d$Fnames,d$Inames)
+  ids <- c(paste0("F",seq_len(d$Fnum)),paste0("I",seq_len(d$Inum)))
+  map_dfr(seq_along(src), function(i) {
+    is_fishery <- ctl$SelMatrix[2,i] == 1
+    origin_id <- paste0(if(is_fishery) "F" else "I", ctl$SelMatrix[3,i])
+    origin_name <- if(is_fishery) d$Fnames[ctl$SelMatrix[3,i]] else d$Inames[ctl$SelMatrix[3,i]]
+    inf <- ctl[[paste0(origin_id,"_info")]]
+    tibble(Source=src[i], Stock=paste0("Stock ",ctl$SelMatrix[1,i]),
+           `Selectivity source`=origin_name,
+           `Change years`=annex_years(ctl[[paste0(origin_id,"_selchangeYear")]]),
+           `Estimation phase`=inf[3], `Curvature weight`=inf[5])
+  })
+}
+```
+
+```{r}
+#| label: tbl-datused
+#| tbl-cap: "Years represented by each data source in the current 1.06 input file. Age and Length columns refer to composition data; a dash indicates no observations of that type. The terminal-year fishery information is partial-year information and the full-year catch is projected."
+coverage |> flextable() |> fontsize(size=8, part="all")
+```
+
+{{< pagebreak >}}
+
+| Symbol | Definition |
+|:---|:---|
+| $y,a,f,s$ | Year, age, fishery and index; the fitted model spans `r min(h1_mod[[1]]$info$data$year)`–`r max(h1_mod[[1]]$info$data$year)` and ages `r min(ages)`–`r max(ages)` with a terminal plus group. |
+| $N_{y,a}$ | Numbers at age at the start of the year. |
+| $M_a,F_{f,y,a},Z_{y,a}$ | Natural, fleet-specific fishing and total instantaneous mortality; $Z_{y,a}=M_a+\sum_f F_{f,y,a}$. |
+| $w_{f,y,a},m_a$ | Mean weight at age and maturity at age. |
+| $q_{s,y},S_{s,y,a},\Delta_s$ | Index catchability, selectivity and fraction of the year before observation. |
+| $\Gamma_{l,a}$ | Probability that a fish of age $a$ occurs in fork-length bin $l$; finite-bin probabilities are normalized across the modeled length range. |
+
+: Definitions for the principal population and observation equations. {#tbl-symbols}
+
+| Component | Equation |
+|:---|:---|
+| Catch in numbers | $C_{f,y,a}=N_{y,a}\dfrac{F_{f,y,a}}{Z_{y,a}}\left(1-e^{-Z_{y,a}}\right)$ |
+| Catch biomass | $Y_{f,y}=\sum_a C_{f,y,a}w_{f,y,a}$ |
+| Survival to the next age | $N_{y+1,a+1}=N_{y,a}e^{-Z_{y,a}}$ for ages below the plus group, before any configured movement. |
+| Plus group $A$ | $N_{y+1,A}=N_{y,A-1}e^{-Z_{y,A-1}}+N_{y,A}e^{-Z_{y,A}}$, before any configured movement. |
+| Biomass index | $\widehat I_{s,y}=q_{s,y}\sum_a N_{y,a}S_{s,y,a}w_{s,y,a}e^{-\Delta_s Z_{y,a}}$ |
+| Fishery age composition | $p_{f,y,a}=C_{f,y,a}/\sum_a C_{f,y,a}$ |
+| Fishery length composition | $C_{f,y,l}=\sum_a\Gamma_{l,a}C_{f,y,a}$ and $p_{f,y,l}=C_{f,y,l}/\sum_l C_{f,y,l}$ |
+| Spawning biomass | $SSB_y=\sum_a N_{y,a}w^{sp}_{y,a}m_a e^{-\Delta_{sp}Z_{y,a}}$ |
+
+: Principal JJM population and observation equations. Catch uses total mortality in the denominator of the Baranov equation. Recruitment, stock allocation, selectivity constraints and estimation phases follow the selected control file. {#tbl-eqs}
+
+| Component | Role in the penalized objective function |
+|:---|:---|
+| Catch and abundance-index observations | Log-scale residual contributions weighted by the specified observation uncertainty. |
+| Age and length compositions | Multinomial composition contributions weighted by effective sample sizes. |
+| Recruitment | Contributions from the selected stock–recruitment relationship, recruitment deviations and their specified uncertainty. |
+| Selectivity and catchability | Regularity penalties, change constraints and priors specified in the selected control file. |
+| Biological parameters | Fixed values or prior contributions and estimation phases specified in the selected control file. |
+| Total | Sum of the active likelihood and penalty contributions. |
+
+: Components of the model objective. Numerical weights and estimation phases are read from the current input and control files rather than inherited from the previous annex. {#tbl-objfun}
+
+```{r}
+#| label: tbl-cv
+#| tbl-cap: "Ranges of annual catch and index CVs and effective composition sample sizes in model 1.06. Catch CVs are supplied directly; index CVs are the supplied standard errors divided by the corresponding observed index values, including the input adjustments for observation weight. A dash indicates no observations. These quantities specify observation precision and composition weight; they are neither counts of fish measured nor posterior uncertainty."
+bind_rows(
+ tibble(Source=d$Fnames, `Catch/index CV`=vapply(seq_len(d$Fnum),function(i) annex_range(d$Fcatonerr[,i]),character(1)),
+        `Age effective N`=vapply(seq_len(d$Fnum),function(i) annex_range(d$Fagesample[,i]),character(1)),
+        `Length effective N`=vapply(seq_len(d$Fnum),function(i) annex_range(d$Flengthsample[,i]),character(1))),
+ tibble(Source=d$Inames, `Catch/index CV`=vapply(seq_len(d$Inum),function(i) annex_range(d$Indexerr[,i]/d$Index[,i]),character(1)),
+        `Age effective N`=vapply(seq_len(d$Inum),function(i) annex_range(d$Iagesample[,i]),character(1)),
+        `Length effective N`=vapply(seq_len(d$Inum),function(i) annex_range(d$Ilengthsample[,i]),character(1)))) |>
+ flextable() |> fontsize(size=8,part="all")
+```
+
+```{r}
+#| label: tbl-sel-h1
+#| tbl-cap: "Selectivity mapping in the single-stock 1.06 control file. A shared selectivity source means that the source profile is used for that fleet or index. Change years and curvature weights refer to the source profile; negative estimation phases indicate a fixed profile."
+annex_selmap(h1_mod) |> flextable() |> fontsize(size=8,part="all")
+```
+
+```{r}
+#| label: tbl-sel-h2-s1
+#| tbl-cap: "Selectivity mapping for the southern component of the two-stock 1.06 control file."
+annex_selmap(h2_mod) |> filter(Stock=="Stock 1") |> flextable() |> fontsize(size=8,part="all")
+```
+
+```{r}
+#| label: tbl-sel-h2-s2
+#| tbl-cap: "Selectivity mapping for the Far North component of the two-stock 1.06 control file."
+annex_selmap(h2_mod) |> filter(Stock=="Stock 2") |> flextable() |> fontsize(size=8,part="all")
+```
+
+{{< pagebreak >}}
+
+```{r}
+#| label: tbl-modruns
+#| tbl-cap: "SC14 model progression, using the assessment run register with the 1.04 weight window and 1.06 catch adjustment reconciled to the active input files. Model 0.00 is the SCW17 0.16 configuration; model 1.06 is the current 2026 assessment configuration shown in this annex."
+modruns <- readr::read_csv("data/SC14_runs.csv", col_types=cols(.default=col_character()), show_col_types=FALSE)
+names(modruns) <- trimws(names(modruns))
+modruns |>
+  mutate(across(everything(), trimws),
+         Description=case_when(
+           Model=="1.04" ~ "As 1.01 but replacing offshore-fleet weights at age for 2025 and 2026 with the 2020–2024 mean.",
+           Model=="1.06" ~ "As 1.05 but adding 10,000 tonnes to the 2026 Far North catch.",
+           TRUE ~ Description)) |>
+  flextable() |>
+  compose(j="Model", value=as_paragraph(dplyr::recode(
+    Model, `0`="0.00", `0.1`="0.10", `1`="1.00"))) |>
+  compose(j="Description", value=as_paragraph(gsub("`", "", Description, fixed=TRUE))) |>
+  align(align="left", part="all")
+```
+
+{{< pagebreak >}}
+
+```{r}
+#| label: tbl-histssb
+#| tbl-cap: "Spawning biomass (thousand tonnes) from the archived SC13 model 1.14, SCW17 model 0.16 and current SC14 model 1.06, under the single-stock hypothesis. These are successive assessment configurations with different data and assumptions, rather than retrospective peels."
+annex_history <- new.env(parent=baseenv())
+load("results/mod_preBM_h1.Rdat", envir=annex_history)
+load("results/mod_prev_h1.Rdat", envir=annex_history)
+annex_historical_models <- combineModels(h1_mod, annex_history$mod_prev_h1, annex_history$mod_preBM_h1) |>
+  changeNameModel(c("SC14 1.06", "SCW17 0.16", "SC13 1.14"))
+map_dfr(seq_along(annex_historical_models), function(i) {
+  z <- annex_historical_models[[i]]$output$Stock_1$SSB
+  limits <- annex_historical_models[[i]]$info$data$year
+  tibble(Year=z[,1], Assessment=names(annex_historical_models)[i], SSB=z[,2]) |>
+    filter(Year >= min(limits), Year <= max(limits))
+}) |> pivot_wider(names_from=Assessment, values_from=SSB) |> arrange(Year) |>
+  flextable() |> colformat_double(j=-1,digits=0)
+```
+
+{{< pagebreak >}}
+
+```{r}
+#| label: tbl-natage-h1
+#| tbl-cap: !expr paste0("Estimated begin-year numbers at age (millions of fish; Model ", h1nm,"; single-stock hypothesis).")
+
+h1_mod[[1]]$output$Stock_1$N %>% 
+  as_tibble() %>% 
+  rename_all(~c('Year', ages)) %>%
+  mutate(across(-Year, ~ round(.x, 0))) %>%
+  flextable() %>%
+  compose(j = "Year", value = as_paragraph(as.character(Year)))  %>%
+  add_header_row(values=c("", "Age group (years)"), 
+    colwidths=c(1, length(ages)))
+
+```
+
+{{< pagebreak >}}
+
+```{r}
+#| label: tbl-natage-h2-s1
+#| tbl-cap: !expr paste0("Estimated begin-year numbers at age (millions of fish; Model ", h2nm,"; two-stock hypothesis; southern stock).")
+
+h2_mod[[1]]$output$Stock_1$N %>% 
+  as_tibble() %>% 
+  rename_all(~c('Year', ages)) %>%
+  mutate(across(-Year, ~ round(.x, 0))) %>%
+  flextable() %>%
+  compose(j = "Year", value = as_paragraph(as.character(Year)))  %>%
+  add_header_row(values=c("", "Age group (years)"), 
+    colwidths=c(1, length(ages)))
+
+```
+
+{{< pagebreak >}}
+
+```{r}
+#| label: tbl-natage-h2-s2
+#| tbl-cap: !expr paste0("Estimated begin-year numbers at age (millions of fish; Model ", h2nm,"; two-stock hypothesis; northern stock).")
+
+h2_mod[[1]]$output$Stock_2$N %>% 
+  as_tibble() %>% 
+  rename_all(~c('Year', ages)) %>%
+  mutate(across(-Year, ~ round(.x, 0))) %>%
+  flextable() %>%
+  compose(j = "Year", value = as_paragraph(as.character(Year)))  %>%
+  add_header_row(values=c("", "Age group (years)"), 
+    colwidths=c(1, length(ages)))
+
+```
+
+{{< pagebreak >}}
+
+```{r}
+#| label: tbl-fatage-h1
+#| tbl-cap: !expr paste0("Estimated total fishing mortality at age (per year; Model ", h1nm,"; single-stock hypothesis).")
+
+cbind(h1_mod[[1]]$output$Stock_1$N[,1],h1_mod[[1]]$output$Stock_1$TotF) %>% 
+  as_tibble() %>% 
+  rename_all(~c('Year', ages)) %>%
+  mutate(across(-Year, ~ round(.x, 3))) %>%
+  flextable() %>%
+  compose(j = "Year", value = as_paragraph(as.character(Year)))  %>%
+  add_header_row(values=c("", "Age group (years)"), 
+    colwidths=c(1, length(ages)))
+
+# cbind(h1_mod[[1]]$output$Stock_1$N[,1],h1_mod[[1]]$output$Stock_1$TotF) %>% 
+#   as_tibble() %>% 
+#   rename_all(~c('Year', ages)) %>%
+#   flextable() %>%
+#   bg(j = -1,
+#     bg = col_numeric(
+#       palette = c("white", "#05427b"),
+#       domain = c(0, max(h1_mod[[1]]$output$Stock_1$TotF))
+#       )
+#   )
+
+```
+
+{{< pagebreak >}}
+
+```{r}
+#| label: tbl-fatage-h2-s1
+#| tbl-cap: !expr paste0("Estimated total fishing mortality at age (per year; Model ", h2nm,"; two-stock hypothesis; southern stock).")
+
+cbind(h2_mod[[1]]$output$Stock_1$N[,1],h2_mod[[1]]$output$Stock_1$TotF) %>% 
+  as_tibble() %>% 
+  rename_all(~c('Year', ages)) %>%
+  mutate(across(-Year, ~ round(.x, 3))) %>%
+  flextable() %>%
+  compose(j = "Year", value = as_paragraph(as.character(Year)))  %>%
+  add_header_row(values=c("", "Age group (years)"), 
+    colwidths=c(1, length(ages)))
+
+```
+
+{{< pagebreak >}}
+
+```{r}
+#| label: tbl-fatage-h2-s2
+#| tbl-cap: !expr paste0("Estimated total fishing mortality at age (per year; Model ", h2nm,"; two-stock hypothesis; far north stock).")
+
+cbind(h2_mod[[1]]$output$Stock_2$N[,1],h2_mod[[1]]$output$Stock_2$TotF) %>% 
+  as_tibble() %>% 
+  rename_all(~c('Year', ages)) %>%
+  mutate(across(-Year, ~ round(.x, 3))) %>%
+  flextable() %>%
+  compose(j = "Year", value = as_paragraph(as.character(Year)))  %>%
+  add_header_row(values=c("", "Age group (years)"), 
+    colwidths=c(1, length(ages)))
+
+```
+
+{{< pagebreak >}}
+
+```{r}
+#| label: tbl-sum-h1
+#| tbl-cap: !expr paste0("Summary of results for Model ", h1nm," (single-stock hypothesis). Note that MSY values are a function of time-varying selectivity and average weight.")
+
+totals_h1 <- h1_tidy$totals %>% 
+  filter(metric == "SSB" | metric == "R") %>% 
+  select(year, value, metric) %>% 
+  pivot_wider(names_from = metric, values_from = value) %>%
+  drop_na()
+
+h1_tidy$msy_mt %>%
+  as_tibble() %>%
+  select(year, f, fmsy, bmsy) %>%
+  mutate(landings = h1_mod[[1]]$data$Fcaton %>% rowSums()) %>%
+  left_join(totals_h1) %>%
+  relocate(landings, .after=year) %>%
+  relocate(SSB:R, .after = landings) %>%
+  flextable() %>% 
+  colformat_double(
+    j = c(
+      "landings",
+      "R", 
+      "SSB",
+      "bmsy"),
+      digits = 0) %>%
+  colformat_double(
+    j = c("f", "fmsy"),
+      digits = 2) %>%
+  compose(j = "year", value = as_paragraph(as.character(year))) %>%
+  set_header_labels(
+    values = c(
+    "Year",
+    "Landings ('000 t)",
+    "SSB ('000 t)",
+    "Recruitment (age 1, millions)",
+    "Reported F (per year)",
+    "F_MSY",
+    "SSB_MSY ('000 t)")) 
+
+
+```
+
+{{< pagebreak >}}
+
+```{r}
+#| label: tbl-sum-h2-s1
+#| tbl-cap: !expr paste0("Summary of results for Model ", h2nm, " (two-stock hypothesis; south stock). Note that MSY values are a function of time-varying selectivity and average weight.")
+
+totals_h2 <- h2_tidy$totals %>% 
+  filter(metric == "SSB" | metric == "R") %>% 
+  select(year, value, metric, stock) %>% 
+  pivot_wider(names_from = metric, values_from = value) %>%
+  drop_na()
+
+h2_tidy$msy_mt %>%
+  as_tibble() %>%
+  filter(stock=="Stock_1") %>%
+  select(year, f, fmsy, bmsy) %>%
+  mutate(landings = h2_mod[[1]]$data$Fcaton[,-3] %>% rowSums()) %>%
+  left_join(totals_h2 %>% filter(stock == "Stock_1") %>% select(-stock)) %>%
+  relocate(landings, .after=year) %>%
+  relocate(SSB:R, .after = landings) %>%
+  flextable() %>% 
+  colformat_double(
+    j = c(
+      "landings",
+      "R", 
+      "SSB",
+      "bmsy"),
+      digits = 0) %>%
+  colformat_double(
+    j = c("f", "fmsy"),
+      digits = 2) %>%
+  compose(j = "year", value = as_paragraph(as.character(year))) %>%
+  set_header_labels(
+    values = c(
+    "Year",
+    "Landings ('000 t)",
+    "SSB ('000 t)",
+    "Recruitment (age 1, millions)",
+    "Reported F (per year)",
+    "F_MSY",
+    "SSB_MSY ('000 t)")) 
+```
+
+{{< pagebreak >}}
+
+```{r}
+#| label: tbl-sum-h2-s2
+#| tbl-cap: !expr paste0("Summary of results for Model ", h2nm, " (two-stock hypothesis; far north stock). Note that MSY values are a function of time-varying selectivity and average weight.")
+
+h2_tidy$msy_mt %>%
+  as_tibble() %>%
+  filter(stock=="Stock_2") %>%
+  select(year, f, fmsy, bmsy) %>%
+  mutate(landings = h2_mod[[1]]$data$Fcaton[,3]) %>%
+  left_join(totals_h2 %>% filter(stock == "Stock_2") %>% select(-stock)) %>%
+  relocate(landings, .after=year) %>%
+  relocate(SSB:R, .after = landings) %>%
+  flextable() %>% 
+  colformat_double(
+    j = c(
+      "landings",
+      "R", 
+      "SSB",
+      "bmsy"),
+      digits = 0) %>%
+  colformat_double(
+    j = c("f", "fmsy"),
+      digits = 2) %>%
+  compose(j = "year", value = as_paragraph(as.character(year))) %>%
+  set_header_labels(
+    values = c(
+    "Year",
+    "Landings ('000 t)",
+    "SSB ('000 t)",
+    "Recruitment (age 1, millions)",
+    "Reported F (per year)",
+    "F_MSY",
+    "SSB_MSY ('000 t)")) 
+```
+
+{{< pagebreak >}}
+
+
+The earlier five-year (2027–2031) `.ls` projection outputs are shown in @fig-projection-ssb-h1, @fig-projection-catch-h1, @fig-projection-ssb-h2 and @fig-projection-catch-h2. The updated ten-year (2027–2036) risk summaries are in @tbl-risk-h1, @tbl-risk-h2-south and @tbl-risk-h2-north. Their conditional normal-approximation probabilities use the reported projection standard errors and the fixed biomass reference points described in @sec-risk-summary.

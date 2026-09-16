@@ -1,0 +1,60 @@
+diff --git a/R/jjm.diag-internal.R b/R/jjm.diag-internal.R
+index 29e47fa..736f519 100644
+--- a/R/jjm.diag-internal.R
++++ b/R/jjm.diag-internal.R
+@@ -98,10 +98,21 @@ print(class)
+     return(jjm.ypr)
+   }
+   
+-  jjm.ypr            = read.table(fileName, sep = " ", skip = 4, header = TRUE, fill = TRUE)
+-  jjm.ypr[1,]        = jjm.ypr[1, c(1, 8, 2, 3, 4, 5, 6, 7)]
+-  colnames(jjm.ypr)  = c("F", "X", "SSB", "Yld", "Recruit", "SPR", "B", "X2")
+-  jjm.ypr            = jjm.ypr[,-grep("X", colnames(jjm.ypr))]
++  jjm.ypr            = read.table(fileName, sep = " ", skip = 4, header = TRUE, fill = TRUE,
++                                  check.names = FALSE)
++  if(all(c("Stock", "F", "SSB", "Yld", "Recruit", "SPR", "B") %in% names(jjm.ypr))) {
++    jjm.ypr          = jjm.ypr[, c("Stock", "F", "SSB", "Yld", "Recruit", "SPR", "B")]
++  } else if(all(c("F", "SSB", "Yld", "Recruit", "SPR", "B") %in% names(jjm.ypr))) {
++    jjm.ypr          = jjm.ypr[, c("F", "SSB", "Yld", "Recruit", "SPR", "B")]
++  } else if(ncol(jjm.ypr) == 9) {
++    jjm.ypr[1,]        = jjm.ypr[1, c(1, 2, 9, 3, 4, 5, 6, 7, 8)]
++    colnames(jjm.ypr)  = c("Stock", "F", "X", "SSB", "Yld", "Recruit", "SPR", "B", "X2")
++    jjm.ypr            = jjm.ypr[,-grep("X", colnames(jjm.ypr))]
++  } else {
++    jjm.ypr[1,]        = jjm.ypr[1, c(1, 8, 2, 3, 4, 5, 6, 7)]
++    colnames(jjm.ypr)  = c("F", "X", "SSB", "Yld", "Recruit", "SPR", "B", "X2")
++    jjm.ypr            = jjm.ypr[,-grep("X", colnames(jjm.ypr))]
++  }
+   return(jjm.ypr)
+ }
+ 
+diff --git a/R/jjm.output-internal.R b/R/jjm.output-internal.R
+index a0c66e9..4959596 100644
+--- a/R/jjm.output-internal.R
++++ b/R/jjm.output-internal.R
+@@ -845,12 +845,24 @@
+   return(info)
+ }
+ 
++.subsetYPR = function(ypr, stock) {
++  if(is.null(ypr) || !"Stock" %in% names(ypr)) return(ypr)
++  
++  stockRows = ypr$Stock == stock
++  stockRows[is.na(stockRows)] = FALSE
++  
++  ypr = ypr[stockRows, names(ypr) != "Stock", drop = FALSE]
++  rownames(ypr) = NULL
++  
++  return(ypr)
++}
++
+ .readOutputsJJM = function(files, yld=NULL) {
+   ypr = if(!is.null(yld)) .readYPR(yld) else NULL # should be a list by stock
+   outputs = list()
+   for(i in seq_along(files)) {
+     outputs[[i]] = PBSmodelling::readList(files[i]) # add validation
+-    outputs[[i]]$YPR = ypr
++    outputs[[i]]$YPR = .subsetYPR(ypr, i)
+     outputs[[i]]$Index_names = as.matrix(outputs[[i]]$Index_names,ncol=1) # Reading in single index
+     outputs[[i]]$Fshry_names = as.matrix(outputs[[i]]$Fshry_names,ncol=1) # Reading in single index
+   }

@@ -15,3 +15,10 @@ Source-paper links prefer verified HTML reading versions on SPRFMO working-group
 ## Current SC14 assessment
 
 Run `python3 render_sc14.py --jjm /absolute/path/to/jjm` after updating the assessment checkout. This renders the report from existing outputs and synchronizes the report and its figure links into the wiki. See [SC14 synchronization](SC14-SYNC.md) for review and publication steps.
+
+## Technical annex
+
+The maintained assessment annex and its R workflow are in [technical-annex-v2](technical-annex-v2/README.md).
+Read the [handover](technical-annex-v2/report/technology-transfer.qmd) for the data sources, calculations, and update steps.
+From that folder, run `Rscript build.R` for HTML or `Rscript build.R all` for HTML, PDF and Word.
+The annex uses saved assessment products and has its own R build, independent of the wiki builder.
