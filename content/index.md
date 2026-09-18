@@ -40,4 +40,4 @@ The strongest coverage here is May–September 2026. Earlier research and manage
 
 ## Technical annex
 
-[Read the technical annex and analyst handover](technical-annex.html) for the Model 1.06 assessment, reference points, two-, five- and ten-year risk tables, report downloads and reproducible R calculations.
+[Read the draft technical annex and analyst handover](technical-annex.html) for the Model 1.06 assessment, reference points, two-, five- and ten-year risk tables, report downloads and reproducible R calculations.

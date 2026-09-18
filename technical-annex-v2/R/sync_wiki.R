@@ -28,16 +28,18 @@ for (file in files) {
   if (endsWith(file, ".html")) {
     text <- rawToChar(readBin(original, "raw", n = file.info(original)$size))
     stopifnot(grepl("<body", text, fixed = TRUE), !grepl("annex-wiki-nav", text, fixed = TRUE))
-    label <- if (basename(file) == "technical-annex.html") "Assessment report" else "Analyst handover"
+    label <- if (basename(file) == "technical-annex.html") "Assessment report (draft)" else "Analyst handover"
     navigation <- paste0(
       '<!-- annex-wiki-navigation:start -->\n',
       '<nav class="annex-wiki-nav" aria-label="Wiki navigation" ',
       'style="background:#173f60;color:white;padding:.75rem 1.25rem;font:16px/1.5 system-ui,sans-serif">',
       '<a style="color:white" href="../../index.html">Jack mackerel wiki</a>',
       ' <span aria-hidden="true"> / </span> ',
-      '<a style="color:white" href="../../technical-annex.html">Technical annex</a>',
+      '<a style="color:white" href="../../technical-annex.html">Technical annex (draft)</a>',
       ' <span aria-hidden="true"> / </span> ',
       '<span aria-current="page">', label, '</span></nav>\n',
+      if (basename(file) == "technical-annex.html")
+        '<div style="background:#fff3dc;color:#193649;padding:.75rem 1.25rem;font:16px/1.5 system-ui,sans-serif"><strong>DRAFT — Technical annex for review.</strong></div>\n' else "",
       '<!-- annex-wiki-navigation:end -->')
     hosted <- sub("(<body[^>]*>)", paste0("\\1\n", navigation), text)
     # Removing only the added navigation must recover the original bytes.
@@ -50,7 +52,7 @@ for (file in files) {
     source = file.path("technical-annex-v2", file),
     published = file.path("technical-annex-v2", file),
     source_sha256 = hash(original), published_sha256 = hash(target),
-    change = if (endsWith(file, ".html")) "Wiki navigation added; original document preserved" else "Exact copy")
+    change = if (endsWith(file, ".html")) "Wiki labels added; original document preserved" else "Exact copy")
 }
 write.csv(do.call(rbind, records), file.path(destination, "publication.csv"), row.names = FALSE)
 cat("Synchronized", length(files), "annex files into docs/technical-annex-v2.\n")

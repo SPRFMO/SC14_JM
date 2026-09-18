@@ -26,7 +26,7 @@ The annex uses saved assessment products and has its own R build, independent of
 The wiki navigation includes **Technical annex** near the end. The wiki build runs
 `Rscript technical-annex-v2/R/sync_wiki.R` to verify and copy the six reviewed
 reports and linked projection records into `docs/technical-annex-v2/`, then
-refreshes navigation and search. Hosted HTML adds links back to the wiki; PDF,
+refreshes navigation and search. Hosted HTML adds links back to the wiki and marks the annex as draft; PDF,
 Word and data files are exact copies. `publication.csv` records both hashes.
 After an annex update, run its R build, then rebuild the wiki and commit the
 sources and generated `docs/` files together. Pushing `main` publishes the wiki.

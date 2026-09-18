@@ -1,17 +1,19 @@
 # Technical annex
 
+**DRAFT — for review**
+
 **Jack mackerel assessment · Version 2 · Working results through 11 September 2026**
 
 The technical annex brings together the assessment data, model development, diagnostics, reference points and projections for Model 1.06. It covers both the single-stock and two-stock hypotheses. Its findings retain the working status stated in the report; agreed Scientific Committee advice follows the Committee's meeting record.
 
 ## Read the annex
 
-[Read the technical annex online](technical-annex-v2/output/technical-annex.html).
+[Read the draft technical annex online](technical-annex-v2/output/technical-annex.html).
 
-- [Download the annex as PDF](technical-annex-v2/output/technical-annex.pdf).
-- [Download the annex as Word](technical-annex-v2/output/technical-annex.docx).
+- [Download the draft annex as PDF](technical-annex-v2/output/technical-annex.pdf).
+- [Download the draft annex as Word](technical-annex-v2/output/technical-annex.docx).
 
-The report explains the distinction between the long-term biomass target and precautionary projections. Its risk tables cover two, five and ten years after 2026. The saved assessment results and scientific content are the same as in the reviewed Version 2 package.
+The report explains the distinction between the long-term biomass target and precautionary projections. Its risk tables cover two, five and ten years after 2026. The saved assessment results and scientific content are the same as in the saved Version 2 package.
 
 ## Understand and maintain the calculations
 

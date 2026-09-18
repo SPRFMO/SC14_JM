@@ -16,7 +16,7 @@ This working assessment presents model results for review. Its draft or proposed
 
 ## Technical annex
 
-[Read the full technical annex](technical-annex.html), including the single-stock and two-stock results, reference-point equations, projection risk tables and an analyst handover with the R calculations. HTML, PDF and Word versions are available within the wiki.
+[Read the draft technical annex](technical-annex.html), including the single-stock and two-stock results, reference-point equations, projection risk tables and an analyst handover with the R calculations. HTML, PDF and Word versions are available within the wiki.
 
 
 ## Base-model MCMC uncertainty

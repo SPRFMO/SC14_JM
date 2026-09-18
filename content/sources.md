@@ -72,4 +72,4 @@ Earlier studies, Commission decisions and SC14’s agreed conclusions are the ne
 
 ## Assessment technical annex
 
-- [Jack mackerel technical annex, Version 2](technical-annex.html) — working Model 1.06 results through 11 September 2026, with PDF and Word downloads, the analyst handover and links to saved source results.
+- [Jack mackerel technical annex, Version 2 (draft)](technical-annex.html) — working Model 1.06 results through 11 September 2026, with PDF and Word downloads, the analyst handover and links to saved source results.
