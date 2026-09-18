@@ -38,3 +38,24 @@ warnings are not introduced by the R migration and remain visible in the logs.
 The saved reference tables and three explanatory PNG diagrams contain reviewed
 September values. Their update is an explicit scientific review step, documented
 in the handover; the ordinary build does not imply adoption of a new assessment.
+
+## Table layout update — 18 September 2026
+
+The HTML and PDF annexes retain the R flextable renderer. HTML tables now fill
+the text area; Table 35 reserves about 12% for model labels and the remainder
+for descriptions. PDF column widths fill the A4 text area after allowing for
+cell gutters and borders, and the row-height multiplier is reduced from 1.5 to
+1.0. Word formatting and scientific inputs are unchanged.
+
+| Check | Result | Evidence |
+|---|---|---|
+| Input identity and risk calculations | Pass | Existing checksum and 180-record checks run during the builds |
+| HTML scientific content | Pass | All 14,847 table cells and 50 embedded figure payloads match the preceding version |
+| HTML width | Pass | All 37 flextables fill their containing text area in the browser; Table 35 is 799 px wide, with columns 95.875 and 703.125 px |
+| PDF Table 35 | Pass | All 23 rows and their cell contents retained; table width increased from 462.566 to 480.901 pt and height decreased from 448.319 to 298.879 pt |
+| PDF pagination | Pass | Annex decreased from 117 to 101 pages; no clipped borders in 40 detected table fragments; tables stay within the text margins |
+| PDF visual review | Pass | Inspected pages 14, 34, 42, 45 and 51, covering risk, biological, model-progression, numbers-at-age and assessment-summary tables |
+| Render warnings | Unchanged | Six inherited font-metric warnings in index-fit plots; no new render failures |
+| Accessibility certification | Not Tested | The inherited PDF tagging limitation above remains; these checks establish layout and content preservation |
+
+The rendered products and their build times are recorded in `build.csv`.

@@ -2,3 +2,7 @@
 .quarto-float-tbl { overflow-x: auto; max-width: 100%; }
 .quarto-float-tbl table { margin-bottom: 0.75rem; }
 #title-block-header .subtitle { color: #34465b; }
+
+/* Tables fill the text area; content determines individual column widths. */
+.quarto-float-tbl table { width: 100%; }
+.quarto-float-tbl .tabwid { width: 100%; overflow-x: auto; }

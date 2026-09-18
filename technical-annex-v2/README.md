@@ -60,3 +60,14 @@ The report build above remains independent of the wiki. The separate
 `Rscript R/sync_wiki.R` command copies validated products to the parent
 repository's `docs/` folder. The parent wiki build runs that synchronization
 automatically before updating its pages and search index.
+
+## Table layout
+
+`R/table_layout.R` keeps the editable flextable tables. HTML fills the text
+area and allocates column widths by content; the model-progression table gives
+about 12% to the model label and the rest to its description. PDF tables use
+the A4 text width (20 mm margins), reserving space for cell gutters and borders,
+with single row spacing. Keep the width calculation consistent with
+`report/_quarto.yml` if the page size or margins change. Word retains its
+existing layout. Rebuild HTML and PDF with `Rscript build.R html annex` and
+`Rscript build.R pdf annex`, then rebuild the parent wiki before publishing.
