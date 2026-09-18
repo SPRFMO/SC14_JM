@@ -51,3 +51,12 @@ Model fitting and new projection runs belong to the JJM assessment workflow.
 No Python installation is needed for this annex. The repository's separate wiki
 builder retains its existing implementation. Publishing and committee acceptance
 are separate from building this working assessment.
+
+## Read it within the wiki
+
+[Technical annex in the wiki](https://sprfmo.github.io/SC14_JM/technical-annex.html)
+provides the HTML report, PDF and Word downloads, handover and source data.
+The report build above remains independent of the wiki. The separate
+`Rscript R/sync_wiki.R` command copies validated products to the parent
+repository's `docs/` folder. The parent wiki build runs that synchronization
+automatically before updating its pages and search index.

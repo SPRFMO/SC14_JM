@@ -83,6 +83,8 @@ def build_index(out):
     documents = []
     excluded = {'search.html', 'kobe-100-trajectories-2007-2026.html'}
     labels = {
+        'technical-annex-v2/output/technical-annex.html': 'Jack mackerel technical annex',
+        'technical-annex-v2/output/technology-transfer.html': 'Technical annex analyst handover',
         'assessment/SC14.html': 'SC14 assessment report',
         'assessment/loo.html': 'Assessment index sensitivities: LOI and LOO',
     }

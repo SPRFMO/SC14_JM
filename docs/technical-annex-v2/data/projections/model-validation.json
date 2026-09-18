@@ -1,0 +1,529 @@
+{
+  "status": "PASS",
+  "parameters": [
+    {
+      "model": "h1_1.06",
+      "values": 2884,
+      "maximum_change": 0
+    },
+    {
+      "model": "h2_1.06",
+      "values": 2953,
+      "maximum_change": 0
+    },
+    {
+      "model": "h1_1.06.ls",
+      "values": 2884,
+      "maximum_change": 0
+    },
+    {
+      "model": "h2_1.06.ls",
+      "values": 2953,
+      "maximum_change": 0
+    }
+  ],
+  "stock_checks": [
+    {
+      "model": "h1_1.06",
+      "stock": 1,
+      "references": {
+        "global": {
+          "Fmsy": 0.39162235560944214,
+          "Bmsy_kt": 6546.460627357556,
+          "MSY_kt": 1225.0244723910037
+        },
+        "proj": {
+          "Fmsy": 0.9128019247148444,
+          "Bmsy_kt": 6433.837172386963,
+          "MSY_kt": 1297.5038919935766
+        }
+      },
+      "scenario4": [
+        {
+          "year": 2027,
+          "SSB_difference_kt": -0.009773351072908554,
+          "catch_difference_kt": 0.002865399406346114
+        },
+        {
+          "year": 2028,
+          "SSB_difference_kt": -0.003982074621490028,
+          "catch_difference_kt": -0.005118242043636201
+        },
+        {
+          "year": 2029,
+          "SSB_difference_kt": -0.009293248404901533,
+          "catch_difference_kt": -0.0039008574365198
+        },
+        {
+          "year": 2030,
+          "SSB_difference_kt": -0.006437452009777189,
+          "catch_difference_kt": -0.000538145363861986
+        },
+        {
+          "year": 2031,
+          "SSB_difference_kt": -0.003511119612994662,
+          "catch_difference_kt": -0.0014488631770745997
+        },
+        {
+          "year": 2032,
+          "SSB_difference_kt": -0.006976059101361898,
+          "catch_difference_kt": -0.001749633358713254
+        },
+        {
+          "year": 2033,
+          "SSB_difference_kt": -0.006032858869730262,
+          "catch_difference_kt": 0.0008339574621913926
+        },
+        {
+          "year": 2034,
+          "SSB_difference_kt": -0.0019631871409728774,
+          "catch_difference_kt": 0.0028917594190716045
+        },
+        {
+          "year": 2035,
+          "SSB_difference_kt": -0.004759316752824816,
+          "catch_difference_kt": 0.0007135055604976515
+        },
+        {
+          "year": 2036,
+          "SSB_difference_kt": 0.00012141833030909766,
+          "catch_difference_kt": 0.0021043652675416524
+        }
+      ],
+      "replacement": {
+        "F": 0.981945,
+        "catch_kt": 1273.28936930899,
+        "target_SSB_kt": 5820.351883928726,
+        "next_SSB_kt": 5820.352700280811,
+        "status": 1.0
+      },
+      "historical_blocks_unchanged": true
+    },
+    {
+      "model": "h2_1.06",
+      "stock": 1,
+      "references": {
+        "global": {
+          "Fmsy": 0.3854640437734368,
+          "Bmsy_kt": 6039.716511326369,
+          "MSY_kt": 1129.9064728661472
+        },
+        "proj": {
+          "Fmsy": 0.9501508631896287,
+          "Bmsy_kt": 6204.922368239962,
+          "MSY_kt": 1148.4733512406099
+        }
+      },
+      "scenario4": [
+        {
+          "year": 2027,
+          "SSB_difference_kt": 0.004295532894502685,
+          "catch_difference_kt": -0.0018997352233327547
+        },
+        {
+          "year": 2028,
+          "SSB_difference_kt": 0.004652210935091716,
+          "catch_difference_kt": 0.007082334623419229
+        },
+        {
+          "year": 2029,
+          "SSB_difference_kt": 0.004476794545553275,
+          "catch_difference_kt": 0.008655823525032247
+        },
+        {
+          "year": 2030,
+          "SSB_difference_kt": 0.006662301207143173,
+          "catch_difference_kt": 0.002054742289828937
+        },
+        {
+          "year": 2031,
+          "SSB_difference_kt": -0.0017531741113998578,
+          "catch_difference_kt": 0.006200927433610559
+        },
+        {
+          "year": 2032,
+          "SSB_difference_kt": 0.004492598017350247,
+          "catch_difference_kt": 0.005930349997925077
+        },
+        {
+          "year": 2033,
+          "SSB_difference_kt": 0.005919453619753767,
+          "catch_difference_kt": 0.0063544418619585485
+        },
+        {
+          "year": 2034,
+          "SSB_difference_kt": 0.005241799231953337,
+          "catch_difference_kt": -0.0013805284615955316
+        },
+        {
+          "year": 2035,
+          "SSB_difference_kt": -0.0025132200125881354,
+          "catch_difference_kt": 5.205083311921044e-05
+        },
+        {
+          "year": 2036,
+          "SSB_difference_kt": 0.003691555329169205,
+          "catch_difference_kt": -0.0022356226322699513
+        }
+      ],
+      "replacement": {
+        "F": 0.800206,
+        "catch_kt": 1118.0218271074364,
+        "target_SSB_kt": 6414.906353625,
+        "next_SSB_kt": 6414.905519912991,
+        "status": 1.0
+      },
+      "historical_blocks_unchanged": true
+    },
+    {
+      "model": "h2_1.06",
+      "stock": 2,
+      "references": {
+        "global": {
+          "Fmsy": 0.09549065622211655,
+          "Bmsy_kt": 1314.1920748091252,
+          "MSY_kt": 248.83203604438845
+        },
+        "proj": {
+          "Fmsy": 0.11197532863988627,
+          "Bmsy_kt": 1292.8013371054628,
+          "MSY_kt": 313.45393463103784
+        }
+      },
+      "scenario4": [
+        {
+          "year": 2027,
+          "SSB_difference_kt": 0.0010562416546235909,
+          "catch_difference_kt": -0.000888198143968566
+        },
+        {
+          "year": 2028,
+          "SSB_difference_kt": 0.0002151239227714541,
+          "catch_difference_kt": -0.00018901834840789888
+        },
+        {
+          "year": 2029,
+          "SSB_difference_kt": 0.00484620602992436,
+          "catch_difference_kt": 4.774832723342115e-05
+        },
+        {
+          "year": 2030,
+          "SSB_difference_kt": -0.0008270351190731162,
+          "catch_difference_kt": 7.184235221302515e-05
+        },
+        {
+          "year": 2031,
+          "SSB_difference_kt": 0.0026659178824957053,
+          "catch_difference_kt": -5.07098776552084e-05
+        },
+        {
+          "year": 2032,
+          "SSB_difference_kt": 0.0013712644354200165,
+          "catch_difference_kt": 0.0006949323806111352
+        },
+        {
+          "year": 2033,
+          "SSB_difference_kt": -0.0012169199335403391,
+          "catch_difference_kt": 6.978993849315884e-05
+        },
+        {
+          "year": 2034,
+          "SSB_difference_kt": 0.001968056390978745,
+          "catch_difference_kt": -4.7702008714622934e-05
+        },
+        {
+          "year": 2035,
+          "SSB_difference_kt": 0.008458615737026776,
+          "catch_difference_kt": 0.0002781757850698341
+        },
+        {
+          "year": 2036,
+          "SSB_difference_kt": 0.0004682323733504745,
+          "catch_difference_kt": 0.00016395001040336865
+        }
+      ],
+      "replacement": {
+        "F": 0.00306305,
+        "catch_kt": 15.742978301350654,
+        "target_SSB_kt": 4002.064948356794,
+        "next_SSB_kt": 4002.0648720890613,
+        "status": 1.0
+      },
+      "historical_blocks_unchanged": true
+    },
+    {
+      "model": "h1_1.06.ls",
+      "stock": 1,
+      "references": {
+        "global": {
+          "Fmsy": 0.39317922851392495,
+          "Bmsy_kt": 5749.979074707604,
+          "MSY_kt": 1077.442357709983
+        },
+        "proj": {
+          "Fmsy": 0.9252046954335162,
+          "Bmsy_kt": 5667.350726718769,
+          "MSY_kt": 1139.6580952160166
+        }
+      },
+      "scenario4": [
+        {
+          "year": 2027,
+          "SSB_difference_kt": 0.002549130003899336,
+          "catch_difference_kt": 0.0052453540738497395
+        },
+        {
+          "year": 2028,
+          "SSB_difference_kt": 0.0021687299695258844,
+          "catch_difference_kt": -0.001205026680509036
+        },
+        {
+          "year": 2029,
+          "SSB_difference_kt": -0.0014881284841976594,
+          "catch_difference_kt": 0.0013511080501302786
+        },
+        {
+          "year": 2030,
+          "SSB_difference_kt": 0.001258045185750234,
+          "catch_difference_kt": 0.0012508697213888809
+        },
+        {
+          "year": 2031,
+          "SSB_difference_kt": 0.003997917887318181,
+          "catch_difference_kt": 0.0045046705301956536
+        },
+        {
+          "year": 2032,
+          "SSB_difference_kt": 0.0004294141381251393,
+          "catch_difference_kt": -0.0007824668987268524
+        },
+        {
+          "year": 2033,
+          "SSB_difference_kt": -0.0034743240148600307,
+          "catch_difference_kt": 0.00017191878805533634
+        },
+        {
+          "year": 2034,
+          "SSB_difference_kt": 0.0017550277461850783,
+          "catch_difference_kt": 0.0008134516074278508
+        },
+        {
+          "year": 2035,
+          "SSB_difference_kt": 0.0010171602416448877,
+          "catch_difference_kt": 0.0006956132044706465
+        },
+        {
+          "year": 2036,
+          "SSB_difference_kt": 0.0018547886784290313,
+          "catch_difference_kt": 0.004858285258478645
+        }
+      ],
+      "replacement": {
+        "F": 0.792966,
+        "catch_kt": 1104.7438871224074,
+        "target_SSB_kt": 5979.236632901382,
+        "next_SSB_kt": 5979.236353341846,
+        "status": 1.0
+      },
+      "historical_blocks_unchanged": true
+    },
+    {
+      "model": "h2_1.06.ls",
+      "stock": 1,
+      "references": {
+        "global": {
+          "Fmsy": 0.38743361265013376,
+          "Bmsy_kt": 5096.152240923707,
+          "MSY_kt": 956.5359125199273
+        },
+        "proj": {
+          "Fmsy": 0.9750557577071721,
+          "Bmsy_kt": 5254.39043796892,
+          "MSY_kt": 969.9334494204297
+        }
+      },
+      "scenario4": [
+        {
+          "year": 2027,
+          "SSB_difference_kt": -0.007885034808168712,
+          "catch_difference_kt": -0.002572724472202026
+        },
+        {
+          "year": 2028,
+          "SSB_difference_kt": -0.0063329674949272885,
+          "catch_difference_kt": -0.00032012217684496136
+        },
+        {
+          "year": 2029,
+          "SSB_difference_kt": -0.0024255701837319066,
+          "catch_difference_kt": -0.002730448212560077
+        },
+        {
+          "year": 2030,
+          "SSB_difference_kt": -0.002028465661169321,
+          "catch_difference_kt": 0.0003719023377470876
+        },
+        {
+          "year": 2031,
+          "SSB_difference_kt": -0.005071910930382728,
+          "catch_difference_kt": -0.002658867887703309
+        },
+        {
+          "year": 2032,
+          "SSB_difference_kt": -0.004009414396932698,
+          "catch_difference_kt": -0.0009748869815666694
+        },
+        {
+          "year": 2033,
+          "SSB_difference_kt": -0.0024839223979142844,
+          "catch_difference_kt": 0.004525185678176058
+        },
+        {
+          "year": 2034,
+          "SSB_difference_kt": -0.005062592561444035,
+          "catch_difference_kt": 0.0010439627501455107
+        },
+        {
+          "year": 2035,
+          "SSB_difference_kt": 0.0013207276333560003,
+          "catch_difference_kt": 0.001205414649348313
+        },
+        {
+          "year": 2036,
+          "SSB_difference_kt": -0.0004604296191246249,
+          "catch_difference_kt": 0.0011639832050605037
+        }
+      ],
+      "replacement": {
+        "F": 0.570646,
+        "catch_kt": 895.4741100319106,
+        "target_SSB_kt": 6762.227812730153,
+        "next_SSB_kt": 6762.229446626111,
+        "status": 1.0
+      },
+      "historical_blocks_unchanged": true
+    },
+    {
+      "model": "h2_1.06.ls",
+      "stock": 2,
+      "references": {
+        "global": {
+          "Fmsy": 0.09549065637997131,
+          "Bmsy_kt": 1314.1920001366423,
+          "MSY_kt": 248.8320224689923
+        },
+        "proj": {
+          "Fmsy": 0.11197532892930154,
+          "Bmsy_kt": 1292.8012623126153,
+          "MSY_kt": 313.45391753322957
+        }
+      },
+      "scenario4": [
+        {
+          "year": 2027,
+          "SSB_difference_kt": -0.0015293022279365687,
+          "catch_difference_kt": -0.0009975584976587015
+        },
+        {
+          "year": 2028,
+          "SSB_difference_kt": -0.0019055050174756616,
+          "catch_difference_kt": -0.00021614683998905093
+        },
+        {
+          "year": 2029,
+          "SSB_difference_kt": 0.003089679669301404,
+          "catch_difference_kt": 2.5274385393458942e-05
+        },
+        {
+          "year": 2030,
+          "SSB_difference_kt": -0.002233109960343427,
+          "catch_difference_kt": 2.6028761340057827e-05
+        },
+        {
+          "year": 2031,
+          "SSB_difference_kt": 0.0015435078553309722,
+          "catch_difference_kt": -0.00011494131683775777
+        },
+        {
+          "year": 2032,
+          "SSB_difference_kt": 0.0004892722345175571,
+          "catch_difference_kt": 0.0006289003221695566
+        },
+        {
+          "year": 2033,
+          "SSB_difference_kt": -0.0019212171446270077,
+          "catch_difference_kt": 5.4894103982405795e-06
+        },
+        {
+          "year": 2034,
+          "SSB_difference_kt": 0.001403205950055053,
+          "catch_difference_kt": -0.00010903793861416489
+        },
+        {
+          "year": 2035,
+          "SSB_difference_kt": 0.007996050954034217,
+          "catch_difference_kt": 0.00022069456861117942
+        },
+        {
+          "year": 2036,
+          "SSB_difference_kt": 8.192377299565123e-05,
+          "catch_difference_kt": 0.00011084435948305327
+        }
+      ],
+      "replacement": {
+        "F": 0.00306305,
+        "catch_kt": 15.742975126311057,
+        "target_SSB_kt": 4002.0622898461907,
+        "next_SSB_kt": 4002.0626529637534,
+        "status": 1.0
+      },
+      "historical_blocks_unchanged": true
+    }
+  ],
+  "window_tests": [
+    {
+      "model": "h1_1.06.ls",
+      "stock": 1,
+      "fut_sel": 0,
+      "global_invariant": true,
+      "Fmsy_proj": 0.812308
+    },
+    {
+      "model": "h1_1.06.ls",
+      "stock": 1,
+      "fut_sel": 15,
+      "global_invariant": true,
+      "Fmsy_proj": 0.393179
+    },
+    {
+      "model": "h2_1.06.ls",
+      "stock": 1,
+      "fut_sel": 0,
+      "global_invariant": true,
+      "Fmsy_proj": 0.907566
+    },
+    {
+      "model": "h2_1.06.ls",
+      "stock": 2,
+      "fut_sel": 0,
+      "global_invariant": true,
+      "Fmsy_proj": 0.111975
+    },
+    {
+      "model": "h2_1.06.ls",
+      "stock": 1,
+      "fut_sel": 15,
+      "global_invariant": true,
+      "Fmsy_proj": 0.387434
+    },
+    {
+      "model": "h2_1.06.ls",
+      "stock": 2,
+      "fut_sel": 15,
+      "global_invariant": true,
+      "Fmsy_proj": 0.0954906
+    }
+  ],
+  "method": "Independent Python Baranov, Beverton-Holt, plus-group and golden-section optimization checks using rounded model reports; unchanged historical blocks and parameter values; controlled projection-window runs.",
+  "template_sha256": "b3bef2d3147d967e679140be99d912119061f786c3e0eeea48f11801a31fe7bc"
+}

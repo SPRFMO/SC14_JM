@@ -14,6 +14,11 @@ This working assessment presents model results for review. Its draft or proposed
 [Report synchronization record](assessment/sync.json).
 <!-- sc14-assessment:end -->
 
+## Technical annex
+
+[Read the full technical annex](technical-annex.html), including the single-stock and two-stock results, reference-point equations, projection risk tables and an analyst handover with the R calculations. HTML, PDF and Word versions are available within the wiki.
+
+
 ## Base-model MCMC uncertainty
 
 [Read the separate ADNUTS results document](papers/base-model-adnuts-2026/base-model-adnuts.html), including biomass and recruitment intervals, 100 Kobe trajectories, and annual probabilities of the green quadrant for 2007–2026. The default run completed, but some parameters have incomplete chain mixing; the uncertainty displays are exploratory. The document includes diagnostics, downloadable trajectories and reproducibility files.

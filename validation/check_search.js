@@ -13,6 +13,8 @@ for (const query of ['MP29','MP 29','cmp-29','MP–29','CMP−29']) {
 assert.ok(urls('CMP29 2027').some(url=>url.startsWith('tac-advice-2027-2028.html#')));
 assert.ok(urls('CPUE').some(url=>url.startsWith('assessment/SC14.html#')));
 assert.ok(urls('recruit').length > 0);
+assert.ok(urls('replacement yield').some(url=>url.startsWith('technical-annex-v2/output/technical-annex.html#')));
+assert.ok(urls('Rscript build').some(url=>url.startsWith('technical-annex-v2/output/technology-transfer.html#')));
 assert.equal(urls('zzzxxyynonexistent').length, 0);
 assert.equal(urls('x').length, 0);
 assert.equal(urls('!@#$%').length, 0);

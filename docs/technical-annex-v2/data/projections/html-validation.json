@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "risk_display_values": 144,
+  "probability_headers": 9,
+  "reference_values": 48,
+  "stock_status_values": 15,
+  "restored_lightbox_figures": 47,
+  "total_figures": 50,
+  "years": [
+    2028,
+    2031,
+    2036
+  ],
+  "browser_interaction": "Not tested",
+  "diagram_png_visual_inspection": "PASS"
+}

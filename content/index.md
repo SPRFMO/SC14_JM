@@ -37,3 +37,7 @@ The strongest coverage here is May–September 2026. Earlier research and manage
 ## New base-model uncertainty analysis
 
 [Read the ADNUTS results and 100 Kobe trajectories](papers/base-model-adnuts-2026/base-model-adnuts.html) for the single-stock base model, covering 2007–2026 in the Kobe plot. The document includes sampling diagnostics and downloadable data. Some chains need better mixing, so its uncertainty displays remain exploratory.
+
+## Technical annex
+
+[Read the technical annex and analyst handover](technical-annex.html) for the Model 1.06 assessment, reference points, two-, five- and ten-year risk tables, report downloads and reproducible R calculations.

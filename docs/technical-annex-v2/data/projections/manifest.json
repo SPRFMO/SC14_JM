@@ -1,0 +1,55 @@
+{
+  "date": "2026-09-11",
+  "status": "PASS",
+  "template_sha256": "b3bef2d3147d967e679140be99d912119061f786c3e0eeea48f11801a31fe7bc",
+  "runs": [
+    {
+      "model": "h1_1.06.ls",
+      "control_sha256": "6fc97ff86343bf9808a8b567d528c49dae90e4febdf1afcdafb8d7917820d697",
+      "data_sha256": "6b65fad6aff0340e04b792d687571587c9ca3c66c8c197faa2aec725ef38c844",
+      "parameter_sha256": "671477134b4919730baff6d3dd3f0a65b0739ce1dfe56da39d175134899f49ff",
+      "minimum_hessian_eigenvalue": 0.04548855951,
+      "command": "./jjm -ind model.ctl -ainp start-10yr.par -phase 5 -maxfn 0 -fut_sel 3 -msy_sel 15 -tac 1674.975",
+      "note": "Ten projection years; unchanged fitted parameters and zero future recruitment deviations; Hessian and all derived standard errors recomputed. No refitting."
+    },
+    {
+      "model": "h2_1.06.ls",
+      "control_sha256": "e2c5c7d9c70b96161ffb2b68d5388c64da1129b7005c6dde824de0f479046398",
+      "data_sha256": "6b65fad6aff0340e04b792d687571587c9ca3c66c8c197faa2aec725ef38c844",
+      "parameter_sha256": "35b0d9475f1d4f31809a1286550ed526b389f70fdaa9790bbe64b4cb89e5a2eb",
+      "minimum_hessian_eigenvalue": 0.02730115387,
+      "command": "./jjm -ind model.ctl -ainp start-10yr.par -phase 5 -maxfn 0 -fut_sel 3 -msy_sel 15 -tac 1674.975",
+      "note": "Ten projection years; unchanged fitted parameters and zero future recruitment deviations; Hessian and all derived standard errors recomputed. No refitting."
+    }
+  ],
+  "records": 180,
+  "horizon_years": [
+    2028,
+    2031,
+    2036
+  ],
+  "thresholds": "Fixed base 2017-2026 mean annual BMSY; unchanged. Scalar Bmsy_global is reported separately.",
+  "probability": "100 * (1 - Phi((fixed base BMSY - projected SSB)/ADMB SE)); conditional normal approximation, BMSY uncertainty excluded.",
+  "files": {
+    "h1_1.06.ls-hessian.log": "b5e0ae34626af6038a34563e2ed94dc2485a3c2a75a9a54c217c458133bcbbe8",
+    "h2_1.06.ls-hessian.log": "436fda45c4b7b4678556d21b75f62f98a6829b34e25508cf73b366f6b2cc85a8",
+    "h1_1.06.ls_1_R.rep": "782df0f4f4b2f146a6ea3b05440776124c5d2cd0afdd8a197607928deed3e507",
+    "html-validation.json": "97074b25147137ed131c077fbc1817468c7dabc7b02701ea4167f171b1abe624",
+    "h1_1.06.ls-start-10yr.par": "671477134b4919730baff6d3dd3f0a65b0739ce1dfe56da39d175134899f49ff",
+    "h2_1.06.ls_2_R.rep": "1815ac1f4109b0e4b76e9f125c31d3d53af30ffbd4d81b2df4cead084311cc66",
+    "h2_1.06.ls-start-10yr.par": "35b0d9475f1d4f31809a1286550ed526b389f70fdaa9790bbe64b4cb89e5a2eb",
+    "risk-data.csv": "a0c8a1cf48b2522f83b0967ca825e47f77243d80a94b89eea378e1ada88298be",
+    "h2_1.06.ls-model.ctl": "e2c5c7d9c70b96161ffb2b68d5388c64da1129b7005c6dde824de0f479046398",
+    "h1_1.06.ls-model.ctl": "6fc97ff86343bf9808a8b567d528c49dae90e4febdf1afcdafb8d7917820d697",
+    "reference-values.csv": "0fd1d6d44a9111a8e9894689b6ad325ff132b9d812a4831b54c514df5987b447",
+    "h2_1.06.ls_1_R.rep": "d0feb6ed78001256257964743387b0aaa05b3171b3e38ea48cf73b0553a4ef9c",
+    "model-validation.json": "94eb888ff78e693ea53c9ac9bf9dcaae766d24c99c76cefef5f7914f69500bb6"
+  },
+  "validation_workspace": "/Users/jim/_mymods/sprfmo/jmMSE26/output/jjm-reference-replacement-complete-2026",
+  "data_source": "/Users/jim/_mymods/sprfmo/jjm/assessment/input/1.06.dat",
+  "validation_scripts": [
+    "/Users/jim/_mymods/sprfmo/jmMSE26/output/jjm-reference-replacement-complete-2026/validate_model.py",
+    "/Users/jim/_mymods/sprfmo/jmMSE26/output/jjm-reference-replacement-complete-2026/export_risk.py",
+    "/Users/jim/_mymods/sprfmo/jmMSE26/output/jjm-reference-replacement-complete-2026/validate_html.py"
+  ]
+}

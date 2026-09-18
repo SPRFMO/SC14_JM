@@ -27,7 +27,10 @@ assert 'tac-advice-2027-2028.html' in documents
 assert 'assessment/SC14.html' in documents
 assert 'assessment/loo.html' in documents
 assert 'search.html' not in documents
-assert not any('annex/' in d or 'kobe-100-trajectories' in d for d in documents)
+assert not any('kobe-100-trajectories' in d for d in documents)
+assert 'technical-annex.html' in documents
+assert 'technical-annex-v2/output/technical-annex.html' in documents
+assert 'technical-annex-v2/output/technology-transfer.html' in documents
 assert len(documents) == len(index['documents'])
 ids = {}
 for document in documents:

@@ -1,0 +1,19 @@
+Got to fut_sel 3
+Got to msy_sel 15
+Got to tac 1674.97
+Starting optimization of 'jjm' in phase 5 of 5 at Fri Sep 11 13:22:53 2026
+===============================================================
+||  ++++++ Completed phase 5 In last phase now +++++
+||
+||  model.ctl
+||
+||
+_______________________________________________________________
+Calculating Hessian (1669 variables): 20%, 40%, 60%, 80%, 100% done (46 s) 
+Differentiating 33 derived quantities: 20%, 40%, 60%, 80%, 100% done (5.2 s) 
+Inverting Hessian (1669 variables): 20%, 40%, 60%, 80%, 100% done (5.9 s) 
+Starting standard error calculations...  done (8.1 s) 
+In final section
+Doing a profile over F....
+
+Finished running model 'jjm' after 1 m 5.9 s.

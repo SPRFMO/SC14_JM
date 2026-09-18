@@ -69,3 +69,7 @@ Earlier studies, Commission decisions and SC14’s agreed conclusions are the ne
 ## Base-model uncertainty — 10 September 2026
 
 - [Jack mackerel base model: MCMC uncertainty](papers/base-model-adnuts-2026/base-model-adnuts.html) — default ADNUTS results for single-stock model h1_1.06, with diagnostics, biomass and recruitment summaries, and 100 Kobe trajectories for 2007–2026. Exploratory working analysis: some chains need better mixing.
+
+## Assessment technical annex
+
+- [Jack mackerel technical annex, Version 2](technical-annex.html) — working Model 1.06 results through 11 September 2026, with PDF and Word downloads, the analyst handover and links to saved source results.
