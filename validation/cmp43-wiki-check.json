@@ -1,0 +1,922 @@
+{
+  "checked_at_utc": "2026-09-23T13:43:52.423583+00:00",
+  "base_revision": "0badb8ce09c046d17f080a60b5a2bae32fa966d1",
+  "scope": "Three generated wiki pages, source wording, displayed advice, parameters and local links. Workbook checked separately. No source edits or build.",
+  "pass": true,
+  "counts": {
+    "source_pages": 3,
+    "generated_pages": 3,
+    "advice_CSV_rows": 32,
+    "displayed_advice_values_checked": 32,
+    "main_CMPs": 3,
+    "other_CMPs": 5,
+    "CMP_parameter_rows_checked": 8,
+    "local_links_checked": 90,
+    "local_fragments_checked": 3
+  },
+  "candidate_groups": {
+    "main": [
+      "CMP29",
+      "CMP43",
+      "CMP45"
+    ],
+    "other": [
+      "CMP32",
+      "CMP44",
+      "CMP46",
+      "CMP47",
+      "CMP48"
+    ]
+  },
+  "checks": {
+    "index_post_SC14_wording": true,
+    "index_three_main_CMPs": true,
+    "index_other_five": true,
+    "index_two_scenarios_and_cutoffs": true,
+    "mse_post_SC14_wording": true,
+    "mse_three_main_CMPs": true,
+    "mse_other_five": true,
+    "mse_two_scenarios_and_cutoffs": true,
+    "tac-advice-2027-2028_post_SC14_wording": true,
+    "tac-advice-2027-2028_three_main_CMPs": true,
+    "tac-advice-2027-2028_other_five": true,
+    "tac-advice-2027-2028_two_scenarios_and_cutoffs": true,
+    "all_local_links_pass": true,
+    "CSV_32_unique_advice_rows": true,
+    "main_membership_and_two_scenarios": true,
+    "other_membership_and_two_scenarios": true,
+    "all_32_advice_values_match_CSV": true,
+    "CMP29_parameters": true,
+    "CMP45_parameters": true,
+    "CMP43_parameters": true,
+    "CMP47_parameters": true,
+    "CMP32_parameters": true,
+    "CMP44_parameters": true,
+    "CMP46_parameters": true,
+    "CMP48_parameters": true,
+    "eight_parameter_rows": true,
+    "new_and_legacy_heading_anchors": true,
+    "date_and_historical_vintage": true,
+    "working_and_formal_status": true,
+    "2026_missing_and_provisional_qualification": true,
+    "same_vintage_cutoff_qualification": true,
+    "CMP43_worked_example_values": true,
+    "CMP43_binding_rule_explanation": true,
+    "CMP43_full_precision_carry_forward": true,
+    "all_cmp_advice.csv_unchanged_from_HEAD": true,
+    "all_cmp_parameters.csv_unchanged_from_HEAD": true
+  },
+  "advice_value_checks": [
+    {
+      "category": "main",
+      "tac_2026_kt": 1675,
+      "cmp": "CMP29",
+      "year": 2027,
+      "displayed": "1,423.75",
+      "expected_csv_rounded": "1,423.75",
+      "pass": true
+    },
+    {
+      "category": "main",
+      "tac_2026_kt": 1675,
+      "cmp": "CMP29",
+      "year": 2028,
+      "displayed": "1,210.19",
+      "expected_csv_rounded": "1,210.19",
+      "pass": true
+    },
+    {
+      "category": "main",
+      "tac_2026_kt": 1675,
+      "cmp": "CMP45",
+      "year": 2027,
+      "displayed": "1,423.75",
+      "expected_csv_rounded": "1,423.75",
+      "pass": true
+    },
+    {
+      "category": "main",
+      "tac_2026_kt": 1675,
+      "cmp": "CMP45",
+      "year": 2028,
+      "displayed": "1,210.19",
+      "expected_csv_rounded": "1,210.19",
+      "pass": true
+    },
+    {
+      "category": "main",
+      "tac_2026_kt": 1675,
+      "cmp": "CMP43",
+      "year": 2027,
+      "displayed": "1,340.00",
+      "expected_csv_rounded": "1,340.00",
+      "pass": true
+    },
+    {
+      "category": "main",
+      "tac_2026_kt": 1675,
+      "cmp": "CMP43",
+      "year": 2028,
+      "displayed": "1,073.40",
+      "expected_csv_rounded": "1,073.40",
+      "pass": true
+    },
+    {
+      "category": "main",
+      "tac_2026_kt": 1092,
+      "cmp": "CMP29",
+      "year": 2027,
+      "displayed": "1,115.64",
+      "expected_csv_rounded": "1,115.64",
+      "pass": true
+    },
+    {
+      "category": "main",
+      "tac_2026_kt": 1092,
+      "cmp": "CMP29",
+      "year": 2028,
+      "displayed": "999.01",
+      "expected_csv_rounded": "999.01",
+      "pass": true
+    },
+    {
+      "category": "main",
+      "tac_2026_kt": 1092,
+      "cmp": "CMP45",
+      "year": 2027,
+      "displayed": "1,142.57",
+      "expected_csv_rounded": "1,142.57",
+      "pass": true
+    },
+    {
+      "category": "main",
+      "tac_2026_kt": 1092,
+      "cmp": "CMP45",
+      "year": 2028,
+      "displayed": "1,022.23",
+      "expected_csv_rounded": "1,022.23",
+      "pass": true
+    },
+    {
+      "category": "main",
+      "tac_2026_kt": 1092,
+      "cmp": "CMP43",
+      "year": 2027,
+      "displayed": "1,201.93",
+      "expected_csv_rounded": "1,201.93",
+      "pass": true
+    },
+    {
+      "category": "main",
+      "tac_2026_kt": 1092,
+      "cmp": "CMP43",
+      "year": 2028,
+      "displayed": "1,073.40",
+      "expected_csv_rounded": "1,073.40",
+      "pass": true
+    },
+    {
+      "category": "other",
+      "tac_2026_kt": 1675,
+      "cmp": "CMP47",
+      "year": 2027,
+      "displayed": "1,172.50",
+      "expected_csv_rounded": "1,172.50",
+      "pass": true
+    },
+    {
+      "category": "other",
+      "tac_2026_kt": 1675,
+      "cmp": "CMP47",
+      "year": 2028,
+      "displayed": "1,046.97",
+      "expected_csv_rounded": "1,046.97",
+      "pass": true
+    },
+    {
+      "category": "other",
+      "tac_2026_kt": 1675,
+      "cmp": "CMP32",
+      "year": 2027,
+      "displayed": "1,423.75",
+      "expected_csv_rounded": "1,423.75",
+      "pass": true
+    },
+    {
+      "category": "other",
+      "tac_2026_kt": 1675,
+      "cmp": "CMP32",
+      "year": 2028,
+      "displayed": "1,210.19",
+      "expected_csv_rounded": "1,210.19",
+      "pass": true
+    },
+    {
+      "category": "other",
+      "tac_2026_kt": 1675,
+      "cmp": "CMP44",
+      "year": 2027,
+      "displayed": "1,340.00",
+      "expected_csv_rounded": "1,340.00",
+      "pass": true
+    },
+    {
+      "category": "other",
+      "tac_2026_kt": 1675,
+      "cmp": "CMP44",
+      "year": 2028,
+      "displayed": "1,072.00",
+      "expected_csv_rounded": "1,072.00",
+      "pass": true
+    },
+    {
+      "category": "other",
+      "tac_2026_kt": 1675,
+      "cmp": "CMP46",
+      "year": 2027,
+      "displayed": "1,423.75",
+      "expected_csv_rounded": "1,423.75",
+      "pass": true
+    },
+    {
+      "category": "other",
+      "tac_2026_kt": 1675,
+      "cmp": "CMP46",
+      "year": 2028,
+      "displayed": "1,210.19",
+      "expected_csv_rounded": "1,210.19",
+      "pass": true
+    },
+    {
+      "category": "other",
+      "tac_2026_kt": 1675,
+      "cmp": "CMP48",
+      "year": 2027,
+      "displayed": "1,172.50",
+      "expected_csv_rounded": "1,172.50",
+      "pass": true
+    },
+    {
+      "category": "other",
+      "tac_2026_kt": 1675,
+      "cmp": "CMP48",
+      "year": 2028,
+      "displayed": "820.75",
+      "expected_csv_rounded": "820.75",
+      "pass": true
+    },
+    {
+      "category": "other",
+      "tac_2026_kt": 1092,
+      "cmp": "CMP47",
+      "year": 2027,
+      "displayed": "1,171.27",
+      "expected_csv_rounded": "1,171.27",
+      "pass": true
+    },
+    {
+      "category": "other",
+      "tac_2026_kt": 1092,
+      "cmp": "CMP47",
+      "year": 2028,
+      "displayed": "1,046.97",
+      "expected_csv_rounded": "1,046.97",
+      "pass": true
+    },
+    {
+      "category": "other",
+      "tac_2026_kt": 1092,
+      "cmp": "CMP32",
+      "year": 2027,
+      "displayed": "928.20",
+      "expected_csv_rounded": "928.20",
+      "pass": true
+    },
+    {
+      "category": "other",
+      "tac_2026_kt": 1092,
+      "cmp": "CMP32",
+      "year": 2028,
+      "displayed": "788.97",
+      "expected_csv_rounded": "788.97",
+      "pass": true
+    },
+    {
+      "category": "other",
+      "tac_2026_kt": 1092,
+      "cmp": "CMP44",
+      "year": 2027,
+      "displayed": "873.60",
+      "expected_csv_rounded": "873.60",
+      "pass": true
+    },
+    {
+      "category": "other",
+      "tac_2026_kt": 1092,
+      "cmp": "CMP44",
+      "year": 2028,
+      "displayed": "698.88",
+      "expected_csv_rounded": "698.88",
+      "pass": true
+    },
+    {
+      "category": "other",
+      "tac_2026_kt": 1092,
+      "cmp": "CMP46",
+      "year": 2027,
+      "displayed": "928.20",
+      "expected_csv_rounded": "928.20",
+      "pass": true
+    },
+    {
+      "category": "other",
+      "tac_2026_kt": 1092,
+      "cmp": "CMP46",
+      "year": 2028,
+      "displayed": "788.97",
+      "expected_csv_rounded": "788.97",
+      "pass": true
+    },
+    {
+      "category": "other",
+      "tac_2026_kt": 1092,
+      "cmp": "CMP48",
+      "year": 2027,
+      "displayed": "764.40",
+      "expected_csv_rounded": "764.40",
+      "pass": true
+    },
+    {
+      "category": "other",
+      "tac_2026_kt": 1092,
+      "cmp": "CMP48",
+      "year": 2028,
+      "displayed": "581.46",
+      "expected_csv_rounded": "581.46",
+      "pass": true
+    }
+  ],
+  "local_link_checks": [
+    {
+      "page": "index.html",
+      "url": "style.css",
+      "target_exists": true,
+      "pass": true
+    },
+    {
+      "page": "index.html",
+      "url": "search.css",
+      "target_exists": true,
+      "pass": true
+    },
+    {
+      "page": "index.html",
+      "url": "search.js",
+      "target_exists": true,
+      "pass": true
+    },
+    {
+      "page": "index.html",
+      "url": "#main",
+      "target_exists": true,
+      "fragment_exists": true,
+      "pass": true
+    },
+    {
+      "page": "index.html",
+      "url": "search.html",
+      "target_exists": true,
+      "pass": true
+    },
+    {
+      "page": "index.html",
+      "url": "index.html",
+      "target_exists": true,
+      "pass": true
+    },
+    {
+      "page": "index.html",
+      "url": "history.html",
+      "target_exists": true,
+      "pass": true
+    },
+    {
+      "page": "index.html",
+      "url": "meetings.html",
+      "target_exists": true,
+      "pass": true
+    },
+    {
+      "page": "index.html",
+      "url": "stock-structure.html",
+      "target_exists": true,
+      "pass": true
+    },
+    {
+      "page": "index.html",
+      "url": "data-surveys.html",
+      "target_exists": true,
+      "pass": true
+    },
+    {
+      "page": "index.html",
+      "url": "assessments.html",
+      "target_exists": true,
+      "pass": true
+    },
+    {
+      "page": "index.html",
+      "url": "mse.html",
+      "target_exists": true,
+      "pass": true
+    },
+    {
+      "page": "index.html",
+      "url": "tac-advice-2027-2028.html",
+      "target_exists": true,
+      "pass": true
+    },
+    {
+      "page": "index.html",
+      "url": "sc14-week.html",
+      "target_exists": true,
+      "pass": true
+    },
+    {
+      "page": "index.html",
+      "url": "sources.html",
+      "target_exists": true,
+      "pass": true
+    },
+    {
+      "page": "index.html",
+      "url": "technical-annex.html",
+      "target_exists": true,
+      "pass": true
+    },
+    {
+      "page": "index.html",
+      "url": "contributing.html",
+      "target_exists": true,
+      "pass": true
+    },
+    {
+      "page": "index.html",
+      "url": "search.html",
+      "target_exists": true,
+      "pass": true
+    },
+    {
+      "page": "index.html",
+      "url": "assessments.html",
+      "target_exists": true,
+      "pass": true
+    },
+    {
+      "page": "index.html",
+      "url": "assessment/SC14.html",
+      "target_exists": true,
+      "pass": true
+    },
+    {
+      "page": "index.html",
+      "url": "mse.html",
+      "target_exists": true,
+      "pass": true
+    },
+    {
+      "page": "index.html",
+      "url": "data-surveys.html",
+      "target_exists": true,
+      "pass": true
+    },
+    {
+      "page": "index.html",
+      "url": "sc14-week.html",
+      "target_exists": true,
+      "pass": true
+    },
+    {
+      "page": "index.html",
+      "url": "papers/cmp-screening-2026/cmp-screening-working-paper.html",
+      "target_exists": true,
+      "pass": true
+    },
+    {
+      "page": "index.html",
+      "url": "tac-advice-2027-2028.html",
+      "target_exists": true,
+      "pass": true
+    },
+    {
+      "page": "index.html",
+      "url": "papers/base-model-adnuts-2026/base-model-adnuts.html",
+      "target_exists": true,
+      "pass": true
+    },
+    {
+      "page": "index.html",
+      "url": "technical-annex.html",
+      "target_exists": true,
+      "pass": true
+    },
+    {
+      "page": "index.html",
+      "url": "sources.html",
+      "target_exists": true,
+      "pass": true
+    },
+    {
+      "page": "index.html",
+      "url": "contributing.html",
+      "target_exists": true,
+      "pass": true
+    },
+    {
+      "page": "mse.html",
+      "url": "style.css",
+      "target_exists": true,
+      "pass": true
+    },
+    {
+      "page": "mse.html",
+      "url": "search.css",
+      "target_exists": true,
+      "pass": true
+    },
+    {
+      "page": "mse.html",
+      "url": "search.js",
+      "target_exists": true,
+      "pass": true
+    },
+    {
+      "page": "mse.html",
+      "url": "#main",
+      "target_exists": true,
+      "fragment_exists": true,
+      "pass": true
+    },
+    {
+      "page": "mse.html",
+      "url": "search.html",
+      "target_exists": true,
+      "pass": true
+    },
+    {
+      "page": "mse.html",
+      "url": "index.html",
+      "target_exists": true,
+      "pass": true
+    },
+    {
+      "page": "mse.html",
+      "url": "history.html",
+      "target_exists": true,
+      "pass": true
+    },
+    {
+      "page": "mse.html",
+      "url": "meetings.html",
+      "target_exists": true,
+      "pass": true
+    },
+    {
+      "page": "mse.html",
+      "url": "stock-structure.html",
+      "target_exists": true,
+      "pass": true
+    },
+    {
+      "page": "mse.html",
+      "url": "data-surveys.html",
+      "target_exists": true,
+      "pass": true
+    },
+    {
+      "page": "mse.html",
+      "url": "assessments.html",
+      "target_exists": true,
+      "pass": true
+    },
+    {
+      "page": "mse.html",
+      "url": "mse.html",
+      "target_exists": true,
+      "pass": true
+    },
+    {
+      "page": "mse.html",
+      "url": "tac-advice-2027-2028.html",
+      "target_exists": true,
+      "pass": true
+    },
+    {
+      "page": "mse.html",
+      "url": "sc14-week.html",
+      "target_exists": true,
+      "pass": true
+    },
+    {
+      "page": "mse.html",
+      "url": "sources.html",
+      "target_exists": true,
+      "pass": true
+    },
+    {
+      "page": "mse.html",
+      "url": "technical-annex.html",
+      "target_exists": true,
+      "pass": true
+    },
+    {
+      "page": "mse.html",
+      "url": "contributing.html",
+      "target_exists": true,
+      "pass": true
+    },
+    {
+      "page": "mse.html",
+      "url": "search.html",
+      "target_exists": true,
+      "pass": true
+    },
+    {
+      "page": "mse.html",
+      "url": "tac-advice-2027-2028.html",
+      "target_exists": true,
+      "pass": true
+    },
+    {
+      "page": "mse.html",
+      "url": "papers/cmp-screening-2026/cmp-screening-working-paper.html",
+      "target_exists": true,
+      "pass": true
+    },
+    {
+      "page": "mse.html",
+      "url": "papers/cmp-screening-2026/cmp-decision-guide.html",
+      "target_exists": true,
+      "pass": true
+    },
+    {
+      "page": "mse.html",
+      "url": "papers/cmp-screening-2026/scorecard-all.html",
+      "target_exists": true,
+      "pass": true
+    },
+    {
+      "page": "mse.html",
+      "url": "papers/cmp-screening-2026/scorecard-shortlist.html",
+      "target_exists": true,
+      "pass": true
+    },
+    {
+      "page": "mse.html",
+      "url": "papers/cmp-screening-hs-2026/cmp-screening-working-paper.html",
+      "target_exists": true,
+      "pass": true
+    },
+    {
+      "page": "mse.html",
+      "url": "papers/cmp-screening-hs-2026/scorecard-shortlist.html",
+      "target_exists": true,
+      "pass": true
+    },
+    {
+      "page": "mse.html",
+      "url": "papers/cmp-screening-hs-2026/scorecard-all.html",
+      "target_exists": true,
+      "pass": true
+    },
+    {
+      "page": "mse.html",
+      "url": "sources.html",
+      "target_exists": true,
+      "pass": true
+    },
+    {
+      "page": "mse.html",
+      "url": "contributing.html",
+      "target_exists": true,
+      "pass": true
+    },
+    {
+      "page": "tac-advice-2027-2028.html",
+      "url": "style.css",
+      "target_exists": true,
+      "pass": true
+    },
+    {
+      "page": "tac-advice-2027-2028.html",
+      "url": "search.css",
+      "target_exists": true,
+      "pass": true
+    },
+    {
+      "page": "tac-advice-2027-2028.html",
+      "url": "search.js",
+      "target_exists": true,
+      "pass": true
+    },
+    {
+      "page": "tac-advice-2027-2028.html",
+      "url": "#main",
+      "target_exists": true,
+      "fragment_exists": true,
+      "pass": true
+    },
+    {
+      "page": "tac-advice-2027-2028.html",
+      "url": "search.html",
+      "target_exists": true,
+      "pass": true
+    },
+    {
+      "page": "tac-advice-2027-2028.html",
+      "url": "index.html",
+      "target_exists": true,
+      "pass": true
+    },
+    {
+      "page": "tac-advice-2027-2028.html",
+      "url": "history.html",
+      "target_exists": true,
+      "pass": true
+    },
+    {
+      "page": "tac-advice-2027-2028.html",
+      "url": "meetings.html",
+      "target_exists": true,
+      "pass": true
+    },
+    {
+      "page": "tac-advice-2027-2028.html",
+      "url": "stock-structure.html",
+      "target_exists": true,
+      "pass": true
+    },
+    {
+      "page": "tac-advice-2027-2028.html",
+      "url": "data-surveys.html",
+      "target_exists": true,
+      "pass": true
+    },
+    {
+      "page": "tac-advice-2027-2028.html",
+      "url": "assessments.html",
+      "target_exists": true,
+      "pass": true
+    },
+    {
+      "page": "tac-advice-2027-2028.html",
+      "url": "mse.html",
+      "target_exists": true,
+      "pass": true
+    },
+    {
+      "page": "tac-advice-2027-2028.html",
+      "url": "tac-advice-2027-2028.html",
+      "target_exists": true,
+      "pass": true
+    },
+    {
+      "page": "tac-advice-2027-2028.html",
+      "url": "sc14-week.html",
+      "target_exists": true,
+      "pass": true
+    },
+    {
+      "page": "tac-advice-2027-2028.html",
+      "url": "sources.html",
+      "target_exists": true,
+      "pass": true
+    },
+    {
+      "page": "tac-advice-2027-2028.html",
+      "url": "technical-annex.html",
+      "target_exists": true,
+      "pass": true
+    },
+    {
+      "page": "tac-advice-2027-2028.html",
+      "url": "contributing.html",
+      "target_exists": true,
+      "pass": true
+    },
+    {
+      "page": "tac-advice-2027-2028.html",
+      "url": "search.html",
+      "target_exists": true,
+      "pass": true
+    },
+    {
+      "page": "tac-advice-2027-2028.html",
+      "url": "papers/cmp-tac-advice-2027-2028/CMP_TAC_advice_2027_2028.xlsx",
+      "target_exists": true,
+      "pass": true
+    },
+    {
+      "page": "tac-advice-2027-2028.html",
+      "url": "papers/cmp-tac-advice-2027-2028/all_cmp_advice.csv",
+      "target_exists": true,
+      "pass": true
+    },
+    {
+      "page": "tac-advice-2027-2028.html",
+      "url": "assessment/SC14.html",
+      "target_exists": true,
+      "pass": true
+    },
+    {
+      "page": "tac-advice-2027-2028.html",
+      "url": "sources.html",
+      "target_exists": true,
+      "pass": true
+    },
+    {
+      "page": "tac-advice-2027-2028.html",
+      "url": "papers/cmp-tac-advice-2027-2028/CMP_TAC_advice_2027_2028.xlsx",
+      "target_exists": true,
+      "pass": true
+    },
+    {
+      "page": "tac-advice-2027-2028.html",
+      "url": "papers/cmp-tac-advice-2027-2028/all_cmp_advice.csv",
+      "target_exists": true,
+      "pass": true
+    },
+    {
+      "page": "tac-advice-2027-2028.html",
+      "url": "papers/cmp-tac-advice-2027-2028/all_cmp_parameters.csv",
+      "target_exists": true,
+      "pass": true
+    },
+    {
+      "page": "tac-advice-2027-2028.html",
+      "url": "papers/cmp-tac-advice-2027-2028/index_inputs_and_standardization.csv",
+      "target_exists": true,
+      "pass": true
+    },
+    {
+      "page": "tac-advice-2027-2028.html",
+      "url": "papers/cmp-tac-advice-2027-2028/annual_combined_indices.csv",
+      "target_exists": true,
+      "pass": true
+    },
+    {
+      "page": "tac-advice-2027-2028.html",
+      "url": "papers/cmp-tac-advice-2027-2028/reproduce_tac_advice.R",
+      "target_exists": true,
+      "pass": true
+    },
+    {
+      "page": "tac-advice-2027-2028.html",
+      "url": "papers/cmp-tac-advice-2027-2028/all_cmp_calculations.R",
+      "target_exists": true,
+      "pass": true
+    },
+    {
+      "page": "tac-advice-2027-2028.html",
+      "url": "papers/cmp-tac-advice-2027-2028/all_cmp_validation.txt",
+      "target_exists": true,
+      "pass": true
+    },
+    {
+      "page": "tac-advice-2027-2028.html",
+      "url": "mse.html",
+      "target_exists": true,
+      "pass": true
+    },
+    {
+      "page": "tac-advice-2027-2028.html",
+      "url": "sources.html",
+      "target_exists": true,
+      "pass": true
+    },
+    {
+      "page": "tac-advice-2027-2028.html",
+      "url": "contributing.html",
+      "target_exists": true,
+      "pass": true
+    }
+  ],
+  "file_hashes_sha256": {
+    "content/index.md": "790825278c442de0d4d5709d0411a49a299bc085c369b190817c2931f826c113",
+    "content/mse.md": "1087908eed16b1eea62bb1d6668efd66f4337509563b265cf6376f52472d6b41",
+    "content/tac-advice-2027-2028.md": "41c96c50c2575a91165e0c35718121d47b74eb0af450613d1f102ef1680a8e05",
+    "docs/index.html": "50d288a4ecc5bd1ec46dfe6a43d2cf0191f785d07fae3d2e5958630383028043",
+    "docs/mse.html": "6a90103bf319498d0f11d73d5f1e3bdf3b91efe78e9fa553902b92f7df89ee76",
+    "docs/tac-advice-2027-2028.html": "4b78bf6ba33afb4d291c97c18c07452b2fc2c9d28886964f48c98320ffc1a1c2",
+    "docs/papers/cmp-tac-advice-2027-2028/all_cmp_advice.csv": "36b925c97d48b2614cde04ffe97affe2bcf53989590f2b7345a8a9ae674d6cff",
+    "docs/papers/cmp-tac-advice-2027-2028/all_cmp_parameters.csv": "ad65a38d654cec0d12c6aceec98930448eca84798964505b74dbb05e6be6abfd"
+  },
+  "errors": [],
+  "publication_status": "Local validation; publication/live downloads checked separately.",
+  "additional_root_review": {
+    "source": "Lead agent report in this task; separate from this reviewer\u2019s independent checks.",
+    "visual": "Local browser preview at 689 px width: main three-CMP table, post-SC14 note, worked example and other five-CMP table readable and complete.",
+    "search": "CMP43 2027 returned seven results including the main table and worked example; CMP43/MP43 aliases checked.",
+    "remote_base": "Lead agent reported current remote main 0badb8c matches checkout base."
+  }
+}

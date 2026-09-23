@@ -1,21 +1,27 @@
 # TAC calculations for 2027 and 2028
 
-**CMP29 and CMP45 give the following catch recommendations when the 2026 TAC is set to either 1,675 or 1,092 kt.** The 2027 advice uses index data through 2025. The 2028 advice uses data through 2026 and carries forward each CMP’s full-precision 2027 recommendation.
+**CMP29, CMP45 and CMP43 give the following catch recommendations when the 2026 TAC is set to either 1,675 or 1,092 kt.** The 2027 advice uses index data through 2025. The 2028 advice uses data through 2026 and carries forward each CMP’s full-precision 2027 recommendation.
 
-These are deterministic applications of the candidate rules prepared for SC14, calculated on 12 September 2026 using the current Model 1.06 index data. Their status is a working calculation for discussion. All catch quantities are **kt (thousand tonnes)**.
+These are deterministic applications of the candidate rules in the SC14 set, calculated on 12 September 2026 using the Model 1.06 index data available at that time. Their status is a working calculation for discussion. All catch quantities are **kt (thousand tonnes)**.
 
-## Main CMPs: CMP29 and CMP45
+**CMP43 was requested after SC14 and is included in the overall set to be forwarded.**
+
+<a id="main-cmps-cmp29-and-cmp45"></a>
+
+## Main CMPs: CMP29, CMP45 and CMP43
 
 | 2026 TAC (kt) | CMP | 2027 advice: data through 2025 (kt) | 2028 advice: data through 2026 (kt) |
 |---:|:---|---:|---:|
 | 1,675 | CMP29 (HS+20) | **1,423.75** | **1,210.19** |
 | 1,675 | CMP45 (HSsym) | **1,423.75** | **1,210.19** |
+| 1,675 | CMP43 (HS−20) | **1,340.00** | **1,073.40** |
 | 1,092 | CMP29 (HS+20) | **1,115.64** | **999.01** |
 | 1,092 | CMP45 (HSsym) | **1,142.57** | **1,022.23** |
+| 1,092 | CMP43 (HS−20) | **1,201.93** | **1,073.40** |
 
-Starting from 1,675 kt, the **15% annual decrease limit** determines the recommendation in both years for both CMPs. Starting from 1,092 kt, the index-based rule determines both years. “Main CMPs” identifies the two candidates requested for this calculation; their formal status remains as recorded in the SC14 material.
+Starting from 1,675 kt, the **15% annual decrease limit** determines the recommendation in both years for CMP29 and CMP45. CMP43 reaches its **20% decrease limit in 2027**, then follows the index-based rule in 2028. Starting from 1,092 kt, the index-based rule determines both years for all three CMPs. “Main CMPs” identifies the three candidates featured in this comparison; their formal status remains as recorded in the SC14 material.
 
-**[Download the Excel calculations](papers/cmp-tac-advice-2027-2028/CMP_TAC_advice_2027_2028.xlsx).** The first sheet contains CMP29 and CMP45; the second contains the other six CMPs in the SC14 set. The workbook includes the input indices, standardization, rule parameters, annual limits and calculations. [Download all results as CSV](papers/cmp-tac-advice-2027-2028/all_cmp_advice.csv).
+**[Download the Excel calculations](papers/cmp-tac-advice-2027-2028/CMP_TAC_advice_2027_2028.xlsx).** The first sheet contains CMP29, CMP45 and CMP43; the second contains the other five CMPs in the SC14 set. The workbook includes the input indices, standardization, rule parameters, annual limits and calculations. [Download all results as CSV](papers/cmp-tac-advice-2027-2028/all_cmp_advice.csv).
 
 ## How the index is calculated
 
@@ -98,19 +104,27 @@ With a 2026 TAC of **1,675 kt**, the annual lower limit is `1,675 * 0.85 = 1,423
 
 With a 2026 TAC of **1,092 kt**, the 2027 raw advice lies within the annual limits and becomes the recommendation. Carrying its full precision into 2028 gives a lower limit of `1,115.63599453305 * 0.85 = 948.290595353095 kt`. The 2028 raw advice of **999.01 kt** also lies within the limits.
 
+### Worked example: CMP43
+
+CMP43 (HS−20) uses a trigger of **1.9375**, with annual TAC changes limited to **−20% and +15%**.
+
+For 2027, `raw TAC = 270 + (1.0898340398436 - 0.1) * 1730 / (1.9375 - 0.1) = 1,201.9253817303 kt`. For 2028, the same rule uses the indicator `0.953321047630978`, giving raw advice of `1,073.39886389202 kt`.
+
+With a 2026 TAC of **1,675 kt**, the 2027 lower limit is `1,675 * 0.80 = 1,340 kt`, which determines the advice. Carrying 1,340 kt into 2028 gives bounds of `1,340 * 0.80 = 1,072 kt` and `1,340 * 1.15 = 1,541 kt`. The raw advice lies within those bounds, giving **1,073.40 kt** for 2028.
+
+With a 2026 TAC of **1,092 kt**, the 2027 bounds are **873.60–1,255.80 kt**, so the raw advice becomes the recommendation: **1,201.93 kt**. Carrying its full precision into 2028 gives bounds of **961.54–1,382.21 kt**. The index-based advice again lies within the bounds, giving **1,073.40 kt**.
+
 ## Other CMPs
 
-The second Excel sheet contains the remaining six members of the same SC14 set: **CMP43, CMP47, CMP32, CMP44, CMP46 and CMP48**. The calculations use the same index data, cutoffs and 2026 TAC scenarios as the main sheet.
+The second Excel sheet contains the remaining five members of the same SC14 set: **CMP47, CMP32, CMP44, CMP46 and CMP48**. The calculations use the same index data, cutoffs and 2026 TAC scenarios as the main sheet.
 
 | 2026 TAC (kt) | CMP | 2027 advice: data through 2025 (kt) | 2028 advice: data through 2026 (kt) |
 |---:|:---|---:|---:|
-| 1,675 | CMP43 (HS−20) | 1,340.00 | 1,073.40 |
 | 1,675 | CMP47 (HS−30) | 1,172.50 | 1,046.97 |
 | 1,675 | CMP32 (PR+20) | 1,423.75 | 1,210.19 |
 | 1,675 | CMP44 (PR−20) | 1,340.00 | 1,072.00 |
 | 1,675 | CMP46 (PRsym) | 1,423.75 | 1,210.19 |
 | 1,675 | CMP48 (PR−30) | 1,172.50 | 820.75 |
-| 1,092 | CMP43 (HS−20) | 1,201.93 | 1,073.40 |
 | 1,092 | CMP47 (HS−30) | 1,171.27 | 1,046.97 |
 | 1,092 | CMP32 (PR+20) | 928.20 | 788.97 |
 | 1,092 | CMP44 (PR−20) | 873.60 | 698.88 |

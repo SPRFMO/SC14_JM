@@ -2,7 +2,9 @@
 
 ## TAC calculations for 2027 and 2028
 
-[See the TAC calculations and download the Excel workbook](tac-advice-2027-2028.html) for **CMP29 and CMP45**, with the other six SC14 CMPs on the second sheet. The two starting scenarios set the 2026 TAC to **1,675 or 1,092 kt**. The 2027 advice uses index data through 2025; the 2028 advice uses data through 2026 and carries forward each CMP’s 2027 recommendation. These working calculations include the index inputs, formulas, annual change limits and current-year data qualifications.
+[See the TAC calculations and download the Excel workbook](tac-advice-2027-2028.html) for **CMP29, CMP45 and CMP43**, with the other five SC14 CMPs on the second sheet. The two starting scenarios set the 2026 TAC to **1,675 or 1,092 kt**. The 2027 advice uses index data through 2025; the 2028 advice uses data through 2026 and carries forward each CMP’s 2027 recommendation. These working calculations include the index inputs, formulas, annual change limits and current-year data qualifications.
+
+CMP43 was requested after SC14 and is included in the overall set to be forwarded.
 
 ## New working comparison: narrowing the CMP set
 

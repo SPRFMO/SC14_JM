@@ -32,7 +32,9 @@ The strongest coverage here is May–September 2026. Earlier research and manage
 
 ## TAC calculations for 2027 and 2028
 
-[Read the CMP29 and CMP45 calculations and download the Excel workbook](tac-advice-2027-2028.html). The two scenarios start from a 2026 TAC of **1,675 or 1,092 kt**, with 2027 advice based on index data through 2025 and 2028 advice based on data through 2026. The page explains each calculation and the workbook’s second sheet covers the other six SC14 CMPs.
+[Read the CMP29, CMP45 and CMP43 calculations and download the Excel workbook](tac-advice-2027-2028.html). The two scenarios start from a 2026 TAC of **1,675 or 1,092 kt**, with 2027 advice based on index data through 2025 and 2028 advice based on data through 2026. The page explains each calculation and the workbook’s second sheet covers the other five SC14 CMPs.
+
+CMP43 was requested after SC14 and is included in the overall set to be forwarded.
 
 ## New base-model uncertainty analysis
 
