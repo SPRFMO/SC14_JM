@@ -59,3 +59,38 @@ cell gutters and borders, and the row-height multiplier is reduced from 1.5 to
 | Accessibility certification | Not Tested | The inherited PDF tagging limitation above remains; these checks establish layout and content preservation |
 
 The rendered products and their build times are recorded in `build.csv`.
+
+## R source cleanup — 30 September 2026
+
+This report-only cleanup keeps the saved Model 1.06 inputs and scientific
+interpretation. The active annex workflow uses R and Quarto. Historical Python
+scripts remain in the archive as evidence; the separate wiki builder keeps Python.
+
+The risk-table code is now in `R/risk_tables.R`. Selectivity extraction uses
+plain loops and tidyverse transformations in `R/selectivity.R`. The Quarto pages
+source those helpers; duplicate package loads, unused calculations and abandoned
+table code were removed. The `check` command requires only `digest`, with report
+and Word dependencies checked when their formats are selected.
+
+| Check | Result | Evidence |
+|---|---|---|
+| Input identity | Pass | All 45 saved-input and archive hashes match the inventory |
+| Risk calculations | Pass | All 180 records reproduce the reviewed export within 1e-9 |
+| Selectivity extraction | Pass | Both source types under both stock hypotheses exactly match the original four data frames |
+| Annex HTML content | Pass | All 14,847 table cells, 97 captions, figure descriptions and bibliography match the baseline at `0d66c7d` |
+| Figure comparison | Pass with small raster differences | All 50 dimensions match; three images are pixel-identical; the other 47 differ by at most 6/255 per colour channel, as recorded in `figure-cleanup-comparison.csv` |
+| Figure visual review | Pass | Inspected the catch-by-fleet and two-stock fishery selectivity figures |
+| Figure zoom | Pass | All 50 lightbox links use their displayed embedded images; separate figure directories are unnecessary |
+| Clean-session render | Pass | Annex and handover HTML rebuilt in independent R sessions, using the installed user library and excluding user startup files |
+| Wiki copies and links | Pass | All 21 annex copy hashes and 370 local links/fragments across 15 pages checked |
+| Search | Pass | All destinations in 24 documents and 345 passages checked; browser-search JavaScript checks pass |
+| Source checks | Pass | All annex R files parse; whitespace checks pass; active code contains no credential values or absolute internal data paths |
+| Model fitting and compilation | Not Applicable | This cleanup reads the saved assessment and projection products |
+| PDF and Word rebuild | Not Tested in this cleanup | Existing reviewed products retain their earlier hashes and build dates in `build.csv` |
+| Interactive browser review | Not Tested | Browser URL policy rejected the local `file://` preview; embedded links were checked directly |
+| Accessibility certification | Not Tested | Existing PDF tagging and manual-review limitations remain |
+
+The HTML render logs contain no new render warnings. Loading the inherited
+`jjmR` dependencies emits a Tcl display-connection warning in this headless
+environment; the report renders and content checks above pass. The local wiki
+copies and search index were refreshed. These changes have not been published.

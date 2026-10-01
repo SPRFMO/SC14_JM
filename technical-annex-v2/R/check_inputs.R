@@ -1,7 +1,5 @@
 # Verify saved files against the human-readable inventory before every build.
-check_packages <- function() {
-  packages <- c("jjmR", "tidyverse", "flextable", "knitr", "scales", "rmarkdown",
-                "digest", "xml2", "zip")
+check_packages <- function(packages) {
   missing <- packages[!vapply(packages, requireNamespace, logical(1), quietly = TRUE)]
   if (length(missing)) stop("Missing R packages: ", paste(missing, collapse = ", "),
     ". See README.md for installation.", call. = FALSE)

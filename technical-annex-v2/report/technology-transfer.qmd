@@ -4,6 +4,7 @@ subtitle: "A handover for the next assessment scientist"
 author: "Jack Mackerel Working Group"
 date: "2026-09-15"
 lang: en
+lightbox: true
 format:
   pdf:
     toc: false
@@ -44,6 +45,8 @@ and draws figures. A new assessment or projection requires a separate JJM run.
 | Base `msy_mt` block | Mean of column 10 for 2017–2026 | Fixed BMSY for stock status and risk |
 | `data/projections/*_R.rep` | `R/risk_data.R` reads projected SSB and ADMB standard error | All 180 annual records in `data/derived/risk-data.csv` |
 | Saved fits and retrospectives | R chunks in `report/annex_tables.qmd` and `annex_plots.qmd` | Report tables and figures |
+| Checked annual risk data | `R/risk_tables.R` selects the display years and formats probabilities | Three flextable risk summaries |
+| Saved selectivity blocks | `R/selectivity.R` reads age columns and keeps each source's assigned stock | Fishery and survey selectivity plots |
 | Text, tables and figures | Quarto assembles the includes in `report/technical-annex.qmd` | HTML, PDF and Word in `output/` |
 
 ## Example probability

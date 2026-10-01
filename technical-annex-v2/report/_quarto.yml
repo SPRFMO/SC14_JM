@@ -4,6 +4,7 @@ project:
   render:
     - technical-annex.qmd
     - technology-transfer.qmd
+lightbox: true
 execute:
   echo: false
   warning: false

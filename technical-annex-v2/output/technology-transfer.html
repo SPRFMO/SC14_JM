@@ -2206,6 +2206,9 @@ vertical-align: -.125em;
 .quarto-float-tbl { overflow-x: auto; max-width: 100%; }
 .quarto-float-tbl table { margin-bottom: 0.75rem; }
 #title-block-header .subtitle { color: #34465b; }
+
+.quarto-float-tbl table { width: 100%; }
+.quarto-float-tbl .tabwid { width: 100%; overflow-x: auto; }
 </style>
 </head>
 
@@ -2215,7 +2218,7 @@ vertical-align: -.125em;
 <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
   <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">Table of contents</h2>
-   
+
   <ul>
   <li><a href="#start-here" id="toc-start-here" class="nav-link active" data-scroll-target="#start-here"><span class="header-section-number">1</span> Start here</a></li>
   <li><a href="#follow-the-calculation" id="toc-follow-the-calculation" class="nav-link" data-scroll-target="#follow-the-calculation"><span class="header-section-number">2</span> Follow the calculation</a>
@@ -2246,17 +2249,17 @@ vertical-align: -.125em;
              <p>Jack Mackerel Working Group </p>
           </div>
   </div>
-    
+
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
       <p class="date">September 15, 2026</p>
     </div>
   </div>
-  
-    
+
+
   </div>
-  
+
 
 
 </header>
@@ -2309,6 +2312,16 @@ vertical-align: -.125em;
 <td>Report tables and figures</td>
 </tr>
 <tr class="odd">
+<td>Checked annual risk data</td>
+<td><code>R/risk_tables.R</code> selects the display years and formats probabilities</td>
+<td>Three flextable risk summaries</td>
+</tr>
+<tr class="even">
+<td>Saved selectivity blocks</td>
+<td><code>R/selectivity.R</code> reads age columns and keeps each source’s assigned stock</td>
+<td>Fishery and survey selectivity plots</td>
+</tr>
+<tr class="odd">
 <td>Text, tables and figures</td>
 <td>Quarto assembles the includes in <code>report/technical-annex.qmd</code></td>
 <td>HTML, PDF and Word in <code>output/</code></td>
@@ -2355,7 +2368,7 @@ vertical-align: -.125em;
     anchorJS.add('.anchored');
     const isCodeAnnotation = (el) => {
       for (const clz of el.classList) {
-        if (clz.startsWith('code-annotation-')) {                     
+        if (clz.startsWith('code-annotation-')) {
           return true;
         }
       }
@@ -2375,11 +2388,11 @@ vertical-align: -.125em;
         button.setAttribute("data-bs-toggle", "tooltip");
         button.setAttribute("data-bs-placement", "left");
         button.setAttribute("data-bs-title", "Copied!");
-        tooltip = new bootstrap.Tooltip(button, 
-          { trigger: "manual", 
+        tooltip = new bootstrap.Tooltip(button,
+          { trigger: "manual",
             customClass: "code-copy-button-tooltip",
             offset: [0, -8]});
-        tooltip.show();    
+        tooltip.show();
       }
       setTimeout(function() {
         if (tooltip) {
@@ -2456,7 +2469,7 @@ vertical-align: -.125em;
       if (onUntriggerFn) {
         config.onUntrigger = onUntriggerFn;
       }
-      window.tippy(el, config); 
+      window.tippy(el, config);
     }
     const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
     for (var i=0; i<noterefs.length; i++) {
@@ -2531,7 +2544,7 @@ vertical-align: -.125em;
       tippyHover(xref, undefined, function(instance) {
         instance.disable();
         let url = xref.getAttribute('href');
-        let hash = undefined; 
+        let hash = undefined;
         if (url.startsWith('#')) {
           hash = url;
         } else {
@@ -2559,7 +2572,7 @@ vertical-align: -.125em;
               if (note !== null) {
                 const html = processXRef(id, note);
                 instance.setContent(html);
-              } 
+              }
             }).finally(() => {
               instance.enable();
               instance.show();
@@ -2583,7 +2596,7 @@ vertical-align: -.125em;
               }
               const html = processXRef(null, note);
               instance.setContent(html);
-            } 
+            }
           }).finally(() => {
             instance.enable();
             instance.show();
@@ -2623,7 +2636,7 @@ vertical-align: -.125em;
               height = bottom - top;
             }
             if (top !== null && height !== null && parent !== null) {
-              // cook up a div (if necessary) and position it 
+              // cook up a div (if necessary) and position it
               let div = window.document.getElementById("code-annotation-line-highlight");
               if (div === null) {
                 div = window.document.createElement("div");

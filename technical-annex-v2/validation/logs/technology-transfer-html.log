@@ -18,6 +18,7 @@ metadata
   link-citations: true
   date-format: long
   lang: en
+  lightbox: true
   theme: flatly
   code-summary: Show supporting code
   title: Maintaining the Jack Mackerel Technical Annex

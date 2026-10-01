@@ -7,6 +7,7 @@ lang: en
 bibliography: refs.bib
 csl: apa.csl
 link-citations: true
+lightbox: true
 word-contents: true
 ---
 

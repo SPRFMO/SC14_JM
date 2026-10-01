@@ -17,7 +17,8 @@ Rscript build.R check      # input hashes and all 180 risk calculations
 ```
 
 The workflow uses **R and Quarto**. PDF also needs XeLaTeX and the fonts listed
-in `report/_quarto.yml`. Install the report packages in R:
+in `report/_quarto.yml`. The `check` command needs only R and `digest`; it reads
+saved results and compares all 180 risk records. Install the report packages in R:
 
 ```r
 install.packages(c("tidyverse", "flextable", "knitr", "scales", "rmarkdown",
@@ -42,6 +43,18 @@ in `software/`. The build checks dependencies and writes `validation/R-session.t
 | `software/` | Matching `jjmR` source and the projection `jjm.tpl` |
 | `validation/` | Build logs, environment, product hashes and migration checks |
 | `archive/` | Historical sources and reviews; excluded from the build |
+
+The main calculation helpers are plain R scripts:
+
+- `R/prepare_report.R` reads saved fits and calculates status and catch summaries.
+- `R/risk_data.R` calculates annual probabilities from saved biomass estimates and standard errors.
+- `R/risk_tables.R` formats the three risk summaries for the report.
+- `R/selectivity.R` reads and plots fishery and survey selectivity.
+
+The Quarto pages source these helpers and supply the narrative, captions and
+table labels. HTML figures open at full size when clicked (`lightbox: true`).
+`R/embed_lightbox.R` connects the zoom links to the embedded images, so the HTML
+works as a single file and needs no separate figure directory.
 
 Every build checks `data/input-checksums.csv`. It stops if a saved input changes.
 It calculates each risk probability from the saved base BMSY and projection

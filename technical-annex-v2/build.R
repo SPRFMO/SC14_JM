@@ -12,7 +12,7 @@ script <- sub("^--file=", "", grep("^--file=", commandArgs(), value = TRUE)[1])
 root <- dirname(normalizePath(script, mustWork = TRUE))
 setwd(root)
 source("R/check_inputs.R")
-check_packages()
+check_packages("digest")
 check_inputs(root)
 source("R/risk_data.R")
 dir.create("data/derived", showWarnings = FALSE)
@@ -22,18 +22,22 @@ if (format == "check") {
   cat("PASS: saved input hashes and all 180 risk records agree. No models were run.\n")
   quit(status = 0)
 }
+check_packages(c("jjmR", "tidyverse", "flextable", "knitr", "scales", "rmarkdown"))
+if (format %in% c("html", "docx", "all")) check_packages("xml2")
+if (format %in% c("docx", "all")) check_packages("zip")
 quarto <- Sys.which("quarto")
 if (!nzchar(quarto)) stop("Install Quarto, then rerun this command.", call. = FALSE)
 if (format %in% c("pdf", "all") && !nzchar(Sys.which("xelatex"))) {
   stop("PDF requires XeLaTeX. Use html or docx while installing LaTeX.", call. = FALSE)
 }
-source("R/format_docx.R")
+if (format %in% c("docx", "all")) source("R/format_docx.R")
+if (format %in% c("html", "all")) source("R/embed_lightbox.R")
 formats <- if (format == "all") c("html", "pdf", "docx") else format
 documents <- c(annex = "technical-annex", guide = "technology-transfer")
 selected <- if (document == "all") documents else documents[document]
 dir.create("output", showWarnings = FALSE)
 dir.create("validation/logs", recursive = TRUE, showWarnings = FALSE)
-writeLines(capture.output(sessionInfo()), "validation/R-session.txt")
+writeLines(trimws(capture.output(sessionInfo()), which = "right"), "validation/R-session.txt")
 products <- character()
 for (name in selected) {
   for (to in formats) {
@@ -49,6 +53,7 @@ for (name in selected) {
     }
     product <- file.path("output", paste0(name, ".", to))
     stopifnot(file.exists(product), file.info(product)$size > 0)
+    if (to == "html") embed_lightbox(product)
     if (to == "docx") format_docx(product)
     products <- c(products, product)
   }
